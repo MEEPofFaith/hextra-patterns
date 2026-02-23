@@ -13,7 +13,6 @@ import static com.meepoffaith.hextra.HextraPatterns.LOGGER;
 import java.util.List;
 
 import at.petrak.hexcasting.api.casting.mishaps.Mishap;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtCompound;
 import org.jetbrains.annotations.NotNull;
 
@@ -51,11 +50,11 @@ public class SpellActionBase extends PatternBase implements SpellAction{
     }
 
     @Override
-    public @NotNull Result executeWithUserdata(@NotNull List<? extends Iota> list, @NotNull CastingEnvironment castingEnvironment, @NotNull CompoundTag compoundTag) throws Mishap{
+    public @NotNull Result executeWithUserdata(@NotNull List<? extends Iota> list, @NotNull CastingEnvironment castingEnvironment, @NotNull NbtCompound nbtCompound) throws Mishap{
         this.ctx = castingEnvironment;
         this.world = castingEnvironment.getWorld();
         _assertIsEnlightenedIfRequiresEnlightenment();
-        return executeWithUserdata(new HexIotaStack(list, getArgc(), castingEnvironment), castingEnvironment, compoundTag);
+        return executeWithUserdata(new HexIotaStack(list, getArgc(), castingEnvironment), castingEnvironment, nbtCompound);
     }
 
     @Override

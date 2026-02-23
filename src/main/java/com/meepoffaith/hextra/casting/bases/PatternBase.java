@@ -9,6 +9,8 @@ import static at.petrak.hexcasting.api.misc.MediaConstants.CRYSTAL_UNIT;
 import static at.petrak.hexcasting.api.misc.MediaConstants.QUENCHED_SHARD_UNIT;
 import static at.petrak.hexcasting.api.misc.MediaConstants.QUENCHED_BLOCK_UNIT;
 
+import net.minecraft.server.world.ServerWorld;
+
 // https://github.com/Real-Luxof/Lapisworks/blob/main/src/main/java/com/luxof/lapisworks/nocarpaltunnel/PatternNCTBase.java
 public abstract class PatternBase{
     public CastingEnvironment ctx;
