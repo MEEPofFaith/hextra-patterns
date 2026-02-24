@@ -14,9 +14,15 @@ import com.meepoffaith.hextra.casting.actions.VecActions.VecOne;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static com.meepoffaith.hextra.init.Arithmetics.*;
-
 public class Patterns{
+    public static HexPattern ROT_ABOUT_X = register("rot_about_x", "aaqqqqqea", HexDir.SOUTH_WEST);
+    public static HexPattern ROT_ABOUT_Y = register("rot_about_y", "aaqqqqqew", HexDir.SOUTH_WEST);
+    public static HexPattern ROT_ABOUT_Z = register("rot_about_z", "aaqqqqqed", HexDir.SOUTH_WEST);
+    public static HexPattern CONSTRUCT_ABOUT_X = register("cons_about_x", "daqqqqqea", HexDir.NORTH_WEST);
+    public static HexPattern CONSTRUCT_ABOUT_Y = register("cons_about_y", "daqqqqqew", HexDir.NORTH_WEST);
+    public static HexPattern CONSTRUCT_ABOUT_Z = register("cons_about_z", "daqqqqqed", HexDir.NORTH_WEST);
+    public static HexPattern NORMALIZE = register("normalize", "eeeeedww", HexDir.SOUTH_WEST);
+
     public static void init(){
         register("deg_to_rad", "qqqqqdwdq", HexDir.WEST, new DegRad());
         register("rad_to_deg", "qdwdqqqqq", HexDir.NORTH_EAST, new RadDeg());
@@ -24,14 +30,6 @@ public class Patterns{
         //Come on, Elise!
         register("haha_ha_one", "qqqqqeq", HexDir.NORTH_WEST, new VecOne());
         register("eno_ah_ahah", "eeeeeqq", HexDir.SOUTH_WEST, new VecNegOne());
-
-        register("rot_about_x", ROT_ABOUT_X);
-        register("rot_about_y", ROT_ABOUT_Y);
-        register("rot_about_z", ROT_ABOUT_Z);
-        register("cons_about_x", CONSTRUCT_ABOUT_X);
-        register("cons_about_y", CONSTRUCT_ABOUT_Y);
-        register("cons_about_z", CONSTRUCT_ABOUT_Z);
-        register("normalize", NORMALIZE);
     }
 
     private static void register(
@@ -43,10 +41,13 @@ public class Patterns{
         Registry.register(HexActions.REGISTRY, new Identifier(HextraPatterns.MOD_ID, name), new ActionRegistryEntry(HexPattern.fromAngles(signature, startDir), action));
     }
 
-    private static void register(
+    private static HexPattern register(
         String name,
-        HexPattern pattern
+        String signature,
+        HexDir startDir
     ) {
+        HexPattern pattern = HexPattern.fromAngles(signature, startDir);
         Registry.register(HexActions.REGISTRY, new Identifier(HextraPatterns.MOD_ID, name), new ActionRegistryEntry(pattern, new OperationAction(pattern)));
+        return pattern;
     }
 }

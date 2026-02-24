@@ -7,14 +7,13 @@ import at.petrak.hexcasting.api.casting.eval.OperationResult;
 import at.petrak.hexcasting.api.casting.eval.vm.CastingImage;
 import at.petrak.hexcasting.api.casting.eval.vm.SpellContinuation;
 import at.petrak.hexcasting.api.casting.iota.Iota;
-
-import static com.meepoffaith.hextra.HextraPatterns.LOGGER;
-
-import java.util.List;
-
 import at.petrak.hexcasting.api.casting.mishaps.Mishap;
 import net.minecraft.nbt.NbtCompound;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
+
+import static com.meepoffaith.hextra.HextraPatterns.LOGGER;
 
 // https://github.com/Real-Luxof/Lapisworks/blob/main/src/main/java/com/luxof/lapisworks/nocarpaltunnel/SpellActionNCT.java
 public class SpellActionBase extends PatternBase implements SpellAction{

@@ -2,14 +2,9 @@ package com.meepoffaith.hextra.casting.bases;
 
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment;
 import at.petrak.hexcasting.api.casting.mishaps.MishapUnenlightened;
-
-import static at.petrak.hexcasting.api.misc.MediaConstants.DUST_UNIT;
-import static at.petrak.hexcasting.api.misc.MediaConstants.SHARD_UNIT;
-import static at.petrak.hexcasting.api.misc.MediaConstants.CRYSTAL_UNIT;
-import static at.petrak.hexcasting.api.misc.MediaConstants.QUENCHED_SHARD_UNIT;
-import static at.petrak.hexcasting.api.misc.MediaConstants.QUENCHED_BLOCK_UNIT;
-
 import net.minecraft.server.world.ServerWorld;
+
+import static at.petrak.hexcasting.api.misc.MediaConstants.*;
 
 // https://github.com/Real-Luxof/Lapisworks/blob/main/src/main/java/com/luxof/lapisworks/nocarpaltunnel/PatternNCTBase.java
 public abstract class PatternBase{

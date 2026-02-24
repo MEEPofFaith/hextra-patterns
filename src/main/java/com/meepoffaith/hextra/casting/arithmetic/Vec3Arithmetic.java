@@ -17,7 +17,7 @@ import java.util.List;
 
 import static at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE;
 import static at.petrak.hexcasting.common.lib.hex.HexIotaTypes.VEC3;
-import static com.meepoffaith.hextra.init.Arithmetics.*;
+import static com.meepoffaith.hextra.init.Patterns.*;
 
 public class Vec3Arithmetic implements Arithmetic{
     private static final List<HexPattern> OPS = List.of(

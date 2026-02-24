@@ -8,7 +8,6 @@ import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaMultiPredicate
 import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaPredicate;
 import at.petrak.hexcasting.api.casting.iota.BooleanIota;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
-import at.petrak.hexcasting.common.casting.arithmetic.Vec3Arithmetic;
 import com.meepoffaith.hextra.util.generics.Func2to1;
 import net.minecraft.util.math.Vec3d;
 

@@ -7,9 +7,9 @@ import at.petrak.hexcasting.api.casting.eval.vm.CastingImage;
 import at.petrak.hexcasting.api.casting.eval.vm.SpellContinuation;
 import at.petrak.hexcasting.api.casting.iota.Iota;
 
-import static com.meepoffaith.hextra.HextraPatterns.LOGGER;
-
 import java.util.List;
+
+import static com.meepoffaith.hextra.HextraPatterns.LOGGER;
 
 public abstract class ConstMediaActionBase extends PatternBase implements ConstMediaAction {
     public boolean requiresEnlightenment = false;
