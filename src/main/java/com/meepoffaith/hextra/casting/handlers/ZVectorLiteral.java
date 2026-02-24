@@ -36,8 +36,9 @@ public class ZVectorLiteral implements SpecialHandler{
         );
     }
 
-    private static class InnerAction extends ConstMediaActionBase{
+    public static class InnerAction extends ConstMediaActionBase{
         public int argc = 0;
+        public long mediaCost = 0L;
         double z;
 
         public InnerAction(double z){

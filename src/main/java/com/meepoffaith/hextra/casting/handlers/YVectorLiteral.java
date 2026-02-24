@@ -36,8 +36,9 @@ public class YVectorLiteral implements SpecialHandler{
         );
     }
 
-    private static class InnerAction extends ConstMediaActionBase{
+    public static class InnerAction extends ConstMediaActionBase{
         public int argc = 0;
+        public long mediaCost = 0L;
         double y;
 
         public InnerAction(double y){

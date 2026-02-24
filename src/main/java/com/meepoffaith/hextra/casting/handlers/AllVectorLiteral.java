@@ -38,8 +38,9 @@ public class AllVectorLiteral implements SpecialHandler{
         return HextraUtils.specialHandlerLang(SpecialHandlers.SCALED_VEC_ALL, val, val, val);
     }
 
-    private static class InnerAction extends ConstMediaActionBase{
+    public static class InnerAction extends ConstMediaActionBase{
         public int argc = 0;
+        public long mediaCost = 0L;
         double x;
 
         public InnerAction(double x){

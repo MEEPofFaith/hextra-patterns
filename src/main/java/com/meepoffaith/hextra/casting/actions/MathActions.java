@@ -11,6 +11,7 @@ import java.util.List;
 public class MathActions{
     public static class DegRad extends ConstMediaActionBase{
         public int argc = 1;
+        public long mediaCost = 0L;
 
         @Override
         public List<? extends Iota> execute(HexIotaStack stack, CastingEnvironment ctx){
@@ -21,6 +22,7 @@ public class MathActions{
 
     public static class RadDeg extends ConstMediaActionBase{
         public int argc = 1;
+        public long mediaCost = 0L;
 
         @Override
         public List<? extends Iota> execute(HexIotaStack stack, CastingEnvironment ctx){
