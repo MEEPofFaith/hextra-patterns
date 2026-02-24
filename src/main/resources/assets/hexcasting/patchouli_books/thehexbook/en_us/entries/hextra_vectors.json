@@ -1,0 +1,62 @@
+{
+    "name": "pages.hextra.hextra_vectors.title",
+    "category": "hexcasting:patterns",
+    "icon": "minecraft:arrow",
+    "sortnum": 3.1,
+    "advancement": "hexcasting:root",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "hexcasting:manual_pattern",
+            "op_id": "hextra:haha_ha_one",
+            "anchor": "hextra:haha_ha_one",
+            "input": "",
+            "output": "vector",
+            "text": "hextra.page.vectors.one",
+            "patterns": [
+                {
+                    "startdir": "NORTH_WEST",
+                    "signature": "qqqqqeq",
+                    "q": -1,
+                    "r": -1
+                }, {
+                    "startdir": "NORTH_EAST",
+                    "signature": "eeeeeqq",
+                    "r": 1
+                }
+            ]
+        },
+        {
+            "type": "hexcasting:pattern",
+            "op_id": "hexcasting:greater",
+            "anchor": "hecasting:greater",
+            "input": "vector vector",
+            "output": "bool",
+            "text": "hextra.page.vectors.greater"
+        },
+        {
+            "type": "hexcasting:pattern",
+            "op_id": "hexcasting:less",
+            "anchor": "hecasting:less",
+            "input": "vector vector",
+            "output": "bool",
+            "text": "hextra.page.vectors.less"
+        },
+        {
+            "type": "hexcasting:pattern",
+            "op_id": "hexcasting:greater_eq",
+            "anchor": "hecasting:greater_eq",
+            "input": "vector vector",
+            "output": "bool",
+            "text": "hextra.page.vectors.greater_eq"
+        },
+        {
+            "type": "hexcasting:pattern",
+            "op_id": "hexcasting:less_eq",
+            "anchor": "hecasting:less_eq",
+            "input": "vector vector",
+            "output": "bool",
+            "text": "hextra.page.vectors.greater"
+        }
+    ]
+}

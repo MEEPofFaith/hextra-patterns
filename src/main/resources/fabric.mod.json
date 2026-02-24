@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "hextra-patterns",
+	"id": "hextra",
 	"version": "${version}",
 	"name": "Hextra Patterns",
 	"description": "Adds some small utility patterns meant to shorten groups of patterns into a single one.",
@@ -22,7 +22,7 @@
 		]
 	},
 	"mixins": [
-		"hextra-patterns.mixins.json"
+		"hextra.mixins.json"
 	],
 	"depends": {
 		"fabric-api": "*",

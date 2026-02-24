@@ -1,0 +1,11 @@
+{
+  "pages.hextra.hextra_vectors.title": "Hextra Vectors",
+  "hexcasting.action.book.hextra:haha_ha_one":  "Vector Rfln. +1/-1",
+  "hexcasting.action.hextra:haha_ha_one": "Vector Rfln. +1",
+  "hexcasting.action.hextra:eno_ah_ahah": "Vector Rfln. -1",
+  "hextra.page.vectors.one": "The left-hand counter-clockwise pattern adds (1, 1, 1) to the stack; the right-hand clockwise pattern adds (-1, -1, -1).",
+  "hextra.page.vectors.greater": "If the first vector is longer than the second, return True. Otherwise, return False.",
+  "hextra.page.vectors.less": "If the first vector is shorter than the second, return True. Otherwise, return False.",
+  "hextra.page.vectors.greater_eq": "If the first vector is longer or the same length as the second, return True. Otherwise, return False.",
+  "hextra.page.vectors.less_eq": "If the first vector is shorter or the same length the second, return True. Otherwise, return False."
+}
