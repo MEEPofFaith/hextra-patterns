@@ -25,7 +25,7 @@ public class Vec3BoolArithmetic implements Arithmetic{
 
     @Override
     public String arithName(){
-        return "more_bool_math";
+        return "hextra_bool_math";
     }
 
     @Override
@@ -44,7 +44,7 @@ public class Vec3BoolArithmetic implements Arithmetic{
         }else if(pattern.equals(LESS_EQ)){
             return makeComp((a, b) -> a.length() <= b.length());
         }else{
-            throw new InvalidOperatorException(pattern + " is not a valid operator in bool arithmetic");
+            throw new InvalidOperatorException(pattern + " is not a valid operator in Vec3 Bool Arithmetic " + this);
         }
     }
 

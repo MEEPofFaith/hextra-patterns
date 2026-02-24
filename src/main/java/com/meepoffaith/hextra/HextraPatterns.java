@@ -1,6 +1,8 @@
 package com.meepoffaith.hextra;
 
+import com.meepoffaith.hextra.init.Arithmetics;
 import com.meepoffaith.hextra.init.Patterns;
+import com.meepoffaith.hextra.init.SpecialHandlers;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,5 +20,7 @@ public class HextraPatterns implements ModInitializer {
 		LOGGER.info("Is anyone there? Hello? I'm trAPPED IN HERE AND CAN'T GET OUT H E L P !");
 
 		Patterns.init();
+		Arithmetics.init();
+		SpecialHandlers.init();
 	}
 }
