@@ -22,7 +22,7 @@ public class Patterns{
     public static void init(){
         //Come on, Elise!
         register("haha_ha_one", "qqqqqeq", HexDir.WEST, new VecOne());
-        register("eno_ah_ahah", "qqqqqee", HexDir.EAST, new VecNegOne());
+        register("eno_ah_ahah", "eeeeeqq", HexDir.EAST, new VecNegOne());
 
         registerSpecialHandler("scaled_vec_x", new XVectorLiteralFactory());
         registerSpecialHandler("scaled_vec_y", new YVectorLiteralFactory());
