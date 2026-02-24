@@ -26,6 +26,8 @@ public class VecActions{
     }
 
     public static class Normalize extends ConstMediaActionBase{
+        public int argc = 1;
+
         @Override
         public List<? extends Iota> execute(HexIotaStack stack, CastingEnvironment ctx){
             Vec3d vec = stack.getVec3(0);
