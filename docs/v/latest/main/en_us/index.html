@@ -77,7 +77,7 @@
       <ul class="nav navbar-nav navbar-right">
             <li>
     <a
-      href="https://github.com/MEEPofFaith/hextra-patterns/tree/f661dbe582fb03adf201ad5e63a2d6d434c516a6"
+      href="https://github.com/MEEPofFaith/hextra-patterns/tree/6b8929975a564ddac0b3613f91326a58251518e2"
         target="_blank"
       class="navbar-link"
       role="button"
@@ -153,13 +153,20 @@
       loading="lazy"
       class="item-texture  texture pixelated"
     > Vector Literals</a></li>
-          <li><a href="#patterns/hextra_vectors" class="toc-elem "><img
-      title="End Rod"
-      alt="End Rod"
-      src="https://hexdoc-dev.github.io/hexdoc-minecraft/v/1.20.1/1.0.dev1/assets/minecraft/textures/block/end_rod.png"
+          <li><a href="#patterns/hextra_consts" class="toc-elem "><img
+      title="Obsidian"
+      alt="Obsidian"
+      src="https://hexdoc-dev.github.io/hexdoc-minecraft/v/1.20.1/1.0.dev1/assets/minecraft/textures/block/obsidian.png"
       loading="lazy"
       class="item-texture  texture "
-    > Hextra Vectors</a></li>
+    > Hextra Constants</a></li>
+          <li><a href="#patterns/hextra_logic" class="toc-elem "><img
+      title="Redstone Lamp"
+      alt="Redstone Lamp"
+      src="https://hexdoc-dev.github.io/hexdoc-minecraft/v/1.20.1/1.0.dev1/assets/minecraft/textures/block/redstone_lamp.png"
+      loading="lazy"
+      class="item-texture  texture "
+    > Hextra Logic</a></li>
       </ul>
     </details>
 </nav>
@@ -455,7 +462,7 @@
         data-per-world="False"
       >Your browser does not support visualizing patterns. Pattern code: qqeeeeedw</canvas>
   </details>
-      <p>A head that slightly bends to the left will output a vector where <a href="#patterns/hextra_vectors@hextra:haha_ha_one"><span style="color: #fc77be">all 3 components are the same</span></a>.</p>
+      <p>A head that slightly bends to the left will output a vector where <a href="#patterns/hextra_consts@hextra:haha_ha_one"><span style="color: #fc77be">all 3 components are the same</span></a>.</p>
   </div>
 <br />
     <p>First, I draw one of the eight shapes shown on the prior pages. Next, the <i>angles</i> following will modify a running count starting at 0.</p><p class="fake-li " style="--level: 1;">Forward: Add 1</p><p class="fake-li " style="--level: 1;">Left: Add 5</p><p class="fake-li " style="--level: 1;">Right: Add 10</p><p class="fake-li " style="--level: 1;">Sharp Left: Multiply by 2</p><p class="fake-li " style="--level: 1;">Sharp Right: Divide by 2.<br />The clockwise version of the pattern, on the right of the other page, will negate the value at the very end. (The left-hand counter-clockwise version keeps the number positive).</p><p>Once I finish drawing, the a vector&#39;s pushed to the top of the stack.</p>
@@ -661,26 +668,26 @@
       <p>This pattern pushes (4.5, 4.5, 4.5): 5 / 2 + 1 + 1.</p>
 <br />
 </div>
-<div id="patterns/hextra_vectors" class="entry">
+<div id="patterns/hextra_consts" class="entry">
     <h3 class="entry-title page-header">
     <img
-      title="End Rod"
-      alt="End Rod"
-      src="https://hexdoc-dev.github.io/hexdoc-minecraft/v/1.20.1/1.0.dev1/assets/minecraft/textures/block/end_rod.png"
+      title="Obsidian"
+      alt="Obsidian"
+      src="https://hexdoc-dev.github.io/hexdoc-minecraft/v/1.20.1/1.0.dev1/assets/minecraft/textures/block/obsidian.png"
       loading="lazy"
       class="item-texture  texture "
-    >Hextra Vectors<a
+    >Hextra Constants<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
   ><i class="bi bi-box-arrow-up"></i></a><a
-    href="#patterns/hextra_vectors"
+    href="#patterns/hextra_consts"
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
-  <div id="patterns/hextra_vectors@hextra:haha_ha_one" class="">
+  <div id="patterns/hextra_consts@hextra:haha_ha_one" class="">
 <h4>Vector Rfln. +1/-1 (→ vector)<a
-    href="#patterns/hextra_vectors@hextra:haha_ha_one"
+    href="#patterns/hextra_consts@hextra:haha_ha_one"
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h4>
@@ -742,9 +749,27 @@
       <p>The left-hand counter-clockwise pattern adds (1, 1, 1) to the stack; the right-hand clockwise pattern adds (-1, -1, -1).</p>
   </div>
 <br />
-  <div id="patterns/hextra_vectors@hexcasting:greater" class="">
+</div>
+<div id="patterns/hextra_logic" class="entry">
+    <h3 class="entry-title page-header">
+    <img
+      title="Redstone Lamp"
+      alt="Redstone Lamp"
+      src="https://hexdoc-dev.github.io/hexdoc-minecraft/v/1.20.1/1.0.dev1/assets/minecraft/textures/block/redstone_lamp.png"
+      loading="lazy"
+      class="item-texture  texture "
+    >Hextra Logic<a
+    href="#table-of-contents"
+    class="permalink small"
+    title="Jump to top"
+  ><i class="bi bi-box-arrow-up"></i></a><a
+    href="#patterns/hextra_logic"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h3>
+  <div id="patterns/hextra_logic@hexcasting:greater" class="">
 <h4 class="pattern-title">Maximus Distillation (vector, vector → bool)<a
-    href="#patterns/hextra_vectors@hexcasting:greater"
+    href="#patterns/hextra_logic@hexcasting:greater"
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h4>
@@ -798,9 +823,9 @@
       <p>If the first vector is longer than the second, return True. Otherwise, return False.</p>
   </div>
 <br />
-  <div id="patterns/hextra_vectors@hexcasting:less" class="">
+  <div id="patterns/hextra_logic@hexcasting:less" class="">
 <h4 class="pattern-title">Minimus Distillation (vector, vector → bool)<a
-    href="#patterns/hextra_vectors@hexcasting:less"
+    href="#patterns/hextra_logic@hexcasting:less"
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h4>
@@ -854,9 +879,9 @@
       <p>If the first vector is shorter than the second, return True. Otherwise, return False.</p>
   </div>
 <br />
-  <div id="patterns/hextra_vectors@hexcasting:greater_eq" class="">
+  <div id="patterns/hextra_logic@hexcasting:greater_eq" class="">
 <h4 class="pattern-title">Maximus Distillation II (vector, vector → bool)<a
-    href="#patterns/hextra_vectors@hexcasting:greater_eq"
+    href="#patterns/hextra_logic@hexcasting:greater_eq"
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h4>
@@ -910,9 +935,9 @@
       <p>If the first vector is longer or the same length as the second, return True. Otherwise, return False.</p>
   </div>
 <br />
-  <div id="patterns/hextra_vectors@hexcasting:less_eq" class="">
+  <div id="patterns/hextra_logic@hexcasting:less_eq" class="">
 <h4 class="pattern-title">Minimus Distillation II (vector, vector → bool)<a
-    href="#patterns/hextra_vectors@hexcasting:less_eq"
+    href="#patterns/hextra_logic@hexcasting:less_eq"
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h4>
@@ -963,7 +988,7 @@
         data-per-world="False"
       >Your browser does not support visualizing patterns. Pattern code: qq</canvas>
   </details>
-      <p>If the first vector is longer than the second, return True. Otherwise, return False.</p>
+      <p>If the first vector is shorter or the same length the second, return True. Otherwise, return False.</p>
   </div>
 <br />
 </div>
