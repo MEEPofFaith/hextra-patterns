@@ -30,7 +30,7 @@
             "type": "hexcasting:pattern",
             "op_id": "hexcasting:greater",
             "anchor": "hecasting:greater",
-            "input": "vector vector",
+            "input": "vector, vector",
             "output": "bool",
             "text": "hextra.page.vectors.greater"
         },
@@ -38,7 +38,7 @@
             "type": "hexcasting:pattern",
             "op_id": "hexcasting:less",
             "anchor": "hecasting:less",
-            "input": "vector vector",
+            "input": "vector, vector",
             "output": "bool",
             "text": "hextra.page.vectors.less"
         },
@@ -46,7 +46,7 @@
             "type": "hexcasting:pattern",
             "op_id": "hexcasting:greater_eq",
             "anchor": "hecasting:greater_eq",
-            "input": "vector vector",
+            "input": "vector, vector",
             "output": "bool",
             "text": "hextra.page.vectors.greater_eq"
         },
@@ -54,7 +54,7 @@
             "type": "hexcasting:pattern",
             "op_id": "hexcasting:less_eq",
             "anchor": "hecasting:less_eq",
-            "input": "vector vector",
+            "input": "vector, vector",
             "output": "bool",
             "text": "hextra.page.vectors.greater"
         }
