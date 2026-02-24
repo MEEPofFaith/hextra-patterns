@@ -16,18 +16,4 @@ public class SpecialHandlers{
     public static Factory<?> SCALED_VEC_Y = new YVectorLiteralFactory();
     public static Factory<?> SCALED_VEC_Z = new ZVectorLiteralFactory();
     public static Factory<?> SCALED_VEC_ALL = new AllVectorLiteralFactory();
-
-    public static void init(){
-        registerSpecialHandler("scaled_vec_x", SCALED_VEC_X);
-        registerSpecialHandler("scaled_vec_y", SCALED_VEC_Y);
-        registerSpecialHandler("scaled_vec_z", SCALED_VEC_Z);
-        registerSpecialHandler("scaled_vec_all", SCALED_VEC_ALL);
-    }
-
-    private static void registerSpecialHandler(
-        String name,
-        SpecialHandler.Factory<?> handler
-    ) {
-        Registry.register(IXplatAbstractions.INSTANCE.getSpecialHandlerRegistry(), new Identifier(HextraPatterns.MOD_ID, name), handler);
-    }
 }

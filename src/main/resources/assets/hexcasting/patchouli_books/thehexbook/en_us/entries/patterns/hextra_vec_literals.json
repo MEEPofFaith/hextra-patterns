@@ -1,0 +1,135 @@
+{
+  "name": "pages.hextra.hextra_vec_literals.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:arrow",
+  "sortnum": 1,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "header": "pages.hextra.hextra_vec_literals.title",
+      "text": "hextra.page.vec_literals.1"
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextra:scaled_vec_x",
+      "anchor": "hextra:scaled_vec_x",
+      "input": "",
+      "output": "vector",
+      "text": "hextra.page.vec_literals.2",
+      "patterns": [
+        {
+          "startdir": "SOUTH_WEST",
+          "signature": "aeqqqqqaw",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "SOUTH_WEST",
+          "signature": "aqeeeeedw",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextra:scaled_vec_y",
+      "anchor": "hextra:scaled_vec_y",
+      "input": "",
+      "output": "vector",
+      "text": "hextra.page.vec_literals.3",
+      "patterns": [
+        {
+          "startdir": "EAST",
+          "signature": "weqqqqqaw",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "EAST",
+          "signature": "wqeeeeedw",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextra:scaled_vec_z",
+      "anchor": "hextra:scaled_vec_z",
+      "input": "",
+      "output": "vector",
+      "text": "hextra.page.vec_literals.4",
+      "patterns": [
+        {
+          "startdir": "NORTH_WEST",
+          "signature": "deqqqqqaw",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "NORTH_WEST",
+          "signature": "dqeeeeedw",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextra:scaled_vec_all",
+      "anchor": "hextra:scaled_vec_all",
+      "input": "",
+      "output": "vector",
+      "text": "hextra.page.vec_literals.5",
+      "patterns": [
+        {
+          "startdir": "SOUTH_EAST",
+          "signature": "qeqqqqqaw",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "SOUTH_EAST",
+          "signature": "qqeeeeedw",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextra.page.vec_literals.6"
+    },
+    {
+      "type": "hexcasting:manual_pattern_nosig",
+      "header": "hextra.page.vec_literals.example.x10.header",
+      "text": "hextra.page.vec_literals.example.x10",
+      "patterns": {
+        "startdir": "SOUTH_WEST",
+        "signature": "aeqqqqqawe"
+      }
+    },
+    {
+      "type": "hexcasting:manual_pattern_nosig",
+      "header": "hextra.page.vec_literals.example.y7.header",
+      "text": "hextra.page.vec_literals.example.y7",
+      "patterns": {
+        "startdir": "EAST",
+        "signature": "weqqqqqawqww"
+      }
+    },
+    {
+      "type": "hexcasting:manual_pattern_nosig",
+      "header": "hextra.page.vec_literals.example.z-32.header",
+      "text": "hextra.page.vec_literals.example.z-32",
+      "patterns": {
+        "startdir": "NORTH_WEST",
+        "signature": "dqeeeeedwwqea"
+      }
+    },
+    {
+      "type": "hexcasting:manual_pattern_nosig",
+      "header": "hextra.page.vec_literals.example.a4.5.header",
+      "text": "hextra.page.vec_literals.example.a4.5",
+      "patterns": {
+        "startdir": "SOUTH_EAST",
+        "signature": "qeqqqqqawqdww"
+      }
+    }
+  ]
+}

@@ -21,6 +21,5 @@ public class HextraPatterns implements ModInitializer {
 
 		Patterns.init();
 		Arithmetics.init();
-		SpecialHandlers.init();
 	}
 }
