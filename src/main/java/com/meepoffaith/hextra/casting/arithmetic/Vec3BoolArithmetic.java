@@ -9,6 +9,7 @@ import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaPredicate;
 import at.petrak.hexcasting.api.casting.iota.BooleanIota;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.common.casting.arithmetic.Vec3Arithmetic;
+import com.meepoffaith.hextra.util.generics.Func2to1;
 import net.minecraft.util.math.Vec3d;
 
 import java.util.List;
@@ -48,13 +49,9 @@ public class Vec3BoolArithmetic implements Arithmetic{
         }
     }
 
-    private OperatorBinary makeComp(BiFunction op){
+    private OperatorBinary makeComp(Func2to1<Vec3d, Vec3d, Boolean> op){
         return new OperatorBinary(IotaMultiPredicate.all(IotaPredicate.ofType(VEC3)),
             (i, j) -> new BooleanIota(op.apply(Operator.downcast(i, VEC3).getVec3(), Operator.downcast(j, VEC3).getVec3()))
         );
-    }
-
-    private interface BiFunction{
-        boolean apply(Vec3d a, Vec3d b);
     }
 }

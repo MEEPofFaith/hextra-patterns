@@ -14,6 +14,10 @@ public class Arithmetics{
     public static HexPattern ROT_ABOUT_X = HexPattern.fromAngles("aaqqqqqea", HexDir.SOUTH_WEST);
     public static HexPattern ROT_ABOUT_Y = HexPattern.fromAngles("aaqqqqqew", HexDir.SOUTH_WEST);
     public static HexPattern ROT_ABOUT_Z = HexPattern.fromAngles("aaqqqqqed", HexDir.SOUTH_WEST);
+    public static HexPattern CONSTRUCT_ABOUT_X = HexPattern.fromAngles("daqqqqqea", HexDir.NORTH_WEST);
+    public static HexPattern CONSTRUCT_ABOUT_Y = HexPattern.fromAngles("daqqqqqew", HexDir.NORTH_WEST);
+    public static HexPattern CONSTRUCT_ABOUT_Z = HexPattern.fromAngles("daqqqqqed", HexDir.NORTH_WEST);
+    public static HexPattern NORMALIZE = HexPattern.fromAngles("eeeeedww", HexDir.SOUTH_WEST);
 
     public static void init(){
         registerArithmetic("vec3bool", new Vec3BoolArithmetic());
