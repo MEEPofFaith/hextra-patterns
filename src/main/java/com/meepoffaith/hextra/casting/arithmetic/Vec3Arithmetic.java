@@ -44,29 +44,30 @@ public class Vec3Arithmetic implements Arithmetic{
     public Operator getOperator(HexPattern pattern){
         //Vec3d already has rotate functions, but for some reason they take in a float for the angle.
         if(pattern.equals(ROT_ABOUT_X)){
-            return makeVecDoubToVec((v, x) -> {
+            return makeVecDoubToVec((v, x) -> { //Already clockwise
                 double c = Math.cos(x);
                 double s = Math.sin(x);
                 return new Vec3d(v.x, c*v.y + s*v.z, c*v.z - s*v.y);
             });
         }else if(pattern.equals(ROT_ABOUT_Y)){
             return makeVecDoubToVec((v, x) -> {
+                x = -x; //Negate to make it a clockwise rotation
                 double c = Math.cos(x);
                 double s = Math.sin(x);
                 return new Vec3d(c*v.x + s*v.z, v.y, c*v.z - s * v.x);
             });
         }else if(pattern.equals(ROT_ABOUT_Z)){
-            return makeVecDoubToVec((v, x) -> {
+            return makeVecDoubToVec((v, x) -> { //Already clockwise
                 double c = Math.cos(x);
                 double s = Math.sin(x);
                 return new Vec3d(c*v.x + s*v.y, c*v.y - s*v.x, v.z);
             });
         }else if(pattern.equals(CONSTRUCT_ABOUT_X)){
-            return makeDoubToVec(a -> new Vec3d(0, Math.sin(a), -Math.cos(a))); //-z is 0 rad
+            return makeDoubToVec(a -> new Vec3d(0, Math.sin(a), Math.cos(a))); //+Z is 0 rad
         }else if(pattern.equals(CONSTRUCT_ABOUT_Y)){
-            return makeDoubToVec(a -> new Vec3d(-Math.sin(a), 0, Math.cos(a))); //+z is 0 rad. Matches player yaw in F3.
+            return makeDoubToVec(a -> new Vec3d(-Math.sin(a), 0, Math.cos(a))); //+Z is 0 rad. Matches player yaw in F3.
         }else if(pattern.equals(CONSTRUCT_ABOUT_Z)){
-            return makeDoubToVec(a -> new Vec3d(Math.cos(a), Math.sin(a), 0)); //+x is 0 rad
+            return makeDoubToVec(a -> new Vec3d(-Math.cos(a), Math.sin(a), 0)); //-X is 0 rad
         }else if(pattern.equals(NORMALIZE)){
             return makeVecToVec(Vec3d::normalize);
         }else{
