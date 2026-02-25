@@ -26,6 +26,8 @@ public class Patterns{
     public static HexPattern CONSTRUCT_ABOUT_Y = register("cons_about_y", "daqqqqqew", HexDir.NORTH_WEST);
     public static HexPattern CONSTRUCT_ABOUT_Z = register("cons_about_z", "daqqqqqed", HexDir.NORTH_WEST);
     public static HexPattern NORMALIZE = register("normalize", "eeeeedww", HexDir.SOUTH_WEST);
+    public static HexPattern LEN_EQ = register("len_eq", "adqqaqw", HexDir.EAST);
+    public static HexPattern LEN_NEQ = register("len_neq", "daeedew", HexDir.EAST);
 
     public static void init(){
         register("deg_to_rad", "qqqqqdwdq", HexDir.WEST, new DegRad());

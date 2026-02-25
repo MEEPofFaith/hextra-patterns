@@ -7,6 +7,7 @@ import at.petrak.hexcasting.api.casting.arithmetic.operator.OperatorBinary;
 import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaMultiPredicate;
 import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaPredicate;
 import at.petrak.hexcasting.api.casting.iota.BooleanIota;
+import at.petrak.hexcasting.api.casting.iota.DoubleIota;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import com.meepoffaith.hextra.util.generics.Func2to1;
 import net.minecraft.util.math.Vec3d;
@@ -14,13 +15,17 @@ import net.minecraft.util.math.Vec3d;
 import java.util.List;
 
 import static at.petrak.hexcasting.common.lib.hex.HexIotaTypes.VEC3;
+import static com.meepoffaith.hextra.init.Patterns.LEN_EQ;
+import static com.meepoffaith.hextra.init.Patterns.LEN_NEQ;
 
 public class Vec3BoolArithmetic implements Arithmetic{
     private static final List<HexPattern> OPS = List.of(
         GREATER,
         LESS,
         GREATER_EQ,
-        LESS_EQ
+        LESS_EQ,
+        LEN_EQ,
+        LEN_NEQ
     );
 
     @Override
@@ -40,9 +45,21 @@ public class Vec3BoolArithmetic implements Arithmetic{
         }else if(pattern.equals(LESS)){
             return makeComp((a, b) -> a.length() < b.length());
         }else if(pattern.equals(GREATER_EQ)){
-            return makeComp((a, b) -> a.length() >= b.length());
+            return makeComp((a, b) -> {
+                double la = a.length();
+                double lb = b.length();
+                return DoubleIota.tolerates(la, lb) || la >= lb;
+            });
         }else if(pattern.equals(LESS_EQ)){
-            return makeComp((a, b) -> a.length() <= b.length());
+            return makeComp((a, b) -> {
+                double la = a.length();
+                double lb = b.length();
+                return DoubleIota.tolerates(la, lb) || la <= lb;
+            });
+        }else if(pattern.equals(LEN_EQ)){
+            return makeComp((a, b) -> DoubleIota.tolerates(a.length(), b.length()));
+        }else if(pattern.equals(LEN_NEQ)){
+            return makeComp((a, b) -> !DoubleIota.tolerates(a.length(), b.length()));
         }else{
             throw new InvalidOperatorException(pattern + " is not a valid operator in Vec3 Bool Arithmetic " + this);
         }

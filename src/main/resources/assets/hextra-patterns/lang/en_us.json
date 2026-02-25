@@ -10,6 +10,12 @@
   "hextra.page.logic.less": "If the first vector is shorter than the second, return True. Otherwise, return False.",
   "hextra.page.logic.greater_eq": "If the first vector is longer or the same length as the second, return True. Otherwise, return False.",
   "hextra.page.logic.less_eq": "If the first vector is shorter or the same length the second, return True. Otherwise, return False.",
+  "hexcasting.action.hextra:len_eq": "Length Equality Distillation",
+  "hexcasting.action.book.hextra:len_eq": "Length Equality Dstl.",
+  "hextra.page.logic.len_eq": "If the two vectors are the same length (within small tolerance), return True. Otherwise, return False",
+  "hexcasting.action.hextra:len_neq": "Length Inequality Distillation",
+  "hexcasting.action.book.hextra:len_neq": "Length Inequality Dstl.",
+  "hextra.page.logic.len_neq": "If the two vectors are not the same length (outside small tolerance), return True. Otherwise, return False",
 
   "pages.hextra.hextra_vec_literals.title": "Vector Literals",
   "hexcasting.action.book.hextra:scaled_vec_x": "Vector Rfln. +X/-X II",

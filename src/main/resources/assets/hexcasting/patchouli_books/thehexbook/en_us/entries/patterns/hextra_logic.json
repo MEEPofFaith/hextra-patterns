@@ -37,6 +37,22 @@
       "input": "vector, vector",
       "output": "bool",
       "text": "hextra.page.logic.less_eq"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextra:len_eq",
+      "anchor": "hextra:len_eq",
+      "input": "vector, vector",
+      "output": "bool",
+      "text": "hextra.page.logic.len_eq"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextra:len_neq",
+      "anchor": "hextra:len_neq",
+      "input": "vector, vector",
+      "output": "bool",
+      "text": "hextra.page.logic.len_neq"
     }
   ]
 }
