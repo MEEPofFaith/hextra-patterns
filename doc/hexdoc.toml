@@ -1,4 +1,4 @@
-modid = "hextra"
+modid = "hextra_patterns"
 book = "hexcasting:thehexbook"
 
 resource_dirs = [  # top takes priority
@@ -15,7 +15,7 @@ export_dir = "src/hexdoc_hextra_patterns/_export/generated"
 # TODO: change this to point to your actual mod icon
 icon = "icon.png"
 include = [
-    "hextra",
+    "hextra_patterns",
     "hexcasting",
     "hexdoc",
 ]
