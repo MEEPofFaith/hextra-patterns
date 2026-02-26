@@ -54,4 +54,4 @@ class HextrapatternsModPlugin(ModPluginWithBook):
     
     @override
     def jinja_template_root(self) -> tuple[Package, str]:
-        return hexdoc_hextra, "_templates"
+        return hexdoc_hextra_patterns, "_templates"
