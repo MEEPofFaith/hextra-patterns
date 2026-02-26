@@ -9,7 +9,7 @@ from hexdoc.plugin import (
     hookimpl,
 )
 
-import hexdoc_hextra
+import hexdoc_hextra_patterns
 
 from .__gradle_version__ import FULL_VERSION, GRADLE_VERSION
 from .__version__ import PY_VERSION
