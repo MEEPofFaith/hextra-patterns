@@ -31,7 +31,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"hextra" {
+		"hextrapats" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

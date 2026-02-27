@@ -11,18 +11,18 @@
 		"sources": "https://github.com/MEEPofFaith/hextra"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/hextra/icon.png",
+	"icon": "assets/hextrapats/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.meepoffaith.hextra.HextraPatterns"
+			"com.meepoffaith.hextrapats.HextraPatterns"
 		],
 		"client": [
-			"com.meepoffaith.hextra.HextraPatternsClient"
+			"com.meepoffaith.hextrapats.HextraPatternsClient"
 		]
 	},
 	"mixins": [
-		"hextra.mixins.json"
+		"hextrapats.mixins.json"
 	],
 	"depends": {
 		"fabric-api": "*",

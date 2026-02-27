@@ -1,5 +1,5 @@
 {
-  "name": "pages.hextra.hextra_consts.title",
+  "name": "pages.hextrapats.hextrapats_consts.title",
   "category": "hexcasting:patterns",
   "icon": "minecraft:obsidian",
   "sortnum": 3,
@@ -8,11 +8,11 @@
   "pages": [
     {
       "type": "hexcasting:manual_pattern",
-      "op_id": "hextra:haha_ha_one",
-      "anchor": "hextra:haha_ha_one",
+      "op_id": "hextrapats:haha_ha_one",
+      "anchor": "hextrapats:haha_ha_one",
       "input": "",
       "output": "vector",
-      "text": "hextra.page.consts.one",
+      "text": "hextrapats.page.consts.one",
       "patterns": [
         {
           "startdir": "NORTH_WEST",

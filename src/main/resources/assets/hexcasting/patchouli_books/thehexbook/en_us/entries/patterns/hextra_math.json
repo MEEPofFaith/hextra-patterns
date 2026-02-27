@@ -1,5 +1,5 @@
 {
-  "name": "pages.hextra.hextra_math.title",
+  "name": "pages.hextrapats.hextrapats_math.title",
   "category": "hexcasting:patterns",
   "icon": "minecraft:popped_chorus_fruit",
   "sortnum": 2,
@@ -8,75 +8,75 @@
   "pages": [
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextra:deg_to_rad",
-      "anchor": "hextra:deg_to_rad",
+      "op_id": "hextrapats:deg_to_rad",
+      "anchor": "hextrapats:deg_to_rad",
       "input": "number",
       "output": "number",
-      "text": "hextra.page.math.deg_to_rad"
+      "text": "hextrapats.page.math.deg_to_rad"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextra:rad_to_deg",
-      "anchor": "hextra:rad_to_deg",
+      "op_id": "hextrapats:rad_to_deg",
+      "anchor": "hextrapats:rad_to_deg",
       "input": "number",
       "output": "number",
-      "text": "hextra.page.math.rad_to_deg"
+      "text": "hextrapats.page.math.rad_to_deg"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextra:normalize",
-      "anchor": "hextra:normalize",
+      "op_id": "hextrapats:normalize",
+      "anchor": "hextrapats:normalize",
       "input": "vector",
       "output": "vector",
-      "text": "hextra.page.math.normalize"
+      "text": "hextrapats.page.math.normalize"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextra:rot_about_x",
-      "anchor": "hextra:rot_about_x",
+      "op_id": "hextrapats:rot_about_x",
+      "anchor": "hextrapats:rot_about_x",
       "input": "vector, number",
       "output": "vector",
-      "text": "hextra.page.math.rot_about_x"
+      "text": "hextrapats.page.math.rot_about_x"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextra:rot_about_y",
-      "anchor": "hextra:rot_about_y",
+      "op_id": "hextrapats:rot_about_y",
+      "anchor": "hextrapats:rot_about_y",
       "input": "vector, number",
       "output": "vector",
-      "text": "hextra.page.math.rot_about_y"
+      "text": "hextrapats.page.math.rot_about_y"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextra:rot_about_z",
-      "anchor": "hextra:rot_about_z",
+      "op_id": "hextrapats:rot_about_z",
+      "anchor": "hextrapats:rot_about_z",
       "input": "vector, number",
       "output": "vector",
-      "text": "hextra.page.math.rot_about_z"
+      "text": "hextrapats.page.math.rot_about_z"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextra:cons_about_x",
-      "anchor": "hextra:cons_about_x",
+      "op_id": "hextrapats:cons_about_x",
+      "anchor": "hextrapats:cons_about_x",
       "input": "number",
       "output": "vector",
-      "text": "hextra.page.math.cons_about_x"
+      "text": "hextrapats.page.math.cons_about_x"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextra:cons_about_y",
-      "anchor": "hextra:cons_about_y",
+      "op_id": "hextrapats:cons_about_y",
+      "anchor": "hextrapats:cons_about_y",
       "input": "number",
       "output": "vector",
-      "text": "hextra.page.math.cons_about_y"
+      "text": "hextrapats.page.math.cons_about_y"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextra:cons_about_z",
-      "anchor": "hextra:cons_about_z",
+      "op_id": "hextrapats:cons_about_z",
+      "anchor": "hextrapats:cons_about_z",
       "input": "number",
       "output": "vector",
-      "text": "hextra.page.math.cons_about_z"
+      "text": "hextrapats.page.math.cons_about_z"
     }
   ]
 }

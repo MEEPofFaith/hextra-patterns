@@ -48,12 +48,12 @@ dev = [
 
 [tool.hatch.build]
 only-include = [
-    "doc/src/hexdoc_hextra_patterns",
+    "doc/src/hexdoc_hextrapats",
     "gradle.properties",
 ]
 artifacts = [
-    "/doc/src/hexdoc_hextra_patterns/_export/generated",
-    "/doc/src/hexdoc_hextra_patterns/__gradle_version__.py",
+    "/doc/src/hexdoc_hextrapats/_export/generated",
+    "/doc/src/hexdoc_hextrapats/__gradle_version__.py",
 ]
 
 [tool.hatch.build.targets.wheel]
@@ -62,7 +62,7 @@ sources = ["doc/src"]
 # hexdoc entry points
 
 [project.entry-points.hexdoc]
-hextra_patterns = "hexdoc_hextra_patterns._hooks:HextrapatternsPlugin"
+hextra_patterns = "hexdoc_hextrapats._hooks:HextrapatsPlugin"
 
 # linting
 

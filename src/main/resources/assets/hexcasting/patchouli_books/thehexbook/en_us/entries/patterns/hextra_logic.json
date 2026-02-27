@@ -1,5 +1,5 @@
 {
-  "name": "pages.hextra.hextra_logic.title",
+  "name": "pages.hextrapats.hextrapats_logic.title",
   "category": "hexcasting:patterns",
   "icon": "minecraft:redstone_lamp",
   "sortnum": 5,
@@ -12,7 +12,7 @@
       "anchor": "hexcasting:greater",
       "input": "vector, vector",
       "output": "bool",
-      "text": "hextra.page.logic.greater"
+      "text": "hextrapats.page.logic.greater"
     },
     {
       "type": "hexcasting:pattern",
@@ -20,7 +20,7 @@
       "anchor": "hexcasting:less",
       "input": "vector, vector",
       "output": "bool",
-      "text": "hextra.page.logic.less"
+      "text": "hextrapats.page.logic.less"
     },
     {
       "type": "hexcasting:pattern",
@@ -28,7 +28,7 @@
       "anchor": "hexcasting:greater_eq",
       "input": "vector, vector",
       "output": "bool",
-      "text": "hextra.page.logic.greater_eq"
+      "text": "hextrapats.page.logic.greater_eq"
     },
     {
       "type": "hexcasting:pattern",
@@ -36,23 +36,23 @@
       "anchor": "hexcasting:less_eq",
       "input": "vector, vector",
       "output": "bool",
-      "text": "hextra.page.logic.less_eq"
+      "text": "hextrapats.page.logic.less_eq"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextra:len_eq",
-      "anchor": "hextra:len_eq",
+      "op_id": "hextrapats:len_eq",
+      "anchor": "hextrapats:len_eq",
       "input": "vector, vector",
       "output": "bool",
-      "text": "hextra.page.logic.len_eq"
+      "text": "hextrapats.page.logic.len_eq"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextra:len_neq",
-      "anchor": "hextra:len_neq",
+      "op_id": "hextrapats:len_neq",
+      "anchor": "hextrapats:len_neq",
       "input": "vector, vector",
       "output": "bool",
-      "text": "hextra.page.logic.len_neq"
+      "text": "hextrapats.page.logic.len_neq"
     }
   ]
 }
