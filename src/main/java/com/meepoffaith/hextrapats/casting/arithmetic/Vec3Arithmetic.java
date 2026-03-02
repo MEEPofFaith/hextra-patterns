@@ -32,7 +32,7 @@ public class Vec3Arithmetic implements Arithmetic{
 
     @Override
     public String arithName(){
-        return "hextra_vec3_math";
+        return "hextrapats_vec3_math";
     }
 
     @Override

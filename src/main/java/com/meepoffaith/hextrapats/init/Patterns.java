@@ -41,6 +41,7 @@ public class Patterns{
         registerSpecialHandler("scaled_vec_y", SCALED_VEC_Y);
         registerSpecialHandler("scaled_vec_z", SCALED_VEC_Z);
         registerSpecialHandler("scaled_vec_all", SCALED_VEC_ALL);
+        registerSpecialHandler("retained_bools", RETAINED_BOOLS);
     }
 
     private static void register(

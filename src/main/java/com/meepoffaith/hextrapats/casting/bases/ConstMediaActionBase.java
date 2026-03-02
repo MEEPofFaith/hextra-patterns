@@ -46,8 +46,8 @@ public abstract class ConstMediaActionBase extends PatternBase implements ConstM
 
 
     @Override
-    public OperationResult operate(CastingEnvironment arg0, CastingImage arg1, SpellContinuation arg2) {
-        return ConstMediaAction.DefaultImpls.operate(this, arg0, arg1, arg2);
+    public OperationResult operate(CastingEnvironment env, CastingImage image, SpellContinuation cont) {
+        return ConstMediaAction.DefaultImpls.operate(this, env, image, cont);
     }
 
     // boo!
