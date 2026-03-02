@@ -1,8 +1,8 @@
 {
   "pages.hextrapats.hextrapats_consts.title": "Hextra Constants",
   "hexcasting.action.book.hextrapats:haha_ha_one":  "Vector Rfln. +1/-1",
-  "hexcasting.action.hextrapats:haha_ha_one": "Vector Rfln. +1",
-  "hexcasting.action.hextrapats:eno_ah_ahah": "Vector Rfln. -1",
+  "hexcasting.action.hextrapats:haha_ha_one": "Vector Reflection +1",
+  "hexcasting.action.hextrapats:eno_ah_ahah": "Vector Reflection -1",
   "hextrapats.page.consts.one": "The left-hand counter-clockwise pattern adds (1, 1, 1) to the stack; the right-hand clockwise pattern adds (-1, -1, -1).",
 
   "pages.hextrapats.hextrapats_logic.title": "Hextra Logic",
@@ -18,9 +18,13 @@
   "hextrapats.page.logic.len_neq": "If the two vectors are not the same length (outside small tolerance), return True. Otherwise, return False",
 
   "pages.hextrapats.hextrapats_vec_literals.title": "Vector Literals",
+  "hexcasting.action.hextrapats:scaled_vec_x": "Vector Reflection X II",
   "hexcasting.action.book.hextrapats:scaled_vec_x": "Vector Rfln. +X/-X II",
+  "hexcasting.action.hextrapats:scaled_vec_y": "Vector Reflection Y II",
   "hexcasting.action.book.hextrapats:scaled_vec_y": "Vector Rfln. +Y/-Y II",
+  "hexcasting.actionhextrapats:scaled_vec_z": "Vector Reflection Z II",
   "hexcasting.action.book.hextrapats:scaled_vec_z": "Vector Rfln. +Z/-Z II",
+  "hexcasting.actionhextrapats:scaled_vec_all": "Vector Reflection 1 II",
   "hexcasting.action.book.hextrapats:scaled_vec_all": "Vector Rfln. +1/-1 II",
   "hextrapats.page.vec_literals.1": "Interestingly, attaching the tail of any Vector Reflection to the start of $(l:patterns/numbers)$(action)Number Reflection/$ makes it return a vector.",
   "hextrapats.page.vec_literals.2": "A head that sharply bends to the left will output a vector along the $(l:patterns/consts#hexcasting:const/vec/x)$(action)X axis/$.",
