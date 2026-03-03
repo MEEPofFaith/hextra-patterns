@@ -2,10 +2,14 @@ package com.meepoffaith.hextrapats.util;
 
 import at.petrak.hexcasting.api.HexAPI;
 import at.petrak.hexcasting.api.casting.castables.SpecialHandler.Factory;
+import at.petrak.hexcasting.api.casting.eval.vm.CastingImage;
+import at.petrak.hexcasting.api.casting.iota.Iota;
 import at.petrak.hexcasting.api.utils.HexUtils;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.text.Text;
+
+import java.util.List;
 
 public class HextraUtils{
     /** Simulates the accumulation process of Numerical Reflection */
@@ -41,5 +45,9 @@ public class HextraUtils{
                 HexAPI.instance().getSpecialHandlerI18nKey(key), args
             )
         );
+    }
+
+    public static CastingImage copyImage(CastingImage image, List<Iota> stack){
+        return image.copy(stack, image.getParenCount(), image.getParenthesized(), image.getEscapeNext(), image.getOpsConsumed(), image.getUserData());
     }
 }

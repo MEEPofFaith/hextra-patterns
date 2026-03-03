@@ -1,20 +1,15 @@
 package com.meepoffaith.hextrapats.casting.handlers;
 
 import at.petrak.hexcasting.api.casting.ActionRegistryEntry;
-import at.petrak.hexcasting.api.casting.SpellList;
-import at.petrak.hexcasting.api.casting.SpellList.LList;
 import at.petrak.hexcasting.api.casting.castables.Action;
 import at.petrak.hexcasting.api.casting.castables.SpecialHandler;
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment;
 import at.petrak.hexcasting.api.casting.eval.OperationResult;
 import at.petrak.hexcasting.api.casting.eval.vm.CastingImage;
-import at.petrak.hexcasting.api.casting.eval.vm.FrameEvaluate;
 import at.petrak.hexcasting.api.casting.eval.vm.SpellContinuation;
 import at.petrak.hexcasting.api.casting.iota.Iota;
-import at.petrak.hexcasting.api.casting.iota.PatternIota;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs;
-import at.petrak.hexcasting.api.utils.HexUtils;
 import at.petrak.hexcasting.common.lib.hex.HexActions;
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds;
 import com.meepoffaith.hextrapats.casting.bases.ConstMediaActionBase;
@@ -23,6 +18,7 @@ import com.meepoffaith.hextrapats.util.HextraUtils;
 import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static at.petrak.hexcasting.common.lib.hex.HexActions.*;
@@ -45,7 +41,7 @@ public class RetainedComparison implements SpecialHandler{
 
     @Override
     public Action act(){
-        return new InnerAction(op.prototype());
+        return new InnerAction(op.action());
     }
 
     @Override
@@ -58,26 +54,22 @@ public class RetainedComparison implements SpecialHandler{
     public static class InnerAction extends ConstMediaActionBase{
         public int argc = 2;
         public long mediaCost = 0L;
-        HexPattern op;
+        Action act;
 
-        public InnerAction(HexPattern op){
-            this.op = op;
+        public InnerAction(Action act){
+            this.act = act;
         }
 
         @Override
         public OperationResult operate(CastingEnvironment env, CastingImage image, SpellContinuation cont){
             List<Iota> stack = image.getStack();
             if(argc > stack.size()) throw new MishapNotEnoughArgs(argc, stack.size());
-            return exec(env, image, cont);
-        }
-
-        //Replicates Hermes, but without consuming from the stack
-        public OperationResult exec(CastingEnvironment env, CastingImage image, SpellContinuation cont){
-            SpellList toCast = new LList(0, asActionResult(new PatternIota(op)));
-            FrameEvaluate frame = new FrameEvaluate(toCast, false);
-            List<Iota> stack = image.getStack();
-            stack.addAll(stack.subList(stack.size() - argc, stack.size()));
-            return new OperationResult(image, List.of(), cont.pushFrame(frame), HexEvalSounds.NORMAL_EXECUTE);
+            List<Iota> stackCopy = stack.subList(stack.size() - argc, stack.size());
+            CastingImage image2 = HextraUtils.copyImage(image, stackCopy);
+            List<Iota> opStack = act.operate(env, image2, cont).getNewImage().getStack();
+            List<Iota> newStack = new ArrayList<>(stack);
+            newStack.add(opStack.get(opStack.size() - 1));
+            return new OperationResult(HextraUtils.copyImage(image, newStack), List.of(), cont, HexEvalSounds.NOTHING);
         }
     }
 
