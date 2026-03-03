@@ -25,6 +25,15 @@ public class HextraUtils{
         return accumulator;
     }
 
+    public static Text specialHandlerLangSuffix(Factory<?> handler, String suffix, Object... args){
+        RegistryKey<Factory<?>> key = IXplatAbstractions.INSTANCE.getSpecialHandlerRegistry().getKey(handler).get();
+        return HexUtils.getLightPurple(
+            HexUtils.asTranslatedComponent(
+                HexAPI.instance().getSpecialHandlerI18nKey(key) + suffix, args
+            )
+        );
+    }
+
     public static Text specialHandlerLang(Factory<?> handler, Object... args){
         RegistryKey<Factory<?>> key = IXplatAbstractions.INSTANCE.getSpecialHandlerRegistry().getKey(handler).get();
         return HexUtils.getLightPurple(

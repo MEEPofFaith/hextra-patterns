@@ -1,5 +1,6 @@
 package com.meepoffaith.hextrapats.casting.handlers;
 
+import at.petrak.hexcasting.api.casting.ActionRegistryEntry;
 import at.petrak.hexcasting.api.casting.SpellList;
 import at.petrak.hexcasting.api.casting.SpellList.LList;
 import at.petrak.hexcasting.api.casting.castables.Action;
@@ -13,8 +14,12 @@ import at.petrak.hexcasting.api.casting.iota.Iota;
 import at.petrak.hexcasting.api.casting.iota.PatternIota;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs;
+import at.petrak.hexcasting.api.utils.HexUtils;
+import at.petrak.hexcasting.common.lib.hex.HexActions;
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds;
 import com.meepoffaith.hextrapats.casting.bases.ConstMediaActionBase;
+import com.meepoffaith.hextrapats.init.SpecialHandlers;
+import com.meepoffaith.hextrapats.util.HextraUtils;
 import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
 
@@ -22,30 +27,32 @@ import java.util.List;
 
 import static at.petrak.hexcasting.common.lib.hex.HexActions.*;
 
-public class RetainedBools implements SpecialHandler{
-    public static final List<HexPattern> OPS = List.of(
-        GREATER.prototype(),
-        LESS.prototype(),
-        GREATER_EQ.prototype(),
-        LESS_EQ.prototype(),
-        EQUALS.prototype(),
-        NOT_EQUALS.prototype()
+public class RetainedComparison implements SpecialHandler{
+    public static final List<ActionRegistryEntry> OPS = List.of(
+        GREATER,
+        LESS,
+        GREATER_EQ,
+        LESS_EQ,
+        EQUALS,
+        NOT_EQUALS
     );
 
-    HexPattern op;
+    ActionRegistryEntry op;
 
-    public RetainedBools(HexPattern op){
+    public RetainedComparison(ActionRegistryEntry op){
         this.op = op;
     }
 
     @Override
     public Action act(){
-        return new InnerAction(op);
+        return new InnerAction(op.prototype());
     }
 
     @Override
     public Text getName(){
-        return null;
+        return HextraUtils.specialHandlerLangSuffix(SpecialHandlers.RETAINED_COMPARISON, ".name",
+            HextraUtils.specialHandlerLangSuffix(SpecialHandlers.RETAINED_COMPARISON, ".op." + HexActions.REGISTRY.getId(op))
+        );
     }
 
     public static class InnerAction extends ConstMediaActionBase{
@@ -74,22 +81,22 @@ public class RetainedBools implements SpecialHandler{
         }
     }
 
-    public static class RetainedBoolsFactory implements Factory<RetainedBools>{
+    public static class RetainedComparisonFactory implements Factory<RetainedComparison>{
         @Override
-        public @Nullable RetainedBools tryMatch(HexPattern pattern, CastingEnvironment env){
+        public @Nullable RetainedComparison tryMatch(HexPattern pattern, CastingEnvironment env){
             String sig = pattern.anglesSignature();
             if(sig.startsWith("dd")){
                 String op = sig.substring(2);
-                for(HexPattern p : OPS){
-                    String opStart = switch(p.getStartDir()){
+                for(ActionRegistryEntry p : OPS){
+                    String opStart = switch(p.prototype().getStartDir()){
                         case EAST -> "q";
                         case SOUTH_EAST -> "w";
                         case SOUTH_WEST -> "e";
                         case NORTH_EAST -> "a";
                         default -> throw new IllegalStateException(); //Will never occur
                     };
-                    if(op.equals(opStart + p.anglesSignature())){
-                        return new RetainedBools(p);
+                    if(op.equals(opStart + p.prototype().anglesSignature())){
+                        return new RetainedComparison(p);
                     }
                 }
             }

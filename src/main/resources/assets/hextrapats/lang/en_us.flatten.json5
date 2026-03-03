@@ -91,7 +91,18 @@
       scaled_vec_x: "Vector Reflection: (%s, 0, 0)",
       scaled_vec_y: "Vector Reflection: (0, %s, 0)",
       scaled_vec_z: "Vector Reflection: (0, 0, %s)",
-      scaled_vec_all: "Vector Reflection: (%s, %s, %s)"
+      scaled_vec_all: "Vector Reflection: (%s, %s, %s)",
+      retained_comparison: {
+        name: "Comparison Gambit: %s",
+        "op.hexcasting:": {
+          greater: "Maximus",
+          less: "Minimus",
+          greater_eq: "Maximus II",
+          less_eq: "Minimus II",
+          equals: "Equality",
+          not_equals: "Inequality"
+        }
+      },
     }
   }
 }
