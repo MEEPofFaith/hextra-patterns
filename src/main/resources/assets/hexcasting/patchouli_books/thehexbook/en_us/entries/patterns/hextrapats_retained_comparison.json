@@ -17,8 +17,7 @@
       "text": "hextrapats.page.retained_comparison.detail"
     },
     {
-      "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:retained_comparison",
+      "type": "hexcasting:manual_pattern_nosig",
       "input": "A, B",
       "output": "A, B, bool",
       "header": "hextrapats.page.retained_comparison.greater",
@@ -31,8 +30,7 @@
       ]
     },
     {
-      "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:retained_comparison",
+      "type": "hexcasting:manual_pattern_nosig",
       "input": "A, B",
       "output": "A, B, bool",
       "header": "hextrapats.page.retained_comparison.less",
@@ -45,8 +43,7 @@
       ]
     },
     {
-      "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:retained_comparison",
+      "type": "hexcasting:manual_pattern_nosig",
       "input": "A, B",
       "output": "A, B, bool",
       "header": "hextrapats.page.retained_comparison.greater_eq",
@@ -59,8 +56,7 @@
       ]
     },
     {
-      "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:retained_comparison",
+      "type": "hexcasting:manual_pattern_nosig",
       "input": "A, B",
       "output": "A, B, bool",
       "header": "hextrapats.page.retained_comparison.less_eq",
@@ -73,8 +69,7 @@
       ]
     },
     {
-      "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:retained_comparison",
+      "type": "hexcasting:manual_pattern_nosig",
       "input": "A, B",
       "output": "A, B, bool",
       "header": "hextrapats.page.retained_comparison.equals",
@@ -87,8 +82,7 @@
       ]
     },
     {
-      "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:retained_comparison",
+      "type": "hexcasting:manual_pattern_nosig",
       "input": "A, B",
       "output": "A, B, bool",
       "header": "hextrapats.page.retained_comparison.not_equals",
@@ -101,8 +95,7 @@
       ]
     },
     {
-      "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:retained_comparison",
+      "type": "hexcasting:manual_pattern_nosig",
       "input": "A, B",
       "output": "A, B, bool",
       "header": "hextrapats.page.retained_comparison.len_eq",
@@ -115,8 +108,7 @@
       ]
     },
     {
-      "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:retained_comparison",
+      "type": "hexcasting:manual_pattern_nosig",
       "input": "A, B",
       "output": "A, B, bool",
       "header": "hextrapats.page.retained_comparison.len_neq",
