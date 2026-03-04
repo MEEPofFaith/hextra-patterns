@@ -79,7 +79,7 @@ public class Vec3BoolArithmetic implements Arithmetic{
                 }else if(op == 3){
                     return min <= len && len <= max;
                 }else{
-                    throw new InvalidOperatorException(op + " is not a valid op for Range Gambit");
+                    throw new InvalidOperatorException(op + " is not a valid op for Range Exaltation");
                 }
             });
         }else if(pattern.equals(OUT_RANGE)){
@@ -96,7 +96,7 @@ public class Vec3BoolArithmetic implements Arithmetic{
                 }else if(op == 3){
                     return len <= min || len >= max;
                 }else{
-                    throw new InvalidOperatorException(op + " is not a valid op for Range Gambit II");
+                    throw new InvalidOperatorException(op + " is not a valid op for Range Exaltation II");
                 }
             });
         }else{

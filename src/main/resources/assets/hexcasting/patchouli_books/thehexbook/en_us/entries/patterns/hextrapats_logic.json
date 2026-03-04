@@ -53,6 +53,30 @@
       "input": "vector, vector",
       "output": "bool",
       "text": "hextrapats.page.logic.len_neq"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:in_range",
+      "anchor": "hextrapats:in_range",
+      "input": "num/vec, num, num, num",
+      "output": "bool",
+      "text": "hextrapats.page.logic.in_range"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.logic.in_range.ops"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:out_range",
+      "anchor": "hextrapats:out_range",
+      "input": "num/vec, num, num, num",
+      "output": "bool",
+      "text": "hextrapats.page.logic.out_range"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.logic.out_range.ops"
     }
   ]
 }

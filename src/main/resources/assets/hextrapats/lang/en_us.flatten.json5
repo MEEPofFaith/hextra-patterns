@@ -17,7 +17,11 @@
         greater_eq: "If the first vector is longer or the same length as the second, return True. Otherwise, return False.",
         less_eq: "If the first vector is shorter or the same length as the second, return True. Otherwise, return False.",
         len_eq: "If the two vectors are the same length (within small tolerance), return True. Otherwise, return False.",
-        len_neq: "If the two vectors are not the same length (outside small tolerance), return True. Otherwise, return False."
+        len_neq: "If the two vectors are not the same length (outside small tolerance), return True. Otherwise, return False.",
+        in_range: "If the first number is between the second and third, return True. Otherwise, return False. If the first value is a vector, compare its length instead.",
+        "in_range.ops": "The fourth number seems to describe how to check if the value is in the range.$(li)0: min < val < max$(li)1: min <= val < max$(li)2: min < val <= max$(li)3: min <= val <= max",
+        out_range: "If the first number is not between the second and third, return True. Otherwise, return False. If the first value is a vector, compare its length instead.",
+        "out_range.ops": "The fourth number seems to describe how to check if the value is outside the range.$(li)0: val < min or max < val$(li)1: val <= min or max < val$(li)2: val < min or max <= val$(li)3: val <= min or max <= val"
       },
       retained_comparison: {
         intro: "Sometimes, I want operate on two iotas after comparing them, but it gets rather annoying to have to execute $(l:patterns/stackmanip#hexcasting:2dup)$(action)Dioscuri Gambit/$ every time I do.",
@@ -71,6 +75,9 @@
 
         len_eq: "Length Equality Distillation",
         len_neq: "Length Inequality Distillation",
+
+        in_range: "Range Exaltation",
+        out_range: "Range Exaltation II",
 
         scaled_vec_x: "Vector Reflection X II",
         scaled_vec_y: "Vector Reflection Y II",
