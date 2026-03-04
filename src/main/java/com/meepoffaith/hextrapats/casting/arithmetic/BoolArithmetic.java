@@ -35,7 +35,9 @@ public class BoolArithmetic implements Arithmetic{
     @Override
     public Operator getOperator(HexPattern pattern){
         if(pattern.equals(IN_RANGE)){
-            return makeRange((len, min, max, op) -> {
+            return makeRange((len, a, b, op) -> {
+                double min = Math.min(a, b);
+                double max = Math.max(a, b);
                 if(op == 0){
                     return min < len && len < max;
                 }else if(op == 1){
@@ -49,7 +51,9 @@ public class BoolArithmetic implements Arithmetic{
                 }
             });
         }else if(pattern.equals(OUT_RANGE)){
-            return makeRange((len, min, max, op) -> {
+            return makeRange((len, a, b, op) -> {
+                double min = Math.min(a, b);
+                double max = Math.max(a, b);
                 if(op == 0){
                     return len < min || len > max;
                 }else if(op == 1){

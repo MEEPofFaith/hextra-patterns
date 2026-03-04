@@ -66,8 +66,10 @@ public class Vec3BoolArithmetic implements Arithmetic{
         }else if(pattern.equals(LEN_NEQ)){
             return makeComp((a, b) -> !DoubleIota.tolerates(a.length(), b.length()));
         }else if(pattern.equals(IN_RANGE)){
-            return makeRange((v, min, max, op) -> {
+            return makeRange((v, a, b, op) -> {
                 double len = v.length();
+                double min = Math.min(a, b);
+                double max = Math.max(a, b);
                 if(op == 0){
                     return min < len && len < max;
                 }else if(op == 1){
@@ -81,8 +83,10 @@ public class Vec3BoolArithmetic implements Arithmetic{
                 }
             });
         }else if(pattern.equals(OUT_RANGE)){
-            return makeRange((v, min, max, op) -> {
+            return makeRange((v, a, b, op) -> {
                 double len = v.length();
+                double min = Math.min(a, b);
+                double max = Math.max(a, b);
                 if(op == 0){
                     return len < min || len > max;
                 }else if(op == 1){
