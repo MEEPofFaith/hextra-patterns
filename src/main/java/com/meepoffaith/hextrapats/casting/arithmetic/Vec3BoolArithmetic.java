@@ -63,13 +63,13 @@ public class Vec3BoolArithmetic implements Arithmetic{
                 double len = v.length();
                 double min = Math.min(a, b);
                 double max = Math.max(a, b);
-                if(op == 0){
+                if(DoubleIota.tolerates(op, 0)){
                     return min < len && len < max;
-                }else if(op == 1){
+                }else if(DoubleIota.tolerates(op, 1)){
                     return HextraUtils.lessEq(min, len) && len < max;
-                }else if(op == 2){
+                }else if(DoubleIota.tolerates(op, 2)){
                     return min < len && HextraUtils.lessEq(len, max);
-                }else if(op == 3){
+                }else if(DoubleIota.tolerates(op, 3)){
                     return HextraUtils.lessEq(min, len) && HextraUtils.lessEq(len, max);
                 }else{
                     throw new InvalidOperatorException(op + " is not a valid op for Range Exaltation");
@@ -80,13 +80,13 @@ public class Vec3BoolArithmetic implements Arithmetic{
                 double len = v.length();
                 double min = Math.min(a, b);
                 double max = Math.max(a, b);
-                if(op == 0){
+                if(DoubleIota.tolerates(op, 0)){
                     return len < min || max < len;
-                }else if(op == 1){
+                }else if(DoubleIota.tolerates(op, 1)){
                     return HextraUtils.lessEq(len, min) || max < len;
-                }else if(op == 2){
+                }else if(DoubleIota.tolerates(op, 2)){
                     return len < min || HextraUtils.lessEq(max, len);
-                }else if(op == 3){
+                }else if(DoubleIota.tolerates(op, 3)){
                     return HextraUtils.lessEq(len, min) || HextraUtils.lessEq(max, len);
                 }else{
                     throw new InvalidOperatorException(op + " is not a valid op for Range Exaltation II");

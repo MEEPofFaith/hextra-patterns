@@ -6,6 +6,7 @@ import at.petrak.hexcasting.api.casting.arithmetic.operator.Operator;
 import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaMultiPredicate;
 import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaPredicate;
 import at.petrak.hexcasting.api.casting.iota.BooleanIota;
+import at.petrak.hexcasting.api.casting.iota.DoubleIota;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import com.meepoffaith.hextrapats.casting.arithmetic.operator.OperatorQuadary;
 import com.meepoffaith.hextrapats.util.HextraUtils;
@@ -39,13 +40,13 @@ public class BoolArithmetic implements Arithmetic{
             return makeRange((val, a, b, op) -> {
                 double min = Math.min(a, b);
                 double max = Math.max(a, b);
-                if(op == 0){
+                if(DoubleIota.tolerates(op, 0)){
                     return min < val && val < max;
-                }else if(op == 1){
+                }else if(DoubleIota.tolerates(op, 1)){
                     return HextraUtils.lessEq(min, val) && val < max;
-                }else if(op == 2){
+                }else if(DoubleIota.tolerates(op, 2)){
                     return min < val && HextraUtils.lessEq(val, max);
-                }else if(op == 3){
+                }else if(DoubleIota.tolerates(op, 3)){
                     return HextraUtils.lessEq(min, val) && HextraUtils.lessEq(val, max);
                 }else{
                     throw new InvalidOperatorException(op + " is not a valid op for Range Exaltation");
@@ -55,13 +56,13 @@ public class BoolArithmetic implements Arithmetic{
             return makeRange((val, a, b, op) -> {
                 double min = Math.min(a, b);
                 double max = Math.max(a, b);
-                if(op == 0){
+                if(DoubleIota.tolerates(op, 0)){
                     return val < min || max < val;
-                }else if(op == 1){
+                }else if(DoubleIota.tolerates(op, 1)){
                     return HextraUtils.lessEq(val, min) || max < val;
-                }else if(op == 2){
+                }else if(DoubleIota.tolerates(op, 2)){
                     return val < min || HextraUtils.lessEq(max, val);
-                }else if(op == 3){
+                }else if(DoubleIota.tolerates(op, 3)){
                     return HextraUtils.lessEq(val, min) || HextraUtils.lessEq(max, val);
                 }else{
                     throw new InvalidOperatorException(op + " is not a valid op for Range Exaltation II");
