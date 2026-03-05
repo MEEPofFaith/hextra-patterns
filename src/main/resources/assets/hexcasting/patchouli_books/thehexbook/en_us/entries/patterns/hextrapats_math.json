@@ -77,6 +77,47 @@
       "input": "number",
       "output": "vector",
       "text": "hextrapats.page.math.cons_about_z"
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:scientific_exp",
+      "anchor": "hextrapats:scientific_exp",
+      "input": "num",
+      "output": "num",
+      "text": "hextrapats.page.math.scientific_exp",
+      "patterns": [
+        {
+          "startdir": "SOUTH_EAST",
+          "signature": "waqe",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "SOUTH_EAST",
+          "signature": "waqeq",
+          "q": 0,
+          "r": -1
+        }, {
+          "startdir": "SOUTH_EAST",
+          "signature": "waqeqe",
+          "q": 1,
+          "r": -1
+        }, {
+          "startdir": "NORTH_EAST",
+          "signature": "wdeq",
+          "q": -1,
+          "r": 1
+        }, {
+          "startdir": "NORTH_EAST",
+          "signature": "wdeqe",
+          "q": 0,
+          "r": 1
+        }, {
+          "startdir": "NORTH_EAST",
+          "signature": "wdeqeq",
+          "q": 1,
+          "r": 1
+        }
+      ]
     }
   ]
 }

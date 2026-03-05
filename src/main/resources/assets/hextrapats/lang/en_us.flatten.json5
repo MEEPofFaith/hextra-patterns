@@ -63,7 +63,8 @@
         rot_about_z: "Rotates the vector by the given angle in radians around the Z axis.",
         cons_about_x: "Converts an angle in radians to a unit vector where X=0. +Z at 0 radians and +Y at pi/4 radians.",
         cons_about_y: "Converts an angle in radians to a unit vector where Y=0. +Z at 0 radians and -X at pi/4 radians. Some texts have mentioned something called $(thing)F3/$, but I haven't been able to tell what that means.",
-        cons_about_z: "Converts an angle in radians to a unit vector where Z=0. -X at 0 radians and +Y at pi/4 radians."
+        cons_about_z: "Converts an angle in radians to a unit vector where Z=0. -X at 0 radians and +Y at pi/4 radians.",
+        scientific_exp: "Multiplies the number by 10^n, where n is the length of the tail. A downwards tail multiplies by 10^-n."
       }
     }
   },
@@ -94,7 +95,9 @@
         cons_about_y: "Yaw Purification",
         cons_about_z: "Roll Purification",
 
-        retained_comparison: "Comparison Gambit"
+        retained_comparison: "Comparison Gambit",
+
+        scientific_exp: "Scientific Purification"
       },
 
       "book.hextrapats:": {
@@ -125,6 +128,7 @@
           not_equals: "Inequality"
         }
       },
+      scientific_exp: "Scientific Purification: 10^%s"
     }
   }
 }

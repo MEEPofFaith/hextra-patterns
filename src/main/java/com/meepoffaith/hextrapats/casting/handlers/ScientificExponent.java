@@ -8,6 +8,8 @@ import at.petrak.hexcasting.api.casting.iota.Iota;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import com.meepoffaith.hextrapats.casting.bases.ConstMediaActionBase;
 import com.meepoffaith.hextrapats.casting.bases.HexIotaStack;
+import com.meepoffaith.hextrapats.init.SpecialHandlers;
+import com.meepoffaith.hextrapats.util.HextraUtils;
 import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
 
@@ -27,7 +29,7 @@ public class ScientificExponent implements SpecialHandler{
 
     @Override
     public Text getName(){
-        return null;
+        return HextraUtils.specialHandlerLang(SpecialHandlers.SCIENTIFIC_EXPONENT, exponent);
     }
 
     public static class InnerAction extends ConstMediaActionBase{
@@ -52,8 +54,8 @@ public class ScientificExponent implements SpecialHandler{
             if(sig.startsWith("waqe") || sig.startsWith("wdeq")){
                 boolean divide = sig.startsWith("wdeq");
                 char[] chars = sig.substring(4).toCharArray();
-                int exponent = 0;
-                for(int i = 0; i < chars.length; i++){
+                int exponent = 1;
+                for(int i = 0; i < chars.length; i++){ //Code based on Sekhmet from Overevaluate
                     if(chars[i] != "qe".charAt((i + (divide ? 1 : 0)) % 2)){
                         return null;
                     }
