@@ -41,7 +41,7 @@ public class Patterns{
         register("haha_ha_one", "qqqqqeq", HexDir.NORTH_WEST, new VecOne());
         register("eno_ah_ahah", "eeeeeqq", HexDir.SOUTH_WEST, new VecNegOne());
 
-        register("split_list", "deeaqaw", HexDir.NORTH_WEST, new ListSplit());
+        register("split_list", "wdedqqa", HexDir.EAST, new ListSplit());
 
         registerSpecialHandler("scaled_vec_x", SCALED_VEC_X);
         registerSpecialHandler("scaled_vec_y", SCALED_VEC_Y);
