@@ -4,19 +4,18 @@ import at.petrak.hexcasting.api.casting.ActionRegistryEntry;
 import at.petrak.hexcasting.api.casting.castables.Action;
 import at.petrak.hexcasting.api.casting.castables.OperationAction;
 import at.petrak.hexcasting.api.casting.castables.SpecialHandler;
+import at.petrak.hexcasting.api.casting.iota.Vec3Iota;
 import at.petrak.hexcasting.api.casting.math.HexDir;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.common.lib.hex.HexActions;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import com.meepoffaith.hextrapats.HextraPatterns;
-import com.meepoffaith.hextrapats.casting.actions.ListActions;
-import com.meepoffaith.hextrapats.casting.actions.ListActions.ListSplit;
-import com.meepoffaith.hextrapats.casting.actions.MathActions.DegRad;
-import com.meepoffaith.hextrapats.casting.actions.MathActions.RadDeg;
-import com.meepoffaith.hextrapats.casting.actions.VecActions.VecNegOne;
-import com.meepoffaith.hextrapats.casting.actions.VecActions.VecOne;
+import com.meepoffaith.hextrapats.casting.actions.OpDegRad;
+import com.meepoffaith.hextrapats.casting.actions.OpRadDeg;
+import com.meepoffaith.hextrapats.casting.actions.OpSplitList;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Vec3d;
 
 import static com.meepoffaith.hextrapats.init.SpecialHandlers.*;
 
@@ -34,14 +33,14 @@ public class Patterns{
     public static ActionRegistryEntry OUT_RANGE = registerEntry("out_range", "eaae", HexDir.SOUTH_EAST);
 
     public static void init(){
-        register("deg_to_rad", "qqqqqdwdq", HexDir.WEST, new DegRad());
-        register("rad_to_deg", "qdwdqqqqq", HexDir.NORTH_EAST, new RadDeg());
+        register("deg_to_rad", "qqqqqdwdq", HexDir.WEST, new OpDegRad());
+        register("rad_to_deg", "qdwdqqqqq", HexDir.NORTH_EAST, new OpRadDeg());
 
         //Come on, Elise!
-        register("haha_ha_one", "qqqqqeq", HexDir.NORTH_WEST, new VecOne());
-        register("eno_ah_ahah", "eeeeeqq", HexDir.SOUTH_WEST, new VecNegOne());
+        register("haha_ha_one", "qqqqqeq", HexDir.NORTH_WEST, Action.makeConstantOp(new Vec3Iota(new Vec3d(1.0, 1.0, 1.0))));
+        register("eno_ah_ahah", "eeeeeqq", HexDir.SOUTH_WEST, Action.makeConstantOp(new Vec3Iota(new Vec3d(-1.0, -1.0, -1.0))));
 
-        register("split_list", "wdedqqa", HexDir.EAST, new ListSplit());
+        register("split_list", "wdedqqa", HexDir.EAST, new OpSplitList());
 
         registerSpecialHandler("scaled_vec_x", SCALED_VEC_X);
         registerSpecialHandler("scaled_vec_y", SCALED_VEC_Y);
