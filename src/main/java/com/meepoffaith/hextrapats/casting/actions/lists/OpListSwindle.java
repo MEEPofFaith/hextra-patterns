@@ -37,7 +37,7 @@ public class OpListSwindle extends ConstMediaActionBase{
             }
         }
 
-        if(strides.size() > list.size()) throw new MishapInvalidIota(stack.get(0), 0, Text.of("too short lmao"));
+        if(strides.size() > list.size()) throw new MishapInvalidIota(stack.get(0), 0, Text.of("list of at least length " + strides.size()));
 
         List<Iota> editTarget = swindleEnd ? list.subList(list.size() - strides.size(), list.size()) : list.subList(0, strides.size());
         List<Iota> swap = new ArrayList<>(editTarget);
