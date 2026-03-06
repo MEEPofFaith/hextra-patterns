@@ -1,0 +1,18 @@
+{
+  "name": "pages.hextrapats.hextrapats_lists.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:name_tag",
+  "sortnum": 7,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:split_list",
+      "anchor": "hextrapats:split_list",
+      "input": "list, num",
+      "output": "list, list",
+      "text": "hextrapats.page.lists.split"
+    }
+  ]
+}
