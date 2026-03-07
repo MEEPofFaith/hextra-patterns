@@ -2,7 +2,7 @@
   "pages.hextrapats":{
     "hextrapats_consts.title": "Hextra Constants",
     "hextrapats_logic.title": "Hextra Logic",
-    "hextrapats_retained_comparison.title": "Retaining Comparisons",
+    "hextrapats_nocon.title": "Non-consuming Comparisons",
     "hextrapats_vec_literals.title": "Vector Literals",
     "hextrapats_math.title": "Hextra Math",
     "hextrapats_lists.title": "Hextra Lists",
@@ -24,17 +24,10 @@
         out_range: "If the first number is not between the second and third, return True. Otherwise, return False. If the first value is a vector, compare its length instead.",
         "out_range.ops": "The fourth number seems to describe how to check if the value is outside the range.$(li)0: val < min or max < val$(li)1: val <= min or max < val$(li)2: val < min or max <= val$(li)3: val <= min or max <= val"
       },
-      "nocon/": {
+      nocon: {
         intro: "Sometimes, I want operate on two iotas after comparing them, but it gets rather annoying to have to execute $(l:patterns/stackmanip#hexcasting:2dup)$(action)Dioscuri Gambit/$ every time I do.",
+        name: "Comparison Gambit",
         detail: "With some experimentation, I have found that prepending a comparison with a clockwise triangle will cause the two inputs to not be consumed.",
-        greater: "Comp. Gambit: Maximus",
-        less: "Comp. Gambit: Minimus",
-        greater_eq: "Comp. Gambit: Maximus II",
-        less_eq: "Comp. Gambit: Minimus II",
-        eq: "Comp. Gambit: Equality",
-        neq: "Comp. Gambit: Inequality",
-        len_eq: "Comp. Gambit: Len. Eq.",
-        len_neq: "Comp. Gambit: Len. Ineq."
       },
       vec_literals: {
         intro: "Interestingly, attaching the tail of any Vector Reflection to the start of $(l:patterns/numbers)$(action)Number Reflection/$ makes it return a vector.",
@@ -127,6 +120,17 @@
         scaled_vec_y: "Vector Rfln. +Y/-Y II",
         scaled_vec_z: "Vector Rfln. +Z/-Z II",
         scaled_vec_all: "Vector Rfln. +1/-1 II",
+
+        "nocon/": {
+          greater: "Comp. Gambit: Maximus",
+          less: "Comp. Gambit: Minimus",
+          greater_eq: "Comp. Gambit: Maximus II",
+          less_eq: "Comp. Gambit: Minimus II",
+          eq: "Comp. Gambit: Equality",
+          neq: "Comp. Gambit: Inequality",
+          len_eq: "Comp. Gambit: Len. Eq.",
+          len_neq: "Comp. Gambit: Len. Ineq."
+        }
       }
     },
     "special.hextrapats:": {

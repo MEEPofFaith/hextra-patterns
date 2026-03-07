@@ -1,5 +1,5 @@
 {
-  "name": "pages.hextrapats.hextrapats_nocon/title",
+  "name": "pages.hextrapats.hextrapats_nocon.title",
   "category": "hexcasting:patterns",
   "icon": "minecraft:repeater",
   "sortnum": 5,
@@ -8,13 +8,12 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "hextrapats.page.nocon/intro"
+      "text": "hextrapats.page.nocon.intro"
     },
     {
       "type": "patchouli:text",
-      "title": "hexcasting.action.hextrapats:retained_comparison",
-      "anchor": "hextrapats:retained_comparison",
-      "text": "hextrapats.page.nocon/detail"
+      "title": "hextrapats.page.nocon.name",
+      "text": "hextrapats.page.nocon.detail"
     },
     {
       "type": "hexcasting:pattern",
@@ -38,7 +37,7 @@
       "anchor": "hextrapats:nocon/greater_eq",
       "input": "A, B",
       "output": "A, B, bool",
-      "text": "hexcasting.page.logic.greater_eq",
+      "text": "hexcasting.page.logic.greater_eq"
     },
     {
       "type": "hexcasting:pattern",
