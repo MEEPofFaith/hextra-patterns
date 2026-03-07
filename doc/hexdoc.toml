@@ -12,7 +12,7 @@ resource_dirs = [  # top takes priority
 export_dir = "src/hexdoc_hextrapats/_export/generated"
 
 [template]
-icon = "assets/hextrapats/icon.png"
+icon = "{$_project.src}/main/resources/assets/hextrapats/icon.png"
 include = [
     "hextrapats",
     "hexcasting",
