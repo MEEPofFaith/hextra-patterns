@@ -77,7 +77,7 @@
       <ul class="nav navbar-nav navbar-right">
             <li>
     <a
-      href="https://github.com/MEEPofFaith/hextra-patterns/tree/f911b038a6de0a27c336e82279ba76dbd1e0c77c"
+      href="https://github.com/MEEPofFaith/hextra-patterns/tree/1d58cce3c2ec4eaf3378a40649073a3b243f48ef"
         target="_blank"
       class="navbar-link"
       role="button"
@@ -180,7 +180,7 @@
       src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/a14c64362abe4a12c2dfd87f8d1673af9d1b09f4/data/1.20.2/items/repeater.png"
       loading="lazy"
       class="item-texture  texture pixelated"
-    > Retaining Comparisons</a></li>
+    > Non-consuming Logic</a></li>
           <li><a href="#patterns/hextrapats_lists" class="toc-elem "><img
       title="Name Tag"
       alt="Name Tag"
@@ -1867,7 +1867,7 @@
       src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/a14c64362abe4a12c2dfd87f8d1673af9d1b09f4/data/1.20.2/items/repeater.png"
       loading="lazy"
       class="item-texture  texture pixelated"
-    >Retaining Comparisons<a
+    >Non-consuming Logic<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -1878,16 +1878,15 @@
   ><i class="bi bi-link-45deg"></i></a></h3>
     <p>Sometimes, I want operate on two iotas after comparing them, but it gets rather annoying to have to execute <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/stackmanip@hexcasting:2dup"><span style="color: #fc77be">Dioscuri Gambit</span></a> every time I do.</p>
 <br />
-  <div id="patterns/hextrapats_retained_comparison@hextrapats:retained_comparison" class="">
-<h4>Comparison Gambit<a
-    href="#patterns/hextrapats_retained_comparison@hextrapats:retained_comparison"
+  <h4>Comparison Gambit</h4>
+    <p>With some experimentation, I have found that prepending a comparison with a clockwise triangle will cause the two inputs to not be consumed.</p>
+<br />
+  <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/greater" class="">
+<h4 class="pattern-title">Comp. Gambit: Maximus (A, B → A, B, bool)<a
+    href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/greater"
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h4>
-    <p>With some experimentation, I have found that prepending a comparison with a clockwise triangle will cause the two inputs to not be consumed.</p>
-  </div>
-<br />
-  <h4>Comp. Gambit: Maximus (A, B → A, B, bool)</h4>
   <details class="details-collapsible">
     <summary class="collapse-details collapse-spell"></summary>
     <div class="dropdown spell-settings-dropdown">
@@ -1936,8 +1935,14 @@
       >Your browser does not support visualizing patterns. Pattern code: ddwe</canvas>
   </details>
       <p>If the first argument is greater than the second, return True. Otherwise, return False.</p>
+  </div>
 <br />
-  <h4>Comp. Gambit: Minimus (A, B → A, B, bool)</h4>
+  <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/less" class="">
+<h4 class="pattern-title">Comp. Gambit: Minimus (A, B → A, B, bool)<a
+    href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/less"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
   <details class="details-collapsible">
     <summary class="collapse-details collapse-spell"></summary>
     <div class="dropdown spell-settings-dropdown">
@@ -1986,8 +1991,14 @@
       >Your browser does not support visualizing patterns. Pattern code: ddeq</canvas>
   </details>
       <p>If the first argument is less than the second, return True. Otherwise, return False.</p>
+  </div>
 <br />
-  <h4>Comp. Gambit: Maximus II (A, B → A, B, bool)</h4>
+  <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/greater_eq" class="">
+<h4 class="pattern-title">Comp. Gambit: Maximus II (A, B → A, B, bool)<a
+    href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/greater_eq"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
   <details class="details-collapsible">
     <summary class="collapse-details collapse-spell"></summary>
     <div class="dropdown spell-settings-dropdown">
@@ -2036,8 +2047,14 @@
       >Your browser does not support visualizing patterns. Pattern code: ddwee</canvas>
   </details>
       <p>If the first argument is greater than or equal to the second, return True. Otherwise, return False.</p>
+  </div>
 <br />
-  <h4>Comp. Gambit: Minimus II (A, B → A, B, bool)</h4>
+  <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/less_eq" class="">
+<h4 class="pattern-title">Comp. Gambit: Minimus II (A, B → A, B, bool)<a
+    href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/less_eq"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
   <details class="details-collapsible">
     <summary class="collapse-details collapse-spell"></summary>
     <div class="dropdown spell-settings-dropdown">
@@ -2086,8 +2103,14 @@
       >Your browser does not support visualizing patterns. Pattern code: ddeqq</canvas>
   </details>
       <p>If the first argument is less than or equal to the second, return True. Otherwise, return False.</p>
+  </div>
 <br />
-  <h4>Comp. Gambit: Equality (A, B → A, B, bool)</h4>
+  <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/eq" class="">
+<h4 class="pattern-title">Comp. Gambit: Equality (A, B → A, B, bool)<a
+    href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/eq"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
   <details class="details-collapsible">
     <summary class="collapse-details collapse-spell"></summary>
     <div class="dropdown spell-settings-dropdown">
@@ -2136,8 +2159,14 @@
       >Your browser does not support visualizing patterns. Pattern code: ddqad</canvas>
   </details>
       <p>If the first argument equals the second (within a small tolerance), return True. Otherwise, return False.</p>
+  </div>
 <br />
-  <h4>Comp. Gambit: Inequality (A, B → A, B, bool)</h4>
+  <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/neq" class="">
+<h4 class="pattern-title">Comp. Gambit: Inequality (A, B → A, B, bool)<a
+    href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/neq"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
   <details class="details-collapsible">
     <summary class="collapse-details collapse-spell"></summary>
     <div class="dropdown spell-settings-dropdown">
@@ -2186,8 +2215,14 @@
       >Your browser does not support visualizing patterns. Pattern code: ddqda</canvas>
   </details>
       <p>If the first argument does not equal the second (outside a small tolerance), return True. Otherwise, return False.</p>
+  </div>
 <br />
-  <h4>Comp. Gambit: Len. Eq. (A, B → A, B, bool)</h4>
+  <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/len_eq" class="">
+<h4 class="pattern-title">Comp. Gambit: Len. Eq. (A, B → A, B, bool)<a
+    href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/len_eq"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
   <details class="details-collapsible">
     <summary class="collapse-details collapse-spell"></summary>
     <div class="dropdown spell-settings-dropdown">
@@ -2236,8 +2271,14 @@
       >Your browser does not support visualizing patterns. Pattern code: ddqadqqaqw</canvas>
   </details>
       <p>If the two vectors are the same length (within small tolerance), return True. Otherwise, return False.</p>
+  </div>
 <br />
-  <h4>Comp. Gambit: Len. Ineq. (A, B → A, B, bool)</h4>
+  <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/len_neq" class="">
+<h4 class="pattern-title">Comp. Gambit: Len. Ineq. (A, B → A, B, bool)<a
+    href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/len_neq"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
   <details class="details-collapsible">
     <summary class="collapse-details collapse-spell"></summary>
     <div class="dropdown spell-settings-dropdown">
@@ -2286,6 +2327,7 @@
       >Your browser does not support visualizing patterns. Pattern code: ddqdaeedew</canvas>
   </details>
       <p>If the two vectors are not the same length (outside small tolerance), return True. Otherwise, return False.</p>
+  </div>
 <br />
 </div>
 <div id="patterns/hextrapats_lists" class="entry">
@@ -2306,7 +2348,7 @@
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
   <div id="patterns/hextrapats_lists@hextrapats:split_list" class="">
-<h4 class="pattern-title">Splitting Gambit (list, num → list, list)<a
+<h4 class="pattern-title">Separation Gambit (list, num → list, list)<a
     href="#patterns/hextrapats_lists@hextrapats:split_list"
     class="permalink small"
     title="Permalink"
