@@ -38,7 +38,7 @@ public class BoolArithmetic implements Arithmetic{
 
     @Override
     public Operator getOperator(HexPattern pattern){
-        if(pattern.equals(IN_RANGE)){
+        if(pattern.sigsEqual(IN_RANGE)){
             return makeRange((val, a, b, opI) -> {
                 double min = Math.min(a, b);
                 double max = Math.max(a, b);
@@ -51,7 +51,7 @@ public class BoolArithmetic implements Arithmetic{
                     default -> throw new MishapInvalidIota(opI, 0, Text.of("int from 0 to 3"));
                 };
             });
-        }else if(pattern.equals(OUT_RANGE)){
+        }else if(pattern.sigsEqual(OUT_RANGE)){
             return makeRange((val, a, b, opI) -> {
                 double min = Math.min(a, b);
                 double max = Math.max(a, b);

@@ -49,19 +49,19 @@ public class Vec3BoolArithmetic implements Arithmetic{
 
     @Override
     public Operator getOperator(HexPattern pattern){ // Switchelss behavior :pensive:
-        if(pattern.equals(GREATER)){
+        if(pattern.sigsEqual(GREATER)){
             return makeComp((a, b) -> a.length() > b.length());
-        }else if(pattern.equals(LESS)){
+        }else if(pattern.sigsEqual(LESS)){
             return makeComp((a, b) -> a.length() < b.length());
-        }else if(pattern.equals(GREATER_EQ)){
+        }else if(pattern.sigsEqual(GREATER_EQ)){
             return makeComp((a, b) -> HextraUtils.greaterEq(a.length(), b.length()));
-        }else if(pattern.equals(LESS_EQ)){
+        }else if(pattern.sigsEqual(LESS_EQ)){
             return makeComp((a, b) -> HextraUtils.lessEq(a.length(), b.length()));
-        }else if(pattern.equals(LEN_EQ)){
+        }else if(pattern.sigsEqual(LEN_EQ)){
             return makeComp((a, b) -> DoubleIota.tolerates(a.length(), b.length()));
-        }else if(pattern.equals(LEN_NEQ)){
+        }else if(pattern.sigsEqual(LEN_NEQ)){
             return makeComp((a, b) -> !DoubleIota.tolerates(a.length(), b.length()));
-        }else if(pattern.equals(IN_RANGE)){
+        }else if(pattern.sigsEqual(IN_RANGE)){
             return makeRange((v, a, b, opI) -> {
                 double len = v.length();
                 double min = Math.min(a, b);
@@ -75,7 +75,7 @@ public class Vec3BoolArithmetic implements Arithmetic{
                     default -> throw new MishapInvalidIota(opI, 0, Text.of("int from 0 to 3"));
                 };
             });
-        }else if(pattern.equals(OUT_RANGE)){
+        }else if(pattern.sigsEqual(OUT_RANGE)){
             return makeRange((v, a, b, opI) -> {
                 double len = v.length();
                 double min = Math.min(a, b);

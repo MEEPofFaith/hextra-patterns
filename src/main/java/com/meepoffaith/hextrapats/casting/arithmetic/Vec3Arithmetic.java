@@ -9,6 +9,7 @@ import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaMultiPredicate
 import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaPredicate;
 import at.petrak.hexcasting.api.casting.iota.Vec3Iota;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
+import com.meepoffaith.hextrapats.init.Arithmetics;
 import com.meepoffaith.hextrapats.util.generics.Func1to1;
 import com.meepoffaith.hextrapats.util.generics.Func2to1;
 import net.minecraft.util.math.Vec3d;
@@ -17,7 +18,7 @@ import java.util.List;
 
 import static at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE;
 import static at.petrak.hexcasting.common.lib.hex.HexIotaTypes.VEC3;
-import static com.meepoffaith.hextrapats.init.Patterns.*;
+import static com.meepoffaith.hextrapats.init.Arithmetics.*;
 
 public class Vec3Arithmetic implements Arithmetic{
     private static final List<HexPattern> OPS = List.of(
@@ -27,7 +28,8 @@ public class Vec3Arithmetic implements Arithmetic{
         CONSTRUCT_ABOUT_X,
         CONSTRUCT_ABOUT_Y,
         CONSTRUCT_ABOUT_Z,
-        NORMALIZE
+        NORMALIZE,
+        INVERT
     );
 
     @Override
@@ -43,33 +45,35 @@ public class Vec3Arithmetic implements Arithmetic{
     @Override
     public Operator getOperator(HexPattern pattern){
         //Vec3d already has rotate functions, but for some reason they take in a float for the angle.
-        if(pattern.equals(ROT_ABOUT_X)){
+        if(pattern.sigsEqual(ROT_ABOUT_X)){
             return makeVecDoubToVec((v, x) -> { //Already clockwise
                 double c = Math.cos(x);
                 double s = Math.sin(x);
                 return new Vec3d(v.x, c*v.y + s*v.z, c*v.z - s*v.y);
             });
-        }else if(pattern.equals(ROT_ABOUT_Y)){
+        }else if(pattern.sigsEqual(ROT_ABOUT_Y)){
             return makeVecDoubToVec((v, x) -> {
                 x = -x; //Negate to make it a clockwise rotation
                 double c = Math.cos(x);
                 double s = Math.sin(x);
                 return new Vec3d(c*v.x + s*v.z, v.y, c*v.z - s * v.x);
             });
-        }else if(pattern.equals(ROT_ABOUT_Z)){
+        }else if(pattern.sigsEqual(ROT_ABOUT_Z)){
             return makeVecDoubToVec((v, x) -> { //Already clockwise
                 double c = Math.cos(x);
                 double s = Math.sin(x);
                 return new Vec3d(c*v.x + s*v.y, c*v.y - s*v.x, v.z);
             });
-        }else if(pattern.equals(CONSTRUCT_ABOUT_X)){
+        }else if(pattern.sigsEqual(CONSTRUCT_ABOUT_X)){
             return makeDoubToVec(a -> new Vec3d(0, Math.sin(a), Math.cos(a))); //+Z is 0 rad
-        }else if(pattern.equals(CONSTRUCT_ABOUT_Y)){
+        }else if(pattern.sigsEqual(CONSTRUCT_ABOUT_Y)){
             return makeDoubToVec(a -> new Vec3d(-Math.sin(a), 0, Math.cos(a))); //+Z is 0 rad. Matches player yaw in F3.
-        }else if(pattern.equals(CONSTRUCT_ABOUT_Z)){
+        }else if(pattern.sigsEqual(CONSTRUCT_ABOUT_Z)){
             return makeDoubToVec(a -> new Vec3d(-Math.cos(a), Math.sin(a), 0)); //-X is 0 rad
-        }else if(pattern.equals(NORMALIZE)){
+        }else if(pattern.sigsEqual(NORMALIZE)){
             return makeVecToVec(Vec3d::normalize);
+        }else if(pattern.sigsEqual(Arithmetics.INVERT)){
+            return makeVecToVec(v -> v.multiply(-1));
         }else{
             throw new InvalidOperatorException(pattern + " is not a valid operator in Vec3 Arithmetic " + this);
         }

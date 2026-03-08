@@ -24,17 +24,18 @@ import net.minecraft.util.math.Vec3d;
 import static com.meepoffaith.hextrapats.init.SpecialHandlers.*;
 
 public class Patterns{
-    public static HexPattern ROT_ABOUT_X = register("rot_about_x", "aaqqqqqea", HexDir.SOUTH_WEST);
-    public static HexPattern ROT_ABOUT_Y = register("rot_about_y", "aaqqqqqew", HexDir.SOUTH_WEST);
-    public static HexPattern ROT_ABOUT_Z = register("rot_about_z", "aaqqqqqed", HexDir.SOUTH_WEST);
-    public static HexPattern CONSTRUCT_ABOUT_X = register("cons_about_x", "daqqqqqea", HexDir.NORTH_WEST);
-    public static HexPattern CONSTRUCT_ABOUT_Y = register("cons_about_y", "daqqqqqew", HexDir.NORTH_WEST);
-    public static HexPattern CONSTRUCT_ABOUT_Z = register("cons_about_z", "daqqqqqed", HexDir.NORTH_WEST);
-    public static HexPattern NORMALIZE = register("normalize", "eeeeedww", HexDir.SOUTH_WEST);
+    public static ActionRegistryEntry ROT_ABOUT_X = registerEntry("rot_about_x", "aaqqqqqea", HexDir.SOUTH_WEST);
+    public static ActionRegistryEntry ROT_ABOUT_Y = registerEntry("rot_about_y", "aaqqqqqew", HexDir.SOUTH_WEST);
+    public static ActionRegistryEntry ROT_ABOUT_Z = registerEntry("rot_about_z", "aaqqqqqed", HexDir.SOUTH_WEST);
+    public static ActionRegistryEntry CONSTRUCT_ABOUT_X = registerEntry("cons_about_x", "daqqqqqea", HexDir.NORTH_WEST);
+    public static ActionRegistryEntry CONSTRUCT_ABOUT_Y = registerEntry("cons_about_y", "daqqqqqew", HexDir.NORTH_WEST);
+    public static ActionRegistryEntry CONSTRUCT_ABOUT_Z = registerEntry("cons_about_z", "daqqqqqed", HexDir.NORTH_WEST);
+    public static ActionRegistryEntry NORMALIZE = registerEntry("normalize", "eeeeedww", HexDir.SOUTH_WEST);
     public static ActionRegistryEntry LEN_EQ = registerEntry("len_eq", "adqqaqw", HexDir.EAST);
     public static ActionRegistryEntry LEN_NEQ = registerEntry("len_neq", "daeedew", HexDir.EAST);
     public static ActionRegistryEntry IN_RANGE = registerEntry("in_range", "qqqq", HexDir.SOUTH_WEST);
     public static ActionRegistryEntry OUT_RANGE = registerEntry("out_range", "eaae", HexDir.SOUTH_EAST);
+    public static ActionRegistryEntry INVERT = registerEntry("invert", "edwaqaw", HexDir.NORTH_WEST);
 
     public static void init(){
         register("deg_to_rad", "qqqqqdwdq", HexDir.WEST, new OpDegRad());
