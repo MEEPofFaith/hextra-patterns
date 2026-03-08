@@ -52,6 +52,7 @@
         deg_to_rad: "Converts an angle in degrees to an angle in radians. Essentially multiplies by $(l:patterns/consts#hexcasting:const/double/pi)$(action)pi/$ then divides by 180.",
         rad_to_deg: "Converts an angle in radians to an angle in degrees. Essentially multiplies by 180 then divides by $(l:patterns/consts#hexcasting:const/double/pi)$(action)pi/$.",
         normalize: "Sets the length of the vector to one.",
+        invert: "Multiplies the number/vector by -1.",,
         rot_about_x: "Rotates the vector by the given angle in radians around the X axis.",
         rot_about_y: "Rotates the vector by the given angle in radians around the Y axis.",
         rot_about_z: "Rotates the vector by the given angle in radians around the Z axis.",
@@ -92,6 +93,8 @@
         cons_about_x: "Pitch Purification",
         cons_about_y: "Yaw Purification",
         cons_about_z: "Roll Purification",
+        scientific_exp: "Scientific Purification",
+        invert: "Reversal Purification",
 
         "nocon/": {
           greater: "Comparison Gambit: Maximus",
@@ -103,8 +106,6 @@
           len_eq: "Comparison Gambit: Length Equality",
           len_neq: "Comparison Gambit: Length Inequality",
         },
-
-        scientific_exp: "Scientific Purification",
 
         split_list: "Separation Gambit",
         swindle_list: "Swindler's Distillation"
