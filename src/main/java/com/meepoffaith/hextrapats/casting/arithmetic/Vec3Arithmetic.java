@@ -88,7 +88,7 @@ public class Vec3Arithmetic implements Arithmetic{
     }
 
     private OperatorUnary makeVecToVec(Func1to1<Vec3d, Vec3d> op){
-        return new OperatorUnary(IotaMultiPredicate.all(IotaPredicate.ofType(DOUBLE)),
+        return new OperatorUnary(IotaMultiPredicate.all(IotaPredicate.ofType(VEC3)),
             i -> new Vec3Iota(op.apply(Operator.downcast(i, VEC3).getVec3()))
         );
     }
