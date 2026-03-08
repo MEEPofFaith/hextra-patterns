@@ -72,7 +72,7 @@ public class Vec3BoolArithmetic implements Arithmetic{
                     case 1 -> HextraUtils.lessEq(min, len) && len < max;
                     case 2 -> min < len && HextraUtils.lessEq(len, max);
                     case 3 -> HextraUtils.lessEq(min, len) && HextraUtils.lessEq(len, max);
-                    default -> throw new MishapInvalidIota(opI, 0, Text.of("int from 0 to 3"));
+                    default -> throw new MishapInvalidIota(opI, 0, Text.of("an integer from 0 to 3"));
                 };
             });
         }else if(pattern.sigsEqual(OUT_RANGE)){
@@ -86,7 +86,7 @@ public class Vec3BoolArithmetic implements Arithmetic{
                     case 1 -> HextraUtils.lessEq(len, min) || max < len;
                     case 2 -> len < min || HextraUtils.lessEq(max, len);
                     case 3 -> HextraUtils.lessEq(len, min) || HextraUtils.lessEq(max, len);
-                    default -> throw new MishapInvalidIota(opI, 0, Text.of("int from 0 to 3"));
+                    default -> throw new MishapInvalidIota(opI, 0, Text.of("an integer from 0 to 3"));
                 };
             });
         }else{

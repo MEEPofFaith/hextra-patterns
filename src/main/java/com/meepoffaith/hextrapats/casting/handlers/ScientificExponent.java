@@ -1,11 +1,14 @@
 package com.meepoffaith.hextrapats.casting.handlers;
 
+import at.petrak.hexcasting.api.casting.arithmetic.operator.Operator;
 import at.petrak.hexcasting.api.casting.castables.Action;
 import at.petrak.hexcasting.api.casting.castables.SpecialHandler;
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment;
 import at.petrak.hexcasting.api.casting.iota.DoubleIota;
 import at.petrak.hexcasting.api.casting.iota.Iota;
+import at.petrak.hexcasting.api.casting.iota.Vec3Iota;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
+import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidIota;
 import com.meepoffaith.hextrapats.casting.bases.ConstMediaActionBase;
 import com.meepoffaith.hextrapats.casting.bases.HexIotaStack;
 import com.meepoffaith.hextrapats.init.SpecialHandlers;
@@ -14,6 +17,9 @@ import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+
+import static at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE;
+import static at.petrak.hexcasting.common.lib.hex.HexIotaTypes.VEC3;
 
 public class ScientificExponent implements SpecialHandler{
     int exponent;
@@ -43,7 +49,15 @@ public class ScientificExponent implements SpecialHandler{
 
         @Override
         public List<? extends Iota> execute(HexIotaStack stack, CastingEnvironment ctx){
-            return asActionResult(new DoubleIota(stack.getDouble(0) * Math.pow(10, exponent)));
+            Iota val = stack.get(0);
+
+            if(val instanceof DoubleIota){
+                return asActionResult(new DoubleIota(Operator.downcast(val, DOUBLE).getDouble() * Math.pow(10, exponent)));
+            }else if(val instanceof Vec3Iota){
+                return asActionResult(new Vec3Iota(Operator.downcast(val, VEC3).getVec3().multiply(Math.pow(10, exponent))));
+            }else{
+                throw new MishapInvalidIota(val, 0, Text.of("a number or vector"));
+            }
         }
     }
 

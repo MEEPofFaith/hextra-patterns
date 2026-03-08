@@ -114,8 +114,8 @@
       "type": "hexcasting:manual_pattern",
       "op_id": "hextrapats:scientific_exp",
       "anchor": "hextrapats:scientific_exp",
-      "input": "num",
-      "output": "num",
+      "input": "num/vec",
+      "output": "num/vec",
       "text": "hextrapats.page.math.scientific_exp",
       "patterns": [
         {

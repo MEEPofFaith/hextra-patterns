@@ -57,7 +57,7 @@ public class HextraUtils{
                 return rounded;
             }
         }
-        throw new MishapInvalidIota(x, arg, Text.of("int"));
+        throw new MishapInvalidIota(x, arg, Text.of("an integer"));
     }
 
     public static CastingImage copyImage(CastingImage image, List<Iota> stack){

@@ -48,7 +48,7 @@ public class BoolArithmetic implements Arithmetic{
                     case 1 -> HextraUtils.lessEq(min, val) && val < max;
                     case 2 -> min < val && HextraUtils.lessEq(val, max);
                     case 3 -> HextraUtils.lessEq(min, val) && HextraUtils.lessEq(val, max);
-                    default -> throw new MishapInvalidIota(opI, 0, Text.of("int from 0 to 3"));
+                    default -> throw new MishapInvalidIota(opI, 0, Text.of("an integer from 0 to 3"));
                 };
             });
         }else if(pattern.sigsEqual(OUT_RANGE)){
@@ -61,7 +61,7 @@ public class BoolArithmetic implements Arithmetic{
                     case 1 -> HextraUtils.lessEq(val, min) || max < val;
                     case 2 -> val < min || HextraUtils.lessEq(max, val);
                     case 3 -> HextraUtils.lessEq(val, min) || HextraUtils.lessEq(max, val);
-                    default -> throw new MishapInvalidIota(opI, 0, Text.of("int from 0 to 3"));
+                    default -> throw new MishapInvalidIota(opI, 0, Text.of("an integer from 0 to 3"));
                 };
             });
         }else{
