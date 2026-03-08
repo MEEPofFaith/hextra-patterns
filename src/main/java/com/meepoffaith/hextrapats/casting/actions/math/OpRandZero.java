@@ -16,6 +16,6 @@ public class OpRandZero extends ConstMediaActionBase{
     public List<? extends Iota> execute(HexIotaStack stack, CastingEnvironment ctx){
         double to = stack.getDouble(0);
 
-        return asActionResult(new DoubleIota(Math.random() * to));
+        return asActionResult(new DoubleIota(ctx.getWorld().random.nextDouble() * to));
     }
 }

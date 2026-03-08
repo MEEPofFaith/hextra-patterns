@@ -17,6 +17,6 @@ public class OpRandRange extends ConstMediaActionBase{
         double from = stack.getDouble(0);
         double to = stack.getDouble(1);
 
-        return asActionResult(new DoubleIota(from + Math.random() * (to - from)));
+        return asActionResult(new DoubleIota(from + ctx.getWorld().random.nextDouble() * (to - from)));
     }
 }

@@ -15,9 +15,9 @@ public class OpRandVec extends ConstMediaActionBase{
 
     @Override
     public List<? extends Iota> execute(HexIotaStack stack, CastingEnvironment ctx){
-        double z = -1 + 2 * Math.random();
+        double z = -1 + 2 * ctx.getWorld().random.nextDouble();
         double r = Math.sqrt(1 - z * z);
-        double t = Math.random() * 2 * Math.PI;
+        double t = ctx.getWorld().random.nextDouble() * 2 * Math.PI;
         return asActionResult(new Vec3Iota(new Vec3d(r * Math.cos(t), r * Math.sin(t), z)));
     }
 }
