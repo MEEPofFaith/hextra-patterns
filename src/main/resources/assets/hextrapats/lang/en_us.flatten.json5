@@ -120,7 +120,7 @@
         split_list: "Separation Gambit",
         "del_element/": {
           first: "Elimination Gambit",
-          all: "Exclusion Gambit"
+          all: "Elimination Gambit II"
         },
         swindle_list: "Swindler's Distillation"
       },
