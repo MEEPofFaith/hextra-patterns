@@ -44,6 +44,8 @@ public class Patterns{
         register("rand_zero", "dedqeqqq", HexDir.EAST, new OpRandRange());
         register("rand_range", "eeeqeqqq", HexDir.SOUTH_WEST, new OpRandZero());
         register("rand_vec", "eeeeeqeqqq", HexDir.EAST, new OpRandVec());
+        register("from_polar", "eqqadaqa", HexDir.EAST, new OpFromPolar());
+        register("to_polar", "qedadeed", HexDir.EAST, new OpToPolar());
 
         //Come on, Elise!
         register("haha_ha_one", "qqqqqeq", HexDir.NORTH_WEST, Action.makeConstantOp(new Vec3Iota(new Vec3d(1.0, 1.0, 1.0))));

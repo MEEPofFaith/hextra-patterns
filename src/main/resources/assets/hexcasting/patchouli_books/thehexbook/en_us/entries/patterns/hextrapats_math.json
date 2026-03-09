@@ -64,6 +64,22 @@
     },
     {
       "type": "hexcasting:pattern",
+      "op_id": "hextrapats:from_polar",
+      "anchor": "hextrapats:from_polar",
+      "input": "num, num",
+      "output": "vec",
+      "text": "hextrapats.page.math.from_polar"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:to_polar",
+      "anchor": "hextrapats:to_polar",
+      "input": "vec",
+      "output": "num, num",
+      "text": "hextrapats.page.math.to_polar"
+    },
+    {
+      "type": "hexcasting:pattern",
       "op_id": "hextrapats:rot_about_x",
       "anchor": "hextrapats:rot_about_x",
       "input": "vector, number",
