@@ -12,6 +12,7 @@ import at.petrak.hexcasting.common.lib.hex.HexActions;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import com.meepoffaith.hextrapats.HextraPatterns;
 import com.meepoffaith.hextrapats.casting.actions.NoConsumeOperationAction;
+import com.meepoffaith.hextrapats.casting.actions.lists.OpDelElement;
 import com.meepoffaith.hextrapats.casting.actions.lists.OpListSwindle;
 import com.meepoffaith.hextrapats.casting.actions.lists.OpSplitList;
 import com.meepoffaith.hextrapats.casting.actions.logic.OpNoConsumeEquality;
@@ -48,6 +49,8 @@ public class Patterns{
         register("eno_ah_ahah", "eeeeeqq", HexDir.SOUTH_WEST, Action.makeConstantOp(new Vec3Iota(new Vec3d(-1.0, -1.0, -1.0))));
 
         register("split_list", "wdedqqa", HexDir.EAST, new OpSplitList());
+        register("del_element/first", "dedwqaeaqa", HexDir.NORTH_EAST, new OpDelElement(true));
+        register("del_element/all", "dedwqaeaqaw", HexDir.NORTH_EAST, new OpDelElement(false));
         register("swindle_list", "dqdeqaawddea", HexDir.WEST, new OpListSwindle());
 
         registerNoConsumeOp("nocon/greater", "ddwe", HexDir.WEST, Arithmetic.GREATER);

@@ -22,7 +22,6 @@ import java.util.List;
 //Replicates OperationAction but with extra handling to keep inputs.
 public class NoConsumeOperationAction implements Action{
     int argc = 2;
-    public long mediaCost = 0L;
 
     HexPattern pattern;
 

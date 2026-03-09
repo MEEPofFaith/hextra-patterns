@@ -66,6 +66,10 @@
       },
       lists: {
         split: "Splits a list at the given index. [a, b, c, d, e], 2 will return [a, b], [c, d, e].",
+        "del_element/": {
+          first: "Remove the iota at the top of the stack, then remove the first instance of it from the list. If that iota was in the list, return True. Otherwise, return False.",
+          all: "Remove the iota at the top of the stack, then remove the $(italic)all/$ instances of it from the list. If that iota was in the list, return True. Otherwise, return False."
+        },
         swindle: "Reorders the elements of a list the same way $(l:patterns/stackmanip#hexcasting:swizzle)$(action)Swindler's Gambit/$ reorders the stack. Inputting a negative code will reorder the elements at the start instead of the end."
       }
     }
@@ -114,6 +118,10 @@
         },
 
         split_list: "Separation Gambit",
+        "del_element/": {
+          first: "Elimination Gambit",
+          all: "Exclusion Gambit"
+        },
         swindle_list: "Swindler's Distillation"
       },
 
