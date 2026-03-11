@@ -1,0 +1,90 @@
+{
+  "name": "pages.hextrapats.hextrapats_vec_math.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:echo_shard",
+  "sortnum": 2,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:normalize",
+      "anchor": "hextrapats:normalize",
+      "input": "vector",
+      "output": "vector",
+      "text": "hextrapats.page.vec_math.normalize"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:rand_vec",
+      "anchor": "hextrapats:rand_vec",
+      "input": "",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.rand_vec"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:rot_about_x",
+      "anchor": "hextrapats:rot_about_x",
+      "input": "vector, number",
+      "output": "vector",
+      "text": "hextrapats.page.vec_math.rot_about_x"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:rot_about_y",
+      "anchor": "hextrapats:rot_about_y",
+      "input": "vector, number",
+      "output": "vector",
+      "text": "hextrapats.page.vec_math.rot_about_y"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:rot_about_z",
+      "anchor": "hextrapats:rot_about_z",
+      "input": "vector, number",
+      "output": "vector",
+      "text": "hextrapats.page.vec_math.rot_about_z"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:cons_about_x",
+      "anchor": "hextrapats:cons_about_x",
+      "input": "number",
+      "output": "vector",
+      "text": "hextrapats.page.vec_math.cons_about_x"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:cons_about_y",
+      "anchor": "hextrapats:cons_about_y",
+      "input": "number",
+      "output": "vector",
+      "text": "hextrapats.page.vec_math.cons_about_y"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:cons_about_z",
+      "anchor": "hextrapats:cons_about_z",
+      "input": "number",
+      "output": "vector",
+      "text": "hextrapats.page.vec_math.cons_about_z"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:from_polar",
+      "anchor": "hextrapats:from_polar",
+      "input": "num, num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.from_polar"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:to_polar",
+      "anchor": "hextrapats:to_polar",
+      "input": "vec",
+      "output": "num, num",
+      "text": "hextrapats.page.vec_math.to_polar"
+    }
+  ]
+}
