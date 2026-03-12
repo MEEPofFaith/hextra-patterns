@@ -13,11 +13,13 @@ import com.meepoffaith.hextrapats.util.generics.Func1to1;
 import java.util.List;
 
 import static at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE;
-import static com.meepoffaith.hextrapats.init.Arithmetics.INVERT;
+import static com.meepoffaith.hextrapats.init.Arithmetics.*;
 
 public class NumArithmetic implements Arithmetic{
     private static final List<HexPattern> OPS = List.of(
-        INVERT
+        INVERT,
+        INCREMENT,
+        DECREMENT
     );
 
     @Override
@@ -34,6 +36,10 @@ public class NumArithmetic implements Arithmetic{
     public Operator getOperator(HexPattern pattern){
         if(pattern.sigsEqual(INVERT)){
             return makeNumToNum(d -> -d);
+        }if(pattern.sigsEqual(INCREMENT)){
+            return makeNumToNum(d -> d + 1);
+        }if(pattern.sigsEqual(DECREMENT)){
+            return makeNumToNum(d -> d - 1);
         }else{
             throw new InvalidOperatorException(pattern + " is not a valid operator in Vec3 Bool Arithmetic " + this);
         }

@@ -34,7 +34,9 @@ public class Patterns{
     public static ActionRegistryEntry LEN_NEQ = registerEntry("len_neq", "daeedew", HexDir.EAST);
     public static ActionRegistryEntry IN_RANGE = registerEntry("in_range", "qqqq", HexDir.SOUTH_WEST);
     public static ActionRegistryEntry OUT_RANGE = registerEntry("out_range", "eaae", HexDir.SOUTH_EAST);
-    public static ActionRegistryEntry INVERT = registerEntry("invert", "edwaqaw", HexDir.NORTH_WEST);
+    public static ActionRegistryEntry INVERT = registerEntry("invert", "waqawqa", HexDir.SOUTH_WEST);
+    public static ActionRegistryEntry INCREMENT = registerEntry("increment", "waawawaaw", HexDir.NORTH_EAST);
+    public static ActionRegistryEntry DECREMENT = registerEntry("decrement", "wddwdwddw", HexDir.NORTH_WEST);
 
     public static void init(){
         register("deg_to_rad", "qqqqqdwdq", HexDir.WEST, new OpDegRad());

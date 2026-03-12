@@ -32,6 +32,22 @@
     },
     {
       "type": "hexcasting:pattern",
+      "op_id": "hextrapats:increment",
+      "anchor": "hextrapats:increment",
+      "input": "num",
+      "output": "num",
+      "text": "hextrapats.page.math.increment"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:decrement",
+      "anchor": "hextrapats:decrement",
+      "input": "num",
+      "output": "num",
+      "text": "hextrapats.page.math.decrement"
+    },
+    {
+      "type": "hexcasting:pattern",
       "op_id": "hextrapats:rand_zero",
       "anchor": "hextrapats:rand_zero",
       "input": "num",

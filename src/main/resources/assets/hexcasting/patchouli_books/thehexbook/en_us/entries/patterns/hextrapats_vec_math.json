@@ -16,6 +16,22 @@
     },
     {
       "type": "hexcasting:pattern",
+      "op_id": "hextrapats:increment",
+      "anchor": "hextrapats:increment",
+      "input": "vector",
+      "output": "vector",
+      "text": "hextrapats.page.vec_math.increment"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:decrement",
+      "anchor": "hextrapats:decrement",
+      "input": "vector",
+      "output": "vector",
+      "text": "hextrapats.page.vec_math.decrement"
+    },
+    {
+      "type": "hexcasting:pattern",
       "op_id": "hextrapats:rand_vec",
       "anchor": "hextrapats:rand_vec",
       "input": "",
