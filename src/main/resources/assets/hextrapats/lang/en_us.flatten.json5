@@ -61,7 +61,7 @@
         linear_approach: "Makes the first value approach the second at a rate of the third value. Will not overshoot.",
         angle_dist: "Returns the shortest angular distance between two angles in radians.",
         angle_approach: "Turns the first angle towards the second by the third value, picking whichever direction is closer and will not overshoot. All angles in radians.",
-        "angle_approach.examples": "(To make it easier to read, these examples are written in degrees instead of radians.)$(p)For example:$(li)90, 135, 10 returns 100 (start at 90, turn 10 degrees towards 135)$(li)10, 270, 30 returns 340 (start at 10, turn 30 degrees towards 270)$(li)300, 90, 90 returns 30 (start at 300, turn 90 degrees towards 90)$(li)20, 180, 60 returns 60 (start at 20, turn 180 degrees towards 60, stop at 60)"
+        "angle_approach.examples": "(To make it easier to read, these examples are written in degrees instead of radians.)$(p)For example:$(li)90, 135, 10 returns 100 (start at 90, turn 10 degrees towards 135)$(li)10, 270, 30 returns 340 (start at 10, turn 30 degrees towards 270)$(li)300, 90, 90 returns 30 (start at 300, turn 90 degrees towards 90)$(li)20, 60, 180 returns 60 (start at 20, turn 180 degrees towards 60, stop at 60)"
       },
       vec_math: {
         normalize: "Sets the length of the vector to one.",
