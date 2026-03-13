@@ -36,7 +36,7 @@
         y: "A head that doesn't bend will output a vector along the $(l:patterns/consts#hexcasting:const/vec/y)$(action)Y axis/$.",
         z: "A head that sharply bends to the right will output a vector along the $(l:patterns/consts#hexcasting:const/vec/z)$(action)Z axis/$.",
         "1": "A head that slightly bends to the left will output a vector where $(l:patterns/hextrapats_consts#hextrapats:haha_ha_one)$(action)all 3 components are the same/$.",
-        detail: "First, I draw one of the eight shapes shown on the prior pages. Next, the $(italic)angles/$ following will modify a running count starting at 0.$(li)Forward: Add 1$(li)Left: Add 5$(li)Right: Add 10$(li)Sharp Left: Multiply by 2$(li)Sharp Right: Divide by 2.$(br)The clockwise version of the pattern, on the right of the other page, will negate the value at the very end. (The left-hand counter-clockwise version keeps the number positive).$(p)Once I finish drawing, a vector's pushed to the top of the stack.",
+        detail: "First, I draw one of the eight shapes shown on the prior pages. Next, the $(italic)angles/$ following will modify a running count starting at 0.$(li)Forward: Add 1$(li)Left: Add 5$(li)Right: Add 10$(li)Sharp Left: Multiply by 2$(li)Sharp Right: Divide by 2.$(br)The clockwise version of the pattern, on the right of the other pages, will negate the value at the very end. (The left-hand counter-clockwise version keeps the number positive).$(p)Once I finish drawing, a vector's pushed to the top of the stack.",
 
         example: {
           "x10.header": "Example 1",
@@ -60,7 +60,8 @@
         scientific_exp: "Multiplies the input by 10^n or 10^-n, where n is the length of the tail, depending on whether the start is similar to $(l:patterns/math#hexcasting:mul)$(action)Mult. Dstl./$ or $(l:patterns/math#hexcasting:div)$(action)Div. Dstl./$. The top 3 patterns are x10^1, x10^2, and x10^3. The bottom 3 are x10^-1, x10^-2, and x10^-3.",
         linear_approach: "Makes the first value approach the second at a rate of the third value. Will not overshoot.",
         angle_dist: "Returns the shortest angular distance between two angles in radians.",
-        angle_approach: "Turns the first angle towards the second at a rate of the third value. Will not overshoot. Picks whichever direction is shorter. All angles in radians."
+        angle_approach: "Turns the first angle towards the second by the third value, picking whichever direction is closer and will not overshoot. All angles in radians.",
+        "angle_approach.examples": "(To make it easier to read, these examples are written in degrees instead of radians.)$(p)For example:$(li)90, 135, 10 returns 100 (start at 90, turn 10 degrees towards 100)$(li)10, 270, 30 returns 340 (start at 10, turn 30 degrees towards 270)$(li)300, 90, 90 returns 30 (start at 300, turn 90 degrees towards 90)$(li)20, 180, 60 returns 60 (start at 20, turn 180 degrees towards 60, stop at 60)"
       },
       vec_math: {
         normalize: "Sets the length of the vector to one.",

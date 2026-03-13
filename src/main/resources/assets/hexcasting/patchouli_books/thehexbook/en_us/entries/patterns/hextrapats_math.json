@@ -126,6 +126,10 @@
       "input": "num, num, num",
       "output": "num",
       "text": "hextrapats.page.math.angle_approach"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.math.angle_approach.examples"
     }
   ]
 }
