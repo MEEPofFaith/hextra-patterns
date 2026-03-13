@@ -77,7 +77,7 @@
       <ul class="nav navbar-nav navbar-right">
             <li>
     <a
-      href="https://github.com/MEEPofFaith/hextra-patterns/tree/b3b9001eafe2334370bb06b99e1b5d1c5f4cb66e"
+      href="https://github.com/MEEPofFaith/hextra-patterns/tree/a7784a45fde3338c7a4995b0a2774d4e0d2c50de"
         target="_blank"
       class="navbar-link"
       role="button"
@@ -493,7 +493,7 @@
       <p>A head that slightly bends to the left will output a vector where <a href="#patterns/hextrapats_consts@hextrapats:haha_ha_one"><span style="color: #fc77be">all 3 components are the same</span></a>.</p>
   </div>
 <br />
-    <p>First, I draw one of the eight shapes shown on the prior pages. Next, the <i>angles</i> following will modify a running count starting at 0.</p><p class="fake-li " style="--level: 1;">Forward: Add 1</p><p class="fake-li " style="--level: 1;">Left: Add 5</p><p class="fake-li " style="--level: 1;">Right: Add 10</p><p class="fake-li " style="--level: 1;">Sharp Left: Multiply by 2</p><p class="fake-li " style="--level: 1;">Sharp Right: Divide by 2.<br />The clockwise version of the pattern, on the right of the other page, will negate the value at the very end. (The left-hand counter-clockwise version keeps the number positive).</p><p>Once I finish drawing, a vector&#39;s pushed to the top of the stack.</p>
+    <p>First, I draw one of the eight shapes shown on the prior pages. Next, the <i>angles</i> following will modify a running count starting at 0.</p><p class="fake-li " style="--level: 1;">Forward: Add 1</p><p class="fake-li " style="--level: 1;">Left: Add 5</p><p class="fake-li " style="--level: 1;">Right: Add 10</p><p class="fake-li " style="--level: 1;">Sharp Left: Multiply by 2</p><p class="fake-li " style="--level: 1;">Sharp Right: Divide by 2.<br />The clockwise version of the pattern, on the right of the other pages, will negate the value at the very end. (The left-hand counter-clockwise version keeps the number positive).</p><p>Once I finish drawing, a vector&#39;s pushed to the top of the stack.</p>
 <br />
   <h4>Example 1</h4>
   <details class="details-collapsible">
@@ -1305,10 +1305,10 @@
         class="spell-viz"
         width="216"
         height="216"
-        data-string="dqqqqd"
-        data-start="south_east"
+        data-string="awdaqqqqqea"
+        data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dqqqqd</canvas>
+      >Your browser does not support visualizing patterns. Pattern code: awdaqqqqqea</canvas>
   </details>
       <p>Returns the shortest angular distance between two angles in radians.</p>
   </div>
@@ -1361,13 +1361,15 @@
         class="spell-viz"
         width="216"
         height="216"
-        data-string="deeeea"
-        data-start="east"
+        data-string="awdaqqqqqwd"
+        data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: deeeea</canvas>
+      >Your browser does not support visualizing patterns. Pattern code: awdaqqqqqwd</canvas>
   </details>
-      <p>Makes the first angle approach the second at a rate of the third value. Will not overshoot. Picks whichever direction is shorter. All angles in radians.</p>
+      <p>Turns the first angle towards the second by the third value, picking whichever direction is closer and will not overshoot. All angles in radians.</p>
   </div>
+<br />
+    <p>(To make it easier to read, these examples are written in degrees instead of radians.)</p><p>For example:</p><p class="fake-li " style="--level: 1;">90, 135, 10 returns 100 (start at 90, turn 10 degrees towards 100)</p><p class="fake-li " style="--level: 1;">10, 270, 30 returns 340 (start at 10, turn 30 degrees towards 270)</p><p class="fake-li " style="--level: 1;">300, 90, 90 returns 30 (start at 300, turn 90 degrees towards 90)</p><p class="fake-li " style="--level: 1;">20, 180, 60 returns 60 (start at 20, turn 180 degrees towards 60, stop at 60)</p>
 <br />
 </div>
 <div id="patterns/hextrapats_vec_math" class="entry">
@@ -1723,9 +1725,9 @@
       <p>Moves the first vector towards the second a rate of the third value. Will not overshoot.</p>
   </div>
 <br />
-  <div id="patterns/hextrapats_vec_math@hextrapats:vec_angle_dist" class="">
-<h4 class="pattern-title">Theta Distillation II (vec, vec → num)<a
-    href="#patterns/hextrapats_vec_math@hextrapats:vec_angle_dist"
+  <div id="patterns/hextrapats_vec_math@hextrapats:angle_dist" class="">
+<h4 class="pattern-title">Theta Distillation (vec, vec → num)<a
+    href="#patterns/hextrapats_vec_math@hextrapats:angle_dist"
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h4>
@@ -1779,9 +1781,9 @@
       <p>Returns the shortest angular distance on a sphere between two vectors in radians</p>
   </div>
 <br />
-  <div id="patterns/hextrapats_vec_math@hextrapats:vec_rotate_towards" class="">
-<h4 class="pattern-title">Turning Exaltation II (vec, vec, num → vec)<a
-    href="#patterns/hextrapats_vec_math@hextrapats:vec_rotate_towards"
+  <div id="patterns/hextrapats_vec_math@hextrapats:angle_approach" class="">
+<h4 class="pattern-title">Turning Exaltation (vec, vec, num → vec)<a
+    href="#patterns/hextrapats_vec_math@hextrapats:angle_approach"
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h4>
