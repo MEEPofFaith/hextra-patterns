@@ -60,7 +60,7 @@
         scientific_exp: "Multiplies the input by 10^n or 10^-n, where n is the length of the tail, depending on whether the start is similar to $(l:patterns/math#hexcasting:mul)$(action)Mult. Dstl./$ or $(l:patterns/math#hexcasting:div)$(action)Div. Dstl./$. The top 3 patterns are x10^1, x10^2, and x10^3. The bottom 3 are x10^-1, x10^-2, and x10^-3.",
         linear_approach: "Makes the first value approach the second at a rate of the third value. Will not overshoot.",
         angle_dist: "Returns the shortest angular distance between two angles in radians.",
-        angle_approach: "Makes the first angle approach the second at a rate of the third value. Will not overshoot. Picks whichever direction is shorter. All angles in radians."
+        angle_approach: "Turns the first angle towards the second at a rate of the third value. Will not overshoot. Picks whichever direction is shorter. All angles in radians."
       },
       vec_math: {
         normalize: "Sets the length of the vector to one.",
@@ -69,8 +69,8 @@
         rand_vec: "Returns a unit vector facing a random direction.",
         vec_dist: "Returns the distance between two vectors.",
         vec_approach: "Moves the first vector towards the second a rate of the third value. Will not overshoot.",
-        vec_angle_dist: "Returns the shortest angular distance on a sphere between two vectors in radians",
-        vec_rotate_towards: "Turns the first vector towards the second vector by num radians.",
+        angle_dist: "Returns the shortest angular distance on a sphere between two vectors in radians",
+        angle_approach: "Turns the first vector towards the second vector by num radians.",
         from_polar: "Creates a unit vector from two polar angles, pitch and yaw, in radians. +Y is up. 0 yaw is +Z, pi/2 yaw is -X. Yet again, mentions of $(thing)F3/$ turn up.",
         to_polar: "Converts a vector's direction into two polar angles, pitch and yaw, in radians. +Y is up. 0 yaw is +Z, pi/2 yaw is -X. Yet again, mentions of $(thing)F3/$ turn up.",
         rot_about_x: "Rotates the vector by the given angle in radians around the X axis.",
@@ -119,8 +119,6 @@
         linear_approach: "Approach Exaltation",
         angle_dist: "Theta Distillation",
         angle_approach: "Turning Exaltation",
-        vec_angle_dist: "Theta Distillation II",
-        vec_rotate_towards: "Turning Exaltation II",
 
         normalize: "Norm Purification",
         rand_vec: "Chaos Reflection",

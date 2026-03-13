@@ -56,19 +56,19 @@
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextrapats:vec_angle_dist",
-      "anchor": "hextrapats:vec_angle_dist",
+      "op_id": "hextrapats:angle_dist",
+      "anchor": "hextrapats:angle_dist",
       "input": "vec, vec",
       "output": "num",
-      "text": "hextrapats.page.vec_math.vec_angle_dist"
+      "text": "hextrapats.page.vec_math.angle_dist"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextrapats:vec_rotate_towards",
-      "anchor": "hextrapats:vec_rotate_towards",
+      "op_id": "hextrapats:angle_approach",
+      "anchor": "hextrapats:angle_approach",
       "input": "vec, vec, num",
       "output": "vec",
-      "text": "hextrapats.page.vec_math.vec_rotate_towards"
+      "text": "hextrapats.page.vec_math.angle_approach"
     },
     {
       "type": "hexcasting:pattern",

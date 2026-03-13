@@ -26,7 +26,9 @@ public class Arithmetics{
         OUT_RANGE = Patterns.OUT_RANGE.prototype(),
         INVERT = Patterns.INVERT.prototype(),
         INCREMENT = Patterns.INCREMENT.prototype(),
-        DECREMENT = Patterns.DECREMENT.prototype();
+        DECREMENT = Patterns.DECREMENT.prototype(),
+        ANGLE_DIST = Patterns.ANGLE_DIST.prototype(),
+        ANGLE_APPROACH = Patterns.ANGLE_APPROACH.prototype();
 
     public static void init(){
         registerArithmetic("bool", new BoolArithmetic());
