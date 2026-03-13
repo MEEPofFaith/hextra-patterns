@@ -50,6 +50,8 @@ public class Patterns{
         register("rand_vec", "eeeeeqeqqq", HexDir.EAST, new OpRandVec());
         register("vec_dist", "aqqqqqeqeeeeed", HexDir.EAST, new OpVecDist());
         register("vec_approach", "aqqqqqeadeeed", HexDir.EAST, new OpVecApproach());
+        register("vec_angle_dist", "awdaqqqqqea", HexDir.NORTH_EAST, new OpVecAngleDist());
+        register("vec_rotate_towards", "awdaqqqqqwd", HexDir.NORTH_EAST, new OpRotateTowards());
         register("from_polar", "eqqadaqa", HexDir.EAST, new OpFromPolar());
         register("to_polar", "qedadeed", HexDir.EAST, new OpToPolar());
 

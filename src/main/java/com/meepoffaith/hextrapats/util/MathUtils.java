@@ -1,5 +1,7 @@
 package com.meepoffaith.hextrapats.util;
 
+import net.minecraft.util.math.Vec3d;
+
 public class MathUtils{
     public static final double TAU = 2 * Math.PI;
 
@@ -16,5 +18,12 @@ public class MathUtils{
         double distFwd = (b - a) < 0 ? b - a + TAU : b - a;
 
         return Math.min(distBack, distFwd);
+    }
+
+    public static double vecAngleDist(Vec3d a, Vec3d b){
+        double dot = a.dotProduct(b);
+        double len2 = a.length() * b.length();
+
+        return Math.acos(dot/len2);
     }
 }

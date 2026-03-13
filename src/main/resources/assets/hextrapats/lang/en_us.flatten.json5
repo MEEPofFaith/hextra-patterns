@@ -69,6 +69,8 @@
         rand_vec: "Returns a unit vector facing a random direction.",
         vec_dist: "Returns the distance between two vectors.",
         vec_approach: "Moves the first vector towards the second a rate of the third value. Will not overshoot.",
+        vec_angle_dist: "Returns the shortest angular distance on a sphere between two vectors in radians",
+        vec_rotate_towards: "Turns the first vector towards the second vector by num radians.",
         from_polar: "Creates a unit vector from two polar angles, pitch and yaw, in radians. +Y is up. 0 yaw is +Z, pi/2 yaw is -X. Yet again, mentions of $(thing)F3/$ turn up.",
         to_polar: "Converts a vector's direction into two polar angles, pitch and yaw, in radians. +Y is up. 0 yaw is +Z, pi/2 yaw is -X. Yet again, mentions of $(thing)F3/$ turn up.",
         rot_about_x: "Rotates the vector by the given angle in radians around the X axis.",
@@ -114,14 +116,16 @@
         rand_zero: "Entropy Purification",
         rand_range: "Entropy Distillation",
         scientific_exp: "Scientific Purification",
-        linear_approach: "Linear Approach Exaltation",
-        angle_dist: "Angular Distance Distillation",
-        angle_approach: "Angular Approach Exaltation",
+        linear_approach: "Approach Exaltation",
+        angle_dist: "Theta Distillation",
+        angle_approach: "Turning Exaltation",
+        vec_angle_dist: "Theta Distillation II",
+        vec_rotate_towards: "Turning Exaltation II",
 
         normalize: "Norm Purification",
         rand_vec: "Chaos Reflection",
-        vec_dist: "Vector Distance Distillation",
-        vec_approach: "Vector Approach Exaltation",
+        vec_dist: "Distance Distillation",
+        vec_approach: "Approach Exaltation II",
         from_polar: "Polar Distillation",
         to_polar: "Polar Decomposition",
         rot_about_x: "Pitch Distillation",
@@ -164,12 +168,6 @@
 
         increment: "Incrementation Purif.",
         decrement: "Decrementation Purif.",
-        linear_approach: "Linear Approach Exalt.",
-        angle_dist: "Angular Distance Dstl.",
-        angle_approach: "Angular Approach Exalt.",
-
-        vec_dist: "Vector Distance Dstl.",
-        vec_approach: "Vector Approach Exalt.",
 
         "nocon/": {
           greater: "Comp. Gambit: Maximus",

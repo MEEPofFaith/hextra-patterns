@@ -10,11 +10,8 @@ import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaPredicate;
 import at.petrak.hexcasting.api.casting.iota.DoubleIota;
 import at.petrak.hexcasting.api.casting.iota.Vec3Iota;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
-import at.petrak.hexcasting.api.casting.mishaps.MishapDivideByZero;
-import com.meepoffaith.hextrapats.init.Arithmetics;
 import com.meepoffaith.hextrapats.util.generics.Func1to1;
 import com.meepoffaith.hextrapats.util.generics.Func2to1;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.Vec3d;
 
 import java.util.List;
