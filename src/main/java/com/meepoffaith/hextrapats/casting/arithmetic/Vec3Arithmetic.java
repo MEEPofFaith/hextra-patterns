@@ -132,13 +132,13 @@ public class Vec3Arithmetic implements Arithmetic{
 
     private OperatorBinary makeVecVectoNum(Func2to1<Vec3d, Vec3d, Double> op){
         return new OperatorBinary(IotaMultiPredicate.all(IotaPredicate.ofType(VEC3)),
-            (i, j) -> new DoubleIota(op.apply(Operator.downcast(i, VEC3).getVec3(), Operator.downcast(i, VEC3).getVec3()))
+            (i, j) -> new DoubleIota(op.apply(Operator.downcast(i, VEC3).getVec3(), Operator.downcast(j, VEC3).getVec3()))
         );
     }
 
     private OperatorTrinary makeVecVecNumtoVec(Func3to1<Vec3d, Vec3d, Double, Vec3d> op){
         return new OperatorTrinary(IotaMultiPredicate.triple(IotaPredicate.ofType(VEC3), IotaPredicate.ofType(VEC3), IotaPredicate.ofType(DOUBLE)),
-            (i, j, k) -> new Vec3Iota(op.apply(Operator.downcast(i, VEC3).getVec3(), Operator.downcast(i, VEC3).getVec3(), Operator.downcast(i, DOUBLE).getDouble()))
+            (i, j, k) -> new Vec3Iota(op.apply(Operator.downcast(i, VEC3).getVec3(), Operator.downcast(j, VEC3).getVec3(), Operator.downcast(k, DOUBLE).getDouble()))
         );
     }
 }
