@@ -61,7 +61,7 @@
         linear_approach: "Makes the first value approach the second at a rate of the third value. Will not overshoot.",
         angle_dist: "Returns the shortest angular distance between two angles in radians.",
         angle_approach: "Turns the first angle towards the second by the given number of radians, picking whichever direction is shorter.",
-        "angle_approach.examples": "(To make it easier to read, these examples are written in degrees instead of radians.)$(li)In the form: From, To, Theta$(br)For example:$(li)90, 135, 10 \u2192 100 (start at 90, turn 10 degrees towards 135)$(li)10, 270, 30 \u2192 340 (start at 10, turn 30 degrees towards 270)$(li)300, 90, 90 \u2192 30 (start at 300, turn 90 degrees towards 90)$(li)20, 60, 180 \u2192 60 (start at 20, turn 180 degrees towards 60, stop at 60)"
+        "angle_approach.examples": "(To make it easier to read, these examples are written in degrees instead of radians.)$(p)For example:$(li)90, 135, 10 \u2192 100 (start at 90, turn 10 degrees towards 135)$(li)10, 270, 30 \u2192 340 (start at 10, turn 30 degrees towards 270)$(li)300, 90, 90 \u2192 30 (start at 300, turn 90 degrees towards 90)$(li)20, 60, 180 \u2192 60 (start at 20, turn 180 degrees towards 60, stop at 60)"
       },
       vec_math: {
         normalize: "Sets the length of the vector to one.",
@@ -72,7 +72,7 @@
         vec_approach: "Moves the first vector towards the second a rate of the third value. Will not overshoot.",
         angle_dist: "Returns the shortest angular distance on a sphere between two vectors in radians",
         angle_approach: "Rotates the first vector towards the second vector by the given number of radians.",
-        "angle_approach.examples": "In the form: From, To, Theta$(p)For example:$(li)(1, 0, 0), (0, 1, 0), pi/4$(br)   \u2192 (0.71, 0.71, 0)$(li)(2, 0, 0), (0, 5, 0), pi/4$(br)   \u2192 (1.41, 1.41, 0)$(li)(1, 1, 1), (0, 5, 5), pi/6$(br)   \u2192 (0.16, 1.22, 1.22)",
+        "angle_approach.examples": "For example:$(li)(1, 0, 0), (0, 1, 0), pi/4$(br)   \u2192 (0.71, 0.71, 0)$(li)(2, 0, 0), (0, 5, 0), pi/4$(br)   \u2192 (1.41, 1.41, 0)$(li)(1, 1, 1), (0, 5, 5), pi/6$(br)   \u2192 (0.16, 1.22, 1.22)",
         from_polar: "Creates a unit vector from two polar angles, pitch and yaw, in radians. +Y is up. 0 yaw is +Z, pi/2 yaw is -X. Yet again, mentions of $(thing)F3/$ turn up.",
         to_polar: "Converts a vector's direction into two polar angles, pitch and yaw, in radians. +Y is up. 0 yaw is +Z, pi/2 yaw is -X. Yet again, mentions of $(thing)F3/$ turn up.",
         rot_about_x: "Rotates the vector by the given angle in radians around the X axis.",
