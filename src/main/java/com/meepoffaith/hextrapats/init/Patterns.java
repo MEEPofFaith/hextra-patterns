@@ -38,6 +38,7 @@ public class Patterns{
         INVERT = registerEntry("invert", "waqawqa", HexDir.SOUTH_WEST),
         INCREMENT = registerEntry("increment", "waawawaaw", HexDir.NORTH_EAST),
         DECREMENT = registerEntry("decrement", "wddwdwddw", HexDir.NORTH_WEST),
+        APPROACH = registerEntry("approach", "dedqadeeed", HexDir.SOUTH_WEST),
         ANGLE_DIST = registerEntry("angle_dist", "awdaqqqqqea", HexDir.NORTH_EAST),
         ANGLE_APPROACH = registerEntry("angle_approach", "awdaqqqqqwd", HexDir.NORTH_EAST);
 
@@ -46,11 +47,9 @@ public class Patterns{
         register("rad_to_deg", "qdwdqqqqq", HexDir.NORTH_EAST, new OpRadDeg());
         register("rand_zero", "dedqeqqq", HexDir.EAST, new OpRandRange());
         register("rand_range", "eeeqeqqq", HexDir.SOUTH_WEST, new OpRandZero());
-        register("linear_approach", "wwadeeed", HexDir.EAST, new OpApproach());
 
         register("rand_vec", "eeeeeqeqqq", HexDir.EAST, new OpRandVec());
         register("vec_dist", "aqqqqqeqeeeeed", HexDir.EAST, new OpVecDist());
-        register("vec_approach", "aqqqqqeadeeed", HexDir.EAST, new OpVecApproach());
         register("from_polar", "eqqadaqa", HexDir.EAST, new OpFromPolar());
         register("to_polar", "qedadeed", HexDir.EAST, new OpToPolar());
 

@@ -25,6 +25,7 @@ public class NumArithmetic implements Arithmetic{
         INVERT,
         INCREMENT,
         DECREMENT,
+        APPROACH,
         ANGLE_DIST,
         ANGLE_APPROACH
     );
@@ -47,6 +48,18 @@ public class NumArithmetic implements Arithmetic{
             return makeNumToNum(d -> d + 1);
         }else if(pattern.sigsEqual(DECREMENT)){
             return makeNumToNum(d -> d - 1);
+        }else if(pattern.sigsEqual(APPROACH)){
+            return makeNumNumNumtoNum((from, to, speed) -> {
+                if(Math.abs(from - to) < speed) return to;
+
+                if(to < from){
+                    from -= speed;
+                }else{
+                    from += speed;
+                }
+
+                return from;
+            });
         }else if(pattern.sigsEqual(ANGLE_DIST)){
             return makeNumNumtoNum(MathUtils::angleDist);
         }else if(pattern.sigsEqual(ANGLE_APPROACH)){

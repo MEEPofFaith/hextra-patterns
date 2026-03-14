@@ -27,6 +27,7 @@ public class Arithmetics{
         INVERT = Patterns.INVERT.prototype(),
         INCREMENT = Patterns.INCREMENT.prototype(),
         DECREMENT = Patterns.DECREMENT.prototype(),
+        APPROACH = Patterns.APPROACH.prototype(),
         ANGLE_DIST = Patterns.ANGLE_DIST.prototype(),
         ANGLE_APPROACH = Patterns.ANGLE_APPROACH.prototype();
 

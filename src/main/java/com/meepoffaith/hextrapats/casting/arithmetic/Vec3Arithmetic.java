@@ -35,6 +35,7 @@ public class Vec3Arithmetic implements Arithmetic{
         INVERT,
         INCREMENT,
         DECREMENT,
+        APPROACH,
         ANGLE_DIST,
         ANGLE_APPROACH
     );
@@ -90,6 +91,16 @@ public class Vec3Arithmetic implements Arithmetic{
             return makeVecToVec(v -> {
                 double len = v.length();
                 return  DoubleIota.tolerates(len, 0) ? v : v.multiply((len - 1) / len);
+            });
+        }else if(pattern.sigsEqual(APPROACH)){
+            return makeVecVecNumtoVec((from, to, speed) -> {
+                Vec3d step = to.subtract(from);
+                double stepLen = step.length();
+
+                if(stepLen < speed) return to;
+
+                step = step.multiply(speed / stepLen);
+                return from.add(step);
             });
         }else if(pattern.sigsEqual(ANGLE_DIST)){
             return makeVecVectoNum(MathUtils::vecAngleDist);
