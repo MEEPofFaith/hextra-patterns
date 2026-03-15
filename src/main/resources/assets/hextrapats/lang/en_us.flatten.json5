@@ -69,7 +69,7 @@
         decrement: "Decreases length by 1. Does nothing if the vector is (0, 0, 0).",
         rand_vec: "Returns a unit vector facing a random direction.",
         vec_dist: "Returns the distance between two vectors.",
-        approach: "Moves the first vector towards the second a by a given amount. Will not overshoot.",
+        approach: "Moves the first vector towards the second by a given distance. Will not overshoot.",
         angle_dist: "Returns the shortest angular distance on a sphere between two vectors in radians",
         angle_approach: "Rotates the first vector towards the direction of the second vector by the given number of radians.",
         "angle_approach.examples": "For example:$(li)(1, 0, 0), (0, 1, 0), pi/4$(br)   \u2192 (0.71, 0.71, 0)$(li)(2, 0, 0), (0, 5, 0), pi/4$(br)   \u2192 (1.41, 1.41, 0)$(li)(1, 1, 1), (0, 5, 5), pi/6$(br)   \u2192 (0.16, 1.22, 1.22)",
