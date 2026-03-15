@@ -23,35 +23,33 @@ import net.minecraft.util.math.Vec3d;
 import static com.meepoffaith.hextrapats.init.SpecialHandlers.*;
 
 public class Patterns{
-    public static ActionRegistryEntry ROT_ABOUT_X = registerEntry("rot_about_x", "aaqqqqqea", HexDir.SOUTH_WEST);
-    public static ActionRegistryEntry ROT_ABOUT_Y = registerEntry("rot_about_y", "aaqqqqqew", HexDir.SOUTH_WEST);
-    public static ActionRegistryEntry ROT_ABOUT_Z = registerEntry("rot_about_z", "aaqqqqqed", HexDir.SOUTH_WEST);
-    public static ActionRegistryEntry CONSTRUCT_ABOUT_X = registerEntry("cons_about_x", "daqqqqqea", HexDir.NORTH_WEST);
-    public static ActionRegistryEntry CONSTRUCT_ABOUT_Y = registerEntry("cons_about_y", "daqqqqqew", HexDir.NORTH_WEST);
-    public static ActionRegistryEntry CONSTRUCT_ABOUT_Z = registerEntry("cons_about_z", "daqqqqqed", HexDir.NORTH_WEST);
-    public static ActionRegistryEntry NORMALIZE = registerEntry("normalize", "eeeeedww", HexDir.SOUTH_WEST);
-    public static ActionRegistryEntry LEN_EQ = registerEntry("len_eq", "adqqaqw", HexDir.EAST);
-    public static ActionRegistryEntry LEN_NEQ = registerEntry("len_neq", "daeedew", HexDir.EAST);
-    public static ActionRegistryEntry IN_RANGE = registerEntry("in_range", "qqqq", HexDir.SOUTH_WEST);
-    public static ActionRegistryEntry OUT_RANGE = registerEntry("out_range", "eaae", HexDir.SOUTH_EAST);
-    public static ActionRegistryEntry INVERT = registerEntry("invert", "waqawqa", HexDir.SOUTH_WEST);
-    public static ActionRegistryEntry INCREMENT = registerEntry("increment", "waawawaaw", HexDir.NORTH_EAST);
-    public static ActionRegistryEntry DECREMENT = registerEntry("decrement", "wddwdwddw", HexDir.NORTH_WEST);
+    public static ActionRegistryEntry
+        ROT_ABOUT_X = registerEntry("rot_about_x", "aaqqqqqea", HexDir.SOUTH_WEST),
+        ROT_ABOUT_Y = registerEntry("rot_about_y", "aaqqqqqew", HexDir.SOUTH_WEST),
+        ROT_ABOUT_Z = registerEntry("rot_about_z", "aaqqqqqed", HexDir.SOUTH_WEST),
+        CONSTRUCT_ABOUT_X = registerEntry("cons_about_x", "daqqqqqea", HexDir.NORTH_WEST),
+        CONSTRUCT_ABOUT_Y = registerEntry("cons_about_y", "daqqqqqew", HexDir.NORTH_WEST),
+        CONSTRUCT_ABOUT_Z = registerEntry("cons_about_z", "daqqqqqed", HexDir.NORTH_WEST),
+        NORMALIZE = registerEntry("normalize", "eeeeedww", HexDir.SOUTH_WEST),
+        LEN_EQ = registerEntry("len_eq", "adqqaqw", HexDir.EAST),
+        LEN_NEQ = registerEntry("len_neq", "daeedew", HexDir.EAST),
+        IN_RANGE = registerEntry("in_range", "qqqq", HexDir.SOUTH_WEST),
+        OUT_RANGE = registerEntry("out_range", "eaae", HexDir.SOUTH_EAST),
+        INVERT = registerEntry("invert", "waqawqa", HexDir.SOUTH_WEST),
+        INCREMENT = registerEntry("increment", "waawawaaw", HexDir.NORTH_EAST),
+        DECREMENT = registerEntry("decrement", "wddwdwddw", HexDir.NORTH_WEST),
+        APPROACH = registerEntry("approach", "dedqadeeed", HexDir.SOUTH_WEST),
+        ANGLE_DIST = registerEntry("angle_dist", "awdaqqqqqea", HexDir.NORTH_EAST),
+        ANGLE_APPROACH = registerEntry("angle_approach", "awdaqqqqqwd", HexDir.NORTH_EAST);
 
     public static void init(){
         register("deg_to_rad", "qqqqqdwdq", HexDir.WEST, new OpDegRad());
         register("rad_to_deg", "qdwdqqqqq", HexDir.NORTH_EAST, new OpRadDeg());
         register("rand_zero", "dedqeqqq", HexDir.EAST, new OpRandRange());
         register("rand_range", "eeeqeqqq", HexDir.SOUTH_WEST, new OpRandZero());
-        register("linear_approach", "wwadeeed", HexDir.EAST, new OpApproach());
-        register("angle_dist", "dqqqqd", HexDir.SOUTH_EAST, new OpAngleDist());
-        register("angle_approach", "deeeea", HexDir.EAST, new OpAngleApproach());
 
         register("rand_vec", "eeeeeqeqqq", HexDir.EAST, new OpRandVec());
         register("vec_dist", "aqqqqqeqeeeeed", HexDir.EAST, new OpVecDist());
-        register("vec_approach", "aqqqqqeadeeed", HexDir.EAST, new OpVecApproach());
-        register("vec_angle_dist", "awdaqqqqqea", HexDir.NORTH_EAST, new OpVecAngleDist());
-        register("vec_rotate_towards", "awdaqqqqqwd", HexDir.NORTH_EAST, new OpRotateTowards());
         register("from_polar", "eqqadaqa", HexDir.EAST, new OpFromPolar());
         register("to_polar", "qedadeed", HexDir.EAST, new OpToPolar());
 

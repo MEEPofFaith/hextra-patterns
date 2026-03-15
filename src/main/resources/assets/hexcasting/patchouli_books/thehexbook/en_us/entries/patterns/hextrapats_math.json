@@ -10,16 +10,16 @@
       "type": "hexcasting:pattern",
       "op_id": "hextrapats:deg_to_rad",
       "anchor": "hextrapats:deg_to_rad",
-      "input": "number",
-      "output": "number",
+      "input": "num",
+      "output": "num",
       "text": "hextrapats.page.math.deg_to_rad"
     },
     {
       "type": "hexcasting:pattern",
       "op_id": "hextrapats:rad_to_deg",
       "anchor": "hextrapats:rad_to_deg",
-      "input": "number",
-      "output": "number",
+      "input": "num",
+      "output": "num",
       "text": "hextrapats.page.math.rad_to_deg"
     },
     {
@@ -105,11 +105,11 @@
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextrapats:linear_approach",
-      "anchor": "hextrapats:linear_approach",
+      "op_id": "hextrapats:approach",
+      "anchor": "hextrapats:approach",
       "input": "num, num, num",
       "output": "num",
-      "text": "hextrapats.page.math.linear_approach"
+      "text": "hextrapats.page.math.approach"
     },
     {
       "type": "hexcasting:pattern",
@@ -126,6 +126,10 @@
       "input": "num, num, num",
       "output": "num",
       "text": "hextrapats.page.math.angle_approach"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.math.angle_approach.examples"
     }
   ]
 }
