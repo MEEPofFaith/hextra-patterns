@@ -77,7 +77,7 @@
       <ul class="nav navbar-nav navbar-right">
             <li>
     <a
-      href="https://github.com/MEEPofFaith/hextra-patterns/tree/3a4585934de0b314ad4ee83e87236be5ee5b43b0"
+      href="https://github.com/MEEPofFaith/hextra-patterns/tree/5596d5bd6e4bc915f905194d63a52f11d2dca2eb"
         target="_blank"
       class="navbar-link"
       role="button"
@@ -2401,13 +2401,13 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
-    <p>总有些时候，我会想要在比较两个 iota 之后还继续对它们执行操作，但这就需要每次都先运行<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/stackmanip@hexcasting:2dup"><span style="color: #fc77be">狄俄斯库里之策略</span></a>，确实有些麻烦。</p>
+    <p>总有些时候，我会想要在对两个 iota 进行逻辑操作之后，还继续对它们执行其他操作。但这就需要每次都先复制，确实有些麻烦。而且复制也会给自然带去负担，复制大型 iota 时尤为如此，比如说列表等大到<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#casting/mishaps"><span style="color: #8d6acc">栈上限成为问题</span></a>的那些。</p>
 <br />
-  <h4>比较之策略</h4>
-    <p>通过实验，我发现：在比较图案前加上一个顺时针的三角形，就可以保留两个输入参数了。</p>
+  <h4>留项之策略</h4>
+    <p>通过实验，我发现：在部分逻辑操作图案前加上一个顺时针的三角形，就可以保留两个输入参数了。</p>
 <br />
   <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/bool_coerce" class="">
-<h4 class="pattern-title">Ret. Gambit: Augur&#39;s (A → A, bool)<a
+<h4 class="pattern-title">留项之策略：占卜师 (A → A, bool)<a
     href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/bool_coerce"
     class="permalink small"
     title="Permalink"
@@ -2463,7 +2463,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/eq" class="">
-<h4 class="pattern-title">比较之策略：相等 (A, B → A, B, bool)<a
+<h4 class="pattern-title">留项之策略：相等 (A, B → A, B, bool)<a
     href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/eq"
     class="permalink small"
     title="Permalink"
@@ -2519,7 +2519,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/neq" class="">
-<h4 class="pattern-title">比较之策略：不等 (A, B → A, B, bool)<a
+<h4 class="pattern-title">留项之策略：不等 (A, B → A, B, bool)<a
     href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/neq"
     class="permalink small"
     title="Permalink"
@@ -2575,7 +2575,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/greater" class="">
-<h4 class="pattern-title">比较之策略：至大 (A, B → A, B, bool)<a
+<h4 class="pattern-title">留项之策略：至大 (A, B → A, B, bool)<a
     href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/greater"
     class="permalink small"
     title="Permalink"
@@ -2631,7 +2631,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/less" class="">
-<h4 class="pattern-title">比较之策略：至小 (A, B → A, B, bool)<a
+<h4 class="pattern-title">留项之策略：至小 (A, B → A, B, bool)<a
     href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/less"
     class="permalink small"
     title="Permalink"
@@ -2687,7 +2687,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/greater_eq" class="">
-<h4 class="pattern-title">比较之策略：至大第二型 (A, B → A, B, bool)<a
+<h4 class="pattern-title">留项之策略：至大第二型 (A, B → A, B, bool)<a
     href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/greater_eq"
     class="permalink small"
     title="Permalink"
@@ -2743,7 +2743,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/less_eq" class="">
-<h4 class="pattern-title">比较之策略：至小第二型 (A, B → A, B, bool)<a
+<h4 class="pattern-title">留项之策略：至小第二型 (A, B → A, B, bool)<a
     href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/less_eq"
     class="permalink small"
     title="Permalink"
@@ -2799,7 +2799,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/len_eq" class="">
-<h4 class="pattern-title">比较之策略：长度相等 (A, B → A, B, bool)<a
+<h4 class="pattern-title">留项之策略：长度相等 (A, B → A, B, bool)<a
     href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/len_eq"
     class="permalink small"
     title="Permalink"
@@ -2855,7 +2855,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/len_neq" class="">
-<h4 class="pattern-title">比较之策略：长度不等 (A, B → A, B, bool)<a
+<h4 class="pattern-title">留项之策略：长度不等 (A, B → A, B, bool)<a
     href="#patterns/hextrapats_retained_comparison@hextrapats:nocon/len_neq"
     class="permalink small"
     title="Permalink"
@@ -3698,10 +3698,10 @@
   ><i class="bi bi-link-45deg"></i></a></h3>
     <p>哈希集合的各元素无顺序且不重复，很适合用于记录某物存在与否。<br />由于所谓的“<span style="color: #8d6acc">哈希</span>”之魔法过程，访问其中元素的操作接近于 O(1)，能减轻自然的负担。</p>
 <br />
-    <p>However, &#39;<span style="color: #8d6acc">hashing</span>&#39; seems to have a different, albeit minor, burden on Nature. Numbers and vectors lose precision in the process of getting inserted into a set, becoming rounded to 4 decimals. This seems to be related to <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:equals"><span style="color: #8d6acc">how Nature considers </span><span style="color: #fc77be">equality</span></a>.</p>
+    <p>不过，这种“<span style="color: #8d6acc">哈希</span>”似乎会给自然带去另一种负担，虽然轻微，但确实存在。数和向量在插入集合时会丢失精度，舍入至 4 位小数。这应当是与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:equals"><span style="color: #8d6acc">自然理解</span><span style="color: #fc77be">相等</span></a>的方式有关。</p>
 <br />
   <div id="patterns/hextrapats_sets@hextrapats:empty_num_set" class="">
-<h4 class="pattern-title">Vacant Refl.: Num. Set (→ num set)<a
+<h4 class="pattern-title">空无之精思：数集合 (→ num set)<a
     href="#patterns/hextrapats_sets@hextrapats:empty_num_set"
     class="permalink small"
     title="Permalink"
@@ -3757,7 +3757,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hextrapats:last_n_num_set" class="">
-<h4 class="pattern-title">Bucketing Gamb.: Nums (many nums, num → num set)<a
+<h4 class="pattern-title">桶之策略：数 (many nums, num → num set)<a
     href="#patterns/hextrapats_sets@hextrapats:last_n_num_set"
     class="permalink small"
     title="Permalink"
@@ -3809,11 +3809,11 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：ewdwaawaqdewaqaa</canvas>
   </details>
-      <p>Remove <i>num</i> numbers from the top of the stack, then add them to a number set at the top of the stack.</p>
+      <p>移除栈顶 <i>num</i> 个数，将其插入此时栈顶的数集合。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hextrapats:empty_vec_set" class="">
-<h4 class="pattern-title">Vacant Refl.: Vec. Set (→ vec set)<a
+<h4 class="pattern-title">空无之精思：向量集合 (→ vec set)<a
     href="#patterns/hextrapats_sets@hextrapats:empty_vec_set"
     class="permalink small"
     title="Permalink"
@@ -3869,7 +3869,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hextrapats:last_n_vec_set" class="">
-<h4 class="pattern-title">Bucketing Gamb.: Vecs (many vecs, num → vec set)<a
+<h4 class="pattern-title">桶之策略：向量 (many vecs, num → vec set)<a
     href="#patterns/hextrapats_sets@hextrapats:last_n_vec_set"
     class="permalink small"
     title="Permalink"
@@ -3921,11 +3921,11 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：ewdwaawaqdewqqqqq</canvas>
   </details>
-      <p>Remove <i>num</i> vectors from the top of the stack, then add them to a vec set at the top of the stack.</p>
+      <p>移除栈顶 <i>num</i> 个向量，将其插入此时栈顶的向量集合。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hextrapats:empty_entity_set" class="">
-<h4 class="pattern-title">Vacant Refl.: Ent. Set (→ entity set)<a
+<h4 class="pattern-title">空无之精思：实体集合 (→ entity set)<a
     href="#patterns/hextrapats_sets@hextrapats:empty_entity_set"
     class="permalink small"
     title="Permalink"
@@ -3981,7 +3981,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hextrapats:last_n_entity_set" class="">
-<h4 class="pattern-title">Bucketing Gamb.: Ents (many entities, num → entity set)<a
+<h4 class="pattern-title">桶之策略：实体 (many entities, num → entity set)<a
     href="#patterns/hextrapats_sets@hextrapats:last_n_entity_set"
     class="permalink small"
     title="Permalink"
@@ -4033,7 +4033,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：ewdwaawaqdeqeaqa</canvas>
   </details>
-      <p>Remove <i>num</i> entities from the top of the stack, then add them to an entity set at the top of the stack.</p>
+      <p>移除栈顶 <i>num</i> 个实体，将其插入此时栈顶的实体集合。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hexcasting:append" class="">
@@ -4089,7 +4089,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：edqde</canvas>
   </details>
-      <p>移除栈顶元素，将其插入栈顶集合。</p>
+      <p>移除栈顶元素，将其插入栈顶集合。该 iota 的类型必须符合集合类型。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hextrapats:set_insert_ret" class="">
@@ -4145,7 +4145,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：edqdewd</canvas>
   </details>
-      <p>移除栈顶元素，将其插入此时栈顶的集合。若元素已在集合中，返回 True；否则返回 False。</p>
+      <p>移除栈顶元素，将其插入此时栈顶的集合。若元素已在集合中，返回 True；否则返回 False。该 iota 的类型必须符合集合类型。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hexcasting:remove_from" class="">
@@ -4201,7 +4201,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：edqdewaqa</canvas>
   </details>
-      <p>移除栈顶元素，并从此时栈顶的集合中移除该元素。</p>
+      <p>移除栈顶元素，并从此时栈顶的集合中移除该元素。该 iota 的类型必须符合集合类型。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hextrapats:set_remove_ret" class="">
@@ -4257,7 +4257,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：edqdewaqaaed</canvas>
   </details>
-      <p>移除栈顶元素，并从此时栈顶的集合中移除该元素。若元素曾在集合中，返回 True；否则返回 False。</p>
+      <p>移除栈顶元素，并从此时栈顶的集合中移除该元素。若元素曾在集合中，返回 True；否则返回 False。该 iota 的类型必须符合集合类型。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hexcasting:index_of" class="">
@@ -4313,7 +4313,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：dedqde</canvas>
   </details>
-      <p>移除栈顶元素，若此时栈顶的集合包含该元素，返回 True；否则返回 False。</p>
+      <p>移除栈顶元素，若此时栈顶的集合包含该元素，返回 True；否则返回 False。该 iota 的类型必须符合集合类型。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hexcasting:add" class="">
@@ -4369,7 +4369,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：waaw</canvas>
   </details>
-      <p>移除栈顶集合，再将其中所有元素插入此时栈顶的集合。</p>
+      <p>移除栈顶集合，再将其中所有元素插入此时栈顶的集合。两集合类型必须匹配。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hexcasting:sub" class="">
@@ -4425,7 +4425,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：wddw</canvas>
   </details>
-      <p>移除栈顶集合，再从此时栈顶的集合中移除被移除集合的各元素。</p>
+      <p>移除栈顶集合，再从此时栈顶的集合中移除被移除集合的各元素。两集合类型必须匹配。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hexcasting:and" class="">
@@ -4481,7 +4481,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：wdw</canvas>
   </details>
-      <p>取两集合的交集。新集合将只包含两集合共有的元素。</p>
+      <p>取两集合的交集。新集合将只包含两集合共有的元素。两集合类型必须匹配。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hexcasting:xor" class="">
@@ -4537,7 +4537,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：dwa</canvas>
   </details>
-      <p>取两集合的互斥元素。新集合将只包含仅出现于其中一个集合的元素。</p>
+      <p>取两集合的互斥元素。新集合将只包含仅出现于其中一个集合的元素。两集合类型必须匹配。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hexcasting:abs" class="">
@@ -4705,7 +4705,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：qwawddwdeaq</canvas>
   </details>
-      <p>移除栈顶集合，将其各元素压栈。顺序随自然心情决定。</p>
+      <p>移除栈顶集合，而后将其中元素全部压入栈顶。顺序随自然心情而定。</p>
   </div>
 <br />
 </div>
@@ -4727,7 +4727,7 @@
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
   <div id="patterns/hextrapats_meta@hextrapats:true_eval" class="">
-<h4 class="pattern-title">Helios&#39; Gambit (any, ([pattern] | pattern) → many)<a
+<h4 class="pattern-title">赫利俄斯之策略 (any, ([pattern] | pattern) → many)<a
     href="#patterns/hextrapats_meta@hextrapats:true_eval"
     class="permalink small"
     title="Permalink"
@@ -4779,11 +4779,11 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：deaqqaaqa</canvas>
   </details>
-      <p>Casts a pattern or list of patterns like <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:eval"><span style="color: #fc77be">Hermes&#39; Gambit</span></a> if the next iota from the top of the stack is <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #8d6acc">considered </span><span style="color: #fc77be">True </span><span style="color: #8d6acc">by Nature</span></a>.</p>
+      <p>若自然会将栈顶往下第二 iota <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #8d6acc">视作 </span><span style="color: #fc77be">True</span></a>，则施放栈顶的图案或图案列表，与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:eval"><span style="color: #fc77be">赫尔墨斯之策略</span></a>类似。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_meta@hextrapats:false_eval" class="">
-<h4 class="pattern-title">Selene&#39;s Gambit (any, ([pattern] | pattern) → many)<a
+<h4 class="pattern-title">塞勒涅之策略 (any, ([pattern] | pattern) → many)<a
     href="#patterns/hextrapats_meta@hextrapats:false_eval"
     class="permalink small"
     title="Permalink"
@@ -4835,7 +4835,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：deaqqdded</canvas>
   </details>
-      <p>Casts a pattern or list of patterns like <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:eval"><span style="color: #fc77be">Hermes&#39; Gambit</span></a> if the next iota from the top of the stack is <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #8d6acc">considered </span><span style="color: #fc77be">False </span><span style="color: #8d6acc">by Nature</span></a>.</p>
+      <p>若自然会将栈顶往下第二 iota <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #8d6acc">视作 </span><span style="color: #fc77be">False</span></a>，则施放栈顶的图案或图案列表，与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:eval"><span style="color: #fc77be">赫尔墨斯之策略</span></a>类似。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_meta@hextrapats:true_halt" class="">
@@ -4891,7 +4891,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：aqdeedded</canvas>
   </details>
-      <p>若<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #fc77be">自然会将栈顶 iota 视作 True</span></a>，则强制停止<span style="color: #8d6acc">Hex</span>的施放，与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:halt"><span style="color: #fc77be">卡戎之策略</span></a>类似。</p>
+      <p>若自然会将栈顶 iota <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #8d6acc">视作 </span><span style="color: #fc77be">True</span></a>，则强制停止<span style="color: #8d6acc">Hex</span>的施放，与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:halt"><span style="color: #fc77be">卡戎之策略</span></a>类似。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_meta@hextrapats:false_halt" class="">
@@ -4947,11 +4947,11 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：aqdeeaaqa</canvas>
   </details>
-      <p>若<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #fc77be">自然会将栈顶 iota 视作 False</span></a>，则强制停止<span style="color: #8d6acc">Hex</span>的施放，与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:halt"><span style="color: #fc77be">卡戎之策略</span></a>类似。</p>
+      <p>若自然会将栈顶 iota <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #8d6acc">视作 </span><span style="color: #fc77be">False</span></a>，则强制停止<span style="color: #8d6acc">Hex</span>的施放，与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:halt"><span style="color: #fc77be">卡戎之策略</span></a>类似。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_meta@hextrapats:index_for_each" class="">
-<h4 class="pattern-title">Djehuty&#39;s Gambit ([pattern], list → list)<a
+<h4 class="pattern-title">杰胡提之策略 ([pattern], list → list)<a
     href="#patterns/hextrapats_meta@hextrapats:index_for_each"
     class="permalink small"
     title="Permalink"
@@ -5003,7 +5003,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：dadaddqdq</canvas>
   </details>
-      <p>Casts like <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:for_each"><span style="color: #fc77be">Thoth&#39;s Gambit</span></a>, however the new stack for each element additionally has the index of that element added to the top.</p>
+      <p>与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:for_each"><span style="color: #fc77be">托特之策略</span></a>类似，但被遍历列表的各独立栈会额外将所选元素的下标压入栈顶。</p>
   </div>
 <br />
 </div>
