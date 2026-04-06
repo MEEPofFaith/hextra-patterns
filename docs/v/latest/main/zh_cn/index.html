@@ -77,7 +77,7 @@
       <ul class="nav navbar-nav navbar-right">
             <li>
     <a
-      href="https://github.com/MEEPofFaith/hextra-patterns/tree/59bb1c90a4d2551049d76562700467b6a6a3030d"
+      href="https://github.com/MEEPofFaith/hextra-patterns/tree/399f246c1f260e1c02b132286aa10545aed6b495"
         target="_blank"
       class="navbar-link"
       role="button"
@@ -2851,7 +2851,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：ddqadqqaqw</canvas>
   </details>
-      <p>若两向量的长度相等（允许较小误差），返回 True；否则返回 False。</p>
+      <p>若两向量的长度相等（在较小误差内），返回 True；否则返回 False。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_retained_comparison@hextrapats:nocon/len_neq" class="">
@@ -2907,7 +2907,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：ddqdaeedew</canvas>
   </details>
-      <p>若两向量的长度不相等（不计较小误差），返回 True；否则返回 False。</p>
+      <p>若两向量的长度不相等（超出较小误差），返回 True；否则返回 False。</p>
   </div>
 <br />
 </div>
@@ -3205,7 +3205,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：adqqaqw</canvas>
   </details>
-      <p>若两向量的长度相等（允许较小误差），返回 True；否则返回 False。</p>
+      <p>若两向量的长度相等（在较小误差内），返回 True；否则返回 False。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_logic@hextrapats:len_neq" class="">
@@ -3261,7 +3261,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：daeedew</canvas>
   </details>
-      <p>若两向量的长度不相等（不计较小误差），返回 True；否则返回 False。</p>
+      <p>若两向量的长度不相等（超出较小误差），返回 True；否则返回 False。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_logic@hextrapats:in_range" class="">
@@ -4486,7 +4486,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hextrapats:last_n_set" class="">
-<h4 class="pattern-title">Bucketing Gambit (many, num → set)<a
+<h4 class="pattern-title">桶之策略 (many, num → set)<a
     href="#patterns/hextrapats_sets@hextrapats:last_n_set"
     class="permalink small"
     title="Permalink"
@@ -4538,7 +4538,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：ewdwaawaqde</canvas>
   </details>
-      <p>Remove <i>num</i> iota from the top of the stack, then add them to a set at the top of the stack. Must be either all numbers, all vectors, or all entities.</p>
+      <p>从栈顶移除 <i>num</i> 个 iota，而后将它们加入此时栈顶的集合。被移除 iota 必须全部为数，或全部为向量，或全部为实体。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_sets@hextrapats:splat_set" class="">
@@ -4780,7 +4780,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：aqdeedded</canvas>
   </details>
-      <p>若自然会将栈顶 iota <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #8d6acc">视作 </span><span style="color: #fc77be">True</span></a>，则强制停止<span style="color: #8d6acc">Hex</span>的施放，与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:halt"><span style="color: #fc77be">卡戎之策略</span></a>类似。</p>
+      <p>若自然会将栈顶 iota <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #8d6acc">视作 </span><span style="color: #fc77be">True</span></a>，则强制停止<span style="color: #8d6acc">咒术</span>的施放，与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:halt"><span style="color: #fc77be">卡戎之策略</span></a>类似。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_meta@hextrapats:false_halt" class="">
@@ -4836,7 +4836,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：aqdeeaaqa</canvas>
   </details>
-      <p>若自然会将栈顶 iota <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #8d6acc">视作 </span><span style="color: #fc77be">False</span></a>，则强制停止<span style="color: #8d6acc">Hex</span>的施放，与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:halt"><span style="color: #fc77be">卡戎之策略</span></a>类似。</p>
+      <p>若自然会将栈顶 iota <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/logic@hexcasting:bool_coerce"><span style="color: #8d6acc">视作 </span><span style="color: #fc77be">False</span></a>，则强制停止<span style="color: #8d6acc">咒术</span>的施放，与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:halt"><span style="color: #fc77be">卡戎之策略</span></a>类似。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_meta@hextrapats:index_for_each" class="">
@@ -4896,7 +4896,7 @@
   </div>
 <br />
   <div id="patterns/hextrapats_meta@hextrapats:main_for_each" class="">
-<h4 class="pattern-title">Anubis&#39; Gambit (many, [pattern], list → many)<a
+<h4 class="pattern-title">阿努比斯之策略 (many, [pattern], list → many)<a
     href="#patterns/hextrapats_meta@hextrapats:main_for_each"
     class="permalink small"
     title="Permalink"
@@ -4948,11 +4948,11 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：aawdadad</canvas>
   </details>
-      <p>Casts like <a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:for_each"><span style="color: #fc77be">Thoth&#39;s Gambit</span></a>, however each sub-execution operates on the main stack instead of copies of the stack.</p>
+      <p>与<a href="https://hexcasting.hexxy.media/v/0.11.3/1.0/en_us#patterns/meta@hexcasting:for_each"><span style="color: #fc77be">托特之策略</span></a>类似，但会直接在主栈中进行遍历，而非各项复制新栈。</p>
   </div>
 <br />
   <div id="patterns/hextrapats_meta@hextrapats:main_index_for_each" class="">
-<h4 class="pattern-title">Ra&#39;s Gambit (many, [pattern], list → many)<a
+<h4 class="pattern-title">拉之策略 (many, [pattern], list → many)<a
     href="#patterns/hextrapats_meta@hextrapats:main_index_for_each"
     class="permalink small"
     title="Permalink"
@@ -5004,7 +5004,7 @@
         data-per-world="False"
       >浏览器不支持图案的可视化。图案代码见此：aawdadaddqdq</canvas>
   </details>
-      <p>Casts like <a href="#patterns/hextrapats_meta@hextrapats:index_for_each"><span style="color: #fc77be">Djehuty&#39;s Gambit</span></a>, however each sub-execution operates on the main stack instead of copies of the stack.</p>
+      <p>与<a href="#patterns/hextrapats_meta@hextrapats:index_for_each"><span style="color: #fc77be">杰胡提之策略</span></a>类似，但会直接在主栈中进行遍历，而非各项复制新栈。</p>
   </div>
 <br />
 </div>
