@@ -41,8 +41,6 @@ loom {
 			sourceSet(sourceSets.getByName("client"))
 		}
 	}
-
-	//runs.client.programArgs '--username', 'MEEPofFaith'
 }
 
 dependencies {
