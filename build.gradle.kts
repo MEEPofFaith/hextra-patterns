@@ -4,7 +4,7 @@ import org.gradle.kotlin.dsl.modLocalRuntime
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-	id("net.fabricmc.fabric-loom-remap")
+	id("fabric-loom")
 	`maven-publish`
 	id("org.jetbrains.kotlin.jvm") version "2.3.20"
 	id("at.petra-k.pkpcpbp.PKJson5Plugin") version "0.2.0-pre-95"
