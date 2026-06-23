@@ -8,6 +8,30 @@
   "pages": [
     {
       "type": "hexcasting:pattern",
+      "op_id": "hextrapats:peek/front",
+      "anchor": "hextrapats:peek/front",
+      "input": "list",
+      "output": "list, any",
+      "text": "hextrapats.page.lists.peek/front"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:peek/back",
+      "anchor": "hextrapats:peek/back",
+      "input": "list",
+      "output": "list, any",
+      "text": "hextrapats.page.lists.peek/back"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:peek/index",
+      "anchor": "hextrapats:peek/index",
+      "input": "list, num",
+      "output": "list, any",
+      "text": "hextrapats.page.lists.peek/index"
+    },
+    {
+      "type": "hexcasting:pattern",
       "op_id": "hextrapats:split_list",
       "anchor": "hextrapats:split_list",
       "input": "list, num",

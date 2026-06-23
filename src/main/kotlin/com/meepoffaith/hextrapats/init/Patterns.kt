@@ -66,6 +66,9 @@ object Patterns {
         register("haha_ha_one", "qqqqqeq", HexDir.NORTH_WEST, Action.makeConstantOp(Vec3Iota(Vec3d(1.0, 1.0, 1.0))))
         register("eno_ah_ahah", "eeeeeqq", HexDir.SOUTH_WEST, Action.makeConstantOp(Vec3Iota(Vec3d(-1.0, -1.0, -1.0))))
 
+        register("peek/front", "aaqwqaaq", HexDir.SOUTH_WEST, OpPeek(false))
+        register("peek/back", "qaeaqe", HexDir.NORTH_WEST, OpPeek(true))
+        register("peek/index", "deeedew", HexDir.NORTH_WEST, OpPeekAt())
         register("split_list", "wdedqqa", HexDir.EAST, OpSplitList())
         register("del_element/first", "dedwqaeaqa", HexDir.NORTH_EAST, OpDelete())
         register("del_element/all", "dedwqaeaqaw", HexDir.NORTH_EAST, OpDeleteAll())
