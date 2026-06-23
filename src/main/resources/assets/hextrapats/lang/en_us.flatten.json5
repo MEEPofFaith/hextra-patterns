@@ -198,6 +198,11 @@
           len_neq: "Retention Gambit: Length Inequality",
         },
 
+        "peek/": {
+          front: "Speaker's Decomposition II",
+          back: "Derivation Decomposition II",
+          index: "Viewer's Gambit"
+        },
         split_list: "Separation Gambit",
         "del_element/": {
           first: "Elimination Gambit",
@@ -251,6 +256,11 @@
           neq: "Ret. Gambit: Inequality",
           len_eq: "Ret. Gambit: Len. Eq.",
           len_neq: "Ret. Gambit: Len. Ineq."
+        },
+
+        "peek/": {
+          front: "Speaker's Decomp. II",
+          back: "Derivation Decomp. II",
         },
 
         "empty_set/": {
