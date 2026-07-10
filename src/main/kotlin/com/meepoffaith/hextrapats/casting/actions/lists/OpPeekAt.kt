@@ -9,7 +9,7 @@ import at.petrak.hexcasting.api.casting.iota.ListIota
 import at.petrak.hexcasting.api.casting.iota.NullIota
 import kotlin.math.roundToInt
 
-class OpPeekAt : ConstMediaAction {
+object OpPeekAt : ConstMediaAction {
     override val argc = 2
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
         val list = args.getList(0, argc).toMutableList()

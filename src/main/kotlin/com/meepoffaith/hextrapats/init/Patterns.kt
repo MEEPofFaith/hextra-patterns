@@ -53,15 +53,15 @@ object Patterns {
     val SET_REMOVE_RET = register("set_remove_ret", "edqdewaqaaed", HexDir.SOUTH_WEST)
 
     fun init(){
-        register("deg_to_rad", "qqqqqdwdq", HexDir.WEST, OpDegRad())
-        register("rad_to_deg", "qdwdqqqqq", HexDir.NORTH_EAST, OpRadDeg())
-        register("rand_zero", "dedqeqqq", HexDir.EAST, OpRandZero())
-        register("rand_range", "eeeqeqqq", HexDir.SOUTH_WEST, OpRandRange())
+        register("deg_to_rad", "qqqqqdwdq", HexDir.WEST, OpDegRad)
+        register("rad_to_deg", "qdwdqqqqq", HexDir.NORTH_EAST, OpRadDeg)
+        register("rand_zero", "dedqeqqq", HexDir.EAST, OpRandZero)
+        register("rand_range", "eeeqeqqq", HexDir.SOUTH_WEST, OpRandRange)
 
-        register("rand_vec", "eeeeeqeqqq", HexDir.EAST, OpRandVec())
-        register("vec_dist", "aqqqqqeqeeeeed", HexDir.EAST, OpVecDist())
-        register("from_polar", "eqqadaqa", HexDir.EAST, OpFromPolar())
-        register("to_polar", "qedadeed", HexDir.EAST, OpToPolar())
+        register("rand_vec", "eeeeeqeqqq", HexDir.EAST, OpRandVec)
+        register("vec_dist", "aqqqqqeqeeeeed", HexDir.EAST, OpVecDist)
+        register("from_polar", "eqqadaqa", HexDir.EAST, OpFromPolar)
+        register("to_polar", "qedadeed", HexDir.EAST, OpToPolar)
 
         //Come on, Elise!
         register("haha_ha_one", "qqqqqeq", HexDir.NORTH_WEST, Action.makeConstantOp(Vec3Iota(Vec3d(1.0, 1.0, 1.0))))
@@ -69,14 +69,14 @@ object Patterns {
 
         register("peek/front", "aaqwqaaq", HexDir.SOUTH_WEST, OpPeek(false))
         register("peek/back", "qaeaqe", HexDir.NORTH_WEST, OpPeek(true))
-        register("peek/index", "deeedew", HexDir.NORTH_WEST, OpPeekAt())
-        register("split_list", "wdedqqa", HexDir.EAST, OpSplitList())
-        register("del_element/first", "dedwqaeaqa", HexDir.NORTH_EAST, OpDelete())
-        register("del_element/all", "dedwqaeaqaw", HexDir.NORTH_EAST, OpDeleteAll())
-        register("swindle_list", "dqdeqaawddea", HexDir.WEST, OpListSwindle())
-        register("scronglwfijspoivjqwofklcrvewb", "ddedqdaqwdwaqawdwqaqww", HexDir.EAST, OpShuffle())
+        register("peek/index", "deeedew", HexDir.NORTH_WEST, OpPeekAt)
+        register("split_list", "wdedqqa", HexDir.EAST, OpSplitList)
+        register("del_element/first", "dedwqaeaqa", HexDir.NORTH_EAST, OpDelete)
+        register("del_element/all", "dedwqaeaqaw", HexDir.NORTH_EAST, OpDeleteAll)
+        register("swindle_list", "dqdeqaawddea", HexDir.WEST, OpListSwindle)
+        register("scronglwfijspoivjqwofklcrvewb", "ddedqdaqwdwaqawdwqaqww", HexDir.EAST, OpShuffle)
 
-        register("nocon/bool_coerce", "ddaw", HexDir.SOUTH_EAST, OpNoConsBoolCoerce())
+        register("nocon/bool_coerce", "ddaw", HexDir.SOUTH_EAST, OpNoConsBoolCoerce)
         registerNoConsumeOp("nocon/greater", "ddwe", HexDir.WEST, Arithmetic.GREATER, 2)
         registerNoConsumeOp("nocon/less", "ddeq", HexDir.WEST, Arithmetic.LESS, 2)
         registerNoConsumeOp("nocon/greater_eq", "ddwee", HexDir.WEST, Arithmetic.GREATER_EQ, 2)
@@ -86,23 +86,23 @@ object Patterns {
         register("nocon/eq", "ddqad", HexDir.WEST, OpNoConsEquality(false))
         register("nocon/neq", "ddqda", HexDir.WEST, OpNoConsEquality(true))
 
-        register("empty_set/num", "eedqddeeaqaa", HexDir.NORTH_WEST, OpEmptyNumSet())
-        register("empty_set/vec", "eedqddeeqqqqq", HexDir.NORTH_WEST, OpEmptyVecSet())
-        register("empty_set/entity", "eedqddeweaqa", HexDir.NORTH_WEST, OpEmptyEntitySet())
-        register("last_n_set", "ewdwaawaqde", HexDir.SOUTH_WEST, OpLastNToSet())
-        register("splat_set", "qwawddwdeaq", HexDir.NORTH_WEST, OpSplatSet())
-        register("set_to_list", "eedqddeqaaeaqq", HexDir.NORTH_WEST, OpSetToList())
-        register("list_to_set", "qqaeaadwaddqdee", HexDir.NORTH_EAST, OpListToSet())
+        register("empty_set/num", "eedqddeeaqaa", HexDir.NORTH_WEST, OpEmptyNumSet)
+        register("empty_set/vec", "eedqddeeqqqqq", HexDir.NORTH_WEST, OpEmptyVecSet)
+        register("empty_set/entity", "eedqddeweaqa", HexDir.NORTH_WEST, OpEmptyEntitySet)
+        register("last_n_set", "ewdwaawaqde", HexDir.SOUTH_WEST, OpLastNToSet)
+        register("splat_set", "qwawddwdeaq", HexDir.NORTH_WEST, OpSplatSet)
+        register("set_to_list", "eedqddeqaaeaqq", HexDir.NORTH_WEST, OpSetToList)
+        register("list_to_set", "qqaeaadwaddqdee", HexDir.NORTH_EAST, OpListToSet)
 
         register("true_eval", "deaqqaaqa", HexDir.SOUTH_EAST, OpConditionalEval(true))
         register("false_eval", "deaqqdded", HexDir.SOUTH_EAST, OpConditionalEval(false))
         register("true_halt", "aqdeedded", HexDir.SOUTH_WEST, OpConditionalHalt(true))
         register("false_halt", "aqdeeaaqa", HexDir.SOUTH_WEST, OpConditionalHalt(false))
-        register("index_for_each", "dadaddqdq", HexDir.NORTH_EAST, OpForEachIndex())
+        register("index_for_each", "dadaddqdq", HexDir.NORTH_EAST, OpForEachIndex)
         register("main_for_each", "aawdadad", HexDir.WEST, OpMainForEach(false))
         register("main_index_for_each", "aawdadaddqdq", HexDir.WEST, OpMainForEach(true))
 
-        register("null_coalesce", "wawaa", HexDir.SOUTH_EAST, OpNullCoalesce())
+        register("null_coalesce", "wawaa", HexDir.SOUTH_EAST, OpNullCoalesce)
     }
 
     private fun register(name: String, signature: String, startDir: HexDir, action: Action){

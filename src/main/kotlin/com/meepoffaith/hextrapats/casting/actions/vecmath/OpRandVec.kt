@@ -6,7 +6,7 @@ import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.iota.Iota
 import net.minecraft.util.math.Vec3d
 
-class OpRandVec : ConstMediaAction {
+object OpRandVec : ConstMediaAction {
     override val argc = 0
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
         val rand = env.world.random

@@ -6,7 +6,7 @@ import at.petrak.hexcasting.api.casting.iota.Iota
 import com.meepoffaith.hextrapats.util.HextraUtils.asActionResult
 import net.minecraft.entity.Entity
 
-class OpEmptyEntitySet : ConstMediaAction {
+object OpEmptyEntitySet : ConstMediaAction {
     override val argc = 0
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
         return HashSet<Entity>().asActionResult()

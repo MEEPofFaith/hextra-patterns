@@ -11,7 +11,7 @@ import at.petrak.hexcasting.common.lib.hex.HexEvalSounds
 import com.meepoffaith.hextrapats.casting.eval.vm.FrameForEachIndex
 
 //1:1 copy of OpForEach but it calls FrameForEachIndex instead
-class OpForEachIndex : Action {
+object OpForEachIndex : Action {
     override fun operate(env: CastingEnvironment, image: CastingImage, continuation: SpellContinuation): OperationResult {
         val stack = image.stack.toMutableList()
 

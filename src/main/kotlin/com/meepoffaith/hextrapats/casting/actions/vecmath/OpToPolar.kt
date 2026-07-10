@@ -10,7 +10,7 @@ import kotlin.math.asin
 import kotlin.math.atan2
 
 
-class OpToPolar : ConstMediaAction {
+object OpToPolar : ConstMediaAction {
     override val argc = 1
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
         val v: Vec3d = args.getVec3(0, argc)

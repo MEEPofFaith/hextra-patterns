@@ -9,7 +9,7 @@ import com.meepoffaith.hextrapats.casting.iota.*
 import net.minecraft.entity.Entity
 
 
-class OpListToSet : ConstMediaAction {
+object OpListToSet : ConstMediaAction {
     override val argc = 1
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
         val iotas = args.getList(0, argc).toMutableList()

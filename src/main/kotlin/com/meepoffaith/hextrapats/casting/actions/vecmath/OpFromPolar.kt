@@ -9,7 +9,7 @@ import net.minecraft.util.math.Vec3d
 import kotlin.math.cos
 import kotlin.math.sin
 
-class OpFromPolar : ConstMediaAction {
+object OpFromPolar : ConstMediaAction {
     override val argc = 2
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
         val pitch: Double = args.getDouble(0, argc)

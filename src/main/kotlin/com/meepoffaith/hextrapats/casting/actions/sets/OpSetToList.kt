@@ -13,7 +13,7 @@ import com.meepoffaith.hextrapats.util.HextraUtils.getSet
 import net.minecraft.entity.Entity
 
 
-class OpSetToList : ConstMediaAction {
+object OpSetToList : ConstMediaAction {
     override val argc = 1
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
         val set = args.getSet(0, argc)

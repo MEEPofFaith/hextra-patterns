@@ -9,7 +9,7 @@ import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
 import it.unimi.dsi.fastutil.longs.LongArrayList
 
-class OpListSwindle : ConstMediaAction {
+object OpListSwindle : ConstMediaAction {
     override val argc = 2
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
         val list = args.getList(0, argc).toMutableList()

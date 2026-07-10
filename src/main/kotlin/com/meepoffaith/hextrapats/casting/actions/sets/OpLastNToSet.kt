@@ -20,7 +20,7 @@ import com.meepoffaith.hextrapats.casting.iota.*
 import net.minecraft.entity.Entity
 
 
-class OpLastNToSet : Action {
+object OpLastNToSet : Action {
     override fun operate(env: CastingEnvironment, image: CastingImage, continuation: SpellContinuation): OperationResult {
         var stack = image.stack.toMutableList()
 
