@@ -17,6 +17,7 @@ import com.meepoffaith.hextrapats.casting.actions.eval.OpMainForEach
 import com.meepoffaith.hextrapats.casting.actions.lists.*
 import com.meepoffaith.hextrapats.casting.actions.logic.OpNoConsBoolCoerce
 import com.meepoffaith.hextrapats.casting.actions.logic.OpNoConsEquality
+import com.meepoffaith.hextrapats.casting.actions.logic.OpNullCoalesce
 import com.meepoffaith.hextrapats.casting.actions.math.OpDegRad
 import com.meepoffaith.hextrapats.casting.actions.math.OpRadDeg
 import com.meepoffaith.hextrapats.casting.actions.math.OpRandRange
@@ -100,6 +101,8 @@ object Patterns {
         register("index_for_each", "dadaddqdq", HexDir.NORTH_EAST, OpForEachIndex())
         register("main_for_each", "aawdadad", HexDir.WEST, OpMainForEach(false))
         register("main_index_for_each", "aawdadaddqdq", HexDir.WEST, OpMainForEach(true))
+
+        register("null_coalesce", "wawaa", HexDir.SOUTH_EAST, OpNullCoalesce())
     }
 
     private fun register(name: String, signature: String, startDir: HexDir, action: Action){

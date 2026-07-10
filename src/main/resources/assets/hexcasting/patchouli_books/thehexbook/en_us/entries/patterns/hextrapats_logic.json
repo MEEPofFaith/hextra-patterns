@@ -8,6 +8,14 @@
   "pages": [
     {
       "type": "hexcasting:pattern",
+      "op_id": "hextrapats:null_coalesce",
+      "anchor": "hextrapats:null_coalesce",
+      "input": "any, any",
+      "output": "any",
+      "text": "hextrapats.page.logic.null_coalesce"
+    },
+    {
+      "type": "hexcasting:pattern",
       "op_id": "hexcasting:greater",
       "anchor": "hexcasting:greater",
       "input": "vec, vec",
