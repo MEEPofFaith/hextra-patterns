@@ -1,11 +1,9 @@
-package com.meepoffaith.hextrapats.casting.actions.logic;
+package com.meepoffaith.hextrapats.casting.actions.nullary
 
 import at.petrak.hexcasting.api.casting.castables.ConstMediaAction
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.iota.NullIota
-
-import java.util.*;
 
 object OpNullCoalesce : ConstMediaAction {
     override val argc = 2

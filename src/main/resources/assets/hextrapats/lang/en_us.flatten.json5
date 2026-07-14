@@ -8,7 +8,8 @@
     "hextrapats_vec_math.title": "Hextra Vector Math",
     "hextrapats_lists.title": "Hextra Lists",
     "hextrapats_sets.title": "Hash Set Manipulation",
-    "hextrapats_meta.title": "Hextra Meta-Evaluation"
+    "hextrapats_meta.title": "Hextra Meta-Evaluation",
+    "hextrapats_nulls.title": "Null Correction"
   },
   hextrapats: {
     page: {
@@ -26,7 +27,10 @@
         "in_range.ops": "The fourth number seems to describe how to check if the value is in the range.$(li)0: min < val < max$(li)1: min <= val < max$(li)2: min < val <= max$(li)3: min <= val <= max",
         out_range: "If the first number is not between the second and third, return True. Otherwise, return False. If the first value is a vector, compare its length instead.",
         "out_range.ops": "The fourth number seems to describe how to check if the value is outside the range.$(li)0: val < min or max < val$(li)1: val <= min or max < val$(li)2: val < min or max <= val$(li)3: val <= min or max <= val",
-        null_coalesce: "If the first argument is not $(l:casting/influences)$(thing)Null/$, returns it. Otherwise, returns the second argument."
+      },
+      nulls: {
+        coalesce: "If the first argument is not $(l:casting/influences)$(thing)Null/$, returns it. Otherwise, returns the second argument.",
+        exec: "If the first argument is not $(l:casting/influences)$(thing)Null/$, returns it. Otherwise, executes the second argument, much like $(l:patterns/meta#hexcasting:eval)$(action)Hermes' Gambit/$."
       },
       nocon: {
         intro: "Sometimes, I want operate on iotas after using them for logic operations, but it gets rather annoying to have to copy them every time I do. All this copying also places a heavy burden on Nature, especially with large iotas like lists where $(l:casting/mishaps)$(thing)stack size can be a concern/$.",
@@ -158,7 +162,10 @@
         in_range: "Range Exaltation",
         out_range: "Range Exaltation II",
 
-        null_coalesce: "Coalescing Distillation",
+        "nulls/": {
+          coalesce: "Coalescing Distillation",
+          exec: "Coalescing Gambit"
+        },
 
         vec_x: "Vector Reflection X II",
         vec_y: "Vector Reflection Y II",
