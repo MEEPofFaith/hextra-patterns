@@ -17,11 +17,11 @@ import com.meepoffaith.hextrapats.casting.actions.eval.OpMainForEach
 import com.meepoffaith.hextrapats.casting.actions.lists.*
 import com.meepoffaith.hextrapats.casting.actions.logic.OpNoConsBoolCoerce
 import com.meepoffaith.hextrapats.casting.actions.logic.OpNoConsEquality
-import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullCoalesce
 import com.meepoffaith.hextrapats.casting.actions.math.OpDegRad
 import com.meepoffaith.hextrapats.casting.actions.math.OpRadDeg
 import com.meepoffaith.hextrapats.casting.actions.math.OpRandRange
 import com.meepoffaith.hextrapats.casting.actions.math.OpRandZero
+import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullCoalesce
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullExecute
 import com.meepoffaith.hextrapats.casting.actions.sets.*
 import com.meepoffaith.hextrapats.casting.actions.vecmath.OpFromPolar
@@ -30,7 +30,6 @@ import com.meepoffaith.hextrapats.casting.actions.vecmath.OpToPolar
 import com.meepoffaith.hextrapats.casting.actions.vecmath.OpVecDist
 import net.minecraft.registry.Registry
 import net.minecraft.util.math.Vec3d
-
 
 object Patterns {
     val ROT_ABOUT_X = register("rot_about_x", "aaqqqqqea", HexDir.SOUTH_WEST)
