@@ -26,6 +26,12 @@ import com.meepoffaith.hextrapats.init.Patterns.NORMALIZE
 import com.meepoffaith.hextrapats.init.Patterns.ROT_ABOUT_X
 import com.meepoffaith.hextrapats.init.Patterns.ROT_ABOUT_Y
 import com.meepoffaith.hextrapats.init.Patterns.ROT_ABOUT_Z
+import com.meepoffaith.hextrapats.init.Patterns.VEC_GET_X
+import com.meepoffaith.hextrapats.init.Patterns.VEC_GET_Y
+import com.meepoffaith.hextrapats.init.Patterns.VEC_GET_Z
+import com.meepoffaith.hextrapats.init.Patterns.VEC_SET_X
+import com.meepoffaith.hextrapats.init.Patterns.VEC_SET_Y
+import com.meepoffaith.hextrapats.init.Patterns.VEC_SET_Z
 import com.meepoffaith.hextrapats.util.MathUtils
 import com.meepoffaith.hextrapats.util.MultiPreds
 import net.minecraft.util.math.Vec3d
@@ -49,7 +55,13 @@ class Vec3Arithmetic : Arithmetic {
         DECREMENT,
         APPROACH,
         ANGLE_DIST,
-        ANGLE_APPROACH
+        ANGLE_APPROACH,
+        VEC_GET_X,
+        VEC_GET_Y,
+        VEC_GET_Z,
+        VEC_SET_X,
+        VEC_SET_Y,
+        VEC_SET_Z
     )
 
     override fun arithName() = "hextrapats_vec3_math"
@@ -90,17 +102,26 @@ class Vec3Arithmetic : Arithmetic {
         APPROACH -> OperatorApproachVec
         ANGLE_DIST -> makeVecVecToNum{ v1, v2 -> MathUtils.vecAngleDist(v1, v2) }
         ANGLE_APPROACH -> OperatorTurnVec
+        VEC_GET_X -> makeVecToNum{ v -> v.x }
+        VEC_GET_Y -> makeVecToNum{ v -> v.y }
+        VEC_GET_Z -> makeVecToNum{ v -> v.z }
+        VEC_SET_X -> makeVecNumToVec{ v, x -> Vec3d(x, v.y, v.z) }
+        VEC_SET_Y -> makeVecNumToVec{ v, y -> Vec3d(v.x, y, v.z) }
+        VEC_SET_Z -> makeVecNumToVec{ v, z -> Vec3d(v.x, v.y, z) }
         else -> throw InvalidOperatorException("$pattern is not a valid operator in Arithmetic $this.")
     }
 
-    fun makeVecNumToVec(op: BiFunction<Vec3d, Double, Vec3d>) = OperatorBinary(MultiPreds.pair(VEC3, DOUBLE))
-    { i: Iota, j: Iota -> Vec3Iota(op.apply(Operator.downcast(i, VEC3).vec3, Operator.downcast(j, DOUBLE).double)) }
+    fun makeVecToVec(op: UnaryOperator<Vec3d>) = OperatorUnary(MultiPreds.all(VEC3))
+    { i: Iota -> Vec3Iota(op.apply(Operator.downcast(i, VEC3).vec3)) }
 
     fun makeNumToVec(op: Function<Double, Vec3d>) = OperatorUnary(MultiPreds.all(DOUBLE))
     { i: Iota -> Vec3Iota(op.apply(Operator.downcast(i, DOUBLE).double)) }
 
-    fun makeVecToVec(op: UnaryOperator<Vec3d>) = OperatorUnary(MultiPreds.all(VEC3))
-    { i: Iota -> Vec3Iota(op.apply(Operator.downcast(i, VEC3).vec3)) }
+    fun makeVecToNum(op: Function<Vec3d, Double>) = OperatorUnary(MultiPreds.all(VEC3))
+    { i: Iota -> DoubleIota(op.apply(Operator.downcast(i, VEC3).vec3)) }
+
+    fun makeVecNumToVec(op: BiFunction<Vec3d, Double, Vec3d>) = OperatorBinary(MultiPreds.pair(VEC3, DOUBLE))
+    { i: Iota, j: Iota -> Vec3Iota(op.apply(Operator.downcast(i, VEC3).vec3, Operator.downcast(j, DOUBLE).double)) }
 
     fun makeVecVecToNum(op: BiFunction<Vec3d, Vec3d, Double>) = OperatorBinary(MultiPreds.all(VEC3))
     { i: Iota, j: Iota -> DoubleIota(op.apply(Operator.downcast(i, VEC3).vec3, Operator.downcast(j, VEC3).vec3)) }

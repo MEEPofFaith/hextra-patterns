@@ -92,51 +92,51 @@
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextrapats:rot_about_x",
-      "anchor": "hextrapats:rot_about_x",
+      "op_id": "hextrapats:rot_about/x",
+      "anchor": "hextrapats:rot_about/x",
       "input": "vec, num",
       "output": "vec",
-      "text": "hextrapats.page.vec_math.rot_about_x"
+      "text": "hextrapats.page.vec_math.rot_about/x"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextrapats:rot_about_y",
-      "anchor": "hextrapats:rot_about_y",
+      "op_id": "hextrapats:rot_about/y",
+      "anchor": "hextrapats:rot_about/y",
       "input": "vec, num",
       "output": "vec",
-      "text": "hextrapats.page.vec_math.rot_about_y"
+      "text": "hextrapats.page.vec_math.rot_about/y"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextrapats:rot_about_z",
-      "anchor": "hextrapats:rot_about_z",
+      "op_id": "hextrapats:rot_about/z",
+      "anchor": "hextrapats:rot_about/z",
       "input": "vec, num",
       "output": "vec",
-      "text": "hextrapats.page.vec_math.rot_about_z"
+      "text": "hextrapats.page.vec_math.rot_about/z"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextrapats:cons_about_x",
-      "anchor": "hextrapats:cons_about_x",
+      "op_id": "hextrapats:cons_about/x",
+      "anchor": "hextrapats:cons_about/x",
       "input": "num",
       "output": "vec",
-      "text": "hextrapats.page.vec_math.cons_about_x"
+      "text": "hextrapats.page.vec_math.cons_about/x"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextrapats:cons_about_y",
-      "anchor": "hextrapats:cons_about_y",
+      "op_id": "hextrapats:cons_about/y",
+      "anchor": "hextrapats:cons_about/y",
       "input": "num",
       "output": "vec",
-      "text": "hextrapats.page.vec_math.cons_about_y"
+      "text": "hextrapats.page.vec_math.cons_about/y"
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hextrapats:cons_about_z",
-      "anchor": "hextrapats:cons_about_z",
+      "op_id": "hextrapats:cons_about/z",
+      "anchor": "hextrapats:cons_about/z",
       "input": "num",
       "output": "vec",
-      "text": "hextrapats.page.vec_math.cons_about_z"
+      "text": "hextrapats.page.vec_math.cons_about/z"
     },
     {
       "type": "patchouli:empty"

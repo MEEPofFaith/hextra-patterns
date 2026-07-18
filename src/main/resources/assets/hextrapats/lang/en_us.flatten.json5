@@ -86,12 +86,16 @@
         },
         from_polar: "Creates a unit vector from two polar angles, pitch and yaw, in radians. +Y is up. 0 yaw is +Z, pi/2 yaw is -X. Yet again, mentions of $(thing)F3/$ turn up.",
         to_polar: "Converts a vector's direction into two polar angles, pitch and yaw, in radians. +Y is up. 0 yaw is +Z, pi/2 yaw is -X. Yet again, mentions of $(thing)F3/$ turn up.",
-        rot_about_x: "Rotates the vector by the given angle in radians around the X axis.",
-        rot_about_y: "Rotates the vector by the given angle in radians around the Y axis.",
-        rot_about_z: "Rotates the vector by the given angle in radians around the Z axis.",
-        cons_about_x: "Converts an angle in radians to a unit vector where X=0. +Z at 0 radians and +Y at pi/4 radians.",
-        cons_about_y: "Converts an angle in radians to a unit vector where Y=0. +Z at 0 radians and -X at pi/4 radians. I've seen some texts related to this pattern mentioning something called $(thing)F3/$, but I couldn't figure out what that means.",
-        cons_about_z: "Converts an angle in radians to a unit vector where Z=0. -X at 0 radians and +Y at pi/4 radians.",
+        "rot_about/": {
+          x: "Rotates the vector by the given angle in radians around the X axis.",
+          y: "Rotates the vector by the given angle in radians around the Y axis.",
+          z: "Rotates the vector by the given angle in radians around the Z axis."
+        },
+        "cons_about/": {
+          x: "Converts an angle in radians to a unit vector where X=0. +Z at 0 radians and +Y at pi/4 radians.",
+          y: "Converts an angle in radians to a unit vector where Y=0. +Z at 0 radians and -X at pi/4 radians. I've seen some texts related to this pattern mentioning something called $(thing)F3/$, but I couldn't figure out what that means.",
+          z: "Converts an angle in radians to a unit vector where Z=0. -X at 0 radians and +Y at pi/4 radians."
+        },
         list_to_vec: "Converts a list of 3 numbers into a vector.",
         vec_to_list: "Converts a vector into a list of 3 numbers."
       },
@@ -191,12 +195,28 @@
         vec_dist: "Distance Distillation",
         from_polar: "Polar Distillation",
         to_polar: "Polar Decomposition",
-        rot_about_x: "Pitch Distillation",
-        rot_about_y: "Yaw Distillation",
-        rot_about_z: "Roll Distillation",
-        cons_about_x: "Pitch Purification",
-        cons_about_y: "Yaw Purification",
-        cons_about_z: "Roll Purification",
+        "rot_about/": {
+          x: "Pitch Distillation",
+          y: "Yaw Distillation",
+          z: "Roll Distillation"
+        },
+        "cons_about/": {
+          x: "Pitch Purification",
+          y: "Yaw Purification",
+          z: "Roll Purification"
+        },
+        "vec/": {
+          "get/": {
+            x: "Coordinate Purification: X",
+            y: "Coordinate Purification: Y",
+            z: "Coordinate Purification: Z"
+          },
+          "set/": {
+            x: "Coordinate Distillation: X",
+            y: "Coordinate Distillation: Y",
+            z: "Coordinate Distillation: Z"
+          }
+        },
 
         list_to_vec: "Compression Purification",
         vec_to_list: "Expansion Purification",
@@ -259,6 +279,18 @@
         vec_1: "Vector Rfln. 1 II",
 
         list_to_vec: "Compression Purif.",
+        "vec/": {
+          "get/": {
+            x: "Coordinate Purif.: X",
+            y: "Coordinate Purif.: Y",
+            z: "Coordinate Purif.: Z"
+          },
+          "set/": {
+            x: "Coordinate Dstl.: X",
+            y: "Coordinate Dstl.: Y",
+            z: "Coordinate Dstl.: Z"
+          }
+        },
 
         increment: "Incrementation Purif.",
         decrement: "Decrementation Purif.",

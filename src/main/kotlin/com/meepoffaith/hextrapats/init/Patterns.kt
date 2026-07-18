@@ -34,12 +34,12 @@ import net.minecraft.registry.Registry
 import net.minecraft.util.math.Vec3d
 
 object Patterns {
-    val ROT_ABOUT_X = register("rot_about_x", "aaqqqqqea", HexDir.SOUTH_WEST)
-    val ROT_ABOUT_Y = register("rot_about_y", "aaqqqqqew", HexDir.SOUTH_WEST)
-    val ROT_ABOUT_Z = register("rot_about_z", "aaqqqqqed", HexDir.SOUTH_WEST)
-    val CONSTRUCT_ABOUT_X = register("cons_about_x", "daqqqqqea", HexDir.NORTH_WEST)
-    val CONSTRUCT_ABOUT_Y = register("cons_about_y", "daqqqqqew", HexDir.NORTH_WEST)
-    val CONSTRUCT_ABOUT_Z = register("cons_about_z", "daqqqqqed", HexDir.NORTH_WEST)
+    val ROT_ABOUT_X = register("rot_about/x", "aaqqqqqea", HexDir.SOUTH_WEST)
+    val ROT_ABOUT_Y = register("rot_about/y", "aaqqqqqew", HexDir.SOUTH_WEST)
+    val ROT_ABOUT_Z = register("rot_about/z", "aaqqqqqed", HexDir.SOUTH_WEST)
+    val CONSTRUCT_ABOUT_X = register("cons_about/x", "daqqqqqea", HexDir.NORTH_WEST)
+    val CONSTRUCT_ABOUT_Y = register("cons_about/y", "daqqqqqew", HexDir.NORTH_WEST)
+    val CONSTRUCT_ABOUT_Z = register("cons_about/z", "daqqqqqed", HexDir.NORTH_WEST)
     val NORMALIZE = register("normalize", "eeeeedww", HexDir.SOUTH_WEST)
     val LEN_EQ = register("len_eq", "adqqaqw", HexDir.EAST)
     val LEN_NEQ = register("len_neq", "daeedew", HexDir.EAST)
@@ -53,6 +53,12 @@ object Patterns {
     val ANGLE_APPROACH = register("angle_approach", "awdaqqqqqwd", HexDir.NORTH_EAST)
     val SET_INSERT_RET = register("set_insert_ret", "edqdewd", HexDir.SOUTH_WEST )
     val SET_REMOVE_RET = register("set_remove_ret", "edqdewaqaaed", HexDir.SOUTH_WEST)
+    val VEC_GET_X = register("vec/get/x", "qeeeeedwwa", HexDir.EAST)
+    val VEC_GET_Y = register("vec/get/y", "qeeeeedwww", HexDir.EAST)
+    val VEC_GET_Z = register("vec/get/z", "qeeeeedwwd", HexDir.EAST)
+    val VEC_SET_X = register("vec/set/x", "eqqqqqawwa", HexDir.EAST)
+    val VEC_SET_Y = register("vec/set/y", "eqqqqqawww", HexDir.EAST)
+    val VEC_SET_Z = register("vec/set/z", "eqqqqqawwd", HexDir.EAST)
 
     fun init(){
         register("deg_to_rad", "qqqqqdwdq", HexDir.WEST, OpDegRad)
