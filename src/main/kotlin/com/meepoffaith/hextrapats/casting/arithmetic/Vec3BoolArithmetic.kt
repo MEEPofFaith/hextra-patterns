@@ -44,8 +44,8 @@ class Vec3BoolArithmetic : Arithmetic {
         LESS_EQ -> makeComp { a, b -> HextraUtils.lessEq(a.length(), b.length()) }
         LEN_EQ -> makeComp{ a, b -> DoubleIota.tolerates(a.length(), b.length()) }
         LEN_NEQ -> makeComp{ a, b -> !DoubleIota.tolerates(a.length(), b.length()) }
-        IN_RANGE -> OperatorInRangeVec()
-        OUT_RANGE -> OperatorOutRangeVec()
+        IN_RANGE -> OperatorInRangeVec
+        OUT_RANGE -> OperatorOutRangeVec
         else -> throw InvalidOperatorException("$pattern is not a valid operator in Arithmetic $this.")
     }
 

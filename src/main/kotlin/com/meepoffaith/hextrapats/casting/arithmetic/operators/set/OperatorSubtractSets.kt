@@ -14,7 +14,7 @@ import com.meepoffaith.hextrapats.util.HextraUtils.getVecSet
 import com.meepoffaith.hextrapats.util.MultiPreds.ALL_SETS
 import net.minecraft.entity.Entity
 
-class OperatorSubtractSets : OperatorBasic(2, ALL_SETS) {
+object OperatorSubtractSets : OperatorBasic(2, ALL_SETS) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val stack = iotas.toList()
         val set = stack.getSet(0, arity)

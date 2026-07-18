@@ -35,12 +35,12 @@ class SetArithmetic : Arithmetic {
     override fun opTypes() = OPS
 
     override fun getOperator(pattern: HexPattern): Operator = when(pattern){
-        ADD -> OperatorAddSets()
-        SUB -> OperatorSubtractSets()
-        AND -> OperatorIntersection()
-        XOR -> OperatorDisjunction()
-        ABS -> OperatorAmount()
-        INDEX_OF -> OperatorExists()
+        ADD -> OperatorAddSets
+        SUB -> OperatorSubtractSets
+        AND -> OperatorIntersection
+        XOR -> OperatorDisjunction
+        ABS -> OperatorAmount
+        INDEX_OF -> OperatorExists
         APPEND -> OperatorInsert(false)
         SET_INSERT_RET -> OperatorInsert(true)
         REMOVE -> OperatorRemove(false)

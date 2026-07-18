@@ -10,7 +10,7 @@ import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.VEC3
 import com.meepoffaith.hextrapats.util.MultiPreds
 
-class OperatorOutRangeVec : OperatorBasic(4, MultiPreds.quad(VEC3, DOUBLE, DOUBLE, DOUBLE)) {
+object OperatorOutRangeVec : OperatorBasic(4, MultiPreds.quad(VEC3, DOUBLE, DOUBLE, DOUBLE)) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator().withIndex()
         val num = downcast(it.next().value, VEC3).vec3.length()

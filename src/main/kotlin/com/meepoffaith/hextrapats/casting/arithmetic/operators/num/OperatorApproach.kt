@@ -9,7 +9,7 @@ import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE
 import com.meepoffaith.hextrapats.util.MultiPreds
 import kotlin.math.abs
 
-class OperatorApproach : OperatorBasic(3, MultiPreds.all(DOUBLE)) {
+object OperatorApproach : OperatorBasic(3, MultiPreds.all(DOUBLE)) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator().withIndex()
         var from = it.nextDouble(arity)

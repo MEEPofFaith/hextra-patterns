@@ -87,9 +87,9 @@ class Vec3Arithmetic : Arithmetic {
             val len = v.length()
             if (DoubleIota.tolerates(len, 0.0)) v else v.multiply((len - 1) / len)
         }
-        APPROACH -> OperatorApproachVec()
+        APPROACH -> OperatorApproachVec
         ANGLE_DIST -> makeVecVecToNum{ v1, v2 -> MathUtils.vecAngleDist(v1, v2) }
-        ANGLE_APPROACH -> OperatorTurnVec()
+        ANGLE_APPROACH -> OperatorTurnVec
         else -> throw InvalidOperatorException("$pattern is not a valid operator in Arithmetic $this.")
     }
 

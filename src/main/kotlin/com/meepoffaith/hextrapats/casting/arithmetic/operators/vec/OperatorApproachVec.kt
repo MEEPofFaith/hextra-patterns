@@ -8,7 +8,7 @@ import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.VEC3
 import com.meepoffaith.hextrapats.util.MultiPreds
 
-class OperatorApproachVec : OperatorBasic(3, MultiPreds.triple(VEC3, VEC3, DOUBLE)) {
+object OperatorApproachVec : OperatorBasic(3, MultiPreds.triple(VEC3, VEC3, DOUBLE)) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator()
         val from = downcast(it.next(), VEC3).vec3

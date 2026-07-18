@@ -13,7 +13,7 @@ import com.meepoffaith.hextrapats.util.MultiPreds
 import kotlin.math.cos
 import kotlin.math.sin
 
-class OperatorTurnVec : OperatorBasic(3, MultiPreds.triple(VEC3, VEC3, DOUBLE)) {
+object OperatorTurnVec : OperatorBasic(3, MultiPreds.triple(VEC3, VEC3, DOUBLE)) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator()
         val fromI = downcast(it.next(), VEC3)

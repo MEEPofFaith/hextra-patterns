@@ -42,9 +42,9 @@ class NumArithmetic : Arithmetic {
         INVERT -> make1{ d -> -d }
         INCREMENT -> make1{ d -> d + 1 }
         DECREMENT -> make1{ d -> d - 1 }
-        APPROACH -> OperatorApproach()
+        APPROACH -> OperatorApproach
         ANGLE_DIST -> make2{ a, b -> MathUtils.angleDist(a, b) }
-        ANGLE_APPROACH -> OperatorTurn()
+        ANGLE_APPROACH -> OperatorTurn
         else -> throw InvalidOperatorException("$pattern is not a valid operator in Arithmetic $this.")
     }
 

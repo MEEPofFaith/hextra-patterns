@@ -12,7 +12,7 @@ import com.meepoffaith.hextrapats.util.HextraUtils.getSet
 import com.meepoffaith.hextrapats.util.MultiPreds.SET_OP
 import net.minecraft.entity.Entity
 
-class OperatorExists : OperatorBasic(2, SET_OP) {
+object OperatorExists : OperatorBasic(2, SET_OP) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val stack = iotas.toList()
         val set = stack.getSet(0, arity)
