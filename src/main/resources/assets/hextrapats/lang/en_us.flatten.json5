@@ -198,8 +198,8 @@
         cons_about_y: "Yaw Purification",
         cons_about_z: "Roll Purification",
 
-        list_to_vec: "PLACEHOLDER Purification",
-        vec_to_list: "PLACEHOLDER Purification",
+        list_to_vec: "Compression Purification",
+        vec_to_list: "Expansion Purification",
 
         "nocon/": {
           bool_coerce: "Retention Gambit: Augur's",
