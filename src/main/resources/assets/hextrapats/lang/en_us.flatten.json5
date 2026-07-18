@@ -258,6 +258,8 @@
         vec_z: "Vector Rfln. Z II",
         vec_1: "Vector Rfln. 1 II",
 
+        list_to_vec: "Compression Purif.",
+
         increment: "Incrementation Purif.",
         decrement: "Decrementation Purif.",
 
