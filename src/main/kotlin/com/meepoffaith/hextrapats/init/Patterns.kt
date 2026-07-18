@@ -24,6 +24,8 @@ import com.meepoffaith.hextrapats.casting.actions.math.OpRandZero
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullCoalesce
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullExecute
 import com.meepoffaith.hextrapats.casting.actions.sets.*
+import com.meepoffaith.hextrapats.casting.actions.vec.OpListToVec
+import com.meepoffaith.hextrapats.casting.actions.vec.OpVecToList
 import com.meepoffaith.hextrapats.casting.actions.vecmath.OpFromPolar
 import com.meepoffaith.hextrapats.casting.actions.vecmath.OpRandVec
 import com.meepoffaith.hextrapats.casting.actions.vecmath.OpToPolar
@@ -62,6 +64,9 @@ object Patterns {
         register("vec_dist", "aqqqqqeqeeeeed", HexDir.EAST, OpVecDist)
         register("from_polar", "eqqadaqa", HexDir.EAST, OpFromPolar)
         register("to_polar", "qedadeed", HexDir.EAST, OpToPolar)
+
+        register("list_to_vec", "dawqqqwa", HexDir.EAST, OpListToVec)
+        register("vec_to_list", "adweeewd", HexDir.EAST, OpVecToList)
 
         //Come on, Elise!
         register("haha_ha_one", "qqqqqeq", HexDir.NORTH_WEST, Action.makeConstantOp(Vec3Iota(Vec3d(1.0, 1.0, 1.0))))

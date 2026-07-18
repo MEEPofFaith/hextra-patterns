@@ -137,6 +137,25 @@
       "input": "num",
       "output": "vec",
       "text": "hextrapats.page.vec_math.cons_about_z"
+    },
+    {
+      "type": "patchouli:empty"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:list_to_vec",
+      "anchor": "hextrapats:list_to_vec",
+      "input": "[num]",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.list_to_vec"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:vec_to_list",
+      "anchor": "hextrapats:vec_to_list",
+      "input": "vec",
+      "output": "[num]",
+      "text": "hextrapats.page.vec_math.vec_to_list"
     }
   ]
 }

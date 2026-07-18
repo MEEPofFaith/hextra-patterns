@@ -6,7 +6,7 @@ import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.getList
 import at.petrak.hexcasting.api.casting.getLong
 import at.petrak.hexcasting.api.casting.iota.Iota
-import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
+import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidIota
 import it.unimi.dsi.fastutil.longs.LongArrayList
 
 object OpListSwindle : ConstMediaAction {
@@ -25,7 +25,7 @@ object OpListSwindle : ConstMediaAction {
         }
 
         if (strides.size > list.size)
-            throw MishapNotEnoughArgs(strides.size + 1, list.size + 1)
+            throw MishapInvalidIota.of(args[0], 1, "hextrapats:too_short_to_swindle", strides.size + 1)
         var editTarget = list.subList(list.size - strides.size, list.size)
         val swap = editTarget.toMutableList()
         var radix = code

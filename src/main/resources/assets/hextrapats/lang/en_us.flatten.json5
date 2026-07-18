@@ -92,6 +92,8 @@
         cons_about_x: "Converts an angle in radians to a unit vector where X=0. +Z at 0 radians and +Y at pi/4 radians.",
         cons_about_y: "Converts an angle in radians to a unit vector where Y=0. +Z at 0 radians and -X at pi/4 radians. I've seen some texts related to this pattern mentioning something called $(thing)F3/$, but I couldn't figure out what that means.",
         cons_about_z: "Converts an angle in radians to a unit vector where Z=0. -X at 0 radians and +Y at pi/4 radians.",
+        list_to_vec: "Converts a list of 3 numbers into a vector.",
+        vec_to_list: "Converts a vector into a list of 3 numbers."
       },
       lists: {
         "peek/": {
@@ -195,6 +197,9 @@
         cons_about_x: "Pitch Purification",
         cons_about_y: "Yaw Purification",
         cons_about_z: "Roll Purification",
+
+        list_to_vec: "PLACEHOLDER Purification",
+        vec_to_list: "PLACEHOLDER Purification",
 
         "nocon/": {
           bool_coerce: "Retention Gambit: Augur's",
@@ -312,6 +317,7 @@
         "hextrapats:": {
           opposite_vecs: "vector not facing opposite to the start direction %s",
           too_short_to_swindle: "a list of at least length %s",
+          vec_list: "a list of exactly 3 numbers",
           set_item: "a number, vector, or entity",
           set_list: "a non-empty list of entirely numbers, vectors, or entities"
         }
