@@ -96,8 +96,9 @@
           y: "Converts an angle in radians to a unit vector where Y=0. +Z at 0 radians and -X at pi/4 radians. I've seen some texts related to this pattern mentioning something called $(thing)F3/$, but I couldn't figure out what that means.",
           z: "Converts an angle in radians to a unit vector where Z=0. -X at 0 radians and +Y at pi/4 radians."
         },
-        list_to_vec: "Converts a list of 3 numbers into a vector.",
-        vec_to_list: "Converts a vector into a list of 3 numbers."
+        swap_vec_list: "Converts a list of 3 numbers to a vector, or a vector into a list of 3 numbers.",
+        vec_get: "Returns the X, Y, or Z component of a vector.",
+        vec_set: "Overrides a vector's X, Y, or Z component."
       },
       lists: {
         "peek/": {
@@ -218,8 +219,7 @@
           }
         },
 
-        list_to_vec: "Compression Purification",
-        vec_to_list: "Expansion Purification",
+        swap_vec_list: "Vector Purification",
 
         "nocon/": {
           bool_coerce: "Retention Gambit: Augur's",
@@ -278,18 +278,9 @@
         vec_z: "Vector Rfln. Z II",
         vec_1: "Vector Rfln. 1 II",
 
-        list_to_vec: "Compression Purif.",
         "vec/": {
-          "get/": {
-            x: "Coordinate Purif.: X",
-            y: "Coordinate Purif.: Y",
-            z: "Coordinate Purif.: Z"
-          },
-          "set/": {
-            x: "Coordinate Dstl.: X",
-            y: "Coordinate Dstl.: Y",
-            z: "Coordinate Dstl.: Z"
-          }
+          "get/x": "Coordinate Purif.: X/Y/Z",
+          "set/x": "Coordinate Dstl.: X/Y/Z",
         },
 
         increment: "Incrementation Purif.",
@@ -352,6 +343,7 @@
           opposite_vecs: "vector not facing opposite to the start direction %s",
           too_short_to_swindle: "a list of at least length %s",
           vec_list: "a list of exactly 3 numbers",
+          veclist: "a vector or a list of exactly 3 numbers",
           set_item: "a number, vector, or entity",
           set_list: "a non-empty list of entirely numbers, vectors, or entities"
         }

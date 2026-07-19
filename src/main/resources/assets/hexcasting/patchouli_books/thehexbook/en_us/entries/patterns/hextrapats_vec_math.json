@@ -139,23 +139,52 @@
       "text": "hextrapats.page.vec_math.cons_about/z"
     },
     {
-      "type": "patchouli:empty"
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:swap_vec_list",
+      "anchor": "hextrapats:swap_vec_list",
+      "input": "vec | [num]",
+      "output": "[vec] | vec",
+      "text": "hextrapats.page.vec_math.swap_vec_list"
     },
     {
-      "type": "hexcasting:pattern",
-      "op_id": "hextrapats:list_to_vec",
-      "anchor": "hextrapats:list_to_vec",
-      "input": "[num]",
-      "output": "vec",
-      "text": "hextrapats.page.vec_math.list_to_vec"
-    },
-    {
-      "type": "hexcasting:pattern",
-      "op_id": "hextrapats:vec_to_list",
-      "anchor": "hextrapats:vec_to_list",
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:vec/get/x",
+      "anchor": "hextrapats:vec/get/x",
       "input": "vec",
-      "output": "[num]",
-      "text": "hextrapats.page.vec_math.vec_to_list"
+      "output": "num",
+      "text": "hextrapats.page.vec_math.vec_get",
+      "patterns": [
+        {
+          "startdir": "EAST",
+          "signature": "qeeeeedwwa"
+        }, {
+          "startdir": "EAST",
+          "signature": "qeeeeedwww"
+        }, {
+          "startdir": "EAST",
+          "signature": "qeeeeedwwd"
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:vec/set/x",
+      "anchor": "hextrapats:vec/set/x",
+      "input": "vec, num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.vec_set",
+      "patterns": [
+        {
+          "startdir": "EAST",
+          "signature": "eqqqqqawwa"
+        }, {
+          "startdir": "EAST",
+          "signature": "eqqqqqawww"
+        }, {
+          "startdir": "EAST",
+          "signature": "eqqqqqawwd"
+        }
+      ]
     }
   ]
 }

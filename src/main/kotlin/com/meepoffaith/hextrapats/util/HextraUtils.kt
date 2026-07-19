@@ -1,9 +1,12 @@
 package com.meepoffaith.hextrapats.util
 
 import at.petrak.hexcasting.api.HexAPI
+import at.petrak.hexcasting.api.casting.SpellList
 import at.petrak.hexcasting.api.casting.castables.SpecialHandler
 import at.petrak.hexcasting.api.casting.iota.DoubleIota
 import at.petrak.hexcasting.api.casting.iota.Iota
+import at.petrak.hexcasting.api.casting.iota.ListIota
+import at.petrak.hexcasting.api.casting.iota.Vec3Iota
 import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidIota
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
 import at.petrak.hexcasting.xplat.IXplatAbstractions
@@ -12,7 +15,9 @@ import com.meepoffaith.hextrapats.casting.iota.DoubleSetIota
 import com.meepoffaith.hextrapats.casting.iota.EntitySetIota
 import com.meepoffaith.hextrapats.casting.iota.VecSet
 import com.meepoffaith.hextrapats.casting.iota.VecSetIota
+import com.mojang.datafixers.util.Either
 import net.minecraft.entity.Entity
+import net.minecraft.util.math.Vec3d
 
 
 object HextraUtils {
@@ -74,6 +79,19 @@ object HextraUtils {
             return x.copySet()
         } else {
             throw MishapInvalidIota.ofType(x, if (argc == 0) idx else argc - (idx + 1), "vector")
+        }
+    }
+
+    fun List<Iota>.getVecOrList(idx: Int, argc: Int = 0): Either<Vec3d, SpellList> {
+        val datum = this.getOrElse(idx) { throw MishapNotEnoughArgs(idx + 1, this.size) }
+        return when(datum){
+            is Vec3Iota -> Either.left(datum.vec3)
+            is ListIota -> Either.right(datum.list)
+            else -> throw MishapInvalidIota.of(
+                datum,
+                if (argc == 0) idx else argc - (idx + 1),
+                "hextrapats:veclist"
+            )
         }
     }
 }
