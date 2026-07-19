@@ -9,7 +9,8 @@
     "hextrapats_lists.title": "Hextra Lists",
     "hextrapats_sets.title": "Hash Set Manipulation",
     "hextrapats_meta.title": "Hextra Meta-Evaluation",
-    "hextrapats_nulls.title": "Null Correction"
+    "hextrapats_nulls.title": "Null Coercion",
+    "hextrapats_stackmanip.title": "Hextra Stack Manipulation"
   },
   hextrapats: {
     page: {
@@ -154,6 +155,12 @@
         index_for_each: "Casts like $(l:patterns/meta#hexcasting:for_each)$(action)Thoth's Gambit/$, however the new stack for each element additionally has the index of that element added to the top.",
         main_for_each: "Casts like $(l:patterns/meta#hexcasting:for_each)$(action)Thoth's Gambit/$, however each sub-execution operates on the main stack instead of copies of the stack.",
         main_index_for_each: "Casts like $(l:patterns/hextrapats_meta#hextrapats:index_for_each)$(action)Djehuty's Gambit/$, however each sub-execution operates on the main stack instead of copies of the stack."
+      },
+      stackmanip: {
+        capsizing: "Sends the iota on the top of the stack to the bottom of the stack.",
+        "capsizing/copy": "Like $(l:patterns/hextrapats_stackmanip#hextrapats:capsizing)$(action)Capsizing Gambit/$, but instead of moving the iota, copies it.",
+        dredging: "Pulls the iota at the bottom of the stack to the top of the stack.",
+        "dredging/copy": "Like $(l:patterns/hextrapats_stackmanip#hextrapats:dredging)$(action)Dredging Gambit/$, but instead of moving the iota, copies it."
       }
     }
   },
@@ -264,7 +271,12 @@
         false_eval: "Selene's Gambit",
         index_for_each: "Djehuty's Gambit",
         main_for_each: "Anubis' Gambit",
-        main_index_for_each: "Ra's Gambit"
+        main_index_for_each: "Ra's Gambit",
+
+        capsizing: "Capsizing Gambit",
+        "capsizing/copy": "Capsizing Gambit II",
+        dredging: "Dredging Gambit",
+        "dredging/copy": "Dredging Gambit II"
       },
 
       "book.hextrapats:": {

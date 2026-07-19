@@ -24,6 +24,8 @@ import com.meepoffaith.hextrapats.casting.actions.math.OpRandZero
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullCoalesce
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullExecute
 import com.meepoffaith.hextrapats.casting.actions.sets.*
+import com.meepoffaith.hextrapats.casting.actions.stack.OpFloat
+import com.meepoffaith.hextrapats.casting.actions.stack.OpSink
 import com.meepoffaith.hextrapats.casting.actions.vecmath.*
 import net.minecraft.registry.Registry
 import net.minecraft.util.math.Vec3d
@@ -108,6 +110,11 @@ object Patterns {
 
         register("nulls/coalesce", "wawaa", HexDir.SOUTH_EAST, OpNullCoalesce)
         register("nulls/exec", "wawaadq", HexDir.SOUTH_EAST, OpNullExecute)
+
+        register("capsizing", "ddadeq", HexDir.WEST, OpSink(false))
+        register("capsizing/copy", "aadaqe", HexDir.EAST, OpSink(true))
+        register("dredging", "ddadaq", HexDir.WEST, OpFloat(false))
+        register("dredging/copy", "aadade", HexDir.EAST, OpFloat(true))
     }
 
     private fun register(name: String, signature: String, startDir: HexDir, action: Action){

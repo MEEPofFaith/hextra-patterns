@@ -1,0 +1,42 @@
+{
+  "name": "pages.hextrapats.hextrapats_stackmanip.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:sticky_piston",
+  "sortnum": 4,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:capsizing",
+      "anchor": "hextrapats:capsizing",
+      "input": "any",
+      "output": "any",
+      "text": "hextrapats.page.stackmanip.capsizing"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:capsizing/copy",
+      "anchor": "hextrapats:capsizing/copy",
+      "input": "any",
+      "output": "any",
+      "text": "hextrapats.page.stackmanip.capsizing/copy"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:dredging",
+      "anchor": "hextrapats:dredging",
+      "input": "any",
+      "output": "any",
+      "text": "hextrapats.page.stackmanip.dredging"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:dredging/copy",
+      "anchor": "hextrapats:dredging/copy",
+      "input": "any",
+      "output": "any",
+      "text": "hextrapats.page.stackmanip.dredging/copy"
+    }
+  ]
+}
