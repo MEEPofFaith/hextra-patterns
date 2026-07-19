@@ -158,9 +158,9 @@
       },
       stackmanip: {
         capsizing: "Sends the iota on the top of the stack to the bottom of the stack.",
-        "capsizing/copy": "Like $(l:patterns/hextrapats_stackmanip#hextrapats:capsizing)$(action)Capsizing Gambit/$, but instead of moving the iota, copies it.",
+        "capsizing/copy": "Like $(l:patterns/hextrapats_stackmanip#hextrapats:capsizing)$(action)Capsizing Gambit/$, but copies the iota instead of moving it.",
         dredging: "Pulls the iota at the bottom of the stack to the top of the stack.",
-        "dredging/copy": "Like $(l:patterns/hextrapats_stackmanip#hextrapats:dredging)$(action)Dredging Gambit/$, but instead of moving the iota, copies it."
+        "dredging/copy": "Like $(l:patterns/hextrapats_stackmanip#hextrapats:dredging)$(action)Dredging Gambit/$, but copies the iota instead of moving it."
       }
     }
   },
