@@ -1,0 +1,25 @@
+hextrapats:
+  book:
+    patterns:
+      spells:
+        hextrapats_spells:
+          .: "Example Spells"
+          congratulate: "Remove an entity from the stack, then congratulate them."
+      great_spells:
+        hextrapats_great_spells:
+          .: "Example Great Spells"
+          "congratulate/great": "Same as $(l:patterns/spells/hextrapats_spells#hextrapats:congratulate)$(action)Congratulate/$, but as a great spell."
+
+hexcasting:
+  action:
+    "hextrapats:congratulate" : "Congratulate Player"
+    "hextrapats:congratulate/great": "Great Congrats!"
+
+    # use this to add shortened versions of pattern names if the full name won't fit in the ingame book
+    # you don't need to add an entry for every pattern - the above value will be used as a default
+    book:
+      "hextrapats:congratulate": "Congratulate"
+
+text:
+  hextrapats:
+    congrats: "Tell %1$s they're doing a good job!"

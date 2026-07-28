@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+# https://copier.readthedocs.io/en/stable/updating/#never-change-the-answers-file-manually
+_commit: v1.3.2
+_src_path: gh:Master-Bw3/Hex-Casting-1.21.1-Addon-Template
+advanced: false
+description: Random pattern ideas that come to my head. Mostly utility.
+display_name: Hextra Patterns
+github_repo: hextra-patterns
+github_user: MEEPofFaith
+java_package: com.meepoffaith.hextrapats
+minecraft_version_in_mod_version: true
+mit_license: true
+mod_version: 1.8.1
+modid: hextrapats
