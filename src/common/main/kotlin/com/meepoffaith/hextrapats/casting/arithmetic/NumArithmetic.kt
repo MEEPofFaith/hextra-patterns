@@ -6,18 +6,20 @@ import at.petrak.hexcasting.api.casting.arithmetic.operator.Operator
 import at.petrak.hexcasting.api.casting.arithmetic.operator.OperatorBinary
 import at.petrak.hexcasting.api.casting.arithmetic.operator.OperatorUnary
 import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaMultiPredicate
+import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaPredicate
 import at.petrak.hexcasting.api.casting.iota.DoubleIota
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.math.HexPattern
+import at.petrak.hexcasting.common.lib.hex.HexIotaTypes
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.num.OperatorApproach
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.num.OperatorTurn
-import com.meepoffaith.hextrapats.init.Patterns.ANGLE_APPROACH
-import com.meepoffaith.hextrapats.init.Patterns.ANGLE_DIST
-import com.meepoffaith.hextrapats.init.Patterns.APPROACH
-import com.meepoffaith.hextrapats.init.Patterns.DECREMENT
-import com.meepoffaith.hextrapats.init.Patterns.INCREMENT
-import com.meepoffaith.hextrapats.init.Patterns.INVERT
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.ANGLE_APPROACH
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.ANGLE_DIST
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.APPROACH
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.DECREMENT
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.INCREMENT
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.INVERT
 import com.meepoffaith.hextrapats.util.MathUtils
 import com.meepoffaith.hextrapats.util.MultiPreds
 import java.util.function.DoubleBinaryOperator
@@ -49,11 +51,11 @@ class NumArithmetic : Arithmetic {
     }
 
     //Directly taken from DoubleArithmetic.kt.
-    val ACCEPTS: IotaMultiPredicate = MultiPreds.all(DOUBLE)
+    val ACCEPTS: () -> IotaMultiPredicate = { IotaMultiPredicate.all(IotaPredicate.ofType(DOUBLE.get())) }
 
-    fun make1(op: DoubleUnaryOperator) = OperatorUnary(ACCEPTS)
-    { i: Iota -> DoubleIota(op.applyAsDouble(Operator.downcast(i, DOUBLE).double)) }
+    fun make1(op: DoubleUnaryOperator) = OperatorUnary(ACCEPTS())
+        { i: Iota -> DoubleIota(op.applyAsDouble(Operator.downcast(i, DOUBLE.get()).double)) }
 
-    fun make2(op: DoubleBinaryOperator) = OperatorBinary(ACCEPTS)
-    { i: Iota, j: Iota -> DoubleIota(op.applyAsDouble(Operator.downcast(i, DOUBLE).double, Operator.downcast(j, DOUBLE).double)) }
+    fun make2(op: DoubleBinaryOperator) = OperatorBinary(ACCEPTS())
+        { i: Iota, j: Iota -> DoubleIota(op.applyAsDouble(Operator.downcast(i, DOUBLE.get()).double, Operator.downcast(j, DOUBLE.get()).double)) }
 }

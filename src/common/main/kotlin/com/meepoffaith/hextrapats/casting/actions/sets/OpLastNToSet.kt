@@ -21,7 +21,7 @@ object OpLastNToSet : Action {
         val stackWithoutArg = stack.init()
         val output = TreeList.from(stackWithoutArg.takeRight(yoinkCount))
         val stackWithoutContents = stackWithoutArg.dropRight(yoinkCount)
-        val set = SetIota(output)
+        val set = SetIota(output, yoinkCount + 1)
         val stackWithResult = stackWithoutContents.appended(set)
 
         val image2 = image.withUsedOp().copy(stack = stackWithResult)

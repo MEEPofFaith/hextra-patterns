@@ -4,15 +4,15 @@ import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaMultiPredicate
 import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaPredicate
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.iota.IotaType
-import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.*
-import com.meepoffaith.hextrapats.init.IotaTypes.ENTITY_SET
-import com.meepoffaith.hextrapats.init.IotaTypes.NUM_SET
-import com.meepoffaith.hextrapats.init.IotaTypes.VEC_SET
+import com.meepoffaith.hextrapats.casting.iota.IotaMap
+import com.meepoffaith.hextrapats.registry.HextrapatsIotas
 
 
 object MultiPreds {
-    val SET_OP = Either3(pair(NUM_SET, DOUBLE), pair(VEC_SET, VEC3), pair(ENTITY_SET, ENTITY))
-    val ALL_SETS = Either3(all(NUM_SET), all(VEC_SET), all(ENTITY_SET))
+    val SET_INSERTABLE = IotaPredicate { iota -> IotaMap.checkType(iota) }
+
+    val SET_OP: IotaMultiPredicate = IotaMultiPredicate.pair(IotaPredicate.ofType(HextrapatsIotas.SET), SET_INSERTABLE)
+    val ALL_SETS = all(HextrapatsIotas.SET)
 
     fun all(type: IotaType<*>): IotaMultiPredicate =
         IotaMultiPredicate.all(IotaPredicate.ofType(type))

@@ -140,8 +140,11 @@ object HextrapatsActions : HextrapatsRegistrar<ActionRegistryEntry>(
         ActionRegistryEntry(HexPattern.fromAngles(signature, startDir), getAction())
     }
 
-    private fun makeArithOp(name: String, startDir: HexDir, signature: String) =
-        make(name, startDir, signature, OperationAction(HexPattern.fromAngles(signature, startDir)))
+    private fun makeArithOp(name: String, startDir: HexDir, signature: String): HexPattern {
+        val pattern = HexPattern.fromAngles(signature, startDir)
+        make(name, startDir, signature, OperationAction(pattern))
+        return pattern
+    }
 
     private fun makeNoCons(name: String, startDir: HexDir, signature: String, copied: HexPattern, argc: Int) =
         make(name, startDir, signature, NoConsOperationAction(copied, argc))

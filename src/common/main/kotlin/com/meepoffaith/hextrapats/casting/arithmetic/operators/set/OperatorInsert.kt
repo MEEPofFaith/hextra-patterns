@@ -2,39 +2,20 @@ package com.meepoffaith.hextrapats.casting.arithmetic.operators.set
 
 import at.petrak.hexcasting.api.casting.arithmetic.operator.OperatorBasic
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
-import at.petrak.hexcasting.api.casting.getDouble
-import at.petrak.hexcasting.api.casting.getEntity
-import at.petrak.hexcasting.api.casting.getVec3
 import at.petrak.hexcasting.api.casting.iota.BooleanIota
 import at.petrak.hexcasting.api.casting.iota.Iota
-import com.meepoffaith.hextrapats.casting.iota.DoubleSetIota
-import com.meepoffaith.hextrapats.casting.iota.EntitySetIota
-import com.meepoffaith.hextrapats.casting.iota.VecSetIota
-import com.meepoffaith.hextrapats.util.HextraUtils.getSet
+import com.meepoffaith.hextrapats.casting.iota.SetIota
+import com.meepoffaith.hextrapats.util.HextraUtils.nextSet
 import com.meepoffaith.hextrapats.util.MultiPreds.SET_OP
 
 class OperatorInsert(
     val returnBool: Boolean
 ) : OperatorBasic(2, SET_OP) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
-        val stack = iotas.toList()
-        val set = stack.getSet(0, arity)
-        return set.operate(
-            { dSet ->
-                val num = stack.getDouble(1, arity)
-                val added = dSet.add(num)
-                if(returnBool) listOf(DoubleSetIota(dSet), BooleanIota(added)) else dSet.asActionResult()
-            },
-            { vSet ->
-                val vec = stack.getVec3(1, arity)
-                val added = vSet.add(vec)
-                if(returnBool) listOf(VecSetIota(vSet), BooleanIota(added)) else vSet.asActionResult()
-            },
-            { eSet ->
-                val entity = stack.getEntity(env.world, 1, arity)
-                val added = eSet.putEntity(entity)
-                if(returnBool) listOf(EntitySetIota(eSet), BooleanIota(added)) else eSet.asActionResult()
-            }
-        )
+        val it = iotas.iterator().withIndex()
+        val map = it.nextSet(arity).copy()
+        val iota = it.next().value
+        val added = map.addIota(iota)
+        return if(returnBool) listOf(SetIota(map), BooleanIota(added)) else map.asActionResult()
     }
 }

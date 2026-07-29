@@ -15,6 +15,7 @@ import com.mojang.datafixers.util.Either
 import com.samsthenerd.inline.api.InlineAPI
 import com.samsthenerd.inline.api.data.EntityInlineData
 import com.samsthenerd.inline.api.data.PlayerHeadData
+import it.unimi.dsi.fastutil.doubles.DoubleSet
 import net.minecraft.network.chat.Component
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.player.Player
@@ -65,32 +66,12 @@ object HextraUtils {
         return baseName.append(": ").append(inlineEnt)
     }
 
-    fun List<Iota>.getSet(index: Int, argc: Int ): AnySet = AnySet(get(index), argc - (index + 1))
-
-    fun List<Iota>.getNumSet(idx: Int, argc: Int = 0): DoubleSet {
-        val x = this.getOrElse(idx) { throw MishapNotEnoughArgs(idx + 1, this.size) }
-        if (x is DoubleSetIota) {
-            return x.copySet()
-        } else {
-            throw MishapInvalidIota.ofType(x, if (argc == 0) idx else argc - (idx + 1), "vector")
-        }
-    }
-
-    fun List<Iota>.getVecSet(idx: Int, argc: Int = 0): VecSet {
-        val x = this.getOrElse(idx) { throw MishapNotEnoughArgs(idx + 1, this.size) }
-        if (x is VecSetIota) {
-            return x.copySet()
-        } else {
-            throw MishapInvalidIota.ofType(x, if (argc == 0) idx else argc - (idx + 1), "vector")
-        }
-    }
-
-    fun List<Iota>.getEntitySet(idx: Int, argc: Int = 0): EntityMap {
-        val x = this.getOrElse(idx) { throw MishapNotEnoughArgs(idx + 1, this.size) }
-        if (x is EntitySetIota) {
-            return x.copyMap()
-        } else {
-            throw MishapInvalidIota.ofType(x, if (argc == 0) idx else argc - (idx + 1), "vector")
+    fun List<Iota>.getSet(idx: Int, argc: Int ): IotaMap{
+        val x = this.getOrElse(idx) { throw MishapNotEnoughArgs(idx + 1, argc) }
+        if(x is SetIota){
+            return x.iotaMap
+        }else{
+            throw MishapInvalidIota.ofType(x, if (argc == 0) idx else argc - (idx + 1), "hextrapats:set")
         }
     }
 
@@ -104,6 +85,15 @@ object HextraUtils {
                 if (argc == 0) idx else argc - (idx + 1),
                 "hextrapats:veclist"
             )
+        }
+    }
+
+    fun Iterator<IndexedValue<Iota>>.nextSet(argc: Int = 0): IotaMap {
+        val (idx, x) = this.next()
+        if (x is SetIota) {
+            return x.iotaMap
+        } else {
+            throw MishapInvalidIota.ofType(x, if (argc == 0) idx else argc - (idx + 1), "hextrapats:set")
         }
     }
 }

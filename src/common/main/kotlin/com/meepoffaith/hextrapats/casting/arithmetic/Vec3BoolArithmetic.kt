@@ -12,13 +12,14 @@ import at.petrak.hexcasting.api.casting.math.HexPattern
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.VEC3
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.bool.OperatorInRangeVec
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.bool.OperatorOutRangeVec
-import com.meepoffaith.hextrapats.init.Patterns.IN_RANGE
-import com.meepoffaith.hextrapats.init.Patterns.LEN_EQ
-import com.meepoffaith.hextrapats.init.Patterns.LEN_NEQ
-import com.meepoffaith.hextrapats.init.Patterns.OUT_RANGE
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.IN_RANGE
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.LEN_EQ
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.LEN_NEQ
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.OUT_RANGE
 import com.meepoffaith.hextrapats.util.HextraUtils
 import com.meepoffaith.hextrapats.util.MultiPreds
 import net.minecraft.util.math.Vec3d
+import net.minecraft.world.phys.Vec3
 import java.util.function.BiFunction
 
 class Vec3BoolArithmetic : Arithmetic {
@@ -49,6 +50,6 @@ class Vec3BoolArithmetic : Arithmetic {
         else -> throw InvalidOperatorException("$pattern is not a valid operator in Arithmetic $this.")
     }
 
-    fun makeComp(op: BiFunction<Vec3d, Vec3d, Boolean>) = OperatorBinary(MultiPreds.all(VEC3))
-    { i: Iota, j: Iota -> BooleanIota(op.apply(Operator.downcast(i, VEC3).vec3, Operator.downcast(j, VEC3).vec3)) }
+    fun makeComp(op: BiFunction<Vec3, Vec3, Boolean>) = OperatorBinary(MultiPreds.all(VEC3.get()))
+        { i: Iota, j: Iota -> BooleanIota(op.apply(Operator.downcast(i, VEC3.get()).vec3, Operator.downcast(j, VEC3.get()).vec3)) }
 }

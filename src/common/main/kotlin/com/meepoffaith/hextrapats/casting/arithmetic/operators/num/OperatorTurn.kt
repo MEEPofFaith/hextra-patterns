@@ -10,7 +10,7 @@ import com.meepoffaith.hextrapats.util.MathUtils
 import com.meepoffaith.hextrapats.util.MultiPreds
 import kotlin.math.abs
 
-object OperatorTurn : OperatorBasic(3, MultiPreds.all(DOUBLE)) {
+object OperatorTurn : OperatorBasic(3, MultiPreds.all(DOUBLE.get())) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator().withIndex()
         var from = it.nextDouble(arity)

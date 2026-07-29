@@ -10,13 +10,13 @@ import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE
 import com.meepoffaith.hextrapats.util.HextraUtils
 import com.meepoffaith.hextrapats.util.MultiPreds
 
-class OperatorInRange : OperatorBasic(4, MultiPreds.all(DOUBLE)) {
+class OperatorInRange : OperatorBasic(4, MultiPreds.all(DOUBLE.get())) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator().withIndex()
-        val num = it.nextDouble()
-        val a = it.nextDouble()
-        val b = it.nextDouble()
-        val op = it.nextPositiveIntUnderInclusive(3, 4)
+        val num = it.nextDouble(arity)
+        val a = it.nextDouble(arity)
+        val b = it.nextDouble(arity)
+        val op = it.nextPositiveIntUnderInclusive(3, arity)
         val min = a.coerceAtMost(b)
         val max = a.coerceAtLeast(b)
         return inRange(min, max, num, op).asActionResult

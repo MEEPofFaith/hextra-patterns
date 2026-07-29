@@ -3,14 +3,15 @@ package com.meepoffaith.hextrapats.casting.iota
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.iota.IotaType
 import at.petrak.hexcasting.api.utils.gold
+import com.meepoffaith.hextrapats.registry.HextrapatsIotas
 import com.mojang.serialization.MapCodec
 import net.minecraft.network.RegistryFriendlyByteBuf
 import net.minecraft.network.chat.Component
 import net.minecraft.network.codec.ByteBufCodecs
 import net.minecraft.network.codec.StreamCodec
 
-class SetIota(val iotaMap: IotaMap): Iota({ TYPE }) {
-    constructor(iotaList: List<Iota>) : this(IotaMap(iotaList))
+class SetIota(val iotaMap: IotaMap): Iota({ HextrapatsIotas.SET }) {
+    constructor(iotaList: List<Iota>, argc: Int = 0) : this(IotaMap(iotaList, argc))
 
     override fun isTruthy(): Boolean = iotaMap.isNotEmpty()
 
@@ -39,6 +40,10 @@ class SetIota(val iotaMap: IotaMap): Iota({ TYPE }) {
 
     fun toList(): List<Iota>{
         return iotaMap.values.toList()
+    }
+
+    fun asActionResult(): List<Iota>{
+        return listOf(this)
     }
 
     companion object {

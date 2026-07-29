@@ -4,17 +4,21 @@ import at.petrak.hexcasting.api.casting.arithmetic.Arithmetic
 import at.petrak.hexcasting.api.casting.arithmetic.Arithmetic.*
 import at.petrak.hexcasting.api.casting.arithmetic.engine.InvalidOperatorException
 import at.petrak.hexcasting.api.casting.arithmetic.operator.Operator
+import at.petrak.hexcasting.api.casting.arithmetic.operator.OperatorUnary
+import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaMultiPredicate
+import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaPredicate
+import at.petrak.hexcasting.api.casting.asActionResult
+import at.petrak.hexcasting.api.casting.iota.DoubleIota
+import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.math.HexPattern
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorAddSets
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorAmount
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorDisjunction
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorExists
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorInsert
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorIntersection
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorRemove
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorSubtractSets
-import com.meepoffaith.hextrapats.init.Patterns.SET_INSERT_RET
-import com.meepoffaith.hextrapats.init.Patterns.SET_REMOVE_RET
+import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE
+import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.*
+import com.meepoffaith.hextrapats.casting.iota.SetIota
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.SET_INSERT_RET
+import com.meepoffaith.hextrapats.registry.HextrapatsActions.SET_REMOVE_RET
+import com.meepoffaith.hextrapats.registry.HextrapatsIotas
+import com.meepoffaith.hextrapats.util.MultiPreds.ALL_SETS
+import java.util.function.DoubleUnaryOperator
 
 class SetArithmetic : Arithmetic {
     private val OPS = listOf(
@@ -39,7 +43,7 @@ class SetArithmetic : Arithmetic {
         SUB -> OperatorSubtractSets
         AND -> OperatorIntersection
         XOR -> OperatorDisjunction
-        ABS -> OperatorAmount
+        ABS -> OperatorUnary(ALL_SETS) { iota: Iota -> DoubleIota(Operator.downcast(iota, HextrapatsIotas.SET).iotaMap.size.toDouble()) }
         INDEX_OF -> OperatorExists
         APPEND -> OperatorInsert(false)
         SET_INSERT_RET -> OperatorInsert(true)

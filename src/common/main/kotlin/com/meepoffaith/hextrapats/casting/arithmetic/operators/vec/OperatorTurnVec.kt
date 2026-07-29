@@ -13,18 +13,18 @@ import com.meepoffaith.hextrapats.util.MultiPreds
 import kotlin.math.cos
 import kotlin.math.sin
 
-object OperatorTurnVec : OperatorBasic(3, MultiPreds.triple(VEC3, VEC3, DOUBLE)) {
+object OperatorTurnVec : OperatorBasic(3, MultiPreds.triple(VEC3.get(), VEC3.get(), DOUBLE.get())) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator()
-        val fromI = downcast(it.next(), VEC3)
-        val toI = downcast(it.next(), VEC3)
+        val fromI = downcast(it.next(), VEC3.get())
+        val toI = downcast(it.next(), VEC3.get())
         val from = fromI.vec3
         val to = toI.vec3
-        val theta = downcast(it.next(), DOUBLE).double
+        val theta = downcast(it.next(), DOUBLE.get()).double
         val angDist = MathUtils.vecAngleDist(from, to)
 
         if(theta >= angDist){
-            return to.multiply(from.length() / to.length()).asActionResult
+            return to.scale(from.length() / to.length()).asActionResult
         }else if(DoubleIota.tolerates(angDist, Math.PI)){
             //From and To are facing directly away from each other. In this case, no axis of rotation can be determined (cross product returns the 0 vector).
             throw MishapInvalidIota.of(toI, 1, "hextrapats:opposite_vecs", fromI.display());
@@ -33,9 +33,9 @@ object OperatorTurnVec : OperatorBasic(3, MultiPreds.triple(VEC3, VEC3, DOUBLE))
         val fromN = from.normalize()
         val toN = to.normalize()
 
-        val cross = fromN.crossProduct(toN).crossProduct(fromN).normalize()
-        val next = fromN.multiply(cos(theta)).add(cross.multiply(sin(theta)))
+        val cross = fromN.cross(toN).cross(fromN).normalize()
+        val next = fromN.scale(cos(theta)).add(cross.scale(sin(theta)))
 
-        return next.multiply(from.length()).asActionResult
+        return next.scale(from.length()).asActionResult
     }
 }
