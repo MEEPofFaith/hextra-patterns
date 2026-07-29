@@ -1,0 +1,59 @@
+package com.meepoffaith.hextrapats.casting.arithmetic
+
+import at.petrak.hexcasting.api.casting.arithmetic.Arithmetic
+import at.petrak.hexcasting.api.casting.arithmetic.engine.InvalidOperatorException
+import at.petrak.hexcasting.api.casting.arithmetic.operator.Operator
+import at.petrak.hexcasting.api.casting.arithmetic.operator.OperatorBinary
+import at.petrak.hexcasting.api.casting.arithmetic.operator.OperatorUnary
+import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaMultiPredicate
+import at.petrak.hexcasting.api.casting.iota.DoubleIota
+import at.petrak.hexcasting.api.casting.iota.Iota
+import at.petrak.hexcasting.api.casting.math.HexPattern
+import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE
+import com.meepoffaith.hextrapats.casting.arithmetic.operators.num.OperatorApproach
+import com.meepoffaith.hextrapats.casting.arithmetic.operators.num.OperatorTurn
+import com.meepoffaith.hextrapats.init.Patterns.ANGLE_APPROACH
+import com.meepoffaith.hextrapats.init.Patterns.ANGLE_DIST
+import com.meepoffaith.hextrapats.init.Patterns.APPROACH
+import com.meepoffaith.hextrapats.init.Patterns.DECREMENT
+import com.meepoffaith.hextrapats.init.Patterns.INCREMENT
+import com.meepoffaith.hextrapats.init.Patterns.INVERT
+import com.meepoffaith.hextrapats.util.MathUtils
+import com.meepoffaith.hextrapats.util.MultiPreds
+import java.util.function.DoubleBinaryOperator
+import java.util.function.DoubleUnaryOperator
+
+
+class NumArithmetic : Arithmetic {
+    private val OPS = listOf(
+        INVERT,
+        INCREMENT,
+        DECREMENT,
+        APPROACH,
+        ANGLE_DIST,
+        ANGLE_APPROACH
+    );
+
+    override fun arithName() = "hextrapats_double_math"
+
+    override fun opTypes() = OPS
+
+    override fun getOperator(pattern: HexPattern): Operator = when(pattern){
+        INVERT -> make1{ d -> -d }
+        INCREMENT -> make1{ d -> d + 1 }
+        DECREMENT -> make1{ d -> d - 1 }
+        APPROACH -> OperatorApproach
+        ANGLE_DIST -> make2{ a, b -> MathUtils.angleDist(a, b) }
+        ANGLE_APPROACH -> OperatorTurn
+        else -> throw InvalidOperatorException("$pattern is not a valid operator in Arithmetic $this.")
+    }
+
+    //Directly taken from DoubleArithmetic.kt.
+    val ACCEPTS: IotaMultiPredicate = MultiPreds.all(DOUBLE)
+
+    fun make1(op: DoubleUnaryOperator) = OperatorUnary(ACCEPTS)
+    { i: Iota -> DoubleIota(op.applyAsDouble(Operator.downcast(i, DOUBLE).double)) }
+
+    fun make2(op: DoubleBinaryOperator) = OperatorBinary(ACCEPTS)
+    { i: Iota, j: Iota -> DoubleIota(op.applyAsDouble(Operator.downcast(i, DOUBLE).double, Operator.downcast(j, DOUBLE).double)) }
+}

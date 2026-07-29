@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import com.meepoffaith.hextrapats.networking.HextrapatsNetworking
 import com.meepoffaith.hextrapats.registry.HextrapatsActions
+import com.meepoffaith.hextrapats.registry.HextrapatsIotas
 
 object Hextrapats {
     const val MODID = "hextrapats"
@@ -20,6 +21,7 @@ object Hextrapats {
 
     fun init() {
         initRegistries(
+            HextrapatsIotas,
             HextrapatsActions,
         )
         HextrapatsNetworking.init()
