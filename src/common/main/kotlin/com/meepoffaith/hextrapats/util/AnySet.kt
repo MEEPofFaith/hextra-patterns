@@ -4,7 +4,9 @@ import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidIota
 import com.meepoffaith.hextrapats.casting.iota.*
 import net.minecraft.entity.Entity
+import net.minecraft.network.chat.Component
 import net.minecraft.world.entity.Entity
+import java.util.UUID
 import java.util.function.Function
 
 class AnySet{
@@ -24,14 +26,14 @@ class AnySet{
     fun operate(
         doubles: Function<DoubleSet, List<Iota>>,
         vecs: Function<VecSet, List<Iota>>,
-        entites: Function<MutableSet<Entity>, List<Iota>>
+        entites: Function<EntityMap, List<Iota>>
     ) : List<Iota> {
         return if(doubleSetIota != null){
             doubles.apply(doubleSetIota!!.copySet())
         }else if(vecSetIota != null){
             vecs.apply(vecSetIota!!.copySet())
         }else if(entitySetIota != null){
-            entites.apply(entitySetIota!!.copySet())
+            entites.apply(entitySetIota!!.copyMap())
         }else{
             throw IllegalStateException("wtf did you do to get here")
         }

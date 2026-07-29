@@ -5,20 +5,20 @@ import at.petrak.hexcasting.api.casting.asActionResult
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.iota.Iota
 import com.meepoffaith.hextrapats.casting.iota.DoubleSet
+import com.meepoffaith.hextrapats.casting.iota.EntityMap
 import com.meepoffaith.hextrapats.casting.iota.VecSet
 import com.meepoffaith.hextrapats.util.HextraUtils.getEntitySet
 import com.meepoffaith.hextrapats.util.HextraUtils.getNumSet
 import com.meepoffaith.hextrapats.util.HextraUtils.getSet
 import com.meepoffaith.hextrapats.util.HextraUtils.getVecSet
 import com.meepoffaith.hextrapats.util.MultiPreds.ALL_SETS
-import net.minecraft.entity.Entity
 
 object OperatorDisjunction : OperatorBasic(2, ALL_SETS) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val stack = iotas.toList()
         val set = stack.getSet(0, arity)
         return set.operate(
-            { dSet: DoubleSet ->
+            { dSet ->
                 val set2 = stack.getNumSet(1, arity)
                 val disjunction = DoubleSet()
                 for(key in dSet){
@@ -30,7 +30,7 @@ object OperatorDisjunction : OperatorBasic(2, ALL_SETS) {
                 }
                 disjunction.addAll(set2).asActionResult
             },
-            { vSet: VecSet ->
+            { vSet ->
                 val set2 = stack.getVecSet(1, arity)
                 val disjunction = VecSet()
                 for(key in vSet){
@@ -42,17 +42,18 @@ object OperatorDisjunction : OperatorBasic(2, ALL_SETS) {
                 }
                 disjunction.addAll(set2).asActionResult
             },
-            { eSet: MutableSet<Entity> ->
+            { eSet ->
                 val set2 = stack.getEntitySet(1, arity)
-                val disjunction = HashSet<Entity>()
-                for(key in eSet){
-                    if(!set2.contains(key)){
-                        disjunction.add(key)
+                val disjunction = EntityMap()
+                for(entry in eSet){
+                    if(!set2.containsKey(entry.key)){
+                        disjunction[entry.key] = entry.value
                     }else{
-                        set2.remove(key)
+                        set2.remove(entry.key)
                     }
                 }
-                disjunction.addAll(set2).asActionResult
+                disjunction.putAll(set2)
+                disjunction.asActionResult()
             }
         )
     }

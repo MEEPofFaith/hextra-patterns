@@ -1,7 +1,6 @@
 package com.meepoffaith.hextrapats.util
 
 import at.petrak.hexcasting.api.HexAPI
-import at.petrak.hexcasting.api.casting.SpellList
 import at.petrak.hexcasting.api.casting.castables.SpecialHandler
 import at.petrak.hexcasting.api.casting.iota.DoubleIota
 import at.petrak.hexcasting.api.casting.iota.Iota
@@ -11,17 +10,16 @@ import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidIota
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
 import at.petrak.hexcasting.api.utils.TreeList
 import at.petrak.hexcasting.xplat.IXplatAbstractions
-import com.meepoffaith.hextrapats.casting.iota.DoubleSet
-import com.meepoffaith.hextrapats.casting.iota.DoubleSetIota
-import com.meepoffaith.hextrapats.casting.iota.EntitySetIota
-import com.meepoffaith.hextrapats.casting.iota.VecSet
-import com.meepoffaith.hextrapats.casting.iota.VecSetIota
+import com.meepoffaith.hextrapats.casting.iota.*
 import com.mojang.datafixers.util.Either
-import net.minecraft.entity.Entity
-import net.minecraft.util.math.Vec3d
+import com.samsthenerd.inline.api.InlineAPI
+import com.samsthenerd.inline.api.data.EntityInlineData
+import com.samsthenerd.inline.api.data.PlayerHeadData
+import net.minecraft.network.chat.Component
 import net.minecraft.world.entity.Entity
+import net.minecraft.world.entity.player.Player
+import net.minecraft.world.item.component.ResolvableProfile
 import net.minecraft.world.phys.Vec3
-
 
 object HextraUtils {
     /** Simulates the accumulation process of Numerical Reflection  */
@@ -54,7 +52,18 @@ object HextraUtils {
         return HexAPI.instance().getSpecialHandlerI18nKey(key)
     }
 
-    fun Set<Entity>.asActionResult(): List<Iota> = listOf(EntitySetIota(this))
+    // Taken from EntityIota
+    fun getEntityNameWithInline(entity: Entity): Component {
+        val baseName = entity.name.copy()
+        var inlineEnt: Component
+        if(entity is Player){
+            inlineEnt = PlayerHeadData(ResolvableProfile(entity.gameProfile)).asText(false)
+            inlineEnt = inlineEnt.plainCopy().withStyle(InlineAPI.INSTANCE.withSizeModifier(inlineEnt.style, 1.5))
+        }else{
+            inlineEnt = EntityInlineData.fromType(entity.type).asText(false)
+        }
+        return baseName.append(": ").append(inlineEnt)
+    }
 
     fun List<Iota>.getSet(index: Int, argc: Int ): AnySet = AnySet(get(index), argc - (index + 1))
 
@@ -76,10 +85,10 @@ object HextraUtils {
         }
     }
 
-    fun List<Iota>.getEntitySet(idx: Int, argc: Int = 0): MutableSet<Entity> {
+    fun List<Iota>.getEntitySet(idx: Int, argc: Int = 0): EntityMap {
         val x = this.getOrElse(idx) { throw MishapNotEnoughArgs(idx + 1, this.size) }
         if (x is EntitySetIota) {
-            return x.copySet()
+            return x.copyMap()
         } else {
             throw MishapInvalidIota.ofType(x, if (argc == 0) idx else argc - (idx + 1), "vector")
         }

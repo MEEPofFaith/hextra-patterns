@@ -3,70 +3,50 @@ package com.meepoffaith.hextrapats.casting.iota
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.iota.IotaType
 import at.petrak.hexcasting.api.utils.darkGreen
-import at.petrak.hexcasting.api.utils.downcast
 import at.petrak.hexcasting.api.utils.green
-import net.minecraft.nbt.NbtDouble
-import net.minecraft.nbt.NbtElement
-import net.minecraft.nbt.NbtList
-import net.minecraft.server.world.ServerWorld
-import net.minecraft.text.MutableText
-import net.minecraft.text.Text
+import com.meepoffaith.hextrapats.util.HextrapatsCodecs
+import com.mojang.serialization.MapCodec
+import net.minecraft.network.RegistryFriendlyByteBuf
+import net.minecraft.network.chat.Component
+import net.minecraft.network.codec.StreamCodec
 
+class DoubleSetIota(val doubleSet: DoubleSet) : Iota({ TYPE }) {
+    fun copySet(): DoubleSet = DoubleSet(doubleSet)
 
-class DoubleSetIota(payload: DoubleSet) : Iota(TYPE, payload) {
-    fun getSet(): DoubleSet = payload as DoubleSet
-
-    fun copySet(): DoubleSet = DoubleSet(getSet())
-
-    override fun isTruthy(): Boolean = getSet().isNotEmpty()
+    override fun isTruthy(): Boolean = doubleSet.isNotEmpty()
 
     override fun toleratesOther(that: Iota?): Boolean {
-        return that is DoubleSetIota && that.getSet() == getSet()
+        return that is DoubleSetIota && that.doubleSet == doubleSet
     }
 
-    override fun size(): Int = getSet().size
+    override fun size(): Int = doubleSet.size
 
-    override fun serialize(): NbtElement {
-        val list = NbtList()
-        for(key in getSet()){
-            list.add(NbtDouble.of(key))
+    override fun display(): Component {
+        val out = "{nums: ".darkGreen
+
+        var first = true
+        for(num in doubleSet){
+            if(!first) out.append(" | ".darkGreen)
+            out.append("$num".green)
+            first = false
         }
-        return list
+        out.append(" }".darkGreen)
+
+        return out
     }
 
-    override fun getType(): IotaType<DoubleSetIota> = TYPE
+    override fun hashCode(): Int = doubleSet.hashCode()
 
     companion object {
-        @JvmField
-        var TYPE: IotaType<DoubleSetIota> = object : IotaType<DoubleSetIota>() {
-            @Throws(IllegalArgumentException::class)
-            override fun deserialize(tag: NbtElement, world: ServerWorld): DoubleSetIota {
-                val list: NbtList = tag.downcast(NbtList.TYPE)
-                val set = DoubleSet()
-                for (i in list.indices) {
-                    set.add(list.getDouble(i))
-                }
-                return DoubleSetIota(set)
-            }
+        val CODEC: MapCodec<DoubleSetIota> =
+            HextrapatsCodecs.DOUBLE_SET.xmap({ set -> DoubleSetIota(set) }, DoubleSetIota::doubleSet).fieldOf("double_set")
+        val STREAM_CODEC: StreamCodec<RegistryFriendlyByteBuf, DoubleSetIota> =
+            HextrapatsCodecs.DOUBLE_SET_STREAM.map({ set -> DoubleSetIota(set) }, DoubleSetIota::doubleSet).mapStream { buf -> buf }
 
-            override fun display(tag: NbtElement): Text {
-                val comp: MutableText = "{nums: ".darkGreen
-                val list: NbtList = tag.downcast(NbtList.TYPE)
-                for (i in list.indices) {
-                    val num = list.getDouble(i).toString()
-                    comp.append(num.green)
-                    if (i + 1 < list.size) {
-                        comp.append(" | ".darkGreen)
-                    }
-                }
-                comp.append("}".darkGreen)
-
-                return comp
-            }
-
-            override fun color(): Int {
-                return 0x00AA00
-            }
+        var TYPE: IotaType<DoubleSetIota> = object : IotaType<DoubleSetIota>(){
+            override fun codec(): MapCodec<DoubleSetIota> = CODEC
+            override fun streamCodec(): StreamCodec<RegistryFriendlyByteBuf, DoubleSetIota> = STREAM_CODEC
+            override fun color(): Int = 0x00AA00
         }
     }
 }
