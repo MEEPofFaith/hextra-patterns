@@ -29,7 +29,7 @@ import com.meepoffaith.hextrapats.casting.actions.math.OpRandRange
 import com.meepoffaith.hextrapats.casting.actions.math.OpRandZero
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullCoalesce
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullExecute
-import com.meepoffaith.hextrapats.casting.actions.sets.OpEmptyEntitySet
+import com.meepoffaith.hextrapats.casting.actions.sets.OpEmptySet
 import com.meepoffaith.hextrapats.casting.actions.sets.OpEmptyNumSet
 import com.meepoffaith.hextrapats.casting.actions.sets.OpEmptyVecSet
 import com.meepoffaith.hextrapats.casting.actions.sets.OpLastNToSet
@@ -111,7 +111,7 @@ object HextrapatsActions : HextrapatsRegistrar<ActionRegistryEntry>(
 
     val EMPTY_SET_NUM = make("empty_set/num", HexDir.NORTH_WEST, "eedqddeeaqaa", OpEmptyNumSet)
     val EMPTY_SET_VEC = make("empty_set/vec", HexDir.NORTH_WEST, "eedqddeeqqqqq", OpEmptyVecSet)
-    val EMPTY_SET_ENT = make("empty_set/entity", HexDir.NORTH_WEST, "eedqddeweaqa", OpEmptyEntitySet)
+    val EMPTY_SET_ENT = make("empty_set/entity", HexDir.NORTH_WEST, "eedqddeweaqa", OpEmptySet)
     val LAST_N_SET = make("last_n_set", HexDir.SOUTH_WEST, "ewdwaawaqde", OpLastNToSet)
     val SPLAT_SET = make("splat_set", HexDir.NORTH_WEST, "qwawddwdeaq", OpSplatSet)
     val SET_TO_LIST = make("set_to_list", HexDir.NORTH_WEST, "eedqddeqaaeaqq", OpSetToList)
