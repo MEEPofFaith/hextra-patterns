@@ -11,7 +11,7 @@ from hexdoc.plugin import (
 
 import hexdoc_hextrapats
 
-from .__gradle_version__ import FULL_VERSION, GRADLE_VERSION
+from .__gradle_version__ import FULL_VERSION, GRADLE_VERSION, MINECRAFT_VERSION
 from .__version__ import PY_VERSION
 
 
@@ -36,7 +36,7 @@ class HextrapatsModPlugin(ModPluginWithBook):
     @property
     @override
     def mod_version(self) -> str:
-        return GRADLE_VERSION
+        return f"{GRADLE_VERSION}+{MINECRAFT_VERSION}"
 
     @property
     @override
