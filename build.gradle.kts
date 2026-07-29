@@ -15,7 +15,7 @@ pkJson5 {
 	autoProcessJson5Flattening = true
 }
 
-version = providers.gradleProperty("mod_version").get()
+version = providers.gradleProperty("mod_version").get() + "+" + providers.gradleProperty("minecraft_version").get()
 group = providers.gradleProperty("maven_group").get()
 
 repositories {
