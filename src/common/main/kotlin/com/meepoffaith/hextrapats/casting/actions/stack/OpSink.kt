@@ -13,12 +13,11 @@ class OpSink(val copies: Boolean) : Action {
         image: CastingImage,
         continuation: SpellContinuation
     ): OperationResult {
-        val stack = image.stack.toMutableList()
-        val last = stack.last()
-        if(!copies) stack.removeLast()
+        val stack = image.stack
+        val last = if(copies) stack.last() else stack.removeLast()
         stack.add(0, last)
 
         val image2 = image.withUsedOp().copy(stack = stack)
-        return OperationResult(image2, listOf(), continuation, HexEvalSounds.NORMAL_EXECUTE)
+        return OperationResult(image2, listOf(), continuation, HexEvalSounds.NORMAL_EXECUTE.get())
     }
 }

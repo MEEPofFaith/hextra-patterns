@@ -4,7 +4,6 @@ import at.petrak.hexcasting.api.casting.asActionResult
 import at.petrak.hexcasting.api.casting.castables.ConstMediaAction
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.iota.Iota
-import net.minecraft.util.math.Vec3d
 import net.minecraft.world.phys.Vec3
 
 object OpRandVec : ConstMediaAction {

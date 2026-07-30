@@ -5,8 +5,6 @@ import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.getVec3
 import at.petrak.hexcasting.api.casting.iota.DoubleIota
 import at.petrak.hexcasting.api.casting.iota.Iota
-import net.minecraft.util.math.Vec3d
-import net.minecraft.world.phys.Vec3
 import kotlin.math.asin
 import kotlin.math.atan2
 

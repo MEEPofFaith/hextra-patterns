@@ -5,6 +5,7 @@ import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.eval.OperationResult
 import at.petrak.hexcasting.api.casting.eval.vm.CastingImage
 import at.petrak.hexcasting.api.casting.eval.vm.SpellContinuation
+import at.petrak.hexcasting.api.casting.getEvaluatable
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
 import at.petrak.hexcasting.common.casting.actions.eval.OpEval
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds
@@ -15,17 +16,18 @@ class OpConditionalEval(val evalCond: Boolean) : Action {
         image: CastingImage,
         continuation: SpellContinuation
     ): OperationResult {
-        val stack = image.stack.toMutableList()
+        val stack = image.stack
         if(stack.size < 2) throw MishapNotEnoughArgs(2, stack.size)
 
-        val iota = stack.removeLast()
-        val bool = stack.removeLast().isTruthy
+        val instrs = stack.getEvaluatable(stack.lastIndex, stack.size)
+        val bool = stack[stack.lastIndex - 1].isTruthy
+        val newStack = stack.slice(0, stack.length() - 2)
 
         if(bool == evalCond){
-            return OpEval.exec(env, image, continuation, stack, iota)
+            return OpEval.exec(env, image, continuation, newStack, instrs)
         }else{
-            val image2 = image.withUsedOp().copy(stack = stack)
-            return OperationResult(image2, listOf(), continuation, HexEvalSounds.NORMAL_EXECUTE)
+            val image2 = image.withUsedOp().copy(stack = newStack)
+            return OperationResult(image2, listOf(), continuation, HexEvalSounds.NORMAL_EXECUTE.get())
         }
     }
 }

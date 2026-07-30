@@ -6,6 +6,7 @@ import at.petrak.hexcasting.api.casting.eval.OperationResult
 import at.petrak.hexcasting.api.casting.eval.vm.CastingImage
 import at.petrak.hexcasting.api.casting.eval.vm.SpellContinuation
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
+import at.petrak.hexcasting.api.utils.TreeList
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds
 
 class OpConditionalHalt(val haltCond: Boolean) : Action {
@@ -14,9 +15,9 @@ class OpConditionalHalt(val haltCond: Boolean) : Action {
         image: CastingImage,
         continuation: SpellContinuation
     ): OperationResult {
-        val stack = image.stack.toMutableList()
+        val stack = image.stack
         val bool = (stack.removeLastOrNull() ?: throw MishapNotEnoughArgs(1, 0)).isTruthy
-        var newStack = stack.toList()
+        var newStack = stack.init()
 
         //Copied from OpHalt
         var newCont = continuation
@@ -32,11 +33,11 @@ class OpConditionalHalt(val haltCond: Boolean) : Action {
             // if we hit no continuation boundaries (i.e. thoth/hermes exits), we've TOTALLY cleared the itinerary...
             if (!done) {
                 // bomb the stack so we exit
-                newStack = listOf()
+                newStack = TreeList.empty()
             }
         }
 
         val image2 = image.withUsedOp().copy(stack = newStack)
-        return OperationResult(image2, listOf(), newCont, HexEvalSounds.SPELL)
+        return OperationResult(image2, listOf(), newCont, HexEvalSounds.SPELL.get())
     }
 }

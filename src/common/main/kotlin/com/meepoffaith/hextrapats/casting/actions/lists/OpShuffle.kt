@@ -9,7 +9,7 @@ import at.petrak.hexcasting.api.casting.iota.Iota
 object OpShuffle : ConstMediaAction {
     override val argc = 1
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
-        val list = args.getList(0, argc).toMutableList()
+        val list = args.getList(0, argc)
         val newList = mutableListOf<Iota>()
 
         while(!list.isEmpty()){
