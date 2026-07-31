@@ -10,7 +10,7 @@ import com.meepoffaith.hextrapats.registry.HextraActions.IN_RANGE
 import com.meepoffaith.hextrapats.registry.HextraActions.OUT_RANGE
 
 
-class BoolArithmetic : Arithmetic {
+object BoolArithmetic : Arithmetic {
     private val OPS = listOf(
         IN_RANGE,
         OUT_RANGE

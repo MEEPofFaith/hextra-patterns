@@ -24,7 +24,7 @@ import java.util.function.DoubleBinaryOperator
 import java.util.function.DoubleUnaryOperator
 
 
-class NumArithmetic : Arithmetic {
+object NumArithmetic : Arithmetic {
     private val OPS = listOf(
         INVERT,
         INCREMENT,

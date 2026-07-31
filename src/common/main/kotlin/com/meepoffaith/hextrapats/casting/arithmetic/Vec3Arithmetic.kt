@@ -41,7 +41,7 @@ import java.util.function.UnaryOperator
 import kotlin.math.cos
 import kotlin.math.sin
 
-class Vec3Arithmetic : Arithmetic {
+object Vec3Arithmetic : Arithmetic {
     private val OPS = listOf(
         ROT_ABOUT_X,
         ROT_ABOUT_Y,

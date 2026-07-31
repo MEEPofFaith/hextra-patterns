@@ -3,6 +3,7 @@ package com.meepoffaith.hextrapats
 import com.meepoffaith.hextrapats.config.HextrapatsConfigs
 import com.meepoffaith.hextrapats.networking.HextrapatsNetworking
 import com.meepoffaith.hextrapats.registry.HextraActions
+import com.meepoffaith.hextrapats.registry.HextraArithmetics
 import com.meepoffaith.hextrapats.registry.HextraContinuationTypes
 import com.meepoffaith.hextrapats.registry.HextraIotas
 import com.meepoffaith.hextrapats.registry.HextraSpecialHandlers
@@ -24,6 +25,7 @@ object Hextrapats {
             HextraIotas,
             HextraContinuationTypes,
             HextraActions,
+            HextraArithmetics,
             HextraSpecialHandlers
         )
         HextrapatsNetworking.init()

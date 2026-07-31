@@ -21,7 +21,7 @@ import com.meepoffaith.hextrapats.util.MultiPreds
 import net.minecraft.world.phys.Vec3
 import java.util.function.BiFunction
 
-class Vec3BoolArithmetic : Arithmetic {
+object Vec3BoolArithmetic : Arithmetic {
     private val OPS = listOf(
         GREATER,
         LESS,

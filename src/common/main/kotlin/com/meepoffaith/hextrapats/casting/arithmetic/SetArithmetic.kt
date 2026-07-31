@@ -14,7 +14,7 @@ import com.meepoffaith.hextrapats.registry.HextraActions.SET_REMOVE_RET
 import com.meepoffaith.hextrapats.registry.HextraIotas
 import com.meepoffaith.hextrapats.util.MultiPreds.ALL_SETS
 
-class SetArithmetic : Arithmetic {
+object SetArithmetic : Arithmetic {
     private val OPS = listOf(
         ADD,
         SUB,
