@@ -50,7 +50,7 @@ class IotaSet : HashSet<Iota> {
     }
 
     companion object {
-        /** Iota types disallowed from being input into an iota map. */
+        /** Iota types disallowed from being input into an iota set. */
         val DISALLOWED_TYPES = mutableSetOf<IotaType<*>>(ListIota.TYPE, SetIota.TYPE, ContinuationIota.TYPE)
 
         fun checkType(iota: Iota): Boolean{
@@ -58,6 +58,8 @@ class IotaSet : HashSet<Iota> {
         }
 
         fun coerceIota(iota: Iota): Iota{
+            // There's probably a better option than hardcoding this.
+            // Do something to make it easier for other addons to add their own iotas to this.
             return when(iota){
                 is DoubleIota -> DoubleIota(MathUtils.roundToTolerance(iota.double))
                 is Vec3Iota -> Vec3Iota(MathUtils.roundToTolerance(iota.vec3))
