@@ -3,7 +3,9 @@ package com.meepoffaith.hextrapats
 import com.meepoffaith.hextrapats.config.HextrapatsConfigs
 import com.meepoffaith.hextrapats.networking.HextrapatsNetworking
 import com.meepoffaith.hextrapats.registry.HextrapatsActions
+import com.meepoffaith.hextrapats.registry.HextrapatsContinuationTypes
 import com.meepoffaith.hextrapats.registry.HextrapatsIotas
+import com.meepoffaith.hextrapats.registry.HextrapatsSpecialHandlers
 import net.minecraft.resources.ResourceLocation
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
@@ -14,15 +16,15 @@ object Hextrapats {
     @JvmField
     val LOGGER: Logger = LogManager.getLogger(MODID)
 
-
-
     @JvmStatic
     fun id(path: String): ResourceLocation = ResourceLocation.fromNamespaceAndPath(MODID, path)
 
     fun init() {
         initRegistries(
             HextrapatsIotas,
+            HextrapatsContinuationTypes,
             HextrapatsActions,
+            HextrapatsSpecialHandlers
         )
         HextrapatsNetworking.init()
         HextrapatsConfigs.init()
