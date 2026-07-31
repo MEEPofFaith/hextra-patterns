@@ -9,11 +9,11 @@ import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.math.HexPattern
 import at.petrak.hexcasting.api.utils.asTranslatedComponent
 import at.petrak.hexcasting.api.utils.lightPurple
-import com.meepoffaith.hextrapats.init.SpecialHandlers
+import com.meepoffaith.hextrapats.registry.HextraSpecialHandlers
 import com.meepoffaith.hextrapats.util.HextraUtils
 import com.meepoffaith.hextrapats.util.HextraUtils.numericalReflection
-import net.minecraft.text.Text
-import net.minecraft.util.math.Vec3d
+import net.minecraft.network.chat.Component
+import net.minecraft.world.phys.Vec3
 
 
 class Vector1(val x: Double) : SpecialHandler{
@@ -21,15 +21,15 @@ class Vector1(val x: Double) : SpecialHandler{
         return InnerAction(x)
     }
 
-    override fun getName(): Text{
+    override fun getName(): Component{
         val num = Action.DOUBLE_FORMATTER.format(x)
-        return HextraUtils.specialHandlerLang(SpecialHandlers.VEC_1).asTranslatedComponent(num, num, num).lightPurple
+        return HextraUtils.specialHandlerLang(HextraSpecialHandlers.VEC_1).asTranslatedComponent(num, num, num).lightPurple
     }
 
     class InnerAction(val x: Double) : ConstMediaAction{
         override val argc = 0
         override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
-            return Vec3d(x, x, x).asActionResult
+            return Vec3(x, x, x).asActionResult
         }
     }
 

@@ -49,7 +49,7 @@ object HextraUtils {
     }
 
     fun specialHandlerLang(handler: SpecialHandler.Factory<*>): String {
-        val key = IXplatAbstractions.INSTANCE.specialHandlerRegistry.getKey(handler).get()
+        val key = IXplatAbstractions.INSTANCE.specialHandlerRegistry.getResourceKey(handler).get()
         return HexAPI.instance().getSpecialHandlerI18nKey(key)
     }
 

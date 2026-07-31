@@ -10,20 +10,20 @@ import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.math.HexPattern
 import at.petrak.hexcasting.api.utils.asTranslatedComponent
 import at.petrak.hexcasting.api.utils.lightPurple
-import com.meepoffaith.hextrapats.init.SpecialHandlers
+import com.meepoffaith.hextrapats.registry.HextraSpecialHandlers
 import com.meepoffaith.hextrapats.util.HextraUtils
-import net.minecraft.text.Text
-import net.minecraft.util.math.Vec3d
+import net.minecraft.network.chat.Component
+import net.minecraft.world.phys.Vec3
 import kotlin.math.pow
 
 class ScientificExponent(val exp: Int) : SpecialHandler{
-    override fun act(): Action? {
+    override fun act(): Action{
         return InnerAction(exp)
     }
 
-    override fun getName(): Text? {
+    override fun getName(): Component{
         val num = Action.DOUBLE_FORMATTER.format(exp)
-        return HextraUtils.specialHandlerLang(SpecialHandlers.SCI_EXP).asTranslatedComponent(num).lightPurple
+        return HextraUtils.specialHandlerLang(HextraSpecialHandlers.SCI_EXP).asTranslatedComponent(num).lightPurple
     }
 
     class InnerAction(val exp: Int) : ConstMediaAction{
@@ -33,7 +33,7 @@ class ScientificExponent(val exp: Int) : SpecialHandler{
             val pow = 10.0.pow(exp)
             return arg.map(
                 { num -> (num * pow).asActionResult },
-                { vec -> Vec3d(vec.x * pow, vec.y * pow, vec.z * pow).asActionResult }
+                { vec -> Vec3(vec.x * pow, vec.y * pow, vec.z * pow).asActionResult }
             )
         }
     }
