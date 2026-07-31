@@ -2,10 +2,10 @@ package com.meepoffaith.hextrapats
 
 import com.meepoffaith.hextrapats.config.HextrapatsConfigs
 import com.meepoffaith.hextrapats.networking.HextrapatsNetworking
-import com.meepoffaith.hextrapats.registry.HextrapatsActions
-import com.meepoffaith.hextrapats.registry.HextrapatsContinuationTypes
-import com.meepoffaith.hextrapats.registry.HextrapatsIotas
-import com.meepoffaith.hextrapats.registry.HextrapatsSpecialHandlers
+import com.meepoffaith.hextrapats.registry.HextraActions
+import com.meepoffaith.hextrapats.registry.HextraContinuationTypes
+import com.meepoffaith.hextrapats.registry.HextraIotas
+import com.meepoffaith.hextrapats.registry.HextraSpecialHandlers
 import net.minecraft.resources.ResourceLocation
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
@@ -21,10 +21,10 @@ object Hextrapats {
 
     fun init() {
         initRegistries(
-            HextrapatsIotas,
-            HextrapatsContinuationTypes,
-            HextrapatsActions,
-            HextrapatsSpecialHandlers
+            HextraIotas,
+            HextraContinuationTypes,
+            HextraActions,
+            HextraSpecialHandlers
         )
         HextrapatsNetworking.init()
         HextrapatsConfigs.init()

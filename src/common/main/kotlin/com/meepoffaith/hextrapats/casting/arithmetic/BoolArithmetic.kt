@@ -6,8 +6,8 @@ import at.petrak.hexcasting.api.casting.arithmetic.operator.Operator
 import at.petrak.hexcasting.api.casting.math.HexPattern
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.bool.OperatorInRange
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.bool.OperatorOutRange
-import com.meepoffaith.hextrapats.registry.HextrapatsActions.IN_RANGE
-import com.meepoffaith.hextrapats.registry.HextrapatsActions.OUT_RANGE
+import com.meepoffaith.hextrapats.registry.HextraActions.IN_RANGE
+import com.meepoffaith.hextrapats.registry.HextraActions.OUT_RANGE
 
 
 class BoolArithmetic : Arithmetic {

@@ -6,7 +6,7 @@ import at.petrak.hexcasting.common.lib.hex.HexContinuationTypes
 import com.meepoffaith.hextrapats.casting.eval.vm.FrameForEachIndex
 import com.meepoffaith.hextrapats.casting.eval.vm.FrameMainForEach
 
-object HextrapatsContinuationTypes : HextrapatsRegistrar<ContinuationFrame.Type<*>>(
+object HextraContinuationTypes : HextrapatsRegistrar<ContinuationFrame.Type<*>>(
     HexRegistries.CONTINUATION_TYPE,
     { HexContinuationTypes.REGISTRY }
 ) {

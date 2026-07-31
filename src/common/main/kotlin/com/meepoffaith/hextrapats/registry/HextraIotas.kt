@@ -6,7 +6,7 @@ import at.petrak.hexcasting.common.lib.HexRegistries
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes
 import com.meepoffaith.hextrapats.casting.iota.SetIota
 
-object HextrapatsIotas : HextrapatsRegistrar<IotaType<*>>(
+object HextraIotas : HextrapatsRegistrar<IotaType<*>>(
     HexRegistries.IOTA_TYPE,
     { HexIotaTypes.REGISTRY },
 ) {

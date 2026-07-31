@@ -3,14 +3,14 @@ package com.meepoffaith.hextrapats.casting.iota
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.iota.IotaType
 import at.petrak.hexcasting.api.utils.gold
-import com.meepoffaith.hextrapats.registry.HextrapatsIotas
+import com.meepoffaith.hextrapats.registry.HextraIotas
 import com.mojang.serialization.MapCodec
 import net.minecraft.network.RegistryFriendlyByteBuf
 import net.minecraft.network.chat.Component
 import net.minecraft.network.codec.ByteBufCodecs
 import net.minecraft.network.codec.StreamCodec
 
-class SetIota(val iotaMap: IotaMap): Iota({ HextrapatsIotas.SET }) {
+class SetIota(val iotaMap: IotaMap): Iota({ HextraIotas.SET }) {
     constructor(iotaList: List<Iota>, argc: Int = 0) : this(IotaMap(iotaList, argc))
 
     override fun isTruthy(): Boolean = iotaMap.isNotEmpty()

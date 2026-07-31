@@ -12,10 +12,10 @@ import at.petrak.hexcasting.api.casting.math.HexPattern
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.VEC3
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.bool.OperatorInRangeVec
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.bool.OperatorOutRangeVec
-import com.meepoffaith.hextrapats.registry.HextrapatsActions.IN_RANGE
-import com.meepoffaith.hextrapats.registry.HextrapatsActions.LEN_EQ
-import com.meepoffaith.hextrapats.registry.HextrapatsActions.LEN_NEQ
-import com.meepoffaith.hextrapats.registry.HextrapatsActions.OUT_RANGE
+import com.meepoffaith.hextrapats.registry.HextraActions.IN_RANGE
+import com.meepoffaith.hextrapats.registry.HextraActions.LEN_EQ
+import com.meepoffaith.hextrapats.registry.HextraActions.LEN_NEQ
+import com.meepoffaith.hextrapats.registry.HextraActions.OUT_RANGE
 import com.meepoffaith.hextrapats.util.HextraUtils
 import com.meepoffaith.hextrapats.util.MultiPreds
 import net.minecraft.world.phys.Vec3

@@ -9,7 +9,7 @@ import com.meepoffaith.hextrapats.casting.handlers.VectorX
 import com.meepoffaith.hextrapats.casting.handlers.VectorY
 import com.meepoffaith.hextrapats.casting.handlers.VectorZ
 
-object HextrapatsSpecialHandlers : HextrapatsRegistrar<SpecialHandler.Factory<*>>(
+object HextraSpecialHandlers : HextrapatsRegistrar<SpecialHandler.Factory<*>>(
     HexRegistries.SPECIAL_HANDLER,
     { IXplatAbstractions.INSTANCE.specialHandlerRegistry }
 ) {

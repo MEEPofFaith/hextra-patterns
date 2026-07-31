@@ -28,7 +28,7 @@ import com.meepoffaith.hextrapats.casting.actions.stack.OpSink
 import com.meepoffaith.hextrapats.casting.actions.vecmath.*
 import net.minecraft.world.phys.Vec3
 
-object HextrapatsActions : HextrapatsRegistrar<ActionRegistryEntry>(
+object HextraActions : HextrapatsRegistrar<ActionRegistryEntry>(
     HexRegistries.ACTION,
     { HexActions.REGISTRY },
 ) {

@@ -9,9 +9,9 @@ import at.petrak.hexcasting.api.casting.iota.DoubleIota
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.math.HexPattern
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.*
-import com.meepoffaith.hextrapats.registry.HextrapatsActions.SET_INSERT_RET
-import com.meepoffaith.hextrapats.registry.HextrapatsActions.SET_REMOVE_RET
-import com.meepoffaith.hextrapats.registry.HextrapatsIotas
+import com.meepoffaith.hextrapats.registry.HextraActions.SET_INSERT_RET
+import com.meepoffaith.hextrapats.registry.HextraActions.SET_REMOVE_RET
+import com.meepoffaith.hextrapats.registry.HextraIotas
 import com.meepoffaith.hextrapats.util.MultiPreds.ALL_SETS
 
 class SetArithmetic : Arithmetic {
@@ -37,7 +37,7 @@ class SetArithmetic : Arithmetic {
         SUB -> OperatorSubtractSets
         AND -> OperatorIntersection
         XOR -> OperatorDisjunction
-        ABS -> OperatorUnary(ALL_SETS) { iota: Iota -> DoubleIota(Operator.downcast(iota, HextrapatsIotas.SET).iotaMap.size.toDouble()) }
+        ABS -> OperatorUnary(ALL_SETS) { iota: Iota -> DoubleIota(Operator.downcast(iota, HextraIotas.SET).iotaMap.size.toDouble()) }
         INDEX_OF -> OperatorExists
         APPEND -> OperatorInsert(false)
         SET_INSERT_RET -> OperatorInsert(true)
