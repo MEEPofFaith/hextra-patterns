@@ -18,7 +18,7 @@ class NoConsOperationAction(val pattern: HexPattern, val argc: Int) : Action {
         image: CastingImage,
         continuation: SpellContinuation
     ): OperationResult {
-        val oldStack = image.stack.toMutableList()
+        val oldStack = image.stack
         val size = oldStack.size
         if(oldStack.size < argc){
             throw MishapNotEnoughArgs(argc, size)
@@ -28,7 +28,7 @@ class NoConsOperationAction(val pattern: HexPattern, val argc: Int) : Action {
             val result = HexArithmetics.getEngine().run(pattern, env, image, continuation)
             val resultStack = result.newImage.stack
             oldStack.addAll(resultStack.subList(size - argc, resultStack.size))
-            return OperationResult(image.copy(stack = oldStack), result.sideEffects, continuation, HexEvalSounds.NORMAL_EXECUTE)
+            return OperationResult(image.copy(stack = oldStack), result.sideEffects, continuation, HexEvalSounds.NORMAL_EXECUTE.get())
         } catch (e: NoOperatorCandidatesException) {
             throw MishapInvalidOperatorArgs(e.args)
         }

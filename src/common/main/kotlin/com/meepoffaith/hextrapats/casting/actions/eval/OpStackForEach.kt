@@ -29,6 +29,6 @@ class OpStackForEach(val withIndex: Boolean) : Action {
         val frame = FrameStackForEach(datums, instrList, withIndex)
         val image2 = image.withUsedOp().copy(stack = newStack)
 
-        return OperationResult(image2, listOf(), continuation.pushFrame(frame), HexEvalSounds.THOTH)
+        return OperationResult(image2, listOf(), continuation.pushFrame(frame), HexEvalSounds.THOTH.get())
     }
 }
