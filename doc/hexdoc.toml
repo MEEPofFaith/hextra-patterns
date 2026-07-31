@@ -37,7 +37,7 @@ show_landing_text = false
 _pattern_regex = { "!Raw"='make\(\s*"(?P<name>[a-zA-Z0-9_/]+)"\s*,\s*HexDir\.(?P<startdir>\w+)\s*,\s*"(?P<signature>[aqweds]+)"\s*,\s*(?P<action>\w+)' }
 
 [[extra.hexcasting.pattern_stubs]]
-path = "{$_common.src}/main/kotlin/com/meepoffaith/hextrapats/registry/HextrapatsActions.kt"
+path = "{$_common.src}/main/kotlin/com/meepoffaith/hextrapats/registry/HextraActions.kt"
 regex = "{^_pattern_regex}"
 
 # source paths
