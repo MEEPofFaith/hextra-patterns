@@ -91,7 +91,7 @@ object HextraActions : HextrapatsRegistrar<ActionRegistryEntry>(
     val NOCON_EQ = make("nocon/eq", HexDir.WEST, "ddqad", OpNoConsEquality(false))
     val NOCON_NEQ = make("nocon/neq", HexDir.WEST, "ddqda", OpNoConsEquality(true))
 
-    val EMPTY_SET = make("empty_set", HexDir.NORTH_WEST, "eedwaaw", OpEmptySet)
+    val EMPTY_SET = make("empty_set", HexDir.SOUTH_EAST, "eedwaaw", OpEmptySet)
     val LAST_N_SET = make("last_n_set", HexDir.SOUTH_WEST, "ewdwaawaqde", OpLastNToSet)
     val SPLAT_SET = make("splat_set", HexDir.NORTH_WEST, "qwawddwdeaq", OpSplatSet)
     val SET_TO_LIST = make("set_to_list", HexDir.NORTH_WEST, "eedqddeqaaeaqq", OpSetToList)
