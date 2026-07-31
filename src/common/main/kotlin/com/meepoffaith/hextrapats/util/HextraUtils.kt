@@ -10,7 +10,7 @@ import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidIota
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
 import at.petrak.hexcasting.api.utils.TreeList
 import at.petrak.hexcasting.xplat.IXplatAbstractions
-import com.meepoffaith.hextrapats.casting.iota.IotaMap
+import com.meepoffaith.hextrapats.casting.iota.IotaSet
 import com.meepoffaith.hextrapats.casting.iota.SetIota
 import com.mojang.datafixers.util.Either
 import com.samsthenerd.inline.api.InlineAPI
@@ -66,10 +66,10 @@ object HextraUtils {
         return baseName.append(": ").append(inlineEnt)
     }
 
-    fun List<Iota>.getSet(idx: Int, argc: Int ): IotaMap{
+    fun List<Iota>.getSet(idx: Int, argc: Int ): IotaSet{
         val x = this.getOrElse(idx) { throw MishapNotEnoughArgs(idx + 1, argc) }
         if(x is SetIota){
-            return x.iotaMap
+            return x.iotaSet
         }else{
             throw MishapInvalidIota.ofType(x, if (argc == 0) idx else argc - (idx + 1), "hextrapats:set")
         }
@@ -88,10 +88,10 @@ object HextraUtils {
         }
     }
 
-    fun Iterator<IndexedValue<Iota>>.nextSet(argc: Int = 0): IotaMap {
+    fun Iterator<IndexedValue<Iota>>.nextSet(argc: Int = 0): IotaSet {
         val (idx, x) = this.next()
         if (x is SetIota) {
-            return x.iotaMap
+            return x.iotaSet
         } else {
             throw MishapInvalidIota.ofType(x, if (argc == 0) idx else argc - (idx + 1), "hextrapats:set")
         }

@@ -10,7 +10,7 @@ import com.meepoffaith.hextrapats.util.MultiPreds.SET_OP
 object OperatorExists : OperatorBasic(2, SET_OP) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator().withIndex()
-        val map = it.nextSet(arity)
-        return map.containsIota(it.next().value).asActionResult
+        val set = it.nextSet(arity)
+        return set.contains(it.next().value).asActionResult
     }
 }

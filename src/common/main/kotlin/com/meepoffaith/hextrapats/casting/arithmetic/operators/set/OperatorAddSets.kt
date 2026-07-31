@@ -9,8 +9,8 @@ import com.meepoffaith.hextrapats.util.MultiPreds.ALL_SETS
 object OperatorAddSets : OperatorBasic(2, ALL_SETS) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator().withIndex()
-        val map = it.nextSet(arity).copy()
-        map.putAll(it.nextSet(arity))
-        return map.asActionResult()
+        val set = it.nextSet(arity).copy()
+        set.addAll(it.nextSet(arity))
+        return set.asActionResult()
     }
 }

@@ -10,19 +10,19 @@ import net.minecraft.network.chat.Component
 import net.minecraft.network.codec.ByteBufCodecs
 import net.minecraft.network.codec.StreamCodec
 
-class SetIota(val iotaMap: IotaMap): Iota({ HextraIotas.SET }) {
-    constructor(iotaList: List<Iota>, argc: Int = 0) : this(IotaMap(iotaList, argc))
+class SetIota(val iotaSet: IotaSet): Iota({ HextraIotas.SET }) {
+    constructor(iotaList: List<Iota>, argc: Int = 0) : this(IotaSet(iotaList, argc))
 
-    override fun isTruthy(): Boolean = iotaMap.isNotEmpty()
+    override fun isTruthy(): Boolean = iotaSet.isNotEmpty()
 
     override fun toleratesOther(that: Iota?): Boolean =
-        that is SetIota && that.iotaMap == iotaMap
+        that is SetIota && that.iotaSet == iotaSet
 
     override fun display(): Component{
         val out = "{ ".gold
 
         var first = true
-        iotaMap.values.forEach{
+        iotaSet.forEach{
             if(!first) out.append(" | ".gold)
             out.append(it.display())
             first = false
@@ -32,14 +32,14 @@ class SetIota(val iotaMap: IotaMap): Iota({ HextraIotas.SET }) {
         return out
     }
 
-    override fun hashCode(): Int = iotaMap.hashCode()
+    override fun hashCode(): Int = iotaSet.hashCode()
 
     override fun subIotas(): Iterable<Iota>{
-        return iotaMap.values.toList()
+        return toList()
     }
 
     fun toList(): List<Iota>{
-        return iotaMap.values.toList()
+        return iotaSet.toList()
     }
 
     fun asActionResult(): List<Iota>{

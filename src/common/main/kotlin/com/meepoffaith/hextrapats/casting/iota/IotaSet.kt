@@ -4,43 +4,36 @@ import at.petrak.hexcasting.api.casting.iota.*
 import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidIota
 import com.meepoffaith.hextrapats.util.MathUtils
 
-class IotaMap : HashMap<Int, Iota> {
+class IotaSet : HashSet<Iota> {
     constructor(): super()
-    constructor(map: IotaMap) : super(map)
+    constructor(map: IotaSet) : super(map)
     constructor(list: List<Iota>, argc: Int = 0) : super(){
         for(i in 0..list.lastIndex){
-            addIota(list[i], argc - (i + 1))
+            add(list[i], argc - (i + 1))
         }
     }
 
-    fun copy(): IotaMap{
-        return IotaMap(this)
+    fun copy(): IotaSet{
+        return IotaSet(this)
     }
 
-    fun addIota(iota: Iota): Boolean{
-        val input = coerceIota(iota)
-        return put(input.hashCode(), input) == null
+    override fun add(iota: Iota): Boolean{
+        return super.add(coerceIota(iota))
     }
 
-    fun addIota(iota: Iota, reversedIdx: Int): Boolean{
+    fun add(iota: Iota, reversedIdx: Int): Boolean{
         if(!checkType(iota)) {
             throw MishapInvalidIota.of(iota, reversedIdx, "hextrapats:set_item")
         }
-        return addIota(iota)
+        return add(iota)
     }
 
-    fun containsIota(iota: Iota): Boolean{
-        val input = coerceIota(iota)
-        return containsKey(input.hashCode())
+    override fun contains(iota: Iota): Boolean{
+        return super.contains(coerceIota(iota))
     }
 
-    fun removeIota(iota: Iota): Boolean{
-        val input = coerceIota(iota)
-        return remove(input.hashCode()) != null
-    }
-
-    fun removeAll(map: IotaMap){
-        map.keys.forEach{ remove(it) }
+    override fun remove(iota: Iota): Boolean{
+        return super.remove(coerceIota(iota))
     }
 
     fun asActionResult(): List<Iota>{
@@ -49,9 +42,9 @@ class IotaMap : HashMap<Int, Iota> {
 
     override fun hashCode(): Int {
         var hashCode = 2 // Hopefully, starting on 2 instead of 1 is enough to differentiate from a list.
-        for(key in keys){
+        for(iota in this){
             hashCode *= 31
-            hashCode += key
+            hashCode += iota.hashCode()
         }
         return hashCode
     }

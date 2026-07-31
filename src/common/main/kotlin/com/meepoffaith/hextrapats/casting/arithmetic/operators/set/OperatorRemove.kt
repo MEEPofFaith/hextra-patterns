@@ -13,9 +13,9 @@ class OperatorRemove(
 ) : OperatorBasic(2, SET_OP) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator().withIndex()
-        val map = it.nextSet(arity).copy()
+        val set = it.nextSet(arity).copy()
         val iota = it.next().value
-        val removed = map.removeIota(iota)
-        return if(returnBool) listOf(SetIota(map), BooleanIota(removed)) else map.asActionResult()
+        val removed = set.remove(iota)
+        return if(returnBool) listOf(SetIota(set), BooleanIota(removed)) else set.asActionResult()
     }
 }

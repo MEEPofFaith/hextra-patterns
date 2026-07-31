@@ -5,21 +5,20 @@ import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.getList
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidIota
-import com.meepoffaith.hextrapats.casting.iota.IotaMap
-import com.meepoffaith.hextrapats.casting.iota.SetIota
+import com.meepoffaith.hextrapats.casting.iota.IotaSet
 
 object OpListToSet : ConstMediaAction {
     override val argc = 1
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
         val iotas = args.getList(0, argc)
-        val map = IotaMap()
+        val set = IotaSet()
         for(iota in iotas){
-            if(IotaMap.checkType(iota)){
-                map.addIota(iota)
+            if(IotaSet.checkType(iota)){
+                set.add(iota)
             }else{
                 throw MishapInvalidIota.of(args[0], 0, "hextrapats:set_item_list")
             }
         }
-        return map.asActionResult()
+        return set.asActionResult()
     }
 }

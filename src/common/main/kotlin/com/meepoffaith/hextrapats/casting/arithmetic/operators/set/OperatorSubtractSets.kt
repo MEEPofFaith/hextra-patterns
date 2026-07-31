@@ -9,9 +9,8 @@ import com.meepoffaith.hextrapats.util.MultiPreds.ALL_SETS
 object OperatorSubtractSets : OperatorBasic(2, ALL_SETS) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator().withIndex()
-        val map1 = it.nextSet(arity).copy()
-        val map2 = it.nextSet(arity)
-        map2.keys.forEach { map1.remove(it) }
-        return map1.asActionResult()
+        val set = it.nextSet(arity).copy()
+        set.removeAll(it.nextSet(arity))
+        return set.asActionResult()
     }
 }

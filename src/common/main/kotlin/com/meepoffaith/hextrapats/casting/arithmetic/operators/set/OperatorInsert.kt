@@ -13,9 +13,9 @@ class OperatorInsert(
 ) : OperatorBasic(2, SET_OP) {
     override fun apply(iotas: Iterable<Iota>, env: CastingEnvironment): Iterable<Iota> {
         val it = iotas.iterator().withIndex()
-        val map = it.nextSet(arity).copy()
+        val set = it.nextSet(arity).copy()
         val iota = it.next().value
-        val added = map.addIota(iota)
-        return if(returnBool) listOf(SetIota(map), BooleanIota(added)) else map.asActionResult()
+        val added = set.add(iota)
+        return if(returnBool) listOf(SetIota(set), BooleanIota(added)) else set.asActionResult()
     }
 }

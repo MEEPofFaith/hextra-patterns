@@ -37,7 +37,7 @@ object SetArithmetic : Arithmetic {
         SUB -> OperatorSubtractSets
         AND -> OperatorIntersection
         XOR -> OperatorDisjunction
-        ABS -> OperatorUnary(ALL_SETS) { iota: Iota -> DoubleIota(Operator.downcast(iota, HextraIotas.SET).iotaMap.size.toDouble()) }
+        ABS -> OperatorUnary(ALL_SETS) { iota: Iota -> DoubleIota(Operator.downcast(iota, HextraIotas.SET).iotaSet.size.toDouble()) }
         INDEX_OF -> OperatorExists
         APPEND -> OperatorInsert(false)
         SET_INSERT_RET -> OperatorInsert(true)
