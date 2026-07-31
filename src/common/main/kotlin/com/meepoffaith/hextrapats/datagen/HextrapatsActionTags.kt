@@ -1,9 +1,7 @@
 package com.meepoffaith.hextrapats.datagen
 
 import at.petrak.hexcasting.api.casting.ActionRegistryEntry
-import at.petrak.hexcasting.api.mod.HexTags
 import at.petrak.hexcasting.common.lib.HexRegistries
-import com.meepoffaith.hextrapats.registry.HextrapatsActions
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
 import net.minecraft.data.tags.TagsProvider
@@ -16,6 +14,8 @@ class HextrapatsActionTags(
 ) : TagsProvider<ActionRegistryEntry>(output, HexRegistries.ACTION, provider) {
     override fun addTags(provider: HolderLookup.Provider) {
         // per-world great spells
+        // Not likely to need, but I'll keep this here just in case.
+        /*
         for (entry in arrayOf(
             HextrapatsActions.GREAT_CONGRATULATE,
         )) {
@@ -23,5 +23,6 @@ class HextrapatsActionTags(
             tag(HexTags.Actions.PER_WORLD_PATTERN).add(entry.key)
             tag(HexTags.Actions.REQUIRES_ENLIGHTENMENT).add(entry.key)
         }
+         */
     }
 }

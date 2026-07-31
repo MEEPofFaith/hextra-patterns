@@ -1,6 +1,6 @@
 package com.meepoffaith.hextrapats.networking.handler
 
-import com.meepoffaith.hextrapats.networking.msg.*
+import com.meepoffaith.hextrapats.networking.msg.HextrapatsMessageS2C
 import io.wispforest.owo.network.ClientAccess
 import net.minecraft.client.Minecraft
 

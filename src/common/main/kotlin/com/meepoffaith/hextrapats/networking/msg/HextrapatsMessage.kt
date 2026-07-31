@@ -7,7 +7,6 @@ import com.meepoffaith.hextrapats.networking.handler.applyOnServer
 import io.wispforest.owo.network.ClientAccess
 import io.wispforest.owo.network.OwoNetChannel
 import io.wispforest.owo.network.ServerAccess
-import net.minecraft.network.FriendlyByteBuf
 import net.minecraft.server.level.ServerPlayer
 
 sealed interface HextrapatsMessage

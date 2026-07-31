@@ -10,12 +10,12 @@ import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidIota
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
 import at.petrak.hexcasting.api.utils.TreeList
 import at.petrak.hexcasting.xplat.IXplatAbstractions
-import com.meepoffaith.hextrapats.casting.iota.*
+import com.meepoffaith.hextrapats.casting.iota.IotaMap
+import com.meepoffaith.hextrapats.casting.iota.SetIota
 import com.mojang.datafixers.util.Either
 import com.samsthenerd.inline.api.InlineAPI
 import com.samsthenerd.inline.api.data.EntityInlineData
 import com.samsthenerd.inline.api.data.PlayerHeadData
-import it.unimi.dsi.fastutil.doubles.DoubleSet
 import net.minecraft.network.chat.Component
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.player.Player

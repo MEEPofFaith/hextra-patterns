@@ -1,6 +1,6 @@
 package com.meepoffaith.hextrapats.networking.handler
 
-import com.meepoffaith.hextrapats.networking.msg.*
+import com.meepoffaith.hextrapats.networking.msg.HextrapatsMessageC2S
 import io.wispforest.owo.network.ServerAccess
 
 fun HextrapatsMessageC2S.applyOnServer(access: ServerAccess) = access.player().server.execute {

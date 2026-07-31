@@ -1,12 +1,12 @@
 package com.meepoffaith.hextrapats
 
 import com.meepoffaith.hextrapats.config.HextrapatsConfigs
-import net.minecraft.resources.ResourceLocation
-import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
 import com.meepoffaith.hextrapats.networking.HextrapatsNetworking
 import com.meepoffaith.hextrapats.registry.HextrapatsActions
 import com.meepoffaith.hextrapats.registry.HextrapatsIotas
+import net.minecraft.resources.ResourceLocation
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 
 object Hextrapats {
     const val MODID = "hextrapats"

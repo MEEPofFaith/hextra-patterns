@@ -5,20 +5,14 @@ import at.petrak.hexcasting.api.casting.arithmetic.Arithmetic.*
 import at.petrak.hexcasting.api.casting.arithmetic.engine.InvalidOperatorException
 import at.petrak.hexcasting.api.casting.arithmetic.operator.Operator
 import at.petrak.hexcasting.api.casting.arithmetic.operator.OperatorUnary
-import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaMultiPredicate
-import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaPredicate
-import at.petrak.hexcasting.api.casting.asActionResult
 import at.petrak.hexcasting.api.casting.iota.DoubleIota
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.math.HexPattern
-import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.*
-import com.meepoffaith.hextrapats.casting.iota.SetIota
 import com.meepoffaith.hextrapats.registry.HextrapatsActions.SET_INSERT_RET
 import com.meepoffaith.hextrapats.registry.HextrapatsActions.SET_REMOVE_RET
 import com.meepoffaith.hextrapats.registry.HextrapatsIotas
 import com.meepoffaith.hextrapats.util.MultiPreds.ALL_SETS
-import java.util.function.DoubleUnaryOperator
 
 class SetArithmetic : Arithmetic {
     private val OPS = listOf(

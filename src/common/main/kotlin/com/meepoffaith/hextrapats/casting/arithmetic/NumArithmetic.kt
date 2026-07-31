@@ -10,7 +10,6 @@ import at.petrak.hexcasting.api.casting.arithmetic.predicates.IotaPredicate
 import at.petrak.hexcasting.api.casting.iota.DoubleIota
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.math.HexPattern
-import at.petrak.hexcasting.common.lib.hex.HexIotaTypes
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.DOUBLE
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.num.OperatorApproach
 import com.meepoffaith.hextrapats.casting.arithmetic.operators.num.OperatorTurn
@@ -21,7 +20,6 @@ import com.meepoffaith.hextrapats.registry.HextrapatsActions.DECREMENT
 import com.meepoffaith.hextrapats.registry.HextrapatsActions.INCREMENT
 import com.meepoffaith.hextrapats.registry.HextrapatsActions.INVERT
 import com.meepoffaith.hextrapats.util.MathUtils
-import com.meepoffaith.hextrapats.util.MultiPreds
 import java.util.function.DoubleBinaryOperator
 import java.util.function.DoubleUnaryOperator
 

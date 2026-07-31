@@ -18,7 +18,6 @@ import com.meepoffaith.hextrapats.registry.HextrapatsActions.LEN_NEQ
 import com.meepoffaith.hextrapats.registry.HextrapatsActions.OUT_RANGE
 import com.meepoffaith.hextrapats.util.HextraUtils
 import com.meepoffaith.hextrapats.util.MultiPreds
-import net.minecraft.util.math.Vec3d
 import net.minecraft.world.phys.Vec3
 import java.util.function.BiFunction
 

@@ -1,7 +1,6 @@
 package com.meepoffaith.hextrapats.util
 
 import at.petrak.hexcasting.api.casting.iota.DoubleIota
-import net.minecraft.util.math.Vec3d
 import net.minecraft.world.phys.Vec3
 import kotlin.math.acos
 import kotlin.math.min
