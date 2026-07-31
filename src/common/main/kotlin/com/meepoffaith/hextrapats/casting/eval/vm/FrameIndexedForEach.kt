@@ -110,7 +110,6 @@ data class FrameIndexedForEach(
                 FrameIndexedForEach(a, b, c, d, e, f)
             }
 
-
             override fun codec(): MapCodec<FrameIndexedForEach> =
                 CODEC
 

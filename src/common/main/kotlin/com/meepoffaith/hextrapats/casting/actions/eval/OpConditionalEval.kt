@@ -16,17 +16,17 @@ class OpConditionalEval(val evalCond: Boolean) : Action {
         image: CastingImage,
         continuation: SpellContinuation
     ): OperationResult {
-        val stack = image.stack
+        var stack = image.stack
         if(stack.size < 2) throw MishapNotEnoughArgs(2, stack.size)
 
         val instrs = stack.getEvaluatable(stack.lastIndex, stack.size)
         val bool = stack[stack.lastIndex - 1].isTruthy
-        val newStack = stack.slice(0, stack.length() - 2)
+        stack = stack.dropRight(2)
 
         if(bool == evalCond){
-            return OpEval.exec(env, image, continuation, newStack, instrs)
+            return OpEval.exec(env, image, continuation, stack, instrs)
         }else{
-            val image2 = image.withUsedOp().copy(stack = newStack)
+            val image2 = image.withUsedOp().copy(stack = stack)
             return OperationResult(image2, listOf(), continuation, HexEvalSounds.NORMAL_EXECUTE.get())
         }
     }

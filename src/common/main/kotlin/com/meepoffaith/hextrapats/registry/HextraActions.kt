@@ -12,8 +12,7 @@ import at.petrak.hexcasting.common.lib.hex.HexActions
 import com.meepoffaith.hextrapats.casting.actions.NoConsOperationAction
 import com.meepoffaith.hextrapats.casting.actions.eval.OpConditionalEval
 import com.meepoffaith.hextrapats.casting.actions.eval.OpConditionalHalt
-import com.meepoffaith.hextrapats.casting.actions.eval.OpForEachIndex
-import com.meepoffaith.hextrapats.casting.actions.eval.OpMainForEach
+import com.meepoffaith.hextrapats.casting.actions.eval.OpStackForEach
 import com.meepoffaith.hextrapats.casting.actions.lists.*
 import com.meepoffaith.hextrapats.casting.actions.logic.OpNoConsBoolCoerce
 import com.meepoffaith.hextrapats.casting.actions.logic.OpNoConsEquality
@@ -102,9 +101,8 @@ object HextraActions : HextrapatsRegistrar<ActionRegistryEntry>(
     val FALSE_EVAL = make("false_eval", HexDir.SOUTH_EAST, "deaqqdded", OpConditionalEval(false))
     val TRUE_HALT = make("true_halt", HexDir.SOUTH_WEST, "aqdeedded", OpConditionalHalt(true))
     val FALSE_HALT = make("false_halt", HexDir.SOUTH_WEST, "aqdeeaaqa", OpConditionalHalt(false))
-    val INDEX_FOREACH = make("index_for_each", HexDir.NORTH_EAST, "dadaddqdq", OpForEachIndex)
-    val MAIN_FOREACH = make("main_for_each", HexDir.WEST, "aawdadad", OpMainForEach(false))
-    val MAIN_INDEX_FOREACH = make("main_index_for_each", HexDir.WEST, "aawdadaddqdq", OpMainForEach(true))
+    val STACK_FOREACH = make("stack_for_each", HexDir.WEST, "aawdadad", OpStackForEach(false))
+    val STACK_INDEX_FOREACH = make("stack_indexed_for_each", HexDir.WEST, "aawdadaddqdq", OpStackForEach(true))
 
     val NULL_EXEC = make("nulls/exec", HexDir.SOUTH_EAST, "wawaadq", OpNullExecute)
 
