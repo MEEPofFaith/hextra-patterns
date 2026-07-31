@@ -13,9 +13,10 @@ class OpFloat(val copies: Boolean) : Action {
         image: CastingImage,
         continuation: SpellContinuation
     ): OperationResult {
-        val stack = image.stack
-        val first = if(copies) stack.first() else stack.removeFirst()
-        stack.add(first)
+        var stack = image.stack
+        val first = stack.head()
+        if(!copies) stack = stack.tail()
+        stack.appended(first)
 
         val image2 = image.withUsedOp().copy(stack = stack)
         return OperationResult(image2, listOf(), continuation, HexEvalSounds.NORMAL_EXECUTE.get())
