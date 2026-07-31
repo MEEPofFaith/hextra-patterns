@@ -11,9 +11,10 @@ plugins {
 }
 
 val modVersion: String by project
+val minecraftVersion: String by project
 val mavenGroup: String by project
 
-version = modVersion
+version = "$modVersion+$minecraftVersion"
 group = mavenGroup
 
 kotlin {
