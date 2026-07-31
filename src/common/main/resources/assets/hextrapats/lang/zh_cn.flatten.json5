@@ -147,7 +147,7 @@
         null_eval: "若第一参数不是 $(l:casting/influences)$(thing)Null/$，原样返回。否则执行第二参数，执行形式与$(l:patterns/meta#hexcasting:eval)$(action)赫尔墨斯之策略/$类似。",
         indexed_for_each: "与$(l:patterns/meta#hexcasting:for_each)$(action)托特之策略/$类似，但被遍历列表的各独立栈会额外将所选元素的下标压入栈顶。",
         stack_for_each: "与$(l:patterns/meta#hexcasting:for_each)$(action)托特之策略/$类似，但遍历会直接以主栈为运行环境，而非为各项单独复制新栈。",
-        stack_indexed_for_each: "与$(l:patterns/hextrapats_meta#hextrapats:index_for_each)$(action)杰胡提之策略/$类似，但遍历会直接以主栈为运行环境，而非为各项单独复制新栈。"
+        stack_indexed_for_each: "与$(l:patterns/hextrapats_meta#hextrapats:indexed_for_each)$(action)杰胡提之策略/$类似，但遍历会直接以主栈为运行环境，而非为各项单独复制新栈。"
       },
       stackmanip: {
         capsizing: "将栈顶元素移至栈底。",
