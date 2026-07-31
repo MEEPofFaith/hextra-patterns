@@ -62,7 +62,7 @@ class IotaMap : HashMap<Int, Iota> {
 
     companion object {
         /** Iota types disallowed from being input into an iota map. */
-        val DISALLOWED_TYPES = mutableListOf<IotaType<*>>(ListIota.TYPE, SetIota.TYPE)
+        val DISALLOWED_TYPES = mutableListOf<IotaType<*>>(ListIota.TYPE, SetIota.TYPE, ContinuationIota.TYPE)
 
         fun checkType(iota: Iota): Boolean{
             return !DISALLOWED_TYPES.contains(iota.type)
