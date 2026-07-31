@@ -2,16 +2,21 @@ package com.meepoffaith.hextrapats.casting.eval.vm
 
 import at.petrak.hexcasting.api.casting.eval.CastResult
 import at.petrak.hexcasting.api.casting.eval.ResolvedPatternType
-import at.petrak.hexcasting.api.casting.eval.vm.*
+import at.petrak.hexcasting.api.casting.eval.vm.CastingVM
+import at.petrak.hexcasting.api.casting.eval.vm.ContinuationFrame
+import at.petrak.hexcasting.api.casting.eval.vm.FrameEvaluate
+import at.petrak.hexcasting.api.casting.eval.vm.SpellContinuation
 import at.petrak.hexcasting.api.casting.iota.DoubleIota
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.iota.IotaType
 import at.petrak.hexcasting.api.casting.iota.ListIota
 import at.petrak.hexcasting.api.utils.TreeList
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds
+import com.mojang.serialization.Codec
 import com.mojang.serialization.MapCodec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import net.minecraft.network.RegistryFriendlyByteBuf
+import net.minecraft.network.codec.ByteBufCodecs
 import net.minecraft.network.codec.StreamCodec
 import net.minecraft.server.level.ServerLevel
 
@@ -81,33 +86,35 @@ data class FrameIndexedForEach(
 
     companion object {
         @JvmField
-        val TYPE: ContinuationFrame.Type<FrameForEach> = object : ContinuationFrame.Type<FrameForEach> {
-            val CODEC = RecordCodecBuilder.mapCodec<FrameForEach> { inst ->
+        val TYPE: ContinuationFrame.Type<FrameIndexedForEach> = object : ContinuationFrame.Type<FrameIndexedForEach> {
+            val CODEC = RecordCodecBuilder.mapCodec<FrameIndexedForEach> { inst ->
                 inst.group(
                     TreeList.codecOf(IotaType.TYPED_CODEC).fieldOf("data").forGetter { it.data },
                     TreeList.codecOf(IotaType.TYPED_CODEC).fieldOf("code").forGetter { it.code },
                     TreeList.codecOf(IotaType.TYPED_CODEC).fieldOf("context").forGetter { it.contextStack },
                     TreeList.codecOf(IotaType.TYPED_CODEC).fieldOf("stashed").forGetter { it.stashedStack },
+                    Codec.INT.fieldOf("index").forGetter { it.index },
                     TreeList.codecOf(IotaType.TYPED_CODEC).fieldOf("accumulator").forGetter { it.acc }
-                ).apply(inst) { a, b, c, d, e ->
-                    FrameForEach(a, b, c, d, e)
+                ).apply(inst) { a, b, c, d, e, f ->
+                    FrameIndexedForEach(a, b, c, d, e, f)
                 }
             }
             val STREAM_CODEC = StreamCodec.composite(
-                IotaType.TYPED_STREAM_CODEC.apply(TreeList.streamCodecOp()), FrameForEach::data,
-                IotaType.TYPED_STREAM_CODEC.apply(TreeList.streamCodecOp()), FrameForEach::code,
-                IotaType.TYPED_STREAM_CODEC.apply(TreeList.streamCodecOp()), FrameForEach::contextStack,
-                IotaType.TYPED_STREAM_CODEC.apply(TreeList.streamCodecOp()), FrameForEach::stashedStack,
-                IotaType.TYPED_STREAM_CODEC.apply(TreeList.streamCodecOp()), FrameForEach::acc
-            ) { a, b, c, d, e ->
-                FrameForEach(a, b, c, d, e)
+                IotaType.TYPED_STREAM_CODEC.apply(TreeList.streamCodecOp()), FrameIndexedForEach::data,
+                IotaType.TYPED_STREAM_CODEC.apply(TreeList.streamCodecOp()), FrameIndexedForEach::code,
+                IotaType.TYPED_STREAM_CODEC.apply(TreeList.streamCodecOp()), FrameIndexedForEach::contextStack,
+                IotaType.TYPED_STREAM_CODEC.apply(TreeList.streamCodecOp()), FrameIndexedForEach::stashedStack,
+                ByteBufCodecs.INT, FrameIndexedForEach::index,
+                IotaType.TYPED_STREAM_CODEC.apply(TreeList.streamCodecOp()), FrameIndexedForEach::acc
+            ) { a, b, c, d, e, f ->
+                FrameIndexedForEach(a, b, c, d, e, f)
             }
 
 
-            override fun codec(): MapCodec<FrameForEach> =
+            override fun codec(): MapCodec<FrameIndexedForEach> =
                 CODEC
 
-            override fun streamCodec(): StreamCodec<RegistryFriendlyByteBuf, FrameForEach> =
+            override fun streamCodec(): StreamCodec<RegistryFriendlyByteBuf, FrameIndexedForEach> =
                 STREAM_CODEC
         }
     }
