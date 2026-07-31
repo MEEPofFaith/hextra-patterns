@@ -16,9 +16,8 @@ class OpSink(val copies: Boolean) : Action {
         var stack = image.stack
         val last = stack.last()
         if(!copies) stack = stack.init()
-        stack.prepended(last)
 
-        val image2 = image.withUsedOp().copy(stack = stack)
+        val image2 = image.withUsedOp().copy(stack = stack.prepended(last))
         return OperationResult(image2, listOf(), continuation, HexEvalSounds.NORMAL_EXECUTE.get())
     }
 }

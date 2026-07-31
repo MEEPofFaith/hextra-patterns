@@ -16,9 +16,8 @@ class OpFloat(val copies: Boolean) : Action {
         var stack = image.stack
         val first = stack.head()
         if(!copies) stack = stack.tail()
-        stack.appended(first)
 
-        val image2 = image.withUsedOp().copy(stack = stack)
+        val image2 = image.withUsedOp().copy(stack = stack.appended(first))
         return OperationResult(image2, listOf(), continuation, HexEvalSounds.NORMAL_EXECUTE.get())
     }
 }
