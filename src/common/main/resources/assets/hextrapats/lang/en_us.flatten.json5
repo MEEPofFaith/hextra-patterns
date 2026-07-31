@@ -29,10 +29,6 @@
         out_range: "If the first number is not between the second and third, return True. Otherwise, return False. If the first value is a vector, compare its length instead.",
         "out_range.ops": "The fourth number seems to describe how to check if the value is outside the range.$(li)0: val < min or max < val$(li)1: val <= min or max < val$(li)2: val < min or max <= val$(li)3: val <= min or max <= val",
       },
-      nulls: {
-        coalesce: "If the first argument is not $(l:casting/influences)$(thing)Null/$, returns it. Otherwise, returns the second argument.",
-        exec: "If the first argument is not $(l:casting/influences)$(thing)Null/$, returns it. Otherwise, executes the second argument, much like $(l:patterns/meta#hexcasting:eval)$(action)Hermes' Gambit/$."
-      },
       nocon: {
         intro: "Sometimes, I want operate on iotas after using them for logic operations, but it gets rather annoying to have to copy them every time I do. All this copying also places a heavy burden on Nature, especially with large iotas like lists where $(l:casting/mishaps)$(thing)stack size can be a concern/$.",
         name: "Retention Gambit",
@@ -117,34 +113,30 @@
       },
       sets: {
         intro: "A hash set contains elements in an unordered fashion, and cannot contain duplicates. Excellent for keeping track of whether or not something exists.<br>Due to a magical process known as '$(thing)hashing/$', access is reduced to nearly O(1), relaxing the burden on Nature.",
-        tolerance: "However, '$(thing)hashing/$' seems to have a different, albeit minor, burden on Nature. Numbers and vectors lose precision in the process of getting inserted into a set, becoming rounded to 4 decimals. This seems to be related to $(l:patterns/logic#hexcasting:equals)$(thing)how Nature considers $(action)equality/$.",
-        "empty_set/": {
-          num: "Push an empty set that can hold numbers to the top of the stack.",
-          vec: "Push an empty set that can hold vectors to the top of the stack.",
-          entity: "Push an empty set that can hold entities to the top of the stack."
-        },
+        tolerance: "However, '$(thing)hashing/$' seems to have a different, albeit minor, burden on Nature. Numbers and vectors lose precision in the process of getting inserted into a set, becoming rounded to 4 decimals. This seems to be related to $(l:patterns/logic#hexcasting:equals)$(thing)how Nature considers $(action)equality/$.<br><br>Additionally, not everything can be put into a set. Nature refuses the insertion of complex iotas like lists or other sets.",
+        empty_set: "Push an empty set that to the top of the stack.",
         insert: {
           name: "Insertion Distillation",
-          "": "Remove the iota at the top of the stack, then add it to the set. The iota's type must match the set's type."
+          "": "Remove the iota at the top of the stack, then add it to the set."
         },
-        insert_ret: "Remove the iota at the top of the stack, then add it to the set. Return True if it wasn't already in the set, otherwise return False. The iota's type must match the set's type.",
+        insert_ret: "Remove the iota at the top of the stack, then add it to the set. Return True if it wasn't already in the set, otherwise return False.",
         remove: {
           name: "Removal Distillation",
-          "": "Remove the iota from top of the stack, then remove it set. The iota's type must match the set's type."
+          "": "Remove the iota from top of the stack, then remove it from the set."
         },
-        remove_ret: "Remove the iota from top of the stack, then remove it set. Return True if it was previously in the set, otherwise return False. The iota's type must match the set's type.",
+        remove_ret: "Remove the iota from top of the stack, then remove it set. Return True if it was previously in the set, otherwise return False.",
         find: {
           name: "Locator's Gambit",
-          "": "Remove the iota top of the stack, then return True if the set contains that iota, otherwise return False. The iota's type must match the set's type."
+          "": "Remove the iota top of the stack, then return True if the set contains that iota, otherwise return False."
         },
-        add: "Remove the set at the top of the stack, then add all its elements to the set at the top of the stack. The two sets must be of matching type.",
-        sub: "Remove the set at the top of the stack, then remove all its elements from the set at the top of the stack. The two sets must be of matching type.",
-        and: "Takes the intersection of two sets. The new set will only contain elements that were present in both of the previous sets. The two sets must be of matching type.",
-        xor: "Takes the exclusive disjunction of two sets. The new set will only contain elements that were present in only one of the two sets. The two sets must be of matching type.",
+        add: "Remove the set at the top of the stack, then add all its elements to the set at the top of the stack.",
+        sub: "Remove the set at the top of the stack, then remove all its elements from the set at the top of the stack.",
+        and: "Takes the intersection of two sets. The new set will only contain elements that were present in both of the previous sets.",
+        xor: "Takes the exclusive disjunction of two sets. The new set will only contain elements that were present in only one of the two sets.",
         abs: "Remove the set at the top of the stack, then push the number of elements in the set to the stack.",
         set_to_list: "Converts the set at the top of the stack to a list. The order is up to Nature's whims.",
-        list_to_set: "Converts the list at the top of the stack to a set. The list must be non-empty and entirely numbers, vectors, or entities.",
-        last_n_set: "Remove $(italic)num/$ iota from the top of the stack, then add them to a set at the top of the stack. Must be either all numbers, all vectors, or all entities.",
+        list_to_set: "Converts the list at the top of the stack to a set.",
+        last_n_set: "Remove $(italic)num/$ iota from the top of the stack, then add them to a set at the top of the stack.",
         splat_set: "Remove the set at the top of the stack, then push its contents to the stack. The order is up to Nature's whims.",
       },
       meta: {
@@ -152,9 +144,10 @@
         false_halt: "Forcibly halts a $(thing)Hex/$ like $(l:patterns/meta#hexcasting:halt)$(action)Charon's Gambit/$ if the iota at the top of the stack is $(l:patterns/logic#hexcasting:bool_coerce)$(thing)considered $(action)False $(thing)by Nature/$.",
         true_eval: "Casts a pattern or list of patterns like $(l:patterns/meta#hexcasting:eval)$(action)Hermes' Gambit/$ if the next iota from the top of the stack is $(l:patterns/logic#hexcasting:bool_coerce)$(thing)considered $(action)True $(thing)by Nature/$.",
         false_eval: "Casts a pattern or list of patterns like $(l:patterns/meta#hexcasting:eval)$(action)Hermes' Gambit/$ if the next iota from the top of the stack is $(l:patterns/logic#hexcasting:bool_coerce)$(thing)considered $(action)False $(thing)by Nature/$.",
-        index_for_each: "Casts like $(l:patterns/meta#hexcasting:for_each)$(action)Thoth's Gambit/$, however the new stack for each element additionally has the index of that element added to the top.",
-        main_for_each: "Casts like $(l:patterns/meta#hexcasting:for_each)$(action)Thoth's Gambit/$, however each sub-execution operates on the main stack instead of copies of the stack.",
-        main_index_for_each: "Casts like $(l:patterns/hextrapats_meta#hextrapats:index_for_each)$(action)Djehuty's Gambit/$, however each sub-execution operates on the main stack instead of copies of the stack."
+        null_eval: "If the first argument is not $(l:casting/influences)$(thing)Null/$, returns it. Otherwise, executes the second argument, much like $(l:patterns/meta#hexcasting:eval)$(action)Hermes' Gambit/$.",
+        indexed_for_each: "Casts like $(l:patterns/meta#hexcasting:for_each)$(action)Thoth's Gambit/$, however the new stack for each element additionally has the index of that element added to the top.",
+        stack_for_each: "Casts like $(l:patterns/meta#hexcasting:for_each)$(action)Thoth's Gambit/$, however each sub-execution operates on the main stack instead of copies of the stack.",
+        stack_indexed_for_each: "Casts like $(l:patterns/hextrapats_meta#hextrapats:indexed_for_each)$(action)Djehuty's Gambit/$, however each sub-execution operates on the main stack instead of copies of the stack."
       },
       stackmanip: {
         capsizing: "Sends the iota on the top of the stack to the bottom of the stack.",
@@ -175,11 +168,6 @@
 
         in_range: "Range Exaltation",
         out_range: "Range Exaltation II",
-
-        "nulls/": {
-          coalesce: "Coalescing Distillation",
-          exec: "Coalescing Gambit"
-        },
 
         vec_x: "Vector Reflection X II",
         vec_y: "Vector Reflection Y II",
@@ -253,11 +241,7 @@
         swindle_list: "Swindler's Distillation",
         scronglwfijspoivjqwofklcrvewb: "Shuffling Purification",
 
-        "empty_set/": {
-          num: "Vacant Reflection: Number Set",
-          vec: "Vacant Reflection: Vector Set",
-          entity: "Vacant Reflection: Entity Set"
-        },
+        empty_set: "Vacant Reflection: Set",
         last_n_set: "Bucketing Gambit",
         splat_set: "Spilling Disintegration",
         set_insert_ret: "Insertion Gambit",
@@ -269,9 +253,10 @@
         false_halt: "Styx's Gambit",
         true_eval: "Helios' Gambit",
         false_eval: "Selene's Gambit",
-        index_for_each: "Djehuty's Gambit",
-        main_for_each: "Anubis' Gambit",
-        main_index_for_each: "Ra's Gambit",
+        null_eval: "Coalescing Gambit",
+        indexed_for_each: "Djehuty's Gambit",
+        stack_for_each: "Anubis' Gambit",
+        stack_indexed_for_each: "Ra's Gambit",
 
         capsizing: "Capsizing Gambit",
         "capsizing/copy": "Capsizing Gambit II",
@@ -313,13 +298,7 @@
         "peek/": {
           front: "Speaker's Decomp. II",
           back: "Derivation Decomp. II",
-        },
-
-        "empty_set/": {
-          num: "Vacant Refl.: Num. Set",
-          vec: "Vacant Refl.: Vec. Set",
-          entity: "Vacant Refl.: Ent. Set"
-        },
+        }
       }
     },
     "special.hextrapats:": {
@@ -330,34 +309,18 @@
       scientific_exp: "Scientific Purification: 10^%s"
     },
     "iota.hextrapats:": {
-      num_set: {
-        "": "Set (Nums)",
-        desc: "a number set"
-      },
-      vec_set: {
-        "": "Set (Vectors)",
-        desc: "a vector set"
-      },
-      entity_set: {
-        "": "Set (Entities)",
-        desc: "an entity set"
+      set: {
+        "": "Iota Set",
+        desc: "an iota set"
       }
     },
     mishap: {
       invalid_value: {
-        class: {
-          any_set: "any set",
-          num_set: "a number set",
-          vec_set: "a vector set",
-          entity_set: "an entity set"
-        },
         "hextrapats:": {
           opposite_vecs: "vector not facing opposite to the start direction %s",
           too_short_to_swindle: "a list of at least length %s",
           vec_list: "a list of exactly 3 numbers",
-          veclist: "a vector or a list of exactly 3 numbers",
-          set_item: "a number, vector, or entity",
-          set_list: "a non-empty list of entirely numbers, vectors, or entities"
+          veclist: "a vector or a list of exactly 3 numbers"
         }
       }
     }
