@@ -12,7 +12,7 @@ import kotlin.math.atan2
 object OpToPolar : ConstMediaAction {
     override val argc = 1
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
-        val v = args.getVec3(0, argc)
+        val v = args.getVec3(0, argc).normalize()
 
         val yaw = -atan2(v.x, v.z)
         val pitch = asin(v.y)
