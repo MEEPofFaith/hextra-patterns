@@ -7,9 +7,9 @@ import com.meepoffaith.hextrapats.util.MathUtils
 class IotaMap : HashMap<Int, Iota> {
     constructor(): super()
     constructor(map: IotaMap) : super(map)
-    constructor(list: List<Iota>, argcOrIdx: Int = 0) : super(){
+    constructor(list: List<Iota>, argc: Int = 0) : super(){
         for(i in 0..list.lastIndex){
-            addIota(list[i], if (argcOrIdx > 0) argcOrIdx - (i + 1) else argcOrIdx)
+            addIota(list[i], argc - (i + 1))
         }
     }
 
@@ -24,11 +24,7 @@ class IotaMap : HashMap<Int, Iota> {
 
     fun addIota(iota: Iota, reversedIdx: Int): Boolean{
         if(!checkType(iota)) {
-            if(reversedIdx >= 0) {
-                throw MishapInvalidIota.of(iota, reversedIdx, "hextrapats:set_item")
-            }else{
-                throw MishapInvalidIota.of(iota, -reversedIdx + 1, "hextrapats:list_in_list_to_set")
-            }
+            throw MishapInvalidIota.of(iota, reversedIdx, "hextrapats:set_item")
         }
         return addIota(iota)
     }

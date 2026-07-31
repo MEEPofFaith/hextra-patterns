@@ -319,6 +319,8 @@
         "hextrapats:": {
           opposite_vecs: "vector not facing opposite to the start direction %s",
           too_short_to_swindle: "a list of at least length %s",
+          set_item: "a set insertable",
+          set_item_list: "a list containing only set insertables",
           vec_list: "a list of exactly 3 numbers",
           veclist: "a vector or a list of exactly 3 numbers"
         }
