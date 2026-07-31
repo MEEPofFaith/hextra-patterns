@@ -57,7 +57,7 @@ class SetIota(val iotaSet: IotaSet): Iota({ HextraIotas.SET }) {
         var TYPE: IotaType<SetIota> = object : IotaType<SetIota>() {
             override fun codec(): MapCodec<SetIota> = CODEC
             override fun streamCodec(): StreamCodec<RegistryFriendlyByteBuf, SetIota> = STREAM_CODEC
-            override fun color(): Int = 0xFADC19
+            override fun color(): Int = 0xff_fadc19.toInt()
         }
     }
 }
