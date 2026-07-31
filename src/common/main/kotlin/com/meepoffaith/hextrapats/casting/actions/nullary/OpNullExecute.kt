@@ -5,10 +5,13 @@ import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.eval.OperationResult
 import at.petrak.hexcasting.api.casting.eval.vm.CastingImage
 import at.petrak.hexcasting.api.casting.eval.vm.SpellContinuation
+import at.petrak.hexcasting.api.casting.getEvaluatable
 import at.petrak.hexcasting.api.casting.iota.NullIota
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
 import at.petrak.hexcasting.common.casting.actions.eval.OpEval
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds
+import com.mojang.datafixers.DataFix.checked
+import jdk.incubator.vector.VectorShuffle.iota
 
 object OpNullExecute : Action {
     override fun operate(
@@ -16,18 +19,18 @@ object OpNullExecute : Action {
         image: CastingImage,
         continuation: SpellContinuation
     ): OperationResult {
-        val stack = image.stack.toMutableList()
+        var stack = image.stack
         if(stack.size < 2) throw MishapNotEnoughArgs(2, stack.size)
 
-        val iota = stack.removeLast()
-        val checked = stack.last()
+        val instrs = stack.getEvaluatable(stack.lastIndex, stack.size)
+        val iota = stack[stack.lastIndex - 1]
+        stack = stack.init()
 
-        if(checked is NullIota){
-            stack.removeLast()
-            return OpEval.exec(env, image, continuation, stack, iota)
+        if(iota is NullIota){
+            return OpEval.exec(env, image, continuation, stack.init(), instrs)
         }else{
             val image2 = image.withUsedOp().copy(stack = stack)
-            return OperationResult(image2, listOf(), continuation, HexEvalSounds.NORMAL_EXECUTE)
+            return OperationResult(image2, listOf(), continuation, HexEvalSounds.NORMAL_EXECUTE.get())
         }
     }
 }
