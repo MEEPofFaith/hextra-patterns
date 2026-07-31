@@ -1,0 +1,135 @@
+{
+  "name": "pages.hextrapats.hextrapats_vec_literals.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:arrow",
+  "sortnum": 1,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "pages.hextrapats.hextrapats_vec_literals.title",
+      "text": "hextrapats.page.vec_literals.intro"
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:vec_x",
+      "anchor": "hextrapats:vec_x",
+      "input": "",
+      "output": "vector",
+      "text": "hextrapats.page.vec_literals.x",
+      "patterns": [
+        {
+          "startdir": "SOUTH_WEST",
+          "signature": "aeaqaa",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "SOUTH_WEST",
+          "signature": "aqdedd",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:vec_y",
+      "anchor": "hextrapats:vec_y",
+      "input": "",
+      "output": "vector",
+      "text": "hextrapats.page.vec_literals.y",
+      "patterns": [
+        {
+          "startdir": "EAST",
+          "signature": "weaqaa",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "EAST",
+          "signature": "wqdedd",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:vec_z",
+      "anchor": "hextrapats:vec_z",
+      "input": "",
+      "output": "vector",
+      "text": "hextrapats.page.vec_literals.z",
+      "patterns": [
+        {
+          "startdir": "NORTH_WEST",
+          "signature": "deaqaa",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "NORTH_WEST",
+          "signature": "dqdedd",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:vec_1",
+      "anchor": "hextrapats:vec_1",
+      "input": "",
+      "output": "vector",
+      "text": "hextrapats.page.vec_literals.1",
+      "patterns": [
+        {
+          "startdir": "SOUTH_EAST",
+          "signature": "qeaqaa",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "SOUTH_EAST",
+          "signature": "qqdedd",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.vec_literals.detail"
+    },
+    {
+      "type": "hexcasting:manual_pattern_nosig",
+      "header": "hextrapats.page.vec_literals.example.x10.header",
+      "text": "hextrapats.page.vec_literals.example.x10",
+      "patterns": {
+        "startdir": "SOUTH_WEST",
+        "signature": "aeaqaae"
+      }
+    },
+    {
+      "type": "hexcasting:manual_pattern_nosig",
+      "header": "hextrapats.page.vec_literals.example.y7.header",
+      "text": "hextrapats.page.vec_literals.example.y7",
+      "patterns": {
+        "startdir": "EAST",
+        "signature": "weaqaaqww"
+      }
+    },
+    {
+      "type": "hexcasting:manual_pattern_nosig",
+      "header": "hextrapats.page.vec_literals.example.z-32.header",
+      "text": "hextrapats.page.vec_literals.example.z-32",
+      "patterns": {
+        "startdir": "NORTH_WEST",
+        "signature": "dqdeddwqea"
+      }
+    },
+    {
+      "type": "hexcasting:manual_pattern_nosig",
+      "header": "hextrapats.page.vec_literals.example.a4.5.header",
+      "text": "hextrapats.page.vec_literals.example.a4.5",
+      "patterns": {
+        "startdir": "SOUTH_EAST",
+        "signature": "qeaqaaqdww"
+      }
+    }
+  ]
+}

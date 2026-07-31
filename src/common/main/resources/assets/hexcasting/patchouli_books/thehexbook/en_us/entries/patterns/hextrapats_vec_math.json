@@ -1,0 +1,190 @@
+{
+  "name": "pages.hextrapats.hextrapats_vec_math.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:echo_shard",
+  "sortnum": 2,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:normalize",
+      "anchor": "hextrapats:normalize",
+      "input": "vec",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.normalize"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:increment",
+      "anchor": "hextrapats:increment",
+      "input": "vec",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.increment"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:decrement",
+      "anchor": "hextrapats:decrement",
+      "input": "vec",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.decrement"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:rand_vec",
+      "anchor": "hextrapats:rand_vec",
+      "input": "",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.rand_vec"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:vec_dist",
+      "anchor": "hextrapats:vec_dist",
+      "input": "vec, vec",
+      "output": "num",
+      "text": "hextrapats.page.vec_math.vec_dist"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:approach",
+      "anchor": "hextrapats:approach",
+      "input": "vec, vec, num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.approach"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:angle_dist",
+      "anchor": "hextrapats:angle_dist",
+      "input": "vec, vec",
+      "output": "num",
+      "text": "hextrapats.page.vec_math.angle_dist"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:angle_approach",
+      "anchor": "hextrapats:angle_approach",
+      "input": "vec, vec, num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.angle_approach"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.vec_math.angle_approach.examples"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:from_polar",
+      "anchor": "hextrapats:from_polar",
+      "input": "num, num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.from_polar"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:to_polar",
+      "anchor": "hextrapats:to_polar",
+      "input": "vec",
+      "output": "num, num",
+      "text": "hextrapats.page.vec_math.to_polar"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:rot_about/x",
+      "anchor": "hextrapats:rot_about/x",
+      "input": "vec, num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.rot_about/x"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:rot_about/y",
+      "anchor": "hextrapats:rot_about/y",
+      "input": "vec, num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.rot_about/y"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:rot_about/z",
+      "anchor": "hextrapats:rot_about/z",
+      "input": "vec, num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.rot_about/z"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:cons_about/x",
+      "anchor": "hextrapats:cons_about/x",
+      "input": "num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.cons_about/x"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:cons_about/y",
+      "anchor": "hextrapats:cons_about/y",
+      "input": "num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.cons_about/y"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:cons_about/z",
+      "anchor": "hextrapats:cons_about/z",
+      "input": "num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.cons_about/z"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:swap_vec_list",
+      "anchor": "hextrapats:swap_vec_list",
+      "input": "[num] | vec",
+      "output": "vec | [num]",
+      "text": "hextrapats.page.vec_math.swap_vec_list"
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:vec/get/x",
+      "anchor": "hextrapats:vec/get/x",
+      "input": "vec",
+      "output": "num",
+      "text": "hextrapats.page.vec_math.vec_get",
+      "patterns": [
+        {
+          "startdir": "EAST",
+          "signature": "qeeeeedwwa"
+        }, {
+          "startdir": "EAST",
+          "signature": "qeeeeedwww"
+        }, {
+          "startdir": "EAST",
+          "signature": "qeeeeedwwd"
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:vec/set/x",
+      "anchor": "hextrapats:vec/set/x",
+      "input": "vec, num",
+      "output": "vec",
+      "text": "hextrapats.page.vec_math.vec_set",
+      "patterns": [
+        {
+          "startdir": "EAST",
+          "signature": "eqqqqqawwa"
+        }, {
+          "startdir": "EAST",
+          "signature": "eqqqqqawww"
+        }, {
+          "startdir": "EAST",
+          "signature": "eqqqqqawwd"
+        }
+      ]
+    }
+  ]
+}

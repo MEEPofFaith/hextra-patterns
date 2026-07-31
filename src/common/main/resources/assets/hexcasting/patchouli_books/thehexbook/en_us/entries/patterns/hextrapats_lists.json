@@ -1,0 +1,74 @@
+{
+  "name": "pages.hextrapats.hextrapats_lists.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:name_tag",
+  "sortnum": 7,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:peek/front",
+      "anchor": "hextrapats:peek/front",
+      "input": "list",
+      "output": "list, any",
+      "text": "hextrapats.page.lists.peek/front"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:peek/back",
+      "anchor": "hextrapats:peek/back",
+      "input": "list",
+      "output": "list, any",
+      "text": "hextrapats.page.lists.peek/back"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:peek/index",
+      "anchor": "hextrapats:peek/index",
+      "input": "list, num",
+      "output": "list, any",
+      "text": "hextrapats.page.lists.peek/index"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:split_list",
+      "anchor": "hextrapats:split_list",
+      "input": "list, num",
+      "output": "list, list",
+      "text": "hextrapats.page.lists.split"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:del_element/first",
+      "anchor": "hextrapats:del_element/first",
+      "input": "list, any",
+      "output": "list, bool",
+      "text": "hextrapats.page.lists.del_element/first"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:del_element/all",
+      "anchor": "hextrapats:del_element/all",
+      "input": "list, any",
+      "output": "list, num",
+      "text": "hextrapats.page.lists.del_element/all"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:swindle_list",
+      "anchor": "hextrapats:swindle_list",
+      "input": "list, num",
+      "output": "list",
+      "text": "hextrapats.page.lists.swindle"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:scronglwfijspoivjqwofklcrvewb",
+      "anchor": "hextrapats:scronglwfijspoivjqwofklcrvewb",
+      "input": "list",
+      "output": "list",
+      "text": "hextrapats.page.lists.scronglwfijspoivjqwofklcrvewb"
+    }
+  ]
+}

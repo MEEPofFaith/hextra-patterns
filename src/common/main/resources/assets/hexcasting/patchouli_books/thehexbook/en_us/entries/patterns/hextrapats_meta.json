@@ -1,0 +1,88 @@
+{
+  "name": "pages.hextrapats.hextrapats_meta.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:dragon_egg",
+  "sortnum": 12,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:true_eval",
+      "anchor": "hextrapats:true_eval",
+      "input": "any, evaluatable",
+      "output": "many",
+      "text": "hextrapats.page.meta.true_eval"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:false_eval",
+      "anchor": "hextrapats:false_eval",
+      "input": "any, evaluatable",
+      "output": "many",
+      "text": "hextrapats.page.meta.false_eval"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:true_halt",
+      "anchor": "hextrapats:true_halt",
+      "input": "any",
+      "output": "",
+      "text": "hextrapats.page.meta.true_halt"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:false_halt",
+      "anchor": "hextrapats:false_halt",
+      "input": "any",
+      "output": "",
+      "text": "hextrapats.page.meta.false_halt"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:null_eval",
+      "anchor": "hextrapats:null_eval",
+      "input": "any, evaluatable",
+      "output": "any",
+      "text": "hextrapats.page.meta.null_eval"
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:indexed_for_each",
+      "anchor": "hextrapats:indexed_for_each",
+      "input": "many, list, evaluatable",
+      "output": "list",
+      "text": "hextrapats.page.meta.indexed_for_each",
+      "patterns": [
+        {
+          "startdir": "NORTH_EAST",
+          "signature": "aaqwaaddw"
+        },
+        {
+          "startdir": "NORTH_EAST",
+          "signature": "aaqwaaddwda"
+        },
+        {
+          "startdir": "NORTH_EAST",
+          "signature": "aaqwaaddwdaad"
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:stack_for_each",
+      "anchor": "hextrapats:stack_for_each",
+      "input": "many, list, evaluatable",
+      "output": "many",
+      "text": "hextrapats.page.meta.stack_for_each"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:stack_indexed_for_each",
+      "anchor": "hextrapats:stack_indexed_for_each",
+      "input": "many, list, evaluatable",
+      "output": "many",
+      "text": "hextrapats.page.meta.stack_indexed_for_each"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "name": "pages.hextrapats.hextrapats_sets.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:bucket",
+  "sortnum": 7,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.sets.intro"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.sets.tolerance"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:empty_set",
+      "anchor": "hextrapats:empty_set",
+      "input": "",
+      "output": "num set",
+      "text": "hextrapats.page.sets.empty_set"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hextrapats.page.sets.insert.name",
+      "op_id": "hexcasting:append",
+      "anchor": "hexcasting:append",
+      "input": "set, insertable",
+      "output": "set",
+      "text": "hextrapats.page.sets.insert"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:set_insert_ret",
+      "anchor": "hextrapats:set_insert_ret",
+      "input": "set, insertable",
+      "output": "set, bool",
+      "text": "hextrapats.page.sets.insert_ret"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hextrapats.page.sets.remove.name",
+      "op_id": "hexcasting:remove_from",
+      "anchor": "hexcasting:remove_from",
+      "input": "set, insertable",
+      "output": "set",
+      "text": "hextrapats.page.sets.remove"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:set_remove_ret",
+      "anchor": "hextrapats:set_remove_ret",
+      "input": "set, insertable",
+      "output": "set, bool",
+      "text": "hextrapats.page.sets.remove_ret"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hextrapats.page.sets.find.name",
+      "op_id": "hexcasting:index_of",
+      "anchor": "hexcasting:index_of",
+      "input": "set, insertable",
+      "output": "set, bool",
+      "text": "hextrapats.page.sets.find"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:add",
+      "anchor": "hexcasting:add",
+      "input": "set, set",
+      "output": "set",
+      "text": "hextrapats.page.sets.add"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:sub",
+      "anchor": "hexcasting:sub",
+      "input": "set, set",
+      "output": "set",
+      "text": "hextrapats.page.sets.sub"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:and",
+      "anchor": "hexcasting:and",
+      "input": "set, set",
+      "output": "set",
+      "text": "hextrapats.page.sets.and"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:xor",
+      "anchor": "hexcasting:xor",
+      "input": "set, set",
+      "output": "set",
+      "text": "hextrapats.page.sets.xor"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:abs",
+      "anchor": "hexcasting:abs",
+      "input": "set",
+      "output": "num",
+      "text": "hextrapats.page.sets.abs"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:set_to_list",
+      "anchor": "hextrapats:set_to_list",
+      "input": "set",
+      "output": "list",
+      "text": "hextrapats.page.sets.set_to_list"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:list_to_set",
+      "anchor": "hextrapats:list_to_set",
+      "input": "[insertable]",
+      "output": "set",
+      "text": "hextrapats.page.sets.list_to_set"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:last_n_set",
+      "anchor": "hextrapats:last_n_set",
+      "input": "many, num",
+      "output": "set",
+      "text": "hextrapats.page.sets.last_n_set"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:splat_set",
+      "anchor": "hextrapats:splat_set",
+      "input": "set",
+      "output": "many",
+      "text": "hextrapats.page.sets.splat_set"
+    }
+  ]
+}

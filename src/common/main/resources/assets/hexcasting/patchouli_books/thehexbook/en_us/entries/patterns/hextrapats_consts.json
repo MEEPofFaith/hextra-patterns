@@ -1,0 +1,30 @@
+{
+  "name": "pages.hextrapats.hextrapats_consts.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:obsidian",
+  "sortnum": 3,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:haha_ha_one",
+      "anchor": "hextrapats:haha_ha_one",
+      "input": "",
+      "output": "vector",
+      "text": "hextrapats.page.consts.one",
+      "patterns": [
+        {
+          "startdir": "NORTH_WEST",
+          "signature": "qqqqqeq",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "NORTH_EAST",
+          "signature": "eeeeeqq",
+          "r": 1
+        }
+      ]
+    }
+  ]
+}

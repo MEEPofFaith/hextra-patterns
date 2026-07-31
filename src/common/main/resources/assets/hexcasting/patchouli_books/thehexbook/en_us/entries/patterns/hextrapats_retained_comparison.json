@@ -1,0 +1,91 @@
+{
+  "name": "pages.hextrapats.hextrapats_nocon.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:repeater",
+  "sortnum": 5,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.nocon.intro"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "hextrapats.page.nocon.name",
+      "text": "hextrapats.page.nocon.detail"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:nocon/bool_coerce",
+      "anchor": "hextrapats:nocon/bool_coerce",
+      "input": "A",
+      "output": "A, bool",
+      "text": "hexcasting.page.logic.bool_coerce"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:nocon/eq",
+      "anchor": "hextrapats:nocon/eq",
+      "input": "A, B",
+      "output": "A, B, bool",
+      "text": "hexcasting.page.logic.equals"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:nocon/neq",
+      "anchor": "hextrapats:nocon/neq",
+      "input": "A, B",
+      "output": "A, B, bool",
+      "text": "hexcasting.page.logic.not_equals"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:nocon/greater",
+      "anchor": "hextrapats:nocon/greater",
+      "input": "A, B",
+      "output": "A, B, bool",
+      "text": "hexcasting.page.logic.greater"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:nocon/less",
+      "anchor": "hextrapats:nocon/less",
+      "input": "A, B",
+      "output": "A, B, bool",
+      "text": "hexcasting.page.logic.less"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:nocon/greater_eq",
+      "anchor": "hextrapats:nocon/greater_eq",
+      "input": "A, B",
+      "output": "A, B, bool",
+      "text": "hexcasting.page.logic.greater_eq"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:nocon/less_eq",
+      "anchor": "hextrapats:nocon/less_eq",
+      "input": "A, B",
+      "output": "A, B, bool",
+      "text": "hexcasting.page.logic.less_eq"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:nocon/len_eq",
+      "anchor": "hextrapats:nocon/len_eq",
+      "input": "A, B",
+      "output": "A, B, bool",
+      "text": "hextrapats.page.logic.len_eq"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:nocon/len_neq",
+      "anchor": "hextrapats:nocon/len_neq",
+      "input": "A, B",
+      "output": "A, B, bool",
+      "text": "hextrapats.page.logic.len_neq"
+    }
+  ]
+}

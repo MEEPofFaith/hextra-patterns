@@ -1,0 +1,135 @@
+{
+  "name": "pages.hextrapats.hextrapats_math.title",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:popped_chorus_fruit",
+  "sortnum": 2,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:deg_to_rad",
+      "anchor": "hextrapats:deg_to_rad",
+      "input": "num",
+      "output": "num",
+      "text": "hextrapats.page.math.deg_to_rad"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:rad_to_deg",
+      "anchor": "hextrapats:rad_to_deg",
+      "input": "num",
+      "output": "num",
+      "text": "hextrapats.page.math.rad_to_deg"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:invert",
+      "anchor": "hextrapats:invert",
+      "input": "num/vec",
+      "output": "num/vec",
+      "text": "hextrapats.page.math.invert"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:increment",
+      "anchor": "hextrapats:increment",
+      "input": "num",
+      "output": "num",
+      "text": "hextrapats.page.math.increment"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:decrement",
+      "anchor": "hextrapats:decrement",
+      "input": "num",
+      "output": "num",
+      "text": "hextrapats.page.math.decrement"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:rand_zero",
+      "anchor": "hextrapats:rand_zero",
+      "input": "num",
+      "output": "num",
+      "text": "hextrapats.page.math.rand_zero"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:rand_range",
+      "anchor": "hextrapats:rand_range",
+      "input": "num, num",
+      "output": "num",
+      "text": "hextrapats.page.math.rand_range"
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:scientific_exp",
+      "anchor": "hextrapats:scientific_exp",
+      "input": "num/vec",
+      "output": "num/vec",
+      "text": "hextrapats.page.math.scientific_exp",
+      "patterns": [
+        {
+          "startdir": "SOUTH_EAST",
+          "signature": "waqe",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "SOUTH_EAST",
+          "signature": "waqeq",
+          "q": 0,
+          "r": -1
+        }, {
+          "startdir": "SOUTH_EAST",
+          "signature": "waqeqe",
+          "q": 1,
+          "r": -1
+        }, {
+          "startdir": "NORTH_EAST",
+          "signature": "wdeq",
+          "q": -1,
+          "r": 1
+        }, {
+          "startdir": "NORTH_EAST",
+          "signature": "wdeqe",
+          "q": 0,
+          "r": 1
+        }, {
+          "startdir": "NORTH_EAST",
+          "signature": "wdeqeq",
+          "q": 1,
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:approach",
+      "anchor": "hextrapats:approach",
+      "input": "num, num, num",
+      "output": "num",
+      "text": "hextrapats.page.math.approach"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:angle_dist",
+      "anchor": "hextrapats:angle_dist",
+      "input": "num, num",
+      "output": "num",
+      "text": "hextrapats.page.math.angle_dist"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextrapats:angle_approach",
+      "anchor": "hextrapats:angle_approach",
+      "input": "num, num, num",
+      "output": "num",
+      "text": "hextrapats.page.math.angle_approach"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.math.angle_approach.examples"
+    }
+  ]
+}

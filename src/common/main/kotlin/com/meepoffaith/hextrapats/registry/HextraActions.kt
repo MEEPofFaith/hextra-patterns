@@ -101,10 +101,9 @@ object HextraActions : HextrapatsRegistrar<ActionRegistryEntry>(
     val FALSE_EVAL = make("false_eval", HexDir.SOUTH_EAST, "deaqqdded", OpConditionalEval(false))
     val TRUE_HALT = make("true_halt", HexDir.SOUTH_WEST, "aqdeedded", OpConditionalHalt(true))
     val FALSE_HALT = make("false_halt", HexDir.SOUTH_WEST, "aqdeeaaqa", OpConditionalHalt(false))
+    val NULL_EXEC = make("null_eval", HexDir.SOUTH_EAST, "wawaadq", OpNullExecute)
     val STACK_FOREACH = make("stack_for_each", HexDir.WEST, "aawdadad", OpStackForEach(false))
-    val STACK_INDEX_FOREACH = make("stack_indexed_for_each", HexDir.WEST, "aawdadaddqdq", OpStackForEach(true))
-
-    val NULL_EXEC = make("nulls/exec", HexDir.SOUTH_EAST, "wawaadq", OpNullExecute)
+    val STACK_INDEXED_FOREACH = make("stack_indexed_for_each", HexDir.WEST, "aawdadaddqdq", OpStackForEach(true))
 
     val SINK_IOTA = make("capsizing", HexDir.WEST, "ddadeq", OpSink(false))
     val SINK_IOTA_COPY = make("capsizing/copy", HexDir.EAST, "aadaqe", OpSink(true))
