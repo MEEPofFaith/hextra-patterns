@@ -17,7 +17,7 @@ object OpListToSet : ConstMediaAction {
             if(IotaMap.checkType(iota)){
                 map.addIota(iota)
             }else{
-                throw MishapInvalidIota.of(iota, 0, "hextrapats:set_item_list")
+                throw MishapInvalidIota.of(iotas, 0, "hextrapats:set_item_list")
             }
         }
         return map.asActionResult()
