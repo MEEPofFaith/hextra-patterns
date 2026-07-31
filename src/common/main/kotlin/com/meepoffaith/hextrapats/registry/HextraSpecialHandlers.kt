@@ -3,6 +3,7 @@ package com.meepoffaith.hextrapats.registry
 import at.petrak.hexcasting.api.casting.castables.SpecialHandler
 import at.petrak.hexcasting.common.lib.HexRegistries
 import at.petrak.hexcasting.xplat.IXplatAbstractions
+import com.meepoffaith.hextrapats.casting.actions.eval.SpecialHandlerIndexedForEach
 import com.meepoffaith.hextrapats.casting.handlers.ScientificExponent
 import com.meepoffaith.hextrapats.casting.handlers.Vector1
 import com.meepoffaith.hextrapats.casting.handlers.VectorX
@@ -18,6 +19,7 @@ object HextraSpecialHandlers : HextrapatsRegistrar<SpecialHandler.Factory<*>>(
     val VEC_Z = make("vec_z", VectorZ.Factory())
     val VEC_1 = make("vec_1", Vector1.Factory())
     val SCI_EXP = make("scientific_exp", ScientificExponent.Factory())
+    val INDEXED_FOR_EACH = make("indexed_for_each", SpecialHandlerIndexedForEach.Factory())
 
     private fun make(name: String, handler: SpecialHandler.Factory<*>): SpecialHandler.Factory<*> {
         register(name) { handler }
