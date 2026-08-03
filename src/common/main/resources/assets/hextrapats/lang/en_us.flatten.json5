@@ -306,7 +306,8 @@
       vec_y: "Vector Reflection: (0, %s, 0)",
       vec_z: "Vector Reflection: (0, 0, %s)",
       vec_1: "Vector Reflection: (%s, %s, %s)",
-      scientific_exp: "Scientific Purification: 10^%s"
+      scientific_exp: "Scientific Purification: 10^%s",
+      indexed_for_each: "Djehuty's Gambit: %s",
     },
     "iota.hextrapats:": {
       set: {
