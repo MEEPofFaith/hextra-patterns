@@ -16,14 +16,14 @@ import net.minecraft.network.chat.Component
 import net.minecraft.world.phys.Vec3
 import kotlin.math.pow
 
-class ScientificExponent(val exp: Int) : SpecialHandler{
+class SpecialHandlerScientificExponent(val exp: Int) : SpecialHandler{
     override fun act(): Action{
         return InnerAction(exp)
     }
 
     override fun getName(): Component{
-        val num = Action.DOUBLE_FORMATTER.format(exp)
-        return HextraUtils.specialHandlerLang(HextraSpecialHandlers.SCI_EXP).asTranslatedComponent(num).lightPurple
+        return HextraUtils.specialHandlerLang(HextraSpecialHandlers.SCI_EXP)
+            .asTranslatedComponent(Action.DOUBLE_FORMATTER.format(exp)).lightPurple
     }
 
     class InnerAction(val exp: Int) : ConstMediaAction{
@@ -38,8 +38,8 @@ class ScientificExponent(val exp: Int) : SpecialHandler{
         }
     }
 
-    class Factory : SpecialHandler.Factory<ScientificExponent> {
-        override fun tryMatch(pattern: HexPattern, env: CastingEnvironment): ScientificExponent? {
+    class Factory : SpecialHandler.Factory<SpecialHandlerScientificExponent> {
+        override fun tryMatch(pattern: HexPattern, env: CastingEnvironment): SpecialHandlerScientificExponent? {
             val sig = pattern.anglesSignature()
             if(sig.startsWith("waqe") || sig.startsWith("wdeq")){
                 val divide = sig.startsWith("wdeq")
@@ -51,7 +51,7 @@ class ScientificExponent(val exp: Int) : SpecialHandler{
                     }
                     exponent++
                 }
-                return ScientificExponent(exponent * (if (divide) -1 else 1))
+                return SpecialHandlerScientificExponent(exponent * (if (divide) -1 else 1))
             }
             return null
         }

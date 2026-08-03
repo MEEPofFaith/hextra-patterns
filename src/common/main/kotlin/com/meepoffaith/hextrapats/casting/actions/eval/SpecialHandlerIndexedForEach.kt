@@ -27,7 +27,8 @@ class SpecialHandlerIndexedForEach(val n: Int) : SpecialHandler {
     }
 
     override fun getName(): Component {
-        return HextraUtils.specialHandlerLang(HextraSpecialHandlers.INDEXED_FOR_EACH).asTranslatedComponent(n.toString()).lightPurple
+        return HextraUtils.specialHandlerLang(HextraSpecialHandlers.INDEXED_FOR_EACH)
+            .asTranslatedComponent(n.toString()).lightPurple
     }
 
     class InnerAction(val n: Int) : Action {

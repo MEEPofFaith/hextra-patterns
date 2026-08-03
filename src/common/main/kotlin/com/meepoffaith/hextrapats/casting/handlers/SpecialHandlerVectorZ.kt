@@ -15,30 +15,30 @@ import com.meepoffaith.hextrapats.util.HextraUtils.numericalReflection
 import net.minecraft.network.chat.Component
 import net.minecraft.world.phys.Vec3
 
-class VectorX(val x: Double) : SpecialHandler{
+class SpecialHandlerVectorZ(val z: Double) : SpecialHandler{
     override fun act(): Action{
-        return InnerAction(x)
+        return InnerAction(z)
     }
 
-    override fun getName(): Component {
-        val num = Action.DOUBLE_FORMATTER.format(x)
-        return HextraUtils.specialHandlerLang(HextraSpecialHandlers.VEC_X).asTranslatedComponent(num).lightPurple
+    override fun getName(): Component{
+        return HextraUtils.specialHandlerLang(HextraSpecialHandlers.VEC_Z)
+            .asTranslatedComponent(Action.DOUBLE_FORMATTER.format(z)).lightPurple
     }
 
-    class InnerAction(val x: Double) : ConstMediaAction{
+    class InnerAction(val z: Double) : ConstMediaAction{
         override val argc = 0
         override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
-            return Vec3(x, 0.0, 0.0).asActionResult
+            return Vec3(0.0, 0.0, z).asActionResult
         }
     }
 
-    class Factory : SpecialHandler.Factory<VectorX>{
-        override fun tryMatch(pattern: HexPattern, env: CastingEnvironment): VectorX? {
+    class Factory : SpecialHandler.Factory<SpecialHandlerVectorZ>{
+        override fun tryMatch(pattern: HexPattern, env: CastingEnvironment): SpecialHandlerVectorZ? {
             val sig = pattern.anglesSignature()
-            if(sig.startsWith("aeaqaa") || sig.startsWith("aqdedd")){
+            if(sig.startsWith("deaqaa") || sig.startsWith("dqdedd")){
                 val num = numericalReflection(sig.substring(6)) *
-                        (if (sig.startsWith("aqdedd")) -1.0 else 1.0)
-                return VectorX(num)
+                        (if (sig.startsWith("dqdedd")) -1.0 else 1.0)
+                return SpecialHandlerVectorZ(num)
             } else {
                 return null
             }
