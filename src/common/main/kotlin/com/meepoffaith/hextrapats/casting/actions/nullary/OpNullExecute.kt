@@ -10,8 +10,6 @@ import at.petrak.hexcasting.api.casting.iota.NullIota
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
 import at.petrak.hexcasting.common.casting.actions.eval.OpEval
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds
-import com.mojang.datafixers.DataFix.checked
-import jdk.incubator.vector.VectorShuffle.iota
 
 object OpNullExecute : Action {
     override fun operate(

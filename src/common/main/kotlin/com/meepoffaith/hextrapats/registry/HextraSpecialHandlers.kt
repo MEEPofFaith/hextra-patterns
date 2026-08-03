@@ -4,11 +4,7 @@ import at.petrak.hexcasting.api.casting.castables.SpecialHandler
 import at.petrak.hexcasting.common.lib.HexRegistries
 import at.petrak.hexcasting.xplat.IXplatAbstractions
 import com.meepoffaith.hextrapats.casting.actions.eval.SpecialHandlerIndexedForEach
-import com.meepoffaith.hextrapats.casting.handlers.SpecialHandlerScientificExponent
-import com.meepoffaith.hextrapats.casting.handlers.SpecialHandlerVector1
-import com.meepoffaith.hextrapats.casting.handlers.SpecialHandlerVectorX
-import com.meepoffaith.hextrapats.casting.handlers.SpecialHandlerVectorY
-import com.meepoffaith.hextrapats.casting.handlers.SpecialHandlerVectorZ
+import com.meepoffaith.hextrapats.casting.handlers.*
 
 object HextraSpecialHandlers : HextrapatsRegistrar<SpecialHandler.Factory<*>>(
     HexRegistries.SPECIAL_HANDLER,

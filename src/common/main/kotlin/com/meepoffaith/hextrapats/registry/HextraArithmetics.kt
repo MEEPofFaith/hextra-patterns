@@ -3,11 +3,7 @@ package com.meepoffaith.hextrapats.registry
 import at.petrak.hexcasting.api.casting.arithmetic.Arithmetic
 import at.petrak.hexcasting.common.lib.HexRegistries
 import at.petrak.hexcasting.common.lib.hex.HexArithmetics
-import com.meepoffaith.hextrapats.casting.arithmetic.BoolArithmetic
-import com.meepoffaith.hextrapats.casting.arithmetic.NumArithmetic
-import com.meepoffaith.hextrapats.casting.arithmetic.SetArithmetic
-import com.meepoffaith.hextrapats.casting.arithmetic.Vec3Arithmetic
-import com.meepoffaith.hextrapats.casting.arithmetic.Vec3BoolArithmetic
+import com.meepoffaith.hextrapats.casting.arithmetic.*
 
 object HextraArithmetics : HextrapatsRegistrar<Arithmetic>(
     HexRegistries.ARITHMETIC,
