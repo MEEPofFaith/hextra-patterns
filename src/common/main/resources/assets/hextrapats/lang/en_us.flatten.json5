@@ -145,9 +145,9 @@
         true_eval: "Casts a pattern or list of patterns like $(l:patterns/meta#hexcasting:eval)$(action)Hermes' Gambit/$ if the next iota from the top of the stack is $(l:patterns/logic#hexcasting:bool_coerce)$(thing)considered $(action)True $(thing)by Nature/$.",
         false_eval: "Casts a pattern or list of patterns like $(l:patterns/meta#hexcasting:eval)$(action)Hermes' Gambit/$ if the next iota from the top of the stack is $(l:patterns/logic#hexcasting:bool_coerce)$(thing)considered $(action)False $(thing)by Nature/$.",
         null_eval: "If the first argument is not $(l:casting/influences)$(thing)Null/$, returns it. Otherwise, executes the second argument, much like $(l:patterns/meta#hexcasting:eval)$(action)Hermes' Gambit/$.",
-        indexed_for_each: "Casts like $(l:patterns/meta#hexcasting:for_each)$(action)Thoth's Gambit/$, however the new stack for each element additionally has the index of that element added to the top.",
-        stack_for_each: "Casts like $(l:patterns/meta#hexcasting:for_each)$(action)Thoth's Gambit/$, however each sub-execution operates on the main stack instead of copies of the stack.",
-        stack_indexed_for_each: "Casts like $(l:patterns/hextrapats_meta#hextrapats:indexed_for_each)$(action)Djehuty's Gambit/$, however each sub-execution operates on the main stack instead of copies of the stack."
+        indexed_for_each: "A family of patterns that casts like $(l:patterns/meta#hexcasting:for_each)$(action)Thoth's Gambit/$, however for each sub-stack the index of the data is pushed also pushed.",
+        stack_for_each: "Casts similarly to $(l:patterns/meta#hexcasting:for_each)$(action)Thoth's Gambit/$, however it does not operate on sub-stacks. Rather, everything occurs on the original stack.",
+        stack_indexed_for_each: "Casts similarly to $(l:patterns/hextrapats_meta#hextrapats:indexed_for_each)$(action)Djehuty's Gambit/$, however it does not operate on sub-stacks. Rather, everything occurs on the original stack."
       },
       stackmanip: {
         capsizing: "Sends the iota on the top of the stack to the bottom of the stack.",
