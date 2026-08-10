@@ -7,11 +7,7 @@ import at.petrak.hexcasting.api.casting.getEntity
 import at.petrak.hexcasting.api.casting.getVec3
 import at.petrak.hexcasting.api.casting.iota.BooleanIota
 import at.petrak.hexcasting.api.casting.iota.Iota
-import com.meepoffaith.hextrapats.casting.iota.DoubleSet
-import com.meepoffaith.hextrapats.casting.iota.DoubleSetIota
-import com.meepoffaith.hextrapats.casting.iota.EntitySetIota
-import com.meepoffaith.hextrapats.casting.iota.VecSet
-import com.meepoffaith.hextrapats.casting.iota.VecSetIota
+import com.meepoffaith.hextrapats.casting.iota.*
 import com.meepoffaith.hextrapats.util.HextraUtils.asActionResult
 import com.meepoffaith.hextrapats.util.HextraUtils.getSet
 import com.meepoffaith.hextrapats.util.MultiPreds.SET_OP

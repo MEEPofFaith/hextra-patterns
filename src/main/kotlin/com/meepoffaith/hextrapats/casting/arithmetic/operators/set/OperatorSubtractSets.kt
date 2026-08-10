@@ -6,7 +6,6 @@ import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.iota.Iota
 import com.meepoffaith.hextrapats.casting.iota.DoubleSet
 import com.meepoffaith.hextrapats.casting.iota.VecSet
-import com.meepoffaith.hextrapats.util.HextraUtils.asActionResult
 import com.meepoffaith.hextrapats.util.HextraUtils.getEntitySet
 import com.meepoffaith.hextrapats.util.HextraUtils.getNumSet
 import com.meepoffaith.hextrapats.util.HextraUtils.getSet

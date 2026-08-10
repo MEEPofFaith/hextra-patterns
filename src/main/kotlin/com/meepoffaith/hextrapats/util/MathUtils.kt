@@ -4,7 +4,7 @@ import at.petrak.hexcasting.api.casting.iota.DoubleIota
 import net.minecraft.util.math.Vec3d
 import kotlin.math.acos
 import kotlin.math.min
-import kotlin.math.roundToInt
+import kotlin.math.roundToLong
 
 
 object MathUtils {
@@ -34,15 +34,35 @@ object MathUtils {
         return acos(dot / len2)
     }
 
-    fun roundToTolerance(num: Double): Double{
-        return (num / DoubleIota.TOLERANCE).roundToInt() * DoubleIota.TOLERANCE
+    fun Double.round(interval: Double): Double{
+        return (this / interval).roundToLong() * interval
     }
 
-    fun roundToTolerance(v: Vec3d): Vec3d{
+    fun Double.roundToTolerance(): Double{
+        return this.round(DoubleIota.TOLERANCE)
+    }
+
+    fun Vec3d.round(): Vec3d{
         return Vec3d(
-            roundToTolerance(v.getX()),
-            roundToTolerance(v.getY()),
-            roundToTolerance(v.getZ())
+            this.x.roundToLong().toDouble(),
+            this.y.roundToLong().toDouble(),
+            this.z.roundToLong().toDouble()
+        )
+    }
+
+    fun Vec3d.round(interval: Double): Vec3d{
+        return Vec3d(
+            this.x.round(interval),
+            this.y.round(interval),
+            this.z.round(interval)
+        )
+    }
+
+    fun Vec3d.roundToTolerance(): Vec3d{
+        return Vec3d(
+            this.x.roundToTolerance(),
+            this.y.roundToTolerance(),
+            this.z.roundToTolerance()
         )
     }
 }

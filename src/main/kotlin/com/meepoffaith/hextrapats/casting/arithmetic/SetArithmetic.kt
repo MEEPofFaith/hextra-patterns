@@ -5,14 +5,7 @@ import at.petrak.hexcasting.api.casting.arithmetic.Arithmetic.*
 import at.petrak.hexcasting.api.casting.arithmetic.engine.InvalidOperatorException
 import at.petrak.hexcasting.api.casting.arithmetic.operator.Operator
 import at.petrak.hexcasting.api.casting.math.HexPattern
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorAddSets
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorAmount
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorDisjunction
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorExists
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorInsert
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorIntersection
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorRemove
-import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.OperatorSubtractSets
+import com.meepoffaith.hextrapats.casting.arithmetic.operators.set.*
 import com.meepoffaith.hextrapats.init.Patterns.SET_INSERT_RET
 import com.meepoffaith.hextrapats.init.Patterns.SET_REMOVE_RET
 

@@ -56,6 +56,8 @@ object Patterns {
     val VEC_SET_X = register("vec/set/x", "eqqqqqawwa", HexDir.EAST)
     val VEC_SET_Y = register("vec/set/y", "eqqqqqawww", HexDir.EAST)
     val VEC_SET_Z = register("vec/set/z", "eqqqqqawwd", HexDir.EAST)
+    val ROUND_INT = register("round/int", "qdwae", HexDir.EAST)
+    val ROUND_EXACT = register("round/exact", "eawdq", HexDir.EAST)
 
     fun init(){
         register("deg_to_rad", "qqqqqdwdq", HexDir.WEST, OpDegRad)

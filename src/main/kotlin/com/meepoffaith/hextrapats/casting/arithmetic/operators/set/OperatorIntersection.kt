@@ -1,7 +1,6 @@
 package com.meepoffaith.hextrapats.casting.arithmetic.operators.set
 
 import at.petrak.hexcasting.api.casting.arithmetic.operator.OperatorBasic
-import at.petrak.hexcasting.api.casting.asActionResult
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.iota.Iota
 import com.meepoffaith.hextrapats.casting.iota.DoubleSet

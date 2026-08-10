@@ -10,11 +10,7 @@ import at.petrak.hexcasting.api.casting.iota.Vec3Iota
 import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidIota
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
 import at.petrak.hexcasting.xplat.IXplatAbstractions
-import com.meepoffaith.hextrapats.casting.iota.DoubleSet
-import com.meepoffaith.hextrapats.casting.iota.DoubleSetIota
-import com.meepoffaith.hextrapats.casting.iota.EntitySetIota
-import com.meepoffaith.hextrapats.casting.iota.VecSet
-import com.meepoffaith.hextrapats.casting.iota.VecSetIota
+import com.meepoffaith.hextrapats.casting.iota.*
 import com.mojang.datafixers.util.Either
 import net.minecraft.entity.Entity
 import net.minecraft.util.math.Vec3d
