@@ -21,7 +21,7 @@ import com.meepoffaith.hextrapats.init.Patterns.INVERT
 import com.meepoffaith.hextrapats.init.Patterns.ROUND_EXACT
 import com.meepoffaith.hextrapats.init.Patterns.ROUND_INT
 import com.meepoffaith.hextrapats.util.MathUtils
-import com.meepoffaith.hextrapats.util.MathUtils.round
+import com.meepoffaith.hextrapats.util.MathUtils.roundToInterval
 import com.meepoffaith.hextrapats.util.MultiPreds
 import java.util.function.DoubleBinaryOperator
 import java.util.function.DoubleUnaryOperator
@@ -52,7 +52,7 @@ class NumArithmetic : Arithmetic {
         ANGLE_DIST -> make2{ a, b -> MathUtils.angleDist(a, b) }
         ANGLE_APPROACH -> OperatorTurn
         ROUND_INT -> make1{ d -> d.roundToLong().toDouble() }
-        ROUND_EXACT -> make2{ a, b -> a.round(b) }
+        ROUND_EXACT -> make2{ a, b -> a.roundToInterval(b) }
         else -> throw InvalidOperatorException("$pattern is not a valid operator in Arithmetic $this.")
     }
 

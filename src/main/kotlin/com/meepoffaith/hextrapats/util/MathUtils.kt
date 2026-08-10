@@ -34,12 +34,12 @@ object MathUtils {
         return acos(dot / len2)
     }
 
-    fun Double.round(interval: Double): Double{
+    fun Double.roundToInterval(interval: Double): Double{
         return (this / interval).roundToLong() * interval
     }
 
     fun Double.roundToTolerance(): Double{
-        return this.round(DoubleIota.TOLERANCE)
+        return this.roundToInterval(DoubleIota.TOLERANCE)
     }
 
     fun Vec3d.round(): Vec3d{
@@ -50,11 +50,11 @@ object MathUtils {
         )
     }
 
-    fun Vec3d.round(interval: Double): Vec3d{
+    fun Vec3d.roundToInterval(interval: Double): Vec3d{
         return Vec3d(
-            this.x.round(interval),
-            this.y.round(interval),
-            this.z.round(interval)
+            this.x.roundToInterval(interval),
+            this.y.roundToInterval(interval),
+            this.z.roundToInterval(interval)
         )
     }
 

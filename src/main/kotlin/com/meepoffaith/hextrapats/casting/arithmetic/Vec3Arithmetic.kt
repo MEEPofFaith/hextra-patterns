@@ -36,6 +36,7 @@ import com.meepoffaith.hextrapats.init.Patterns.VEC_SET_Y
 import com.meepoffaith.hextrapats.init.Patterns.VEC_SET_Z
 import com.meepoffaith.hextrapats.util.MathUtils
 import com.meepoffaith.hextrapats.util.MathUtils.round
+import com.meepoffaith.hextrapats.util.MathUtils.roundToInterval
 import com.meepoffaith.hextrapats.util.MultiPreds
 import net.minecraft.util.math.Vec3d
 import java.util.function.BiFunction
@@ -114,7 +115,7 @@ class Vec3Arithmetic : Arithmetic {
         VEC_SET_Y -> makeVecNumToVec{ v, y -> Vec3d(v.x, y, v.z) }
         VEC_SET_Z -> makeVecNumToVec{ v, z -> Vec3d(v.x, v.y, z) }
         ROUND_INT -> makeVecToVec{ v -> v.round() }
-        ROUND_EXACT -> makeVecNumToVec{ v, n -> v.round(n) }
+        ROUND_EXACT -> makeVecNumToVec{ v, n -> v.roundToInterval(n) }
         else -> throw InvalidOperatorException("$pattern is not a valid operator in Arithmetic $this.")
     }
 
