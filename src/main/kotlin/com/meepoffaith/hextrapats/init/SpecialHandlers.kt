@@ -12,6 +12,7 @@ object SpecialHandlers {
     val VEC_Z = registerSpecialHandler("vec_z", VectorZ.Factory())
     val VEC_1 = registerSpecialHandler("vec_1", Vector1.Factory())
     val SCI_EXP = registerSpecialHandler("scientific_exp", ScientificExponent.Factory())
+    val DUPLICATE_AT = registerSpecialHandler("duplicate_at", DuplicateAt.Factory())
 
     fun init(){}
 

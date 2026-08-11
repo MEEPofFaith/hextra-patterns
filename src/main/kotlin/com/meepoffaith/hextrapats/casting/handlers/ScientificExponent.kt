@@ -17,11 +17,11 @@ import net.minecraft.util.math.Vec3d
 import kotlin.math.pow
 
 class ScientificExponent(val exp: Int) : SpecialHandler{
-    override fun act(): Action? {
+    override fun act(): Action{
         return InnerAction(exp)
     }
 
-    override fun getName(): Text? {
+    override fun getName(): Text{
         val num = Action.DOUBLE_FORMATTER.format(exp)
         return HextraUtils.specialHandlerLang(SpecialHandlers.SCI_EXP).asTranslatedComponent(num).lightPurple
     }

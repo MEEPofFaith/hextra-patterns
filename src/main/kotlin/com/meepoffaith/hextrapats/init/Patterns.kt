@@ -114,7 +114,7 @@ object Patterns {
         register("nulls/coalesce", "wawaa", HexDir.SOUTH_EAST, OpNullCoalesce)
         register("nulls/exec", "wawaadq", HexDir.SOUTH_EAST, OpNullExecute)
 
-        register("duplicate_at", "wwddad", HexDir.WEST, OpDuplicateAt)
+        //register("duplicate_at", "wwddad", HexDir.WEST, OpDuplicateAt)
         register("capsizing", "ddadeq", HexDir.WEST, OpSink(false))
         register("capsizing/copy", "aadaqe", HexDir.EAST, OpSink(true))
         register("dredging", "ddadaq", HexDir.WEST, OpFloat(false))
