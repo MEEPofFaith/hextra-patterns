@@ -16,7 +16,7 @@ import net.minecraft.text.Text
 import net.minecraft.util.math.Vec3d
 import kotlin.math.pow
 
-class ScientificExponent(val exp: Int) : SpecialHandler{
+class SpecialHandlerScientificExponent(val exp: Int) : SpecialHandler{
     override fun act(): Action{
         return InnerAction(exp)
     }
@@ -38,8 +38,8 @@ class ScientificExponent(val exp: Int) : SpecialHandler{
         }
     }
 
-    class Factory : SpecialHandler.Factory<ScientificExponent> {
-        override fun tryMatch(pattern: HexPattern, env: CastingEnvironment): ScientificExponent? {
+    class Factory : SpecialHandler.Factory<SpecialHandlerScientificExponent> {
+        override fun tryMatch(pattern: HexPattern, env: CastingEnvironment): SpecialHandlerScientificExponent? {
             val sig = pattern.anglesSignature()
             if(sig.startsWith("waqe") || sig.startsWith("wdeq")){
                 val divide = sig.startsWith("wdeq")
@@ -51,7 +51,7 @@ class ScientificExponent(val exp: Int) : SpecialHandler{
                     }
                     exponent++
                 }
-                return ScientificExponent(exponent * (if (divide) -1 else 1))
+                return SpecialHandlerScientificExponent(exponent * (if (divide) -1 else 1))
             }
             return null
         }

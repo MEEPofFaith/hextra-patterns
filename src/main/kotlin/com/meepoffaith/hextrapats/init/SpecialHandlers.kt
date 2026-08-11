@@ -7,12 +7,12 @@ import com.meepoffaith.hextrapats.casting.handlers.*
 import net.minecraft.registry.Registry
 
 object SpecialHandlers {
-    val VEC_X = registerSpecialHandler("vec_x", VectorX.Factory())
-    val VEC_Y = registerSpecialHandler("vec_y", VectorY.Factory())
-    val VEC_Z = registerSpecialHandler("vec_z", VectorZ.Factory())
-    val VEC_1 = registerSpecialHandler("vec_1", Vector1.Factory())
-    val SCI_EXP = registerSpecialHandler("scientific_exp", ScientificExponent.Factory())
-    val DUPLICATE_AT = registerSpecialHandler("duplicate_at", DuplicateAt.Factory())
+    val VEC_X = registerSpecialHandler("vec_x", SpecialHandlerVectorX.Factory())
+    val VEC_Y = registerSpecialHandler("vec_y", SpecialHandlerVectorY.Factory())
+    val VEC_Z = registerSpecialHandler("vec_z", SpecialHandlerVectorZ.Factory())
+    val VEC_1 = registerSpecialHandler("vec_1", SpecialHandlerVector1.Factory())
+    val SCI_EXP = registerSpecialHandler("scientific_exp", SpecialHandlerScientificExponent.Factory())
+    val DUPLICATE_AT = registerSpecialHandler("duplicate_at", SpecialHandlerDuplicateAt.Factory())
 
     fun init(){}
 

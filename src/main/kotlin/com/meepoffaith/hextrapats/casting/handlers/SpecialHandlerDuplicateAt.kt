@@ -12,7 +12,7 @@ import com.meepoffaith.hextrapats.init.SpecialHandlers
 import com.meepoffaith.hextrapats.util.HextraUtils
 import net.minecraft.text.Text
 
-class DuplicateAt(val depth: Int) : SpecialHandler {
+class SpecialHandlerDuplicateAt(val depth: Int) : SpecialHandler {
     override fun act(): Action{
         return InnerAction(depth)
     }
@@ -30,15 +30,15 @@ class DuplicateAt(val depth: Int) : SpecialHandler {
         }
     }
 
-    class Factory : SpecialHandler.Factory<DuplicateAt>{
-        override fun tryMatch(pattern: HexPattern, env: CastingEnvironment): DuplicateAt? {
+    class Factory : SpecialHandler.Factory<SpecialHandlerDuplicateAt>{
+        override fun tryMatch(pattern: HexPattern, env: CastingEnvironment): SpecialHandlerDuplicateAt? {
             val sig = pattern.anglesSignature()
             if(sig.endsWith("wddad")){
                 val chars = sig.substring(0, sig.length - 5).toCharArray()
                 for(c in chars){
                     if(c != 'w') return null
                 }
-                return DuplicateAt(chars.size)
+                return SpecialHandlerDuplicateAt(chars.size)
             }
             return null
         }
