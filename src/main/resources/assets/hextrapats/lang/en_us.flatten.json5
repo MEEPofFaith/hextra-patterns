@@ -164,7 +164,11 @@
         capsizing: "Sends the iota on the top of the stack to the bottom of the stack.",
         "capsizing/copy": "Like $(l:patterns/hextrapats_stackmanip#hextrapats:capsizing)$(action)Capsizing Gambit/$, but copies the iota instead of moving it.",
         dredging: "Pulls the iota at the bottom of the stack to the top of the stack.",
-        "dredging/copy": "Like $(l:patterns/hextrapats_stackmanip#hextrapats:dredging)$(action)Dredging Gambit/$, but copies the iota instead of moving it."
+        "dredging/copy": "Like $(l:patterns/hextrapats_stackmanip#hextrapats:dredging)$(action)Dredging Gambit/$, but copies the iota instead of moving it.",
+        duplicate_at: {
+          "": "A family of patterns that duplicates the Nth iota from the top of the stack, where N is the length of the head.",
+          details: "The first pattern is identical to $(l:patterns/stackmanip#hexcasting:duplicate)$(action)Gemini Decomposition/$.$(br2)The second pattern, with a head length of 1, duplicates the first iota from the top. [1, 0] becomes [1, 1, 0].$(br2)The third pattern follows this. [2, 1, 0] becomes [2, 2, 1, 0]."
+        }
       }
     }
   },
@@ -284,7 +288,8 @@
         capsizing: "Capsizing Gambit",
         "capsizing/copy": "Capsizing Gambit II",
         dredging: "Dredging Gambit",
-        "dredging/copy": "Dredging Gambit II"
+        "dredging/copy": "Dredging Gambit II",
+        duplicate_at: "Angler's Gambit"
       },
 
       "book.hextrapats:": {
@@ -335,7 +340,8 @@
       vec_y: "Vector Reflection: (0, %s, 0)",
       vec_z: "Vector Reflection: (0, 0, %s)",
       vec_1: "Vector Reflection: (%s, %s, %s)",
-      scientific_exp: "Scientific Purification: 10^%s"
+      scientific_exp: "Scientific Purification: 10^%s",
+      duplicate_at: "Angler's Gambit: %s"
     },
     "iota.hextrapats:": {
       num_set: {

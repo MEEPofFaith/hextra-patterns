@@ -24,7 +24,6 @@ import com.meepoffaith.hextrapats.casting.actions.math.OpRandZero
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullCoalesce
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullExecute
 import com.meepoffaith.hextrapats.casting.actions.sets.*
-import com.meepoffaith.hextrapats.casting.actions.stack.OpDuplicateAt
 import com.meepoffaith.hextrapats.casting.actions.stack.OpFloat
 import com.meepoffaith.hextrapats.casting.actions.stack.OpSink
 import com.meepoffaith.hextrapats.casting.actions.vecmath.*
@@ -114,7 +113,6 @@ object Patterns {
         register("nulls/coalesce", "wawaa", HexDir.SOUTH_EAST, OpNullCoalesce)
         register("nulls/exec", "wawaadq", HexDir.SOUTH_EAST, OpNullExecute)
 
-        //register("duplicate_at", "wwddad", HexDir.WEST, OpDuplicateAt)
         register("capsizing", "ddadeq", HexDir.WEST, OpSink(false))
         register("capsizing/copy", "aadaqe", HexDir.EAST, OpSink(true))
         register("dredging", "ddadaq", HexDir.WEST, OpFloat(false))
