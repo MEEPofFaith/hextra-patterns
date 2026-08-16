@@ -243,6 +243,15 @@
             x: "Coordinate Distillation: X",
             y: "Coordinate Distillation: Y",
             z: "Coordinate Distillation: Z"
+          },
+          "swap/": {
+            xy: "Swapping Purification: XY",
+            yz: "Swapping Purification: YZ",
+            xz: "Swapping Purification: XZ"
+          },
+          "shift/": {
+            left: "Shifting Purification",
+            right: "Shifting Purification II"
           }
         },
         "round/": {
