@@ -26,6 +26,11 @@ import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullExecute
 import com.meepoffaith.hextrapats.casting.actions.sets.*
 import com.meepoffaith.hextrapats.casting.actions.stack.OpFloat
 import com.meepoffaith.hextrapats.casting.actions.stack.OpSink
+import com.meepoffaith.hextrapats.casting.actions.vecmanip.OpVecLeftShift
+import com.meepoffaith.hextrapats.casting.actions.vecmanip.OpVecRightShift
+import com.meepoffaith.hextrapats.casting.actions.vecmanip.OpVecSwapXY
+import com.meepoffaith.hextrapats.casting.actions.vecmanip.OpVecSwapXZ
+import com.meepoffaith.hextrapats.casting.actions.vecmanip.OpVecSwapYZ
 import com.meepoffaith.hextrapats.casting.actions.vecmath.*
 import net.minecraft.registry.Registry
 import net.minecraft.util.math.Vec3d
@@ -117,6 +122,12 @@ object Patterns {
         register("capsizing/copy", "aadaqe", HexDir.EAST, OpSink(true))
         register("dredging", "ddadaq", HexDir.WEST, OpFloat(false))
         register("dredging/copy", "aadade", HexDir.EAST, OpFloat(true))
+
+        register("vec/swap/xy", "eeeqaawede", HexDir.NORTH_WEST, OpVecSwapXY)
+        register("vec/swap/yz", "eeeeqaawdd", HexDir.WEST, OpVecSwapYZ)
+        register("vec/swap/xz", "eeeaddwqaq", HexDir.NORTH_WEST, OpVecSwapXZ)
+        register("vec/shift/left", "eeeeqaaeaa", HexDir.WEST, OpVecLeftShift)
+        register("vec/shift/right", "eeeeaddqdd", HexDir.WEST, OpVecRightShift)
     }
 
     private fun register(name: String, signature: String, startDir: HexDir, action: Action){

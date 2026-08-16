@@ -6,6 +6,7 @@
     "hextrapats_vec_literals.title": "Vector Literals",
     "hextrapats_math.title": "Hextra Math",
     "hextrapats_vec_math.title": "Hextra Vector Math",
+    "hextrapats_vecmanip.title": "Vector Manipulation",
     "hextrapats_lists.title": "Hextra Lists",
     "hextrapats_sets.title": "Hash Set Manipulation",
     "hextrapats_meta.title": "Hextra Meta-Evaluation",
@@ -102,8 +103,19 @@
           z: "Converts an angle in radians to a unit vector where Z=0. -X at 0 radians and +Y at pi/4 radians."
         },
         swap_vec_list: "Converts a list of 3 numbers to a vector, or a vector into a list of 3 numbers.",
-        vec_get: "Returns the X, Y, or Z component of a vector.",
-        vec_set: "Overrides a vector's X, Y, or Z component."
+      },
+      vecmanip: {
+        get: "Returns the X, Y, or Z component of a vector.",
+        set: "Overrides a vector's X, Y, or Z component.",
+        "swap/": {
+          xy: "Swaps the X and Y components of a vector.",
+          yz: "Swaps the Y and Z components of a vector.",
+          xz: "Swaps the X and Z components of a vector."
+        },
+        "shift/": {
+          right: "Shifts a vector's components to the right. That is to say, (X, Y, Z) becomes (Z, X, Y).",
+          left: "Shifts a vector's components to the left. That is to say, (X, Y, Z) becomes (Y, Z, X)."
+        }
       },
       lists: {
         "peek/": {
