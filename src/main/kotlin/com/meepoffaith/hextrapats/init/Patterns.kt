@@ -26,11 +26,7 @@ import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullExecute
 import com.meepoffaith.hextrapats.casting.actions.sets.*
 import com.meepoffaith.hextrapats.casting.actions.stack.OpFloat
 import com.meepoffaith.hextrapats.casting.actions.stack.OpSink
-import com.meepoffaith.hextrapats.casting.actions.vecmanip.OpVecLeftShift
-import com.meepoffaith.hextrapats.casting.actions.vecmanip.OpVecRightShift
-import com.meepoffaith.hextrapats.casting.actions.vecmanip.OpVecSwapXY
-import com.meepoffaith.hextrapats.casting.actions.vecmanip.OpVecSwapXZ
-import com.meepoffaith.hextrapats.casting.actions.vecmanip.OpVecSwapYZ
+import com.meepoffaith.hextrapats.casting.actions.vecmanip.*
 import com.meepoffaith.hextrapats.casting.actions.vecmath.*
 import net.minecraft.registry.Registry
 import net.minecraft.util.math.Vec3d
