@@ -49,6 +49,14 @@
     },
     {
       "type": "hexcasting:pattern",
+      "op_id": "hextrapats:swap_vec_list",
+      "anchor": "hextrapats:swap_vec_list",
+      "input": "[num] | vec",
+      "output": "vec | [num]",
+      "text": "hextrapats.page.vecmanip.swap_vec_list"
+    },
+    {
+      "type": "hexcasting:pattern",
       "op_id": "hextrapats:vec/swap/xy",
       "anchor": "hextrapats:vec/swap/xy",
       "input": "vec",
@@ -86,6 +94,29 @@
       "input": "vec",
       "output": "vec",
       "text": "hextrapats.page.vecmanip.shift/right"
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:vec_swizzle",
+      "anchor": "hextrapats:vec_swizzle",
+      "input": "vec",
+      "output": "vec",
+      "text": "hextrapats.page.vecmanip.swizzle",
+      "patterns": [
+        {
+          "startdir": "WEST",
+          "signature": "eeeeqaawddeawdqea"
+        }, {
+          "startdir": "WEST",
+          "signature": "eeeeqaawddeaeqdad"
+        }, {
+          "startdir": "WEST",
+          "signature": "eeeeqaawddeaeww"
+        }, {
+          "startdir": "WEST",
+          "signature": "eeeeqaawddeadadawd"
+        }
+      ]
     }
   ]
 }

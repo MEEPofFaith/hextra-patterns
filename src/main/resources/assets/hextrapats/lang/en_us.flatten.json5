@@ -101,12 +101,12 @@
           x: "Converts an angle in radians to a unit vector where X=0. +Z at 0 radians and +Y at pi/4 radians.",
           y: "Converts an angle in radians to a unit vector where Y=0. +Z at 0 radians and -X at pi/4 radians. I've seen some texts related to this pattern mentioning something called $(thing)F3/$, but I couldn't figure out what that means.",
           z: "Converts an angle in radians to a unit vector where Z=0. -X at 0 radians and +Y at pi/4 radians."
-        },
-        swap_vec_list: "Converts a list of 3 numbers to a vector, or a vector into a list of 3 numbers.",
+        }
       },
       vecmanip: {
         get: "Returns the X, Y, or Z component of a vector.",
         set: "Overrides a vector's X, Y, or Z component.",
+        swap_vec_list: "Converts a list of 3 numbers to a vector, or a vector into a list of 3 numbers.",
         "swap/": {
           xy: "Swaps the X and Y components of a vector.",
           yz: "Swaps the Y and Z components of a vector.",
@@ -362,7 +362,8 @@
       vec_z: "Vector Reflection: (0, 0, %s)",
       vec_1: "Vector Reflection: (%s, %s, %s)",
       scientific_exp: "Scientific Purification: 10^%s",
-      duplicate_at: "Angler's Gambit: %s"
+      duplicate_at: "Angler's Gambit: %s",
+      vec_swizzle: "Swizzling Purification: %s%s%s"
     },
     "iota.hextrapats:": {
       num_set: {
