@@ -115,6 +115,10 @@
         "shift/": {
           right: "Shifts a vector's components to the right. That is to say, (X, Y, Z) becomes (Z, X, Y).",
           left: "Shifts a vector's components to the left. That is to say, (X, Y, Z) becomes (Y, Z, X)."
+        },
+        "swizzle": {
+          "": "A family of patterns that \"swizzles\" a vector's components based on the 3 sections of its tail.",
+          details: "A leftward point represents X, a straight line is Y, and a rightward point is Z.$(br2)Top-left is XYZ, which doesn't affect the vector.<br>Top-right is YXX, so (1, 2, 3) becomes (2, 2, 1).<br>Bottom-left is YYY, so (1, 2, 3) becomes (2, 2, 2).<br>Bottom-right is ZZX, so (1, 2, 3) becomes (3, 3, 1)."
         }
       },
       lists: {

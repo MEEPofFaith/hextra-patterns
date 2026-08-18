@@ -117,6 +117,10 @@
           "signature": "eeeeqaawddeadadawd"
         }
       ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.vecmanip.swizzle.details"
     }
   ]
 }
