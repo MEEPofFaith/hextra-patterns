@@ -201,11 +201,6 @@
           exec: "Coalescing Gambit"
         },
 
-        vec_x: "Vector Reflection X II",
-        vec_y: "Vector Reflection Y II",
-        vec_z: "Vector Reflection Z II",
-        vec_1: "Vector Reflection 1 II",
-
         deg_to_rad: "Radian Purification",
         rad_to_deg: "Degree Purification",
         invert: "Reflection Purification",
@@ -234,6 +229,10 @@
           z: "Roll Purification"
         },
         "vec/": {
+          x: "Vector Reflection X II",
+          y: "Vector Reflection Y II",
+          z: "Vector Reflection Z II",
+          "1": "Vector Reflection 1 II",
           "get/": {
             x: "Coordinate Purification: X",
             y: "Coordinate Purification: Y",
@@ -252,7 +251,8 @@
           "shift/": {
             left: "Shifting Purification",
             right: "Shifting Purification II"
-          }
+          },
+          swizzle: "Swizzling Purification"
         },
         "round/": {
           int: "Rounding Purification",
@@ -319,12 +319,11 @@
         len_eq: "Length Equality Dstl.",
         len_neq: "Length Inequality Dstl.",
 
-        vec_x: "Vector Rfln. X II",
-        vec_y: "Vector Rfln. Y II",
-        vec_z: "Vector Rfln. Z II",
-        vec_1: "Vector Rfln. 1 II",
-
         "vec/": {
+          x: "Vector Rfln. X II",
+          y: "Vector Rfln. Y II",
+          z: "Vector Rfln. Z II",
+          "1": "Vector Rfln. 1 II",
           "get/x": "Coordinate Purif.: X/Y/Z",
           "set/x": "Coordinate Dstl.: X/Y/Z",
         },
@@ -357,13 +356,15 @@
       }
     },
     "special.hextrapats:": {
-      vec_x: "Vector Reflection: (%s, 0, 0)",
-      vec_y: "Vector Reflection: (0, %s, 0)",
-      vec_z: "Vector Reflection: (0, 0, %s)",
-      vec_1: "Vector Reflection: (%s, %s, %s)",
+      "vec/": {
+        x: "Vector Reflection: (%s, 0, 0)",
+        y: "Vector Reflection: (0, %s, 0)",
+        z: "Vector Reflection: (0, 0, %s)",
+        "1": "Vector Reflection: (%s, %s, %s)",
+        swizzle: "Swizzling Purification: %s%s%s"
+      },
       scientific_exp: "Scientific Purification: 10^%s",
-      duplicate_at: "Angler's Gambit: %s",
-      vec_swizzle: "Swizzling Purification: %s%s%s"
+      duplicate_at: "Angler's Gambit: %s"
     },
     "iota.hextrapats:": {
       num_set: {

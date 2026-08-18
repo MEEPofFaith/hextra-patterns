@@ -13,8 +13,8 @@
     },
     {
       "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:vec_x",
-      "anchor": "hextrapats:vec_x",
+      "op_id": "hextrapats:vec/x",
+      "anchor": "hextrapats:vec/x",
       "input": "",
       "output": "vector",
       "text": "hextrapats.page.vec_literals.x",
@@ -33,8 +33,8 @@
     },
     {
       "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:vec_y",
-      "anchor": "hextrapats:vec_y",
+      "op_id": "hextrapats:vec/y",
+      "anchor": "hextrapats:vec/y",
       "input": "",
       "output": "vector",
       "text": "hextrapats.page.vec_literals.y",
@@ -53,8 +53,8 @@
     },
     {
       "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:vec_z",
-      "anchor": "hextrapats:vec_z",
+      "op_id": "hextrapats:vec/z",
+      "anchor": "hextrapats:vec/z",
       "input": "",
       "output": "vector",
       "text": "hextrapats.page.vec_literals.z",
@@ -73,8 +73,8 @@
     },
     {
       "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:vec_1",
-      "anchor": "hextrapats:vec_1",
+      "op_id": "hextrapats:vec/1",
+      "anchor": "hextrapats:vec/1",
       "input": "",
       "output": "vector",
       "text": "hextrapats.page.vec_literals.1",

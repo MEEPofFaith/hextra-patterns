@@ -97,8 +97,8 @@
     },
     {
       "type": "hexcasting:manual_pattern",
-      "op_id": "hextrapats:vec_swizzle",
-      "anchor": "hextrapats:vec_swizzle",
+      "op_id": "hextrapats:vec/swizzle",
+      "anchor": "hextrapats:vec/swizzle",
       "input": "vec",
       "output": "vec",
       "text": "hextrapats.page.vecmanip.swizzle",
