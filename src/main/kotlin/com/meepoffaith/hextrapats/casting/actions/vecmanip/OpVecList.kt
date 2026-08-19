@@ -1,4 +1,4 @@
-package com.meepoffaith.hextrapats.casting.actions.vecmath
+package com.meepoffaith.hextrapats.casting.actions.vecmanip
 
 import at.petrak.hexcasting.api.casting.asActionResult
 import at.petrak.hexcasting.api.casting.castables.ConstMediaAction
@@ -17,7 +17,7 @@ object OpVecList : ConstMediaAction {
             listOf(DoubleIota(vec.x), DoubleIota(vec.y), DoubleIota(vec.z)).asActionResult
         }, { list ->
             if(list.size() != 3){
-                throw MishapInvalidIota.of(args[0], 0, "hextrapats:vec_list")
+                throw MishapInvalidIota.Companion.of(args[0], 0, "hextrapats:vec_list")
             }
             val x = list.getAt(0)
             val y = list.getAt(1)
@@ -25,7 +25,7 @@ object OpVecList : ConstMediaAction {
             if(x is DoubleIota && y is DoubleIota && z is DoubleIota){
                 Vec3d(x.double, y.double, z.double).asActionResult
             }else{
-                throw MishapInvalidIota.of(args[0], 0, "hextrapats:vec_list")
+                throw MishapInvalidIota.Companion.of(args[0], 0, "hextrapats:vec_list")
             }
         })
     }

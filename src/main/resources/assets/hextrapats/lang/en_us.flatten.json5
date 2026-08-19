@@ -107,15 +107,6 @@
         get: "Returns the X, Y, or Z component of a vector.",
         set: "Overrides a vector's X, Y, or Z component.",
         swap_vec_list: "Converts a list of 3 numbers to a vector, or a vector into a list of 3 numbers.",
-        "swap/": {
-          xy: "Swaps the X and Y components of a vector.",
-          yz: "Swaps the Y and Z components of a vector.",
-          xz: "Swaps the X and Z components of a vector."
-        },
-        "shift/": {
-          right: "Shifts a vector's components to the right. That is to say, (X, Y, Z) becomes (Z, X, Y).",
-          left: "Shifts a vector's components to the left. That is to say, (X, Y, Z) becomes (Y, Z, X)."
-        },
         "swizzle": {
           "": "A family of patterns that \"swizzles\" a vector's components based on the 3 sections of its tail.",
           details: "A leftward point represents X, a straight line is Y, and a rightward point is Z.$(br2)Top-left is ZXY, so (1, 2, 3) becomes (3, 1, 2).<br>Top-right is YXX, so (1, 2, 3) becomes (2, 1, 1).<br>Bottom-left is YYY, so (1, 2, 3) becomes (2, 2, 2).<br>Bottom-right is ZZX, so (1, 2, 3) becomes (3, 3, 1)."
@@ -246,15 +237,6 @@
             x: "Coordinate Distillation: X",
             y: "Coordinate Distillation: Y",
             z: "Coordinate Distillation: Z"
-          },
-          "swap/": {
-            xy: "Swapping Purification: XY",
-            yz: "Swapping Purification: YZ",
-            xz: "Swapping Purification: XZ"
-          },
-          "shift/": {
-            left: "Shifting Purification",
-            right: "Shifting Purification II"
           },
           swizzle: "Swizzling Purification"
         },

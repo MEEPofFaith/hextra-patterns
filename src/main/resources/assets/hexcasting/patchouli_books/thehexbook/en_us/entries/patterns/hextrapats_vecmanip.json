@@ -56,46 +56,6 @@
       "text": "hextrapats.page.vecmanip.swap_vec_list"
     },
     {
-      "type": "hexcasting:pattern",
-      "op_id": "hextrapats:vec/swap/xy",
-      "anchor": "hextrapats:vec/swap/xy",
-      "input": "vec",
-      "output": "vec",
-      "text": "hextrapats.page.vecmanip.swap/xy"
-    },
-    {
-      "type": "hexcasting:pattern",
-      "op_id": "hextrapats:vec/swap/yz",
-      "anchor": "hextrapats:vec/swap/yz",
-      "input": "vec",
-      "output": "vec",
-      "text": "hextrapats.page.vecmanip.swap/yz"
-    },
-    {
-      "type": "hexcasting:pattern",
-      "op_id": "hextrapats:vec/swap/xz",
-      "anchor": "hextrapats:vec/swap/xz",
-      "input": "vec",
-      "output": "vec",
-      "text": "hextrapats.page.vecmanip.swap/xz"
-    },
-    {
-      "type": "hexcasting:pattern",
-      "op_id": "hextrapats:vec/shift/left",
-      "anchor": "hextrapats:vec/shift/left",
-      "input": "vec",
-      "output": "vec",
-      "text": "hextrapats.page.vecmanip.shift/left"
-    },
-    {
-      "type": "hexcasting:pattern",
-      "op_id": "hextrapats:vec/shift/right",
-      "anchor": "hextrapats:vec/shift/right",
-      "input": "vec",
-      "output": "vec",
-      "text": "hextrapats.page.vecmanip.shift/right"
-    },
-    {
       "type": "hexcasting:manual_pattern",
       "op_id": "hextrapats:vec/swizzle",
       "anchor": "hextrapats:vec/swizzle",
