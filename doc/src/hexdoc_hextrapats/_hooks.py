@@ -36,7 +36,7 @@ class HextrapatsModPlugin(ModPluginWithBook):
     @property
     @override
     def mod_version(self) -> str:
-        return f"{GRADLE_VERSION}+{MINECRAFT_VERSION}"
+        return f"{MOD_VERSION}+{MINECRAFT_VERSION}"
 
     @property
     @override
