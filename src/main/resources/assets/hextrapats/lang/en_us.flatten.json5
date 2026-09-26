@@ -1,5 +1,6 @@
 {
   "pages.hextrapats":{
+    "hextrapats_basic.title": "Hextra Basic Patterns",
     "hextrapats_consts.title": "Hextra Constants",
     "hextrapats_logic.title": "Hextra Logic",
     "hextrapats_nocon.title": "Non-consuming Logic",
@@ -17,6 +18,12 @@
     page: {
       consts: {
         one: "The left-hand counter-clockwise pattern adds (1, 1, 1) to the stack; the right-hand clockwise pattern adds (-1, -1, -1)."
+      },
+      basic: {
+        "raycast/": {
+          outline: "Like $(l:patterns/basics#hexcasting:raycast)$(action)Archer's Distillation/$, but is able to hit collisionless blocks like tall grass. Costs a negligible amount of _media.",
+          outaxis: "Like $(l:patterns/basics#hexcasting:raycast/axis)$(action)Architect's Distillation/$, but is able to hit collisionless blocks like tall grass. Costs a negligible amount of _media."
+        }
       },
       logic: {
         greater: "If the first vector is longer than the second, return True. Otherwise, return False.",
@@ -185,6 +192,11 @@
       "hextrapats:": {
         haha_ha_one: "Vector Reflection +1",
         eno_ah_ahah: "Vector Reflection -1",
+
+        "raycast/": {
+          outline: "Archer's Distillation II",
+          outaxis: "Architect's Distillation II"
+        },
 
         len_eq: "Length Equality Distillation",
         len_neq: "Length Inequality Distillation",

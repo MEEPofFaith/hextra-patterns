@@ -23,6 +23,8 @@ import com.meepoffaith.hextrapats.casting.actions.math.OpRandRange
 import com.meepoffaith.hextrapats.casting.actions.math.OpRandZero
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullCoalesce
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullExecute
+import com.meepoffaith.hextrapats.casting.actions.raycast.OpOutlineAxisRaycast
+import com.meepoffaith.hextrapats.casting.actions.raycast.OpOutlineRaycast
 import com.meepoffaith.hextrapats.casting.actions.sets.*
 import com.meepoffaith.hextrapats.casting.actions.stack.OpFloat
 import com.meepoffaith.hextrapats.casting.actions.stack.OpSink
@@ -119,6 +121,9 @@ object Patterns {
         register("capsizing/copy", "aadaqe", HexDir.EAST, OpSink(true))
         register("dredging", "ddadaq", HexDir.WEST, OpFloat(false))
         register("dredging/copy", "aadade", HexDir.EAST, OpFloat(true))
+
+        register("raycast/outline", "wqaaeaa", HexDir.EAST, OpOutlineRaycast)
+        register("raycast/outaxis", "weddqdd", HexDir.EAST, OpOutlineAxisRaycast)
     }
 
     private fun register(name: String, signature: String, startDir: HexDir, action: Action){
