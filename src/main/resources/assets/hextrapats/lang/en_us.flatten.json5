@@ -79,7 +79,8 @@
         }
       },
       vec_math: {
-        normalize: "Sets the length of the vector to one.",
+        normalize: "Sets the length of the vector to one. Does nothing if the vector is (0, 0, 0).",
+        set_length: "Sets the length of a vector. Does nothing if the vector is (0, 0, 0).",
         increment: "Increases length by 1. Does nothing if the vector is (0, 0, 0).",
         decrement: "Decreases length by 1. Does nothing if the vector is (0, 0, 0).",
         rand_vec: "Returns a unit vector facing a random direction.",
@@ -311,7 +312,10 @@
           z: "Vector Rfln. Z II",
           "1": "Vector Rfln. 1 II",
           "get/x": "Coordinate Purif.: X/Y/Z",
-          "set/x": "Coordinate Dstl.: X/Y/Z",
+          "set/": {
+            x: "Coordinate Dstl.: X/Y/Z",
+            len: "Length Distillation"
+          },
         },
 
         increment: "Incrementation Purif.",
