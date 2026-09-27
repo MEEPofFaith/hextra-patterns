@@ -9,16 +9,11 @@ import kotlin.math.roundToLong
 
 
 object MathUtils {
-    /** Modulo that works properly for negative numbers. Taken from Anuken/Arc.  */
-    fun mod(a: Double, b: Double): Double{
-        return ((a % b) + b) % b
-    }
-
     fun angleDist(a: Double, b: Double): Double{
         var a = a
         var b = b
-        a = mod(a, TAU)
-        b = mod(b, TAU)
+        a = a.mod(TAU)
+        b = b.mod(TAU)
 
         val distBack = if ((a - b) < 0) a - b + TAU else a - b
         val distFwd = if ((b - a) < 0) b - a + TAU else b - a

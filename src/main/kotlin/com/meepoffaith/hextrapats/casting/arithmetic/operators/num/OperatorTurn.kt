@@ -20,8 +20,8 @@ object OperatorTurn : OperatorBasic(3, MultiPreds.all(DOUBLE)) {
 
         if(MathUtils.angleDist(from, to) < speed) return to.asActionResult
 
-        from = MathUtils.mod(from, TAU)
-        to = MathUtils.mod(to, TAU)
+        from = from.mod(TAU)
+        to = to.mod(TAU)
 
         val fwdDist = abs(from - to)
         val backDst = TAU - fwdDist
