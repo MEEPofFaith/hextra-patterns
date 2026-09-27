@@ -26,7 +26,7 @@
         },
         "entity/": {
           look: {
-            yaw: "Transforms an entity on the stack into the yaw of its looking direction in radians. I've seen some texts mention something called $(thing)F3/$. Seems like north is pi, south is 0, east is -pi/2, and west is pi/2",
+            yaw: "Transforms an entity on the stack into the yaw of its looking direction in radians. I've seen some texts mention something called $(t:Matches the yaw shown in F3, albeit in radians instead of degrees.)$(thing)F3/$. It seems like north is pi, south is 0, east is -pi/2, and west is pi/2.",
             pitch: "Transforms an entity on the stack into the pitch of its looking direction in radians. Upwards is pi/2, downwards is -pi/2"
           },
           body: {
