@@ -1,6 +1,7 @@
 package com.meepoffaith.hextrapats.util
 
 import at.petrak.hexcasting.api.casting.iota.DoubleIota
+import at.petrak.hexcasting.api.utils.TAU
 import net.minecraft.util.math.Vec3d
 import kotlin.math.acos
 import kotlin.math.min
@@ -8,8 +9,6 @@ import kotlin.math.roundToLong
 
 
 object MathUtils {
-    const val TAU = Math.PI * 2.0
-
     /** Modulo that works properly for negative numbers. Taken from Anuken/Arc.  */
     fun mod(a: Double, b: Double): Double{
         return ((a % b) + b) % b
