@@ -267,7 +267,8 @@
           "set/": {
             x: "Coordinate Distillation: X",
             y: "Coordinate Distillation: Y",
-            z: "Coordinate Distillation: Z"
+            z: "Coordinate Distillation: Z",
+            len: "Length Distillation"
           },
           swizzle: "Swizzling Purification"
         },
@@ -342,10 +343,7 @@
           z: "Vector Rfln. Z II",
           "1": "Vector Rfln. 1 II",
           "get/x": "Coordinate Purif.: X/Y/Z",
-          "set/": {
-            x: "Coordinate Dstl.: X/Y/Z",
-            len: "Length Distillation"
-          },
+          "set/x": "Coordinate Dstl.: X/Y/Z"
         },
 
         increment: "Incrementation Purif.",
