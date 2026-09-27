@@ -23,6 +23,14 @@
         "raycast/": {
           outline: "Like $(l:patterns/basics#hexcasting:raycast)$(action)Archer's Distillation/$, but is able to hit collisionless blocks like tall grass. Costs a negligible amount of _media.",
           outaxis: "Like $(l:patterns/basics#hexcasting:raycast/axis)$(action)Architect's Distillation/$, but is able to hit collisionless blocks like tall grass. Costs a negligible amount of _media."
+        },
+        "entity/": {
+          look: {
+            yaw: "Transforms an entity on the stack into the yaw of its looking direction in radians. I've seen some texts mention something called $(thing)F3/$, but I can't quite figure out what that means."
+          },
+          body: {
+            yaw: "Transforms an entity on the stack into the yaw of its body in radians. Yet again, mentions of $(thing)F3/$ turn up."
+          }
         }
       },
       logic: {
@@ -107,7 +115,7 @@
         },
         "cons_about/": {
           x: "Converts an angle in radians to a unit vector where X=0. +Z at 0 radians and +Y at pi/4 radians.",
-          y: "Converts an angle in radians to a unit vector where Y=0. +Z at 0 radians and -X at pi/4 radians. I've seen some texts related to this pattern mentioning something called $(thing)F3/$, but I couldn't figure out what that means.",
+          y: "Converts an angle in radians to a unit vector where Y=0. +Z at 0 radians and -X at pi/4 radians. Yet again, mentions of $(thing)F3/$ turn up.",
           z: "Converts an angle in radians to a unit vector where Z=0. -X at 0 radians and +Y at pi/4 radians."
         }
       },
@@ -196,6 +204,14 @@
         "raycast/": {
           outline: "Archer's Distillation II",
           outaxis: "Architect's Distillation II"
+        },
+        "entity/": {
+          look: {
+            yaw: "Sextant Purification"
+          },
+          body: {
+            yaw: "Sextant Purification II"
+          }
         },
 
         len_eq: "Length Equality Distillation",

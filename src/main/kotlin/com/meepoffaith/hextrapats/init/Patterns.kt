@@ -23,13 +23,18 @@ import com.meepoffaith.hextrapats.casting.actions.math.OpRandRange
 import com.meepoffaith.hextrapats.casting.actions.math.OpRandZero
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullCoalesce
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullExecute
+import com.meepoffaith.hextrapats.casting.actions.queryentity.OpEntityBodyYaw
+import com.meepoffaith.hextrapats.casting.actions.queryentity.OpEntityLookYaw
 import com.meepoffaith.hextrapats.casting.actions.raycast.OpOutlineAxisRaycast
 import com.meepoffaith.hextrapats.casting.actions.raycast.OpOutlineRaycast
 import com.meepoffaith.hextrapats.casting.actions.sets.*
 import com.meepoffaith.hextrapats.casting.actions.stack.OpFloat
 import com.meepoffaith.hextrapats.casting.actions.stack.OpSink
-import com.meepoffaith.hextrapats.casting.actions.vecmanip.*
-import com.meepoffaith.hextrapats.casting.actions.vecmath.*
+import com.meepoffaith.hextrapats.casting.actions.vecmanip.OpVecList
+import com.meepoffaith.hextrapats.casting.actions.vecmath.OpFromPolar
+import com.meepoffaith.hextrapats.casting.actions.vecmath.OpRandVec
+import com.meepoffaith.hextrapats.casting.actions.vecmath.OpToPolar
+import com.meepoffaith.hextrapats.casting.actions.vecmath.OpVecDist
 import net.minecraft.registry.Registry
 import net.minecraft.util.math.Vec3d
 
@@ -124,6 +129,8 @@ object Patterns {
 
         register("raycast/outline", "wqaaeaa", HexDir.EAST, OpOutlineRaycast)
         register("raycast/outaxis", "weddqdd", HexDir.EAST, OpOutlineAxisRaycast)
+        register("entity/look.yaw", "waa", HexDir.EAST, OpEntityLookYaw)
+        register("entity/body.yaw", "wdd", HexDir.EAST, OpEntityBodyYaw)
     }
 
     private fun register(name: String, signature: String, startDir: HexDir, action: Action){
