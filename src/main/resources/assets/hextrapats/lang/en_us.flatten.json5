@@ -26,7 +26,8 @@
         },
         "entity/": {
           look: {
-            yaw: "Transforms an entity on the stack into the yaw of its looking direction in radians. I've seen some texts mention something called $(thing)F3/$. Seems like north is pi, south is 0, east is -pi/2, and west is pi/2"
+            yaw: "Transforms an entity on the stack into the yaw of its looking direction in radians. I've seen some texts mention something called $(thing)F3/$. Seems like north is pi, south is 0, east is -pi/2, and west is pi/2",
+            pitch: "Transforms an entity on the stack into the pitch of its looking direction in radians. Upwards is pi/2, downwards is -pi/2"
           },
           body: {
             yaw: "Transforms an entity on the stack into the yaw of its body in radians. Yet again, mentions of $(l:patterns/hextrapats_basics#hextrapats:entity/look.yaw)$(action)F3/$ turn up."
@@ -207,10 +208,11 @@
         },
         "entity/": {
           look: {
-            yaw: "Sextant Purification"
+            yaw: "Sextant Purification",
+            pitch: "Sextant Purification II"
           },
           body: {
-            yaw: "Sextant Purification II"
+            yaw: "Sextant Purification III"
           }
         },
 
