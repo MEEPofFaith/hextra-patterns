@@ -24,8 +24,7 @@ import com.meepoffaith.hextrapats.casting.actions.math.OpRandZero
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullCoalesce
 import com.meepoffaith.hextrapats.casting.actions.nullary.OpNullExecute
 import com.meepoffaith.hextrapats.casting.actions.queryentity.OpEntityBodyYaw
-import com.meepoffaith.hextrapats.casting.actions.queryentity.OpEntityLookPitch
-import com.meepoffaith.hextrapats.casting.actions.queryentity.OpEntityLookYaw
+import com.meepoffaith.hextrapats.casting.actions.queryentity.OpEntityLookAngles
 import com.meepoffaith.hextrapats.casting.actions.raycast.OpOutlineAxisRaycast
 import com.meepoffaith.hextrapats.casting.actions.raycast.OpOutlineRaycast
 import com.meepoffaith.hextrapats.casting.actions.sets.*
@@ -130,9 +129,8 @@ object Patterns {
 
         register("raycast/outline", "wqaaeaa", HexDir.EAST, OpOutlineRaycast)
         register("raycast/outaxis", "weddqdd", HexDir.EAST, OpOutlineAxisRaycast)
-        register("entity/look.yaw", "waa", HexDir.EAST, OpEntityLookYaw)
-        register("entity/look.pitch", "wdd", HexDir.EAST, OpEntityLookPitch)
-        register("entity/body.yaw", "waaqa", HexDir.EAST, OpEntityBodyYaw)
+        register("entity/look_angles", "waa", HexDir.EAST, OpEntityLookAngles)
+        register("entity/body_yaw", "wdd", HexDir.EAST, OpEntityBodyYaw)
     }
 
     private fun register(name: String, signature: String, startDir: HexDir, action: Action){
