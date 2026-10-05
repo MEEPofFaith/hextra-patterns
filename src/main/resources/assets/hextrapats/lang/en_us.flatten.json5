@@ -27,7 +27,7 @@
         "entity/": {
           look: {
             angles: "Transforms an entity on the stack into the pitch and yaw of its looking direction in radians.",
-            info: "I've seen some texts mention something called $(thing)F3/$$(br2)For yaw, north is pi, south is 0, east is -pi/2, and west is pi/2.$(br2)For pitch, pi/2 is upwards is pi/2, and downwards is -pi/2."
+            info: "I've seen some texts mention something called $(thing)F3/$.$(br2)For yaw, north is pi, south is 0, east is -pi/2, and west is pi/2.$(br2)For pitch, pi/2 is upwards is pi/2, and downwards is -pi/2."
           },
           body_yaw: "Transforms an entity on the stack into the yaw of its body in radians. Yet again, mentions of $(l:patterns/hextrapats_basics#hextrapats:entity/look_angles)$(action)F3/$ turn up."
         }
