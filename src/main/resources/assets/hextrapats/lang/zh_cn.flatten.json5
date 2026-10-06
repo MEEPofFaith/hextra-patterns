@@ -90,8 +90,8 @@
           "": "将第一个向量向第二个向量旋转给定弧度。若两向量方向正好相反，则会招致事故。",
           examples: "例如：$(li)(1, 0, 0), (0, 1, 0), π/4$(br)   → (0.71, 0.71, 0)$(li)(2, 0, 0), (0, 5, 0), π/4$(br)   → (1.41, 1.41, 0)$(li)(1, 1, 1), (0, 5, 5), π/6$(br)   → (0.16, 1.22, 1.22)",
         },
-        from_polar: "以俯仰和偏航两个极坐标角生成单位向量，均以弧度计。+Y 对应上方。偏航角为 0 对应 +Z，为 π/2 对应 -X。相关文献又提到了所谓的 $(l:patterns/hextrapats_basics#hextrapats:entity/look.yaw)$(action)F3/$。",
-        to_polar: "将向量的方向转换为俯仰和偏航两个极坐标角，均以弧度计。+Y 对应上方。偏航角为 0 对应 +Z，为 π/2 对应 -X。相关文献又提到了所谓的 $(l:patterns/hextrapats_basics#hextrapats:entity/look.yaw)$(action)F3/$。",
+        from_polar: "以俯仰和偏航两个极坐标角生成单位向量，均以弧度计。+Y 对应上方。偏航角为 0 对应 +Z，为 π/2 对应 -X。相关文献又提到了所谓的 $(l:patterns/hextrapats_basics#hextrapats:entity/look_angles)$(action)F3/$。",
+        to_polar: "将向量的方向转换为俯仰和偏航两个极坐标角，均以弧度计。+Y 对应上方。偏航角为 0 对应 +Z，为 π/2 对应 -X。相关文献又提到了所谓的 $(l:patterns/hextrapats_basics#hextrapats:entity/look_angles)$(action)F3/$。",
         "rot_about/": {
           x: "绕 X 轴将所给向量旋转所给弧度。",
           y: "绕 Y 轴将所给向量旋转所给弧度。",
@@ -99,7 +99,7 @@
         },
         "cons_about/": {
           x: "将弧度角变为单位向量。该向量的 X 分量为 0。0 弧度对应 +Z，π/4 弧度对应 +Y。",
-          y: "将弧度角变为单位向量。该向量的 Y 分量为 0。0 弧度对应 +Z，π/4 弧度对应 -X。相关文献又提到了所谓的 $(l:patterns/hextrapats_basics#hextrapats:entity/look.yaw)$(action)F3/$。",
+          y: "将弧度角变为单位向量。该向量的 Y 分量为 0。0 弧度对应 +Z，π/4 弧度对应 -X。相关文献又提到了所谓的 $(l:patterns/hextrapats_basics#hextrapats:entity/look_angles)$(action)F3/$。",
           z: "将弧度角变为单位向量。该向量的 Z 分量为 0。0 弧度对应 -X，π/4 弧度对应 +Y。",
         },
         set_length: "设置向量的长度。零向量不变。",
@@ -185,11 +185,15 @@
         },
         "entity/": {
           look: {
-            yaw: "将栈顶实体变为其视线方向的偏航角，以弧度计。我在部分文献中读到过某种叫 $(thing)F3/$ 的东西。似乎北对应 π，南对应 0，东为 -π/2，西为 π/2。",
+            yaw: "将栈顶实体变为其视线方向的偏航角，以弧度计。我在部分文献中读到过某种叫 $(t:与F3界面中的偏航角相同，但单位是弧度不是角度。)$(thing)F3/$ 的东西。似乎北对应 π，南对应 0，东为 -π/2，西为 π/2。",
+            pitch: "将栈顶实体变为其视线方向的俯仰角，以弧度计。向上为 π/2，向下为 -π/2。",
+            angles: "将栈顶实体变为其视线方向的俯仰角与偏航角，均以弧度计。",
+            info: "我曾读到过某些文献提到某种叫 $(thing)F3/$ 的东西。$(br2)对于偏航角，北对应 π，南对应 0，东对应 -π/2，西对应 π/2。$(br2)对于俯仰角，上为 π/2，下为 -π/2。",
           },
           body: {
             yaw: "将栈顶实体变为其身体朝向的偏航角，以弧度计。相关文献又提到了所谓的 $(l:patterns/hextrapats_basics#hextrapats:entity/look.yaw)$(action)F3/$。",
           },
+          body_yaw: "将栈顶实体变为其身体朝向的偏航角。相关文献又提到了所谓的 $(l:patterns/hextrapats_basics#hextrapats:entity/look_angles)$(action)F3/$。",
         },
       },
     },
@@ -247,6 +251,7 @@
             x: "坐标之馏化：X",
             y: "坐标之馏化：Y",
             z: "坐标之馏化：Z",
+            len: "长度之馏化",
           },
           swizzle: "重排之纯化",
         },
@@ -308,10 +313,13 @@
         "entity/": {
           look: {
             yaw: "六分仪之纯化",
+            pitch: "六分仪之纯化，第二型",
           },
           body: {
-            yaw: "六分仪之纯化，第二型",
+            yaw: "六分仪之纯化，第三型",
           },
+          look_angles: "六分仪之纯化",
+          body_yaw: "六分仪之纯化，第二型",
         },
       },
       "book.hextrapats:": {
