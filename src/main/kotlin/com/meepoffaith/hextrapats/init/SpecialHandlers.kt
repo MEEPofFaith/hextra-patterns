@@ -14,6 +14,7 @@ object SpecialHandlers {
     val SCI_EXP = registerSpecialHandler("scientific_exp", SpecialHandlerScientificExponent.Factory())
     val DUPLICATE_AT = registerSpecialHandler("duplicate_at", SpecialHandlerDuplicateAt.Factory())
     val VEC_SWIZZLE = registerSpecialHandler("vec/swizzle", SpecialHandlerVecSwizzling.Factory())
+    val MASK_LIST = registerSpecialHandler("mask_list", SpecialHandlerMaskList.Factory())
 
     fun init(){}
 
