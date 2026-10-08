@@ -69,6 +69,30 @@
       "input": "list",
       "output": "list",
       "text": "hextrapats.page.lists.scronglwfijspoivjqwofklcrvewb"
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hextrapats:mask_list",
+      "anchor": "hextrapats:mask_list",
+      "input": "many",
+      "output": "many, list",
+      "text": "hextrapats.page.lists.mask",
+      "patterns": [
+        {
+          "startdir": "SOUTH_WEST",
+          "signature": "ewdqdwedww"
+        }, {
+          "startdir": "SOUTH_WEST",
+          "signature": "ewdqdwedwwwqdad"
+        }, {
+          "startdir": "SOUTH_WEST",
+          "signature": "ewdqdwedwwqdqwqdadqqd"
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextrapats.page.lists.mask.details"
     }
   ]
 }

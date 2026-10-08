@@ -139,7 +139,11 @@
           all: "Remove the iota at the top of the stack, then remove $(italic)all/$ instances of it from the list. Returns the number of removed occurrences."
         },
         swindle: "Reorders the elements of a list the same way $(l:patterns/stackmanip#hexcasting:swizzle)$(action)Swindler's Gambit/$ reorders the stack. Inputting a negative code will reorder the elements at the start instead of the end.",
-        scronglwfijspoivjqwofklcrvewb: "Shuffles the order of elements in the list."
+        scronglwfijspoivjqwofklcrvewb: "Shuffles the order of elements in the list.",
+        mask: {
+          "": "An infinite family of patterns that creates a list out of iotas on the stack based on a sequence of dips and lines.",
+          details: "The first pattern will produce an empty list when drawn.$(br2)Each dip represents an iota to be drawn into the list.<br>The second pattern will make a list from the 3rd and 2nd iota on the stack.$(br2)The third pattern will take in the 7th, 5th, 4th, and 1st iota on the stack."
+        }
       },
       sets: {
         intro: "A hash set contains elements in an unordered fashion, and cannot contain duplicates. Excellent for keeping track of whether or not something exists.<br>Due to a magical process known as '$(thing)hashing/$', access is reduced to nearly O(1), relaxing the burden on Nature.",
@@ -296,6 +300,7 @@
         },
         swindle_list: "Swindler's Distillation",
         scronglwfijspoivjqwofklcrvewb: "Shuffling Purification",
+        mask_list: "Birdkeeper's Gambit",
 
         "empty_set/": {
           num: "Vacant Reflection: Number Set",
@@ -375,7 +380,8 @@
         swizzle: "Swizzling Purification: %s%s%s"
       },
       scientific_exp: "Scientific Purification: 10^%s",
-      duplicate_at: "Angler's Gambit: %s"
+      duplicate_at: "Angler's Gambit: %s",
+      mask_list: "Birdkeeper's Gambit: %s"
     },
     "iota.hextrapats:": {
       num_set: {
