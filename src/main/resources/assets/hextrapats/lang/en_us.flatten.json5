@@ -142,7 +142,7 @@
         scronglwfijspoivjqwofklcrvewb: "Shuffles the order of elements in the list.",
         mask: {
           "": "An infinite family of patterns that creates a list out of iotas on the stack based on a sequence of dips and lines.",
-          details: "The first pattern will produce an empty list when drawn.$(br2)Each dip represents an iota to be drawn into the list.<br>The second pattern will make a list from the 3rd and 2nd iota on the stack.$(br2)The third pattern will take in the 7th, 5th, 4th, and 1st iota on the stack."
+          details: "Each dip represents an iota to be drawn into the list. Leftover iotas remain where they are.$(br2)The first pattern will produce an empty list when drawn.$(br2)The second pattern will make a list from the 3rd and 2nd iota on the stack.$(br2)The third pattern will take in the 7th, 5th, 4th, and 1st iota on the stack."
         }
       },
       sets: {
