@@ -126,6 +126,10 @@
         },
         swindle: "重排列表的元素，方式与$(l:patterns/stackmanip#hexcasting:swizzle)$(action)骗徒之策略/$重排栈的一致。给定负值会从开头起进行重排，而非从末尾起。",
         scronglwfijspoivjqwofklcrvewb: "打乱列表各元素。",
+        mask: {
+          "": "一组无限个根据凹槽和横线的顺序来选取或不选取栈中元素组成列表的操作。",
+          details: "凹槽代表将该处元素选入列表。未选取的元素留在原地。$(br2)第一个图案绘制时会产生空列表。$(br2)第二个图案会选取栈中第三个和第二个元素组成列表。$(br2)第三个图案则会选取第七、第五、第四、第一个元素。",
+        },
       },
       sets: {
         intro: "哈希集合的各元素无顺序且不重复，很适合用于记录某物存在与否。<br>由于所谓的“$(thing)哈希/$”之魔法过程，访问其中元素的操作接近于 O(1)，能减轻自然的负担。",
@@ -321,6 +325,7 @@
           look_angles: "六分仪之纯化",
           body_yaw: "六分仪之纯化，第二型",
         },
+        mask_list: "养鸟人之策略",
       },
       "book.hextrapats:": {
         haha_ha_one: "向量之精思，+1/-1型",
@@ -371,6 +376,7 @@
       },
       scientific_exp: "科学记数之纯化：10^%s",
       duplicate_at: "渔夫之策略：%s",
+      mask_list: "养鸟人之策略：%s",
     },
     "iota.hextrapats:": {
       num_set: {
