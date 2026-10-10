@@ -315,15 +315,8 @@
           outaxis: "建筑师之馏化，第二型",
         },
         "entity/": {
-          look: {
-            yaw: "六分仪之纯化",
-            pitch: "六分仪之纯化，第二型",
-          },
-          body: {
-            yaw: "六分仪之纯化，第三型",
-          },
-          look_angles: "六分仪之纯化",
-          body_yaw: "六分仪之纯化，第二型",
+          look_angles: "六分仪之分解",
+          body_yaw: "六分仪之纯化",
         },
         mask_list: "养鸟人之策略",
       },

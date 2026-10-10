@@ -209,8 +209,8 @@
           outaxis: "Architect's Distillation II"
         },
         "entity/": {
-          look_angles: "Sextant Purification",
-          body_yaw: "Sextant Purification II"
+          look_angles: "Sextant Decomposition",
+          body_yaw: "Sextant Purification"
         },
 
         len_eq: "Length Equality Distillation",
